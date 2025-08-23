@@ -16,7 +16,7 @@ export function Header() {
     { key: 'home', href: '/' },
     { key: 'planVisit', href: '/plan-visit' },
     { key: 'schedule', href: '/schedule' },
-    { key: 'watch', href: '/watch' },
+    { key: 'watch', href: '/watch/live' },
     { key: 'events', href: '/events' },
     { key: 'nextSteps', href: '/next-steps' },
     { key: 'prayer', href: '/prayer' },
