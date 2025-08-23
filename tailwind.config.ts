@@ -31,6 +31,7 @@ const config: Config = {
         ring: "hsl(var(--ring))",
         background: "hsl(var(--background))",
         foreground: "hsl(var(--foreground))",
+        brandMaroon: "#800020",
         primary: {
           DEFAULT: "hsl(var(--primary))", // brand-maroon
           foreground: "hsl(var(--primary-foreground))",

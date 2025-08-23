@@ -646,6 +646,71 @@
       "submitting": "Submitting..."
     }
   },
+  "give": {
+    "title": "Give",
+    "subtitle": "Your generosity helps us serve our community and spread God's love. Thank you for your faithful giving.",
+    "tithely": {
+      "title": "Online Giving",
+      "description": "Give securely online with credit card, debit card, or bank transfer through our trusted partner Tithely.",
+      "embedTitle": "Tithely Giving Platform",
+      "embedDescription": "Click below to access our secure online giving platform powered by Tithely.",
+      "giveNow": "Give Now",
+      "features": {
+        "recurring": "Recurring Gifts",
+        "recurringDesc": "Set up automatic monthly or weekly giving",
+        "textGive": "Text to Give",
+        "textGiveDesc": "Give quickly by sending a text message",
+        "receipts": "Tax Receipts",
+        "receiptsDesc": "Automatic receipts for tax deduction purposes"
+      },
+      "textToGive": {
+        "title": "Text to Give",
+        "description": "Send a text message to give quickly and easily:",
+        "instructions": "Text any amount to (555) 123-GIVE"
+      }
+    },
+    "alternatives": {
+      "title": "Other Ways to Give",
+      "zelle": {
+        "title": "Zelle",
+        "description": "Send directly from your bank app",
+        "sendTo": "Send to:",
+        "number": "(555) 123-4567",
+        "note": "Available through most major banks and credit unions"
+      },
+      "cashApp": {
+        "title": "Cash App",
+        "description": "Send using the Cash App mobile app",
+        "sendTo": "Send to:",
+        "handle": "$FMCBethlehem",
+        "note": "Include your name in the note for proper record keeping"
+      }
+    },
+    "faq": {
+      "title": "Frequently Asked Questions",
+      "subtitle": "Common questions about giving and security",
+      "security": {
+        "question": "Is online giving secure?",
+        "answer": "Yes, all online transactions are processed through bank-level encryption and security. Tithely is PCI compliant and uses the same security standards as major financial institutions. Your personal and financial information is never stored on our servers."
+      },
+      "receipts": {
+        "question": "Will I receive a receipt for tax purposes?",
+        "answer": "Yes, you will automatically receive email receipts for all online donations. At the end of the year, you'll receive a comprehensive giving statement for tax deduction purposes. For Zelle and Cash App donations, please contact our office for manual receipt processing."
+      },
+      "recurring": {
+        "question": "Can I set up recurring donations?",
+        "answer": "Absolutely! Through Tithely, you can set up weekly, bi-weekly, or monthly recurring donations. You can modify or cancel recurring gifts at any time through your Tithely account or by contacting our office."
+      },
+      "contact": {
+        "question": "Who can I contact with questions about giving?",
+        "answer": "For any questions about giving, receipts, or technical issues, please contact our church office at (555) 123-4567 or email finance@fmcbethlehem.org. We're here to help make your giving experience as smooth as possible."
+      }
+    },
+    "footer": {
+      "title": "Thank You for Your Generosity",
+      "message": "Your faithful giving enables us to serve our community, support missions, and maintain our facilities. Every gift, no matter the size, makes a difference in advancing God's kingdom."
+    }
+  },
   "sermons": {
     "title": "Sermon Archive",
     "subtitle": "Explore our collection of sermons, teachings, and messages from our pastors.",
