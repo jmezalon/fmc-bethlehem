@@ -173,3 +173,4 @@ Edit these files to update church details:
 
 
 ## DONE
+- [ ] Deploy to Vercel
