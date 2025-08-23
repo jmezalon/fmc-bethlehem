@@ -170,3 +170,6 @@ Edit these files to update church details:
 
 *Last updated: January 2025*
 *For technical support, please contact the development team*
+
+
+## DONE
