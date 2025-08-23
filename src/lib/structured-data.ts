@@ -25,7 +25,7 @@ interface Sermon {
 
 export function generateEventJsonLd(event: Event, locale: 'en' | 'ht' | 'fr') {
   const baseUrl = process.env.NEXT_PUBLIC_SITE_URL || 'http://localhost:3000';
-  
+
   return {
     '@context': 'https://schema.org',
     '@type': 'Event',
@@ -50,7 +50,9 @@ export function generateEventJsonLd(event: Event, locale: 'en' | 'ht' | 'fr') {
       url: baseUrl,
     },
     ...(event.image && {
-      image: event.image.startsWith('http') ? event.image : `${baseUrl}${event.image}`,
+      image: event.image.startsWith('http')
+        ? event.image
+        : `${baseUrl}${event.image}`,
     }),
     eventStatus: 'https://schema.org/EventScheduled',
     eventAttendanceMode: 'https://schema.org/OfflineEventAttendanceMode',
@@ -63,9 +65,12 @@ export function generateEventJsonLd(event: Event, locale: 'en' | 'ht' | 'fr') {
   };
 }
 
-export function generateSermonJsonLd(sermon: Sermon, locale: 'en' | 'ht' | 'fr') {
+export function generateSermonJsonLd(
+  sermon: Sermon,
+  locale: 'en' | 'ht' | 'fr'
+) {
   const baseUrl = process.env.NEXT_PUBLIC_SITE_URL || 'http://localhost:3000';
-  
+
   return {
     '@context': 'https://schema.org',
     '@type': 'Article',
@@ -124,7 +129,7 @@ export function generateSermonJsonLd(sermon: Sermon, locale: 'en' | 'ht' | 'fr')
 
 export function generateOrganizationJsonLd(locale: 'en' | 'ht' | 'fr') {
   const baseUrl = process.env.NEXT_PUBLIC_SITE_URL || 'http://localhost:3000';
-  
+
   return {
     '@context': 'https://schema.org',
     '@type': 'Organization',
@@ -133,7 +138,8 @@ export function generateOrganizationJsonLd(locale: 'en' | 'ht' | 'fr') {
     alternateName: 'FMCB',
     url: baseUrl,
     logo: `${baseUrl}/api/og?title=FMC%20Bethlehem`,
-    description: 'Free Methodist Church in Brooklyn, NY serving the community with worship, prayer, and Bible study.',
+    description:
+      'Free Methodist Church in Brooklyn, NY serving the community with worship, prayer, and Bible study.',
     address: {
       '@type': 'PostalAddress',
       streetAddress: '4415 Glenwood Rd',
@@ -163,7 +169,7 @@ export function generateOrganizationJsonLd(locale: 'en' | 'ht' | 'fr') {
 
 export function generateWebsiteJsonLd(locale: 'en' | 'ht' | 'fr') {
   const baseUrl = process.env.NEXT_PUBLIC_SITE_URL || 'http://localhost:3000';
-  
+
   return {
     '@context': 'https://schema.org',
     '@type': 'WebSite',

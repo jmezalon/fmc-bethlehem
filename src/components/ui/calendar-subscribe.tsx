@@ -10,7 +10,10 @@ interface CalendarSubscribeProps {
   className?: string;
 }
 
-export function CalendarSubscribe({ type = 'all', className = '' }: CalendarSubscribeProps) {
+export function CalendarSubscribe({
+  type = 'all',
+  className = '',
+}: CalendarSubscribeProps) {
   const t = useTranslations('calendar');
   const locale = useLocale();
   const [isDownloading, setIsDownloading] = useState(false);
@@ -24,7 +27,7 @@ export function CalendarSubscribe({ type = 'all', className = '' }: CalendarSubs
     setIsDownloading(true);
     try {
       const url = getCalendarUrl(calendarType);
-      
+
       if (typeof window !== 'undefined') {
         // Create a temporary link to trigger download
         const link = document.createElement('a');
@@ -44,7 +47,7 @@ export function CalendarSubscribe({ type = 'all', className = '' }: CalendarSubs
   const handleSubscribe = (calendarType: string) => {
     const url = getCalendarUrl(calendarType);
     const webcalUrl = url.replace(/^https?:/, 'webcal:');
-    
+
     if (typeof window !== 'undefined') {
       window.open(webcalUrl, '_blank');
     }
@@ -58,7 +61,7 @@ export function CalendarSubscribe({ type = 'all', className = '' }: CalendarSubs
           {t('subscribe.title')}
         </h3>
       </div>
-      
+
       <p className="text-sm text-muted-foreground mb-4">
         {t('subscribe.description')}
       </p>
@@ -85,7 +88,7 @@ export function CalendarSubscribe({ type = 'all', className = '' }: CalendarSubs
                 <Download className="h-4 w-4" />
               </Button>
             </div>
-            
+
             <div className="flex gap-2">
               <Button
                 variant="outline"
@@ -105,7 +108,7 @@ export function CalendarSubscribe({ type = 'all', className = '' }: CalendarSubs
                 <Download className="h-4 w-4" />
               </Button>
             </div>
-            
+
             <div className="flex gap-2">
               <Button
                 variant="outline"
@@ -127,7 +130,7 @@ export function CalendarSubscribe({ type = 'all', className = '' }: CalendarSubs
             </div>
           </>
         )}
-        
+
         {type !== 'all' && (
           <div className="flex gap-2">
             <Button
@@ -150,7 +153,7 @@ export function CalendarSubscribe({ type = 'all', className = '' }: CalendarSubs
           </div>
         )}
       </div>
-      
+
       <p className="text-xs text-muted-foreground mt-3">
         {t('subscribe.instructions')}
       </p>

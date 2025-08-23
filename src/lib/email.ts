@@ -15,7 +15,13 @@ export async function sendEmail(options: EmailOptions) {
     throw new Error('RESEND_API_KEY environment variable is not set');
   }
 
-  const { to, subject, html, text, from = 'FMCB <noreply@fmcbethlehem.org>' } = options;
+  const {
+    to,
+    subject,
+    html,
+    text,
+    from = 'FMCB <noreply@fmcbethlehem.org>',
+  } = options;
 
   try {
     const emailData: any = {
@@ -68,10 +74,15 @@ Prayer Request:
 ${request}
 
 This prayer request was submitted through the FMCB website.
-    `
+    `,
   }),
 
-  eventReminder: (eventTitle: string, eventDate: string, eventTime: string, eventLocation: string) => ({
+  eventReminder: (
+    eventTitle: string,
+    eventDate: string,
+    eventTime: string,
+    eventLocation: string
+  ) => ({
     subject: `Reminder: ${eventTitle}`,
     html: `
       <div style="font-family: Arial, sans-serif; max-width: 600px; margin: 0 auto;">
@@ -98,7 +109,7 @@ Location: ${eventLocation}
 We look forward to seeing you there!
 
 This is an automated reminder from FMCB.
-    `
+    `,
   }),
 
   newsletterSubscription: (email: string) => ({
@@ -131,6 +142,6 @@ Thank you for subscribing to our newsletter. You'll now receive updates about:
 We're excited to keep you connected with our church family!
 
 You can unsubscribe at any time by replying to this email.
-    `
-  })
+    `,
+  }),
 };

@@ -18,7 +18,7 @@ export default function ContactPage() {
 
     // Simulate form submission
     await new Promise(resolve => setTimeout(resolve, 1000));
-    
+
     setIsSubmitting(false);
     setIsSubmitted(true);
   };
@@ -59,7 +59,8 @@ export default function ContactPage() {
                       {t('info.address.title')}
                     </h3>
                     <p className="text-muted-foreground">
-                      {t('info.address.street')}<br />
+                      {t('info.address.street')}
+                      <br />
                       {t('info.address.city')}
                     </p>
                   </div>
@@ -125,9 +126,7 @@ export default function ContactPage() {
                   <h3 className="text-lg font-semibold text-green-800 mb-2">
                     {t('form.success.title')}
                   </h3>
-                  <p className="text-green-700">
-                    {t('form.success.message')}
-                  </p>
+                  <p className="text-green-700">{t('form.success.message')}</p>
                 </div>
               ) : (
                 <form onSubmit={handleSubmit} className="space-y-6">
@@ -153,11 +152,7 @@ export default function ContactPage() {
                     required
                   />
 
-                  <FormField
-                    label={t('form.phone')}
-                    name="phone"
-                    type="tel"
-                  />
+                  <FormField label={t('form.phone')} name="phone" type="tel" />
 
                   <FormField
                     label={t('form.subject')}
@@ -204,18 +199,21 @@ export default function ContactPage() {
             <h2 className="text-3xl font-bold text-foreground mb-4">
               {t('map.title')}
             </h2>
-            <p className="text-muted-foreground">
-              {t('map.subtitle')}
-            </p>
+            <p className="text-muted-foreground">{t('map.subtitle')}</p>
           </div>
 
-          <div className="bg-muted rounded-lg h-96 flex items-center justify-center">
-            <div className="text-center">
-              <MapPin className="h-12 w-12 text-muted-foreground mx-auto mb-4" />
-              <p className="text-muted-foreground">
-                {t('map.placeholder')}
-              </p>
-            </div>
+          <div className="bg-white rounded-lg overflow-hidden shadow-lg">
+            <iframe
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3027.8942857142857!2d-73.9284!3d40.6398!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89c25c0f8f8f8f8f%3A0x8f8f8f8f8f8f8f8f!2s4415%20Glenwood%20Rd%2C%20Brooklyn%2C%20NY%2011203!5e0!3m2!1sen!2sus!4v1234567890123"
+              width="100%"
+              height="400"
+              style={{ border: 0 }}
+              allowFullScreen
+              loading="lazy"
+              referrerPolicy="no-referrer-when-downgrade"
+              title="Free Methodist Church of Bethlehem Location"
+              className="w-full h-96"
+            />
           </div>
         </Container>
       </section>

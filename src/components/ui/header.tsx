@@ -28,25 +28,32 @@ export function Header() {
   return (
     <>
       <SkipLink />
-      <header 
+      <header
         className="sticky top-0 z-40 w-full border-b bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60"
         role="banner"
       >
         <Container>
           <div className="flex h-16 items-center justify-between">
             {/* Logo */}
-            <Link href={"/" as any} className="flex items-center space-x-2 focus:outline-none focus:ring-2 focus:ring-primary focus:ring-offset-2 rounded-md">
-              <img 
-                src="/logo.jpeg" 
-                alt="Free Methodist Church of Bethlehem Logo" 
+            <Link
+              href={'/' as any}
+              className="flex items-center space-x-2 focus:outline-none"
+            >
+              <img
+                src="/logo.jpeg"
+                alt="Free Methodist Church of Bethlehem Logo"
                 className="h-10 w-10"
               />
               <span className="font-bold text-lg">FMCB</span>
             </Link>
 
             {/* Desktop Navigation */}
-            <nav className="hidden md:flex items-center space-x-6" role="navigation" aria-label="Main navigation">
-              {navigationItems.map((item) => (
+            <nav
+              className="hidden md:flex items-center space-x-6"
+              role="navigation"
+              aria-label="Main navigation"
+            >
+              {navigationItems.map(item => (
                 <Link
                   key={item.href}
                   href={item.href as any}
@@ -60,7 +67,7 @@ export function Header() {
             {/* Right side actions */}
             <div className="flex items-center space-x-4">
               <LanguageSwitcher />
-              
+
               {/* Give Button */}
               <Link
                 href="/give"
@@ -76,7 +83,9 @@ export function Header() {
                 onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
                 aria-expanded={isMobileMenuOpen}
                 aria-controls="mobile-menu"
-                aria-label={isMobileMenuOpen ? tA11y('closeMenu') : tA11y('openMenu')}
+                aria-label={
+                  isMobileMenuOpen ? tA11y('closeMenu') : tA11y('openMenu')
+                }
               >
                 {isMobileMenuOpen ? (
                   <X className="h-6 w-6" />
@@ -91,7 +100,7 @@ export function Header() {
         {/* Mobile Navigation Drawer */}
         {isMobileMenuOpen && (
           <FocusTrap isActive={isMobileMenuOpen}>
-            <nav 
+            <nav
               id="mobile-menu"
               className="md:hidden border-t bg-background"
               role="navigation"
@@ -99,7 +108,7 @@ export function Header() {
             >
               <Container>
                 <div className="py-4 space-y-2">
-                  {navigationItems.map((item) => (
+                  {navigationItems.map(item => (
                     <Link
                       key={item.href}
                       href={item.href as any}

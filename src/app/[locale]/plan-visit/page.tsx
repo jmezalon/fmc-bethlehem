@@ -24,23 +24,25 @@ export default function PlanVisitPage() {
     const now = new Date();
     const nextSunday = new Date(now);
     nextSunday.setDate(now.getDate() + (7 - now.getDay()));
-    
+
     let startTime, endTime, title, description;
-    
+
     if (service === 'morning') {
       startTime = new Date(nextSunday);
       startTime.setHours(9, 0, 0, 0);
       endTime = new Date(nextSunday);
       endTime.setHours(11, 30, 0, 0);
       title = 'FMCB - Morning Worship Service';
-      description = 'Sunday School: 8:00 AM\\nWorship Service: 9:00-11:30 AM\\nLanguage: Haitian Creole';
+      description =
+        'Sunday School: 8:00 AM\\nWorship Service: 9:00-11:30 AM\\nLanguage: Haitian Creole';
     } else {
       startTime = new Date(nextSunday);
       startTime.setHours(12, 30, 0, 0);
       endTime = new Date(nextSunday);
       endTime.setHours(14, 30, 0, 0);
       title = 'FMCB - Youth/Afternoon Service';
-      description = 'Youth and Afternoon Service\\nLanguages: English & Haitian Creole';
+      description =
+        'Youth and Afternoon Service\\nLanguages: English & Haitian Creole';
     }
 
     const formatDate = (date: Date) => {
@@ -99,24 +101,29 @@ export default function PlanVisitPage() {
                 <MapPin className="h-8 w-8 text-primary" />
                 {t('location.title')}
               </h2>
-              
+
               <div className="space-y-6">
                 <div className="bg-card border rounded-lg p-6">
                   <h3 className="text-lg font-semibold text-card-foreground mb-3">
                     {t('location.address')}
                   </h3>
                   <p className="text-muted-foreground mb-2">
-                    4415 Glenwood Rd<br />
+                    4415 Glenwood Rd
+                    <br />
                     Brooklyn, NY 11203
                   </p>
                   <div className="flex items-center gap-2 text-sm text-primary bg-primary/10 rounded-md p-3 mt-4">
                     <Car className="h-4 w-4" />
-                    <span className="font-medium">{t('location.entrance')}</span>
+                    <span className="font-medium">
+                      {t('location.entrance')}
+                    </span>
                   </div>
                 </div>
 
                 <Link
-                  href={"https://maps.google.com/?q=4415+Glenwood+Rd,+Brooklyn,+NY+11203" as any}
+                  href={
+                    'https://maps.google.com/?q=4415+Glenwood+Rd,+Brooklyn,+NY+11203' as any
+                  }
                   target="_blank"
                   rel="noopener noreferrer"
                   className="inline-flex items-center gap-2 bg-primary text-primary-foreground px-6 py-3 rounded-md font-semibold hover:bg-primary/90 transition-colors"
@@ -131,7 +138,9 @@ export default function PlanVisitPage() {
             <div className="bg-muted rounded-lg h-80 flex items-center justify-center">
               <div className="text-center">
                 <MapPin className="h-12 w-12 text-muted-foreground mx-auto mb-4" />
-                <p className="text-muted-foreground">{t('location.mapPlaceholder')}</p>
+                <p className="text-muted-foreground">
+                  {t('location.mapPlaceholder')}
+                </p>
               </div>
             </div>
           </div>
@@ -156,22 +165,30 @@ export default function PlanVisitPage() {
                 <div className="flex items-center gap-3">
                   <Clock className="h-5 w-5 text-primary" />
                   <div>
-                    <p className="font-medium">{t('schedule.morning.sunSchool')}</p>
+                    <p className="font-medium">
+                      {t('schedule.morning.sunSchool')}
+                    </p>
                     <p className="text-sm text-muted-foreground">8:00 AM</p>
                   </div>
                 </div>
                 <div className="flex items-center gap-3">
                   <Users className="h-5 w-5 text-primary" />
                   <div>
-                    <p className="font-medium">{t('schedule.morning.worship')}</p>
-                    <p className="text-sm text-muted-foreground">9:00 AM - 11:30 AM</p>
+                    <p className="font-medium">
+                      {t('schedule.morning.worship')}
+                    </p>
+                    <p className="text-sm text-muted-foreground">
+                      9:00 AM - 11:30 AM
+                    </p>
                   </div>
                 </div>
                 <div className="flex items-center gap-3">
                   <Languages className="h-5 w-5 text-primary" />
                   <div>
                     <p className="font-medium">{t('schedule.language')}</p>
-                    <p className="text-sm text-muted-foreground">{t('schedule.morning.language')}</p>
+                    <p className="text-sm text-muted-foreground">
+                      {t('schedule.morning.language')}
+                    </p>
                   </div>
                 </div>
               </div>
@@ -194,14 +211,18 @@ export default function PlanVisitPage() {
                   <Users className="h-5 w-5 text-primary" />
                   <div>
                     <p className="font-medium">{t('schedule.youth.service')}</p>
-                    <p className="text-sm text-muted-foreground">12:30 PM - 2:30 PM</p>
+                    <p className="text-sm text-muted-foreground">
+                      12:30 PM - 2:30 PM
+                    </p>
                   </div>
                 </div>
                 <div className="flex items-center gap-3">
                   <Languages className="h-5 w-5 text-primary" />
                   <div>
                     <p className="font-medium">{t('schedule.language')}</p>
-                    <p className="text-sm text-muted-foreground">{t('schedule.youth.language')}</p>
+                    <p className="text-sm text-muted-foreground">
+                      {t('schedule.youth.language')}
+                    </p>
                   </div>
                 </div>
               </div>
@@ -282,7 +303,7 @@ export default function PlanVisitPage() {
               {t('contact.description')}
             </p>
             <Link
-              href={"/contact" as any}
+              href={'/contact' as any}
               className="inline-flex items-center gap-2 bg-primary text-primary-foreground px-6 py-3 rounded-md font-semibold hover:bg-primary/90 transition-colors"
             >
               <Users className="h-5 w-5" />

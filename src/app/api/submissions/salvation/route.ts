@@ -6,7 +6,7 @@ import path from 'path';
 export async function POST(request: NextRequest) {
   try {
     const data = await request.json();
-    
+
     // Add timestamp and ID
     const submission = {
       id: Date.now().toString(),
@@ -30,10 +30,10 @@ export async function POST(request: NextRequest) {
     // This would require setting up Resend API key
     console.log('Salvation form submitted:', submission.id);
 
-    return NextResponse.json({ 
-      success: true, 
+    return NextResponse.json({
+      success: true,
       message: 'Form submitted successfully',
-      id: submission.id 
+      id: submission.id,
     });
   } catch (error) {
     console.error('Error processing salvation form:', error);

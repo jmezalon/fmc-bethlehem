@@ -875,16 +875,16 @@
       "title": "Get in Touch",
       "address": {
         "title": "Address",
-        "street": "123 Church Street",
-        "city": "Bethlehem, PA 18015"
+        "street": "4415 Glenwood Road",
+        "city": "Brooklyn, NY 11203"
       },
       "phone": {
         "title": "Phone",
-        "number": "(610) 555-0123"
+        "number": "(929) 343-9393"
       },
       "email": {
         "title": "Email",
-        "address": "info@fmcbethlehem.org"
+        "address": "methodistchurch1993@gmail.com"
       },
       "hours": {
         "title": "Office Hours",
@@ -910,7 +910,7 @@
     },
     "map": {
       "title": "Find Us",
-      "subtitle": "Visit us at our location in the heart of Bethlehem",
+      "subtitle": "Visit us at our location in the heart of Brooklyn",
       "placeholder": "Interactive map will be displayed here"
     }
   }

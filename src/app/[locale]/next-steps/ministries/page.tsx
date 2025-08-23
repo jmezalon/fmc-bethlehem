@@ -19,14 +19,20 @@ const ministriesSchema = z.object({
   email: z.string().email('Please enter a valid email address'),
   phone: z.string().min(10, 'Please enter a valid phone number'),
   age: z.string().min(1, 'Please select your age range'),
-  primaryMinistry: z.string().min(1, 'Please select a primary ministry interest'),
+  primaryMinistry: z
+    .string()
+    .min(1, 'Please select a primary ministry interest'),
   secondaryMinistries: z.array(z.string()).optional(),
   experience: z.string().optional(),
   skills: z.string().optional(),
   availability: z.string().min(1, 'Please select your availability'),
   timeCommitment: z.string().min(1, 'Please select your time commitment'),
-  motivation: z.string().min(10, 'Please explain your motivation (at least 10 characters)'),
-  backgroundCheck: z.boolean().refine(val => val === true, 'Background check consent is required'),
+  motivation: z
+    .string()
+    .min(10, 'Please explain your motivation (at least 10 characters)'),
+  backgroundCheck: z
+    .boolean()
+    .refine(val => val === true, 'Background check consent is required'),
   additionalInfo: z.string().optional(),
 });
 
@@ -91,7 +97,10 @@ export default function MinistriesPage() {
     { value: 'outreach', label: t('form.ministryOptions.outreach') },
     { value: 'prayer', label: t('form.ministryOptions.prayer') },
     { value: 'media', label: t('form.ministryOptions.media') },
-    { value: 'administration', label: t('form.ministryOptions.administration') },
+    {
+      value: 'administration',
+      label: t('form.ministryOptions.administration'),
+    },
     { value: 'maintenance', label: t('form.ministryOptions.maintenance') },
     { value: 'counseling', label: t('form.ministryOptions.counseling') },
   ];
@@ -108,7 +117,10 @@ export default function MinistriesPage() {
     { value: '1-2-hours', label: t('form.timeCommitmentOptions.1to2hours') },
     { value: '3-5-hours', label: t('form.timeCommitmentOptions.3to5hours') },
     { value: '6-10-hours', label: t('form.timeCommitmentOptions.6to10hours') },
-    { value: '10-plus-hours', label: t('form.timeCommitmentOptions.10plusHours') },
+    {
+      value: '10-plus-hours',
+      label: t('form.timeCommitmentOptions.10plusHours'),
+    },
   ];
 
   return (
@@ -125,7 +137,7 @@ export default function MinistriesPage() {
               {t('backToNextSteps')}
             </Link>
           </div>
-          
+
           <div className="flex items-center gap-4">
             <div className="w-12 h-12 rounded-lg bg-purple-500 flex items-center justify-center">
               <HandHeart className="h-6 w-6 text-white" />
@@ -134,9 +146,7 @@ export default function MinistriesPage() {
               <h1 className="text-3xl font-bold text-foreground mb-2">
                 {t('title')}
               </h1>
-              <p className="text-muted-foreground">
-                {t('subtitle')}
-              </p>
+              <p className="text-muted-foreground">{t('subtitle')}</p>
             </div>
           </div>
         </Container>
@@ -159,9 +169,7 @@ export default function MinistriesPage() {
                 <h2 className="text-2xl font-semibold text-card-foreground mb-2">
                   {t('form.title')}
                 </h2>
-                <p className="text-muted-foreground">
-                  {t('form.description')}
-                </p>
+                <p className="text-muted-foreground">{t('form.description')}</p>
               </div>
 
               <form onSubmit={handleSubmit(onSubmit)} className="space-y-6">
@@ -170,7 +178,7 @@ export default function MinistriesPage() {
                   <h3 className="text-lg font-medium text-foreground">
                     {t('form.personalInfo')}
                   </h3>
-                  
+
                   <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                     <FormField
                       label={t('form.firstName')}
@@ -293,13 +301,18 @@ export default function MinistriesPage() {
                       {...register('backgroundCheck')}
                       className="mt-1 h-4 w-4 text-purple-600 focus:ring-purple-500 border-gray-300 rounded"
                     />
-                    <label htmlFor="backgroundCheck" className="text-sm text-foreground">
+                    <label
+                      htmlFor="backgroundCheck"
+                      className="text-sm text-foreground"
+                    >
                       {t('form.backgroundCheckConsent')}
                       <span className="text-red-500 ml-1">*</span>
                     </label>
                   </div>
                   {errors.backgroundCheck && (
-                    <p className="text-sm text-red-500">{errors.backgroundCheck.message}</p>
+                    <p className="text-sm text-red-500">
+                      {errors.backgroundCheck.message}
+                    </p>
                   )}
 
                   <TextareaField

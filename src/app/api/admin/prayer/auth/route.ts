@@ -3,10 +3,10 @@ import { NextRequest, NextResponse } from 'next/server';
 export async function POST(request: NextRequest) {
   try {
     const { secret } = await request.json();
-    
+
     // Check against environment variable
     const adminSecret = process.env.PRAYER_ADMIN_SECRET || 'prayer-admin-2024';
-    
+
     if (secret === adminSecret) {
       return NextResponse.json({ success: true });
     } else {

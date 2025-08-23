@@ -17,7 +17,9 @@ import Link from 'next/link';
 const prayerSchema = z.object({
   name: z.string().optional(),
   email: z.string().email('Please enter a valid email address'),
-  request: z.string().min(10, 'Please share more details about your prayer request'),
+  request: z
+    .string()
+    .min(10, 'Please share more details about your prayer request'),
   isPublic: z.boolean().default(false),
 });
 
@@ -63,7 +65,9 @@ export default function PrayerPage() {
       }
     } catch (error) {
       console.error('Error submitting prayer:', error);
-      alert('There was an error submitting your prayer request. Please try again.');
+      alert(
+        'There was an error submitting your prayer request. Please try again.'
+      );
     } finally {
       setIsSubmitting(false);
     }
@@ -78,10 +82,7 @@ export default function PrayerPage() {
             message={t('success.message')}
           />
           <div className="text-center mt-8">
-            <Button
-              onClick={() => setIsSubmitted(false)}
-              variant="outline"
-            >
+            <Button onClick={() => setIsSubmitted(false)} variant="outline">
               {t('submitAnother')}
             </Button>
           </div>
@@ -119,12 +120,10 @@ export default function PrayerPage() {
                 <h3 className="font-semibold text-gray-900 mb-1">
                   {t('wall.title')}
                 </h3>
-                <p className="text-gray-600 text-sm">
-                  {t('wall.description')}
-                </p>
+                <p className="text-gray-600 text-sm">{t('wall.description')}</p>
               </div>
               <Link
-                href={"/prayer/wall" as any}
+                href={'/prayer/wall' as any}
                 className="bg-blue-600 text-white px-4 py-2 rounded-md hover:bg-blue-700 transition-colors text-sm font-medium"
               >
                 {t('wall.visit')}
@@ -139,9 +138,7 @@ export default function PrayerPage() {
                 <h2 className="text-2xl font-semibold text-gray-900">
                   {t('form.title')}
                 </h2>
-                <p className="text-gray-600">
-                  {t('form.description')}
-                </p>
+                <p className="text-gray-600">{t('form.description')}</p>
               </div>
 
               {/* Personal Information */}
@@ -149,7 +146,7 @@ export default function PrayerPage() {
                 <h3 className="text-lg font-medium text-gray-900">
                   {t('form.personalInfo')}
                 </h3>
-                
+
                 <FormField
                   label={t('form.name')}
                   error={errors.name?.message}
@@ -190,13 +187,15 @@ export default function PrayerPage() {
                 <h3 className="text-lg font-medium text-gray-900">
                   {t('form.privacy')}
                 </h3>
-                
+
                 <div className="bg-gray-50 rounded-lg p-4">
                   <div className="flex items-start space-x-3">
                     <Checkbox
                       id="isPublic"
                       checked={isPublic}
-                      onCheckedChange={(checked: boolean) => setValue('isPublic', !!checked)}
+                      onCheckedChange={(checked: boolean) =>
+                        setValue('isPublic', !!checked)
+                      }
                     />
                     <div className="flex-1">
                       <label
@@ -210,7 +209,7 @@ export default function PrayerPage() {
                       </p>
                     </div>
                   </div>
-                  
+
                   {!isPublic && (
                     <div className="flex items-center gap-2 mt-3 text-xs text-gray-500">
                       <Lock className="h-3 w-3" />

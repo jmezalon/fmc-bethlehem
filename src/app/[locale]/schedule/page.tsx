@@ -30,23 +30,23 @@ export default function SchedulePage() {
           title: t('sunday.sunSchool'),
           description: t('sunday.sunSchoolDesc'),
           icon: BookOpen,
-          type: 'regular'
+          type: 'regular',
         },
         {
           time: '9:00 - 11:30 AM',
           title: t('sunday.morningWorship'),
           description: t('sunday.morningWorshipDesc'),
           icon: Heart,
-          type: 'worship'
+          type: 'worship',
         },
         {
           time: '12:30 - 2:30 PM',
           title: t('sunday.afternoonWorship'),
           description: t('sunday.afternoonWorshipDesc'),
           icon: Users,
-          type: 'worship'
-        }
-      ]
+          type: 'worship',
+        },
+      ],
     },
     {
       day: 'monday',
@@ -56,23 +56,23 @@ export default function SchedulePage() {
           title: t('monday.kaseChenn'),
           description: t('monday.kaseChennDesc'),
           icon: Heart,
-          type: 'prayer'
+          type: 'prayer',
         },
         {
           time: '5:30 - 7:00 PM',
           title: t('monday.youthBible'),
           description: t('monday.youthBibleDesc'),
           icon: Users,
-          type: 'study'
+          type: 'study',
         },
         {
           time: '7:15 - 9:00 PM',
           title: t('monday.generalBible'),
           description: t('monday.generalBibleDesc'),
           icon: BookOpen,
-          type: 'study'
-        }
-      ]
+          type: 'study',
+        },
+      ],
     },
     {
       day: 'tuesday',
@@ -82,9 +82,9 @@ export default function SchedulePage() {
           title: t('multiDay.prayer'),
           description: t('multiDay.prayerDesc'),
           icon: Video,
-          type: 'online'
-        }
-      ]
+          type: 'online',
+        },
+      ],
     },
     {
       day: 'wednesday',
@@ -94,16 +94,16 @@ export default function SchedulePage() {
           title: t('multiDay.prayer'),
           description: t('multiDay.prayerDesc'),
           icon: Video,
-          type: 'online'
+          type: 'online',
         },
         {
           time: '7:00 - 9:30 PM',
           title: t('wednesday.combat'),
           description: t('wednesday.combatDesc'),
           icon: Zap,
-          type: 'prayer'
-        }
-      ]
+          type: 'prayer',
+        },
+      ],
     },
     {
       day: 'thursday',
@@ -113,9 +113,9 @@ export default function SchedulePage() {
           title: t('multiDay.prayer'),
           description: t('multiDay.prayerDesc'),
           icon: Video,
-          type: 'online'
-        }
-      ]
+          type: 'online',
+        },
+      ],
     },
     {
       day: 'friday',
@@ -125,10 +125,10 @@ export default function SchedulePage() {
           title: t('multiDay.prayer'),
           description: t('multiDay.prayerDesc'),
           icon: Video,
-          type: 'online'
-        }
-      ]
-    }
+          type: 'online',
+        },
+      ],
+    },
   ];
 
   const specialEvents = [
@@ -137,26 +137,33 @@ export default function SchedulePage() {
       description: t('special.communion.description'),
       frequency: t('special.communion.frequency'),
       icon: Crown,
-      type: 'communion'
+      type: 'communion',
     },
     {
       title: t('special.watchNight.title'),
       description: t('special.watchNight.description'),
       frequency: t('special.watchNight.frequency'),
       icon: Moon,
-      type: 'watchnight'
-    }
+      type: 'watchnight',
+    },
   ];
 
   const getEventTypeColor = (type: string) => {
     switch (type) {
-      case 'worship': return 'bg-primary/10 text-primary border-primary/20';
-      case 'prayer': return 'bg-red-50 text-red-700 border-red-200';
-      case 'study': return 'bg-blue-50 text-blue-700 border-blue-200';
-      case 'online': return 'bg-green-50 text-green-700 border-green-200';
-      case 'communion': return 'bg-purple-50 text-purple-700 border-purple-200';
-      case 'watchnight': return 'bg-indigo-50 text-indigo-700 border-indigo-200';
-      default: return 'bg-muted text-muted-foreground border-border';
+      case 'worship':
+        return 'bg-primary/10 text-primary border-primary/20';
+      case 'prayer':
+        return 'bg-red-50 text-red-700 border-red-200';
+      case 'study':
+        return 'bg-blue-50 text-blue-700 border-blue-200';
+      case 'online':
+        return 'bg-green-50 text-green-700 border-green-200';
+      case 'communion':
+        return 'bg-purple-50 text-purple-700 border-purple-200';
+      case 'watchnight':
+        return 'bg-indigo-50 text-indigo-700 border-indigo-200';
+      default:
+        return 'bg-muted text-muted-foreground border-border';
     }
   };
 
@@ -184,27 +191,39 @@ export default function SchedulePage() {
           </h2>
 
           <div className="space-y-8">
-            {weeklySchedule.map((daySchedule) => (
-              <div key={daySchedule.day} className="bg-card border rounded-lg p-6">
+            {weeklySchedule.map(daySchedule => (
+              <div
+                key={daySchedule.day}
+                className="bg-card border rounded-lg p-6"
+              >
                 <h3 className="text-2xl font-semibold text-card-foreground mb-4 flex items-center gap-3">
                   <Calendar className="h-6 w-6 text-primary" />
                   {t(`days.${daySchedule.day}`)}
                 </h3>
-                
+
                 <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
                   {daySchedule.events.map((event, index) => {
                     const IconComponent = event.icon;
                     return (
-                      <div key={index} className={`border rounded-lg p-4 ${getEventTypeColor(event.type)}`}>
+                      <div
+                        key={index}
+                        className={`border rounded-lg p-4 ${getEventTypeColor(event.type)}`}
+                      >
                         <div className="flex items-start gap-3">
                           <IconComponent className="h-5 w-5 mt-1 flex-shrink-0" />
                           <div className="flex-1">
                             <div className="flex items-center gap-2 mb-2">
                               <Clock className="h-4 w-4" />
-                              <span className="text-sm font-medium">{event.time}</span>
+                              <span className="text-sm font-medium">
+                                {event.time}
+                              </span>
                             </div>
-                            <h4 className="font-semibold mb-1">{event.title}</h4>
-                            <p className="text-sm opacity-90">{event.description}</p>
+                            <h4 className="font-semibold mb-1">
+                              {event.title}
+                            </h4>
+                            <p className="text-sm opacity-90">
+                              {event.description}
+                            </p>
                           </div>
                         </div>
                       </div>
@@ -228,16 +247,24 @@ export default function SchedulePage() {
             <p className="text-muted-foreground mb-8">
               {t('zoom.description')}
             </p>
-            
+
             <div className="bg-card border rounded-lg p-6">
               <div className="grid grid-cols-1 md:grid-cols-2 gap-4 text-left">
                 <div>
-                  <h4 className="font-semibold text-card-foreground mb-2">{t('zoom.meetingId')}</h4>
-                  <p className="text-lg font-mono bg-muted px-3 py-2 rounded">457 357 0961</p>
+                  <h4 className="font-semibold text-card-foreground mb-2">
+                    {t('zoom.meetingId')}
+                  </h4>
+                  <p className="text-lg font-mono bg-muted px-3 py-2 rounded">
+                    457 357 0961
+                  </p>
                 </div>
                 <div>
-                  <h4 className="font-semibold text-card-foreground mb-2">{t('zoom.passcode')}</h4>
-                  <p className="text-lg font-mono bg-muted px-3 py-2 rounded">a5ia6i</p>
+                  <h4 className="font-semibold text-card-foreground mb-2">
+                    {t('zoom.passcode')}
+                  </h4>
+                  <p className="text-lg font-mono bg-muted px-3 py-2 rounded">
+                    a5ia6i
+                  </p>
                 </div>
               </div>
               <p className="text-sm text-muted-foreground mt-4">
@@ -259,13 +286,20 @@ export default function SchedulePage() {
             {specialEvents.map((event, index) => {
               const IconComponent = event.icon;
               return (
-                <div key={index} className={`border rounded-lg p-6 ${getEventTypeColor(event.type)}`}>
+                <div
+                  key={index}
+                  className={`border rounded-lg p-6 ${getEventTypeColor(event.type)}`}
+                >
                   <div className="flex items-start gap-4">
                     <IconComponent className="h-8 w-8 flex-shrink-0" />
                     <div>
-                      <h3 className="text-xl font-semibold mb-2">{event.title}</h3>
+                      <h3 className="text-xl font-semibold mb-2">
+                        {event.title}
+                      </h3>
                       <p className="mb-3">{event.description}</p>
-                      <p className="text-sm font-medium opacity-90">{event.frequency}</p>
+                      <p className="text-sm font-medium opacity-90">
+                        {event.frequency}
+                      </p>
                     </div>
                   </div>
                 </div>
@@ -281,7 +315,7 @@ export default function SchedulePage() {
           <h2 className="text-3xl font-bold text-foreground mb-8 text-center">
             {t('pastors.title')}
           </h2>
-          
+
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-2xl mx-auto">
             <div className="text-center bg-card border rounded-lg p-6">
               <div className="w-16 h-16 bg-primary/10 rounded-full flex items-center justify-center mx-auto mb-4">
@@ -290,9 +324,11 @@ export default function SchedulePage() {
               <h3 className="text-xl font-semibold text-card-foreground mb-2">
                 {t('pastors.senior')}
               </h3>
-              <p className="text-lg text-primary font-medium">Rev. WidMarc Pierre</p>
+              <p className="text-lg text-primary font-medium">
+                Rev. WidMarc Pierre
+              </p>
             </div>
-            
+
             <div className="text-center bg-card border rounded-lg p-6">
               <div className="w-16 h-16 bg-primary/10 rounded-full flex items-center justify-center mx-auto mb-4">
                 <Users className="h-8 w-8 text-primary" />
@@ -300,7 +336,9 @@ export default function SchedulePage() {
               <h3 className="text-xl font-semibold text-card-foreground mb-2">
                 {t('pastors.associate')}
               </h3>
-              <p className="text-lg text-primary font-medium">Rev. Evans Pierre</p>
+              <p className="text-lg text-primary font-medium">
+                Rev. Evans Pierre
+              </p>
             </div>
           </div>
         </Container>
@@ -317,7 +355,7 @@ export default function SchedulePage() {
               {t('contact.description')}
             </p>
             <Link
-              href={"/plan-visit" as any}
+              href={'/plan-visit' as any}
               className="inline-flex items-center gap-2 bg-primary text-primary-foreground px-6 py-3 rounded-md font-semibold hover:bg-primary/90 transition-colors"
             >
               <Calendar className="h-5 w-5" />

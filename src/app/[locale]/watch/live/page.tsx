@@ -11,7 +11,7 @@ export default function LivePage() {
   const tCommon = useTranslations('common');
 
   // This would typically come from a CMS or environment variable
-  const liveVideoId = "dQw4w9WgXcQ"; // Replace with actual live stream video ID
+  const liveVideoId = 'dQw4w9WgXcQ'; // Replace with actual live stream video ID
   const isLive = true; // This would be determined by checking if stream is active
 
   const upcomingServices = [
@@ -19,20 +19,20 @@ export default function LivePage() {
       title: t('live.upcoming.sundayMorning'),
       time: t('live.upcoming.sundayMorningTime'),
       language: t('live.upcoming.creole'),
-      day: t('live.upcoming.sunday')
+      day: t('live.upcoming.sunday'),
     },
     {
       title: t('live.upcoming.sundayAfternoon'),
       time: t('live.upcoming.sundayAfternoonTime'),
       language: t('live.upcoming.englishCreole'),
-      day: t('live.upcoming.sunday')
+      day: t('live.upcoming.sunday'),
     },
     {
       title: t('live.upcoming.wednesdayPrayer'),
       time: t('live.upcoming.wednesdayTime'),
       language: t('live.upcoming.multiLang'),
-      day: t('live.upcoming.wednesday')
-    }
+      day: t('live.upcoming.wednesday'),
+    },
   ];
 
   return (
@@ -121,7 +121,7 @@ export default function LivePage() {
             <h2 className="text-3xl font-bold text-foreground mb-8 text-center">
               {t('live.upcoming.title')}
             </h2>
-            
+
             <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
               {upcomingServices.map((service, index) => (
                 <div key={index} className="bg-card border rounded-lg p-6">
@@ -161,13 +161,13 @@ export default function LivePage() {
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Link
-                href={"/watch/sermons" as any}
+                href={'/watch/sermons' as any}
                 className="inline-flex items-center gap-2 bg-primary text-primary-foreground px-6 py-3 rounded-md font-semibold hover:bg-primary/90 transition-colors"
               >
                 {t('live.cta.watchSermons')}
               </Link>
               <Link
-                href={"/plan-visit" as any}
+                href={'/plan-visit' as any}
                 className="inline-flex items-center gap-2 border border-input bg-background px-6 py-3 rounded-md font-semibold hover:bg-accent hover:text-accent-foreground transition-colors"
               >
                 {t('live.cta.planVisit')}

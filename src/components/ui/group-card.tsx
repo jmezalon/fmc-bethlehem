@@ -44,11 +44,14 @@ export function GroupCard({ group }: GroupCardProps) {
     const [hours, minutes] = timeString.split(':');
     const date = new Date();
     date.setHours(parseInt(hours), parseInt(minutes));
-    return date.toLocaleTimeString(locale === 'en' ? 'en-US' : locale === 'fr' ? 'fr-FR' : 'en-US', {
-      hour: 'numeric',
-      minute: '2-digit',
-      hour12: true
-    });
+    return date.toLocaleTimeString(
+      locale === 'en' ? 'en-US' : locale === 'fr' ? 'fr-FR' : 'en-US',
+      {
+        hour: 'numeric',
+        minute: '2-digit',
+        hour12: true,
+      }
+    );
   };
 
   const getCapacityStatus = () => {
@@ -76,22 +79,26 @@ export function GroupCard({ group }: GroupCardProps) {
                   {group.lifeStage}
                 </span>
                 {capacityStatus && (
-                  <span className={`inline-flex items-center px-2 py-1 rounded-full text-xs font-medium ${
-                    capacityStatus === 'full' 
-                      ? 'bg-red-100 text-red-700' 
+                  <span
+                    className={`inline-flex items-center px-2 py-1 rounded-full text-xs font-medium ${
+                      capacityStatus === 'full'
+                        ? 'bg-red-100 text-red-700'
+                        : capacityStatus === 'filling'
+                          ? 'bg-yellow-100 text-yellow-700'
+                          : 'bg-green-100 text-green-700'
+                    }`}
+                  >
+                    {capacityStatus === 'full'
+                      ? t('status.full')
                       : capacityStatus === 'filling'
-                      ? 'bg-yellow-100 text-yellow-700'
-                      : 'bg-green-100 text-green-700'
-                  }`}>
-                    {capacityStatus === 'full' ? t('status.full') : 
-                     capacityStatus === 'filling' ? t('status.filling') : 
-                     t('status.open')}
+                        ? t('status.filling')
+                        : t('status.open')}
                   </span>
                 )}
               </div>
             </div>
           </div>
-          
+
           <p className="text-muted-foreground text-sm line-clamp-2">
             {group.description[locale]}
           </p>
@@ -103,12 +110,12 @@ export function GroupCard({ group }: GroupCardProps) {
             <Calendar className="h-4 w-4" />
             <span>{group.dayOfWeek}</span>
           </div>
-          
+
           <div className="flex items-center gap-3 text-sm text-muted-foreground">
             <Clock className="h-4 w-4" />
             <span>{formatTime(group.time)}</span>
           </div>
-          
+
           <div className="flex items-center gap-3 text-sm text-muted-foreground">
             <Globe className="h-4 w-4" />
             <span>{group.language}</span>
@@ -122,7 +129,9 @@ export function GroupCard({ group }: GroupCardProps) {
           {group.capacity && group.currentMembers && (
             <div className="flex items-center gap-3 text-sm text-muted-foreground">
               <Users className="h-4 w-4" />
-              <span>{group.currentMembers}/{group.capacity} {t('members')}</span>
+              <span>
+                {group.currentMembers}/{group.capacity} {t('members')}
+              </span>
             </div>
           )}
         </div>
@@ -131,12 +140,14 @@ export function GroupCard({ group }: GroupCardProps) {
         <div className="pt-4 border-t border-border space-y-3">
           <div className="text-sm">
             <span className="font-medium text-foreground">{t('leader')}: </span>
-            <span className="text-muted-foreground">{group.leader[locale]}</span>
+            <span className="text-muted-foreground">
+              {group.leader[locale]}
+            </span>
           </div>
-          
+
           <div className="flex items-center gap-2">
             <Mail className="h-4 w-4 text-muted-foreground" />
-            <a 
+            <a
               href={`mailto:${group.contactEmail}`}
               className="text-sm text-primary hover:text-primary/80 transition-colors"
             >
@@ -156,7 +167,9 @@ export function GroupCard({ group }: GroupCardProps) {
             }`}
           >
             <Mail className="h-4 w-4" />
-            {capacityStatus === 'full' ? t('actions.waitlist') : t('actions.contact')}
+            {capacityStatus === 'full'
+              ? t('actions.waitlist')
+              : t('actions.contact')}
           </a>
         </div>
       </div>

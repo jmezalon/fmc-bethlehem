@@ -10,24 +10,26 @@ interface YouTubeEmbedProps {
   className?: string;
 }
 
-export function YouTubeEmbed({ 
-  videoId, 
-  title = "YouTube Video", 
+export function YouTubeEmbed({
+  videoId,
+  title = 'YouTube Video',
   autoplay = false,
-  className = ""
+  className = '',
 }: YouTubeEmbedProps) {
   const [isLoading, setIsLoading] = useState(true);
   const [showPlayer, setShowPlayer] = useState(autoplay);
 
-  const embedUrl = `https://www.youtube.com/embed/${videoId}?${new URLSearchParams({
-    autoplay: autoplay ? '1' : '0',
-    rel: '0',
-    modestbranding: '1',
-    fs: '1',
-    cc_load_policy: '0',
-    iv_load_policy: '3',
-    autohide: '0'
-  }).toString()}`;
+  const embedUrl = `https://www.youtube.com/embed/${videoId}?${new URLSearchParams(
+    {
+      autoplay: autoplay ? '1' : '0',
+      rel: '0',
+      modestbranding: '1',
+      fs: '1',
+      cc_load_policy: '0',
+      iv_load_policy: '3',
+      autohide: '0',
+    }
+  ).toString()}`;
 
   const thumbnailUrl = `https://img.youtube.com/vi/${videoId}/maxresdefault.jpg`;
 
@@ -42,12 +44,14 @@ export function YouTubeEmbed({
 
   if (!showPlayer) {
     return (
-      <div className={`relative bg-black rounded-lg overflow-hidden group cursor-pointer ${className}`}>
+      <div
+        className={`relative bg-black rounded-lg overflow-hidden group cursor-pointer ${className}`}
+      >
         <img
           src={thumbnailUrl}
           alt={title}
           className="w-full h-full object-cover"
-          onError={(e) => {
+          onError={e => {
             // Fallback to standard quality thumbnail if maxres fails
             e.currentTarget.src = `https://img.youtube.com/vi/${videoId}/hqdefault.jpg`;
           }}
@@ -67,7 +71,9 @@ export function YouTubeEmbed({
   }
 
   return (
-    <div className={`relative bg-black rounded-lg overflow-hidden ${className}`}>
+    <div
+      className={`relative bg-black rounded-lg overflow-hidden ${className}`}
+    >
       {isLoading && (
         <div className="absolute inset-0 flex items-center justify-center bg-black/50 z-10">
           <Loader2 className="h-8 w-8 text-white animate-spin" />

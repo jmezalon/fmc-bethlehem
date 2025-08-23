@@ -19,13 +19,16 @@ export interface GroupFilters {
   lifeStage: string;
 }
 
-export function GroupFilters({ onFiltersChange, availableFilters }: GroupFiltersProps) {
+export function GroupFilters({
+  onFiltersChange,
+  availableFilters,
+}: GroupFiltersProps) {
   const t = useTranslations('groups.filters');
-  
+
   const [filters, setFilters] = useState<GroupFilters>({
     dayOfWeek: '',
     language: '',
-    lifeStage: ''
+    lifeStage: '',
   });
 
   useEffect(() => {
@@ -40,7 +43,7 @@ export function GroupFilters({ onFiltersChange, availableFilters }: GroupFilters
     setFilters({
       dayOfWeek: '',
       language: '',
-      lifeStage: ''
+      lifeStage: '',
     });
   };
 
@@ -78,12 +81,14 @@ export function GroupFilters({ onFiltersChange, availableFilters }: GroupFilters
           </label>
           <select
             value={filters.dayOfWeek}
-            onChange={(e) => handleFilterChange('dayOfWeek', e.target.value)}
+            onChange={e => handleFilterChange('dayOfWeek', e.target.value)}
             className="w-full px-3 py-2 text-sm border border-input bg-background rounded-md focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent"
           >
             <option value="">{t('allDays')}</option>
             {availableFilters.daysOfWeek.map(day => (
-              <option key={day} value={day}>{day}</option>
+              <option key={day} value={day}>
+                {day}
+              </option>
             ))}
           </select>
         </div>
@@ -95,12 +100,14 @@ export function GroupFilters({ onFiltersChange, availableFilters }: GroupFilters
           </label>
           <select
             value={filters.language}
-            onChange={(e) => handleFilterChange('language', e.target.value)}
+            onChange={e => handleFilterChange('language', e.target.value)}
             className="w-full px-3 py-2 text-sm border border-input bg-background rounded-md focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent"
           >
             <option value="">{t('allLanguages')}</option>
             {availableFilters.languages.map(language => (
-              <option key={language} value={language}>{language}</option>
+              <option key={language} value={language}>
+                {language}
+              </option>
             ))}
           </select>
         </div>
@@ -112,12 +119,14 @@ export function GroupFilters({ onFiltersChange, availableFilters }: GroupFilters
           </label>
           <select
             value={filters.lifeStage}
-            onChange={(e) => handleFilterChange('lifeStage', e.target.value)}
+            onChange={e => handleFilterChange('lifeStage', e.target.value)}
             className="w-full px-3 py-2 text-sm border border-input bg-background rounded-md focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent"
           >
             <option value="">{t('allLifeStages')}</option>
             {availableFilters.lifeStages.map(stage => (
-              <option key={stage} value={stage}>{stage}</option>
+              <option key={stage} value={stage}>
+                {stage}
+              </option>
             ))}
           </select>
         </div>

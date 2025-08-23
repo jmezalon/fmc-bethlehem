@@ -3,7 +3,15 @@
 import { useTranslations } from 'next-intl';
 import { Container } from '@/components/ui/container';
 import { Button } from '@/components/ui/button';
-import { Heart, Smartphone, CreditCard, Shield, Receipt, HelpCircle, ExternalLink } from 'lucide-react';
+import {
+  Heart,
+  Smartphone,
+  CreditCard,
+  Shield,
+  Receipt,
+  HelpCircle,
+  ExternalLink,
+} from 'lucide-react';
 import Link from 'next/link';
 
 export default function GivePage() {
@@ -39,9 +47,7 @@ export default function GivePage() {
               <h2 className="text-2xl font-bold text-gray-900 mb-2">
                 {t('tithely.title')}
               </h2>
-              <p className="text-gray-600">
-                {t('tithely.description')}
-              </p>
+              <p className="text-gray-600">{t('tithely.description')}</p>
             </div>
 
             {/* Tithely Embed Placeholder */}
@@ -57,11 +63,14 @@ export default function GivePage() {
                   <p className="text-gray-600 mb-4">
                     {t('tithely.embedDescription')}
                   </p>
-                  <Button 
+                  <Button
                     className="bg-brandMaroon hover:bg-brandMaroon/90 text-white"
                     onClick={() => {
                       if (typeof window !== 'undefined') {
-                        window.open('https://tithe.ly/give_new/www/#/tithely/give-one-time/5891075', '_blank');
+                        window.open(
+                          'https://tithe.ly/give_new/www/#/tithely/give-one-time/5891075',
+                          '_blank'
+                        );
                       }
                     }}
                   >
@@ -84,7 +93,7 @@ export default function GivePage() {
                   {t('tithely.features.recurringDesc')}
                 </p>
               </div>
-              
+
               <div className="text-center">
                 <div className="w-10 h-10 bg-blue-100 rounded-lg flex items-center justify-center mx-auto mb-3">
                   <Smartphone className="h-5 w-5 text-blue-600" />
@@ -96,7 +105,7 @@ export default function GivePage() {
                   {t('tithely.features.textGiveDesc')}
                 </p>
               </div>
-              
+
               <div className="text-center">
                 <div className="w-10 h-10 bg-purple-100 rounded-lg flex items-center justify-center mx-auto mb-3">
                   <Receipt className="h-5 w-5 text-purple-600" />
@@ -138,7 +147,7 @@ export default function GivePage() {
             <h2 className="text-2xl font-bold text-gray-900 text-center mb-8">
               {t('alternatives.title')}
             </h2>
-            
+
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
               {/* Zelle Card */}
               <div className="bg-white rounded-lg shadow-sm border p-6">
@@ -155,7 +164,7 @@ export default function GivePage() {
                     </p>
                   </div>
                 </div>
-                
+
                 <div className="bg-gray-50 rounded-lg p-4 mb-4">
                   <div className="text-center">
                     <p className="text-sm text-gray-600 mb-1">
@@ -166,7 +175,7 @@ export default function GivePage() {
                     </p>
                   </div>
                 </div>
-                
+
                 <p className="text-xs text-gray-500">
                   {t('alternatives.zelle.note')}
                 </p>
@@ -187,7 +196,7 @@ export default function GivePage() {
                     </p>
                   </div>
                 </div>
-                
+
                 <div className="bg-gray-50 rounded-lg p-4 mb-4">
                   <div className="text-center">
                     <p className="text-sm text-gray-600 mb-1">
@@ -198,7 +207,7 @@ export default function GivePage() {
                     </p>
                   </div>
                 </div>
-                
+
                 <p className="text-xs text-gray-500">
                   {t('alternatives.cashApp.note')}
                 </p>
@@ -217,9 +226,7 @@ export default function GivePage() {
               <h2 className="text-2xl font-bold text-gray-900 mb-2">
                 {t('faq.title')}
               </h2>
-              <p className="text-gray-600">
-                {t('faq.subtitle')}
-              </p>
+              <p className="text-gray-600">{t('faq.subtitle')}</p>
             </div>
 
             <div className="space-y-6">

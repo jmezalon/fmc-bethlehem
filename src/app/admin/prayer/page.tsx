@@ -48,10 +48,10 @@ export default function AdminPrayerPage() {
     try {
       const response = await fetch('/api/admin/prayer', {
         headers: {
-          'Authorization': `Bearer ${secretKey}`,
+          Authorization: `Bearer ${secretKey}`,
         },
       });
-      
+
       if (response.ok) {
         const data = await response.json();
         setPrayers(data.prayers || []);
@@ -63,13 +63,16 @@ export default function AdminPrayerPage() {
     }
   };
 
-  const toggleVisibility = async (prayerId: string, currentVisibility: boolean) => {
+  const toggleVisibility = async (
+    prayerId: string,
+    currentVisibility: boolean
+  ) => {
     try {
       const response = await fetch('/api/admin/prayer/toggle', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
-          'Authorization': `Bearer ${secretKey}`,
+          Authorization: `Bearer ${secretKey}`,
         },
         body: JSON.stringify({
           prayerId,
@@ -78,11 +81,13 @@ export default function AdminPrayerPage() {
       });
 
       if (response.ok) {
-        setPrayers(prayers.map(prayer => 
-          prayer.id === prayerId 
-            ? { ...prayer, isPublic: !currentVisibility }
-            : prayer
-        ));
+        setPrayers(
+          prayers.map(prayer =>
+            prayer.id === prayerId
+              ? { ...prayer, isPublic: !currentVisibility }
+              : prayer
+          )
+        );
       }
     } catch (error) {
       console.error('Error toggling visibility:', error);
@@ -96,7 +101,7 @@ export default function AdminPrayerPage() {
       day: 'numeric',
       year: 'numeric',
       hour: '2-digit',
-      minute: '2-digit'
+      minute: '2-digit',
     });
   };
 
@@ -109,7 +114,9 @@ export default function AdminPrayerPage() {
               <Shield className="h-8 w-8 text-red-600" />
             </div>
             <h1 className="text-2xl font-bold text-gray-900">Admin Access</h1>
-            <p className="text-gray-600 mt-2">Enter the secret key to access prayer administration</p>
+            <p className="text-gray-600 mt-2">
+              Enter the secret key to access prayer administration
+            </p>
           </div>
 
           <div className="space-y-4">
@@ -120,10 +127,10 @@ export default function AdminPrayerPage() {
               <input
                 type="password"
                 value={secretKey}
-                onChange={(e) => setSecretKey(e.target.value)}
+                onChange={e => setSecretKey(e.target.value)}
                 className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"
                 placeholder="Enter secret key..."
-                onKeyPress={(e) => e.key === 'Enter' && authenticate()}
+                onKeyPress={e => e.key === 'Enter' && authenticate()}
               />
             </div>
 
@@ -152,8 +159,12 @@ export default function AdminPrayerPage() {
         <div className="mb-8">
           <div className="flex items-center justify-between">
             <div>
-              <h1 className="text-3xl font-bold text-gray-900">Prayer Administration</h1>
-              <p className="text-gray-600 mt-2">Manage prayer requests and visibility settings</p>
+              <h1 className="text-3xl font-bold text-gray-900">
+                Prayer Administration
+              </h1>
+              <p className="text-gray-600 mt-2">
+                Manage prayer requests and visibility settings
+              </p>
             </div>
             <div className="text-sm text-gray-500">
               Total: {prayers.length} prayers
@@ -169,7 +180,9 @@ export default function AdminPrayerPage() {
                 <Eye className="h-6 w-6 text-blue-600" />
               </div>
               <div className="ml-4">
-                <p className="text-sm font-medium text-gray-600">Public Prayers</p>
+                <p className="text-sm font-medium text-gray-600">
+                  Public Prayers
+                </p>
                 <p className="text-2xl font-bold text-gray-900">
                   {prayers.filter(p => p.isPublic).length}
                 </p>
@@ -183,7 +196,9 @@ export default function AdminPrayerPage() {
                 <EyeOff className="h-6 w-6 text-gray-600" />
               </div>
               <div className="ml-4">
-                <p className="text-sm font-medium text-gray-600">Private Prayers</p>
+                <p className="text-sm font-medium text-gray-600">
+                  Private Prayers
+                </p>
                 <p className="text-2xl font-bold text-gray-900">
                   {prayers.filter(p => !p.isPublic).length}
                 </p>
@@ -199,11 +214,13 @@ export default function AdminPrayerPage() {
               <div className="ml-4">
                 <p className="text-sm font-medium text-gray-600">This Week</p>
                 <p className="text-2xl font-bold text-gray-900">
-                  {prayers.filter(p => {
-                    const weekAgo = new Date();
-                    weekAgo.setDate(weekAgo.getDate() - 7);
-                    return new Date(p.submittedAt) > weekAgo;
-                  }).length}
+                  {
+                    prayers.filter(p => {
+                      const weekAgo = new Date();
+                      weekAgo.setDate(weekAgo.getDate() - 7);
+                      return new Date(p.submittedAt) > weekAgo;
+                    }).length
+                  }
                 </p>
               </div>
             </div>
@@ -213,7 +230,9 @@ export default function AdminPrayerPage() {
         {/* Prayer Requests */}
         <div className="bg-white rounded-lg shadow-sm border">
           <div className="px-6 py-4 border-b border-gray-200">
-            <h2 className="text-lg font-semibold text-gray-900">All Prayer Requests</h2>
+            <h2 className="text-lg font-semibold text-gray-900">
+              All Prayer Requests
+            </h2>
           </div>
 
           {isLoading ? (
@@ -227,7 +246,7 @@ export default function AdminPrayerPage() {
             </div>
           ) : (
             <div className="divide-y divide-gray-200">
-              {prayers.map((prayer) => (
+              {prayers.map(prayer => (
                 <div key={prayer.id} className="p-6">
                   <div className="flex items-start justify-between">
                     <div className="flex-1">
@@ -238,14 +257,16 @@ export default function AdminPrayerPage() {
                           <span className="font-medium text-gray-900">
                             {prayer.name || 'Anonymous'}
                           </span>
-                          <span className="text-gray-400">({prayer.initials})</span>
+                          <span className="text-gray-400">
+                            ({prayer.initials})
+                          </span>
                         </div>
-                        
+
                         <div className="flex items-center gap-2 text-sm text-gray-500">
                           <Mail className="h-4 w-4" />
                           {prayer.email}
                         </div>
-                        
+
                         <div className="flex items-center gap-2 text-sm text-gray-500">
                           <Calendar className="h-4 w-4" />
                           {formatDate(prayer.submittedAt)}
@@ -263,8 +284,10 @@ export default function AdminPrayerPage() {
                     {/* Visibility Toggle */}
                     <div className="ml-6">
                       <Button
-                        onClick={() => toggleVisibility(prayer.id, prayer.isPublic)}
-                        variant={prayer.isPublic ? "default" : "outline"}
+                        onClick={() =>
+                          toggleVisibility(prayer.id, prayer.isPublic)
+                        }
+                        variant={prayer.isPublic ? 'default' : 'outline'}
                         size="sm"
                         className="flex items-center gap-2"
                       >

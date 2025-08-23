@@ -43,7 +43,7 @@ export default function PrayerWallPage() {
     return date.toLocaleDateString('en-US', {
       month: 'short',
       day: 'numeric',
-      year: 'numeric'
+      year: 'numeric',
     });
   };
 
@@ -59,7 +59,7 @@ export default function PrayerWallPage() {
             <ArrowLeft className="h-4 w-4" />
             {t('wall.backToPrayer')}
           </Link>
-          
+
           <div className="flex justify-center mb-6">
             <div className="w-16 h-16 bg-blue-600 rounded-full flex items-center justify-center">
               <Users className="h-8 w-8 text-white" />
@@ -114,14 +114,12 @@ export default function PrayerWallPage() {
                 {t('wall.empty.description')}
               </p>
               <Link href="/prayer">
-                <Button>
-                  {t('wall.empty.firstPrayer')}
-                </Button>
+                <Button>{t('wall.empty.firstPrayer')}</Button>
               </Link>
             </div>
           ) : (
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-              {prayers.map((prayer) => (
+              {prayers.map(prayer => (
                 <div
                   key={prayer.id}
                   className="bg-white rounded-lg shadow-sm border p-6 hover:shadow-md transition-shadow"
@@ -139,11 +137,11 @@ export default function PrayerWallPage() {
                       </div>
                     </div>
                   </div>
-                  
+
                   <p className="text-gray-700 leading-relaxed">
                     {prayer.request}
                   </p>
-                  
+
                   <div className="mt-4 pt-4 border-t border-gray-100">
                     <p className="text-xs text-gray-500 italic">
                       {t('wall.prayerNote')}
@@ -159,9 +157,7 @@ export default function PrayerWallPage() {
         {prayers.length > 0 && (
           <div className="text-center mt-12 max-w-2xl mx-auto">
             <div className="bg-gray-50 rounded-lg p-6">
-              <p className="text-gray-600">
-                {t('wall.footerMessage')}
-              </p>
+              <p className="text-gray-600">{t('wall.footerMessage')}</p>
             </div>
           </div>
         )}

@@ -12,14 +12,19 @@ interface CalendarViewProps {
 export function CalendarView({ events, onEventClick }: CalendarViewProps) {
   const t = useTranslations('events.calendar');
   const locale = useLocale() as 'en' | 'ht' | 'fr';
-  
+
   const [currentDate, setCurrentDate] = useState(new Date());
 
   const monthNames = useMemo(() => {
     const names = [];
     for (let i = 0; i < 12; i++) {
       const date = new Date(2024, i, 1);
-      names.push(date.toLocaleDateString(locale === 'en' ? 'en-US' : locale === 'fr' ? 'fr-FR' : 'en-US', { month: 'long' }));
+      names.push(
+        date.toLocaleDateString(
+          locale === 'en' ? 'en-US' : locale === 'fr' ? 'fr-FR' : 'en-US',
+          { month: 'long' }
+        )
+      );
     }
     return names;
   }, [locale]);
@@ -30,7 +35,12 @@ export function CalendarView({ events, onEventClick }: CalendarViewProps) {
     for (let i = 0; i < 7; i++) {
       const date = new Date(startDate);
       date.setDate(startDate.getDate() + i);
-      names.push(date.toLocaleDateString(locale === 'en' ? 'en-US' : locale === 'fr' ? 'fr-FR' : 'en-US', { weekday: 'short' }));
+      names.push(
+        date.toLocaleDateString(
+          locale === 'en' ? 'en-US' : locale === 'fr' ? 'fr-FR' : 'en-US',
+          { weekday: 'short' }
+        )
+      );
     }
     return names;
   }, [locale]);
@@ -44,17 +54,17 @@ export function CalendarView({ events, onEventClick }: CalendarViewProps) {
     const startingDayOfWeek = firstDay.getDay();
 
     const days = [];
-    
+
     // Add empty cells for days before the first day of the month
     for (let i = 0; i < startingDayOfWeek; i++) {
       days.push(null);
     }
-    
+
     // Add all days of the month
     for (let day = 1; day <= daysInMonth; day++) {
       days.push(new Date(year, month, day));
     }
-    
+
     return days;
   };
 
@@ -102,7 +112,7 @@ export function CalendarView({ events, onEventClick }: CalendarViewProps) {
             {t('today')}
           </button>
         </div>
-        
+
         <div className="flex items-center gap-2">
           <button
             onClick={() => navigateMonth('prev')}
@@ -123,28 +133,35 @@ export function CalendarView({ events, onEventClick }: CalendarViewProps) {
       <div className="grid grid-cols-7 gap-1">
         {/* Day Headers */}
         {dayNames.map((day, index) => (
-          <div key={index} className="p-2 text-center text-sm font-medium text-muted-foreground">
+          <div
+            key={index}
+            className="p-2 text-center text-sm font-medium text-muted-foreground"
+          >
             {day}
           </div>
         ))}
-        
+
         {/* Calendar Days */}
         {days.map((date, index) => {
           const dayEvents = getEventsForDate(date);
           const isCurrentDay = isToday(date);
-          
+
           return (
             <div
               key={index}
               className={`min-h-[80px] p-1 border border-border/50 ${
-                date ? 'bg-background hover:bg-muted/50 cursor-pointer' : 'bg-muted/20'
+                date
+                  ? 'bg-background hover:bg-muted/50 cursor-pointer'
+                  : 'bg-muted/20'
               } ${isCurrentDay ? 'bg-primary/10 border-primary/30' : ''}`}
             >
               {date && (
                 <>
-                  <div className={`text-sm font-medium mb-1 ${
-                    isCurrentDay ? 'text-primary' : 'text-foreground'
-                  }`}>
+                  <div
+                    className={`text-sm font-medium mb-1 ${
+                      isCurrentDay ? 'text-primary' : 'text-foreground'
+                    }`}
+                  >
                     {date.getDate()}
                   </div>
                   <div className="space-y-1">

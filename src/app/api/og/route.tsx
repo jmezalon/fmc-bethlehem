@@ -21,7 +21,8 @@ export async function GET(request: NextRequest) {
             alignItems: 'center',
             justifyContent: 'center',
             backgroundColor: '#ffffff',
-            backgroundImage: 'linear-gradient(135deg, #667eea 0%, #764ba2 100%)',
+            backgroundImage:
+              'linear-gradient(135deg, #667eea 0%, #764ba2 100%)',
           }}
         >
           {/* Logo */}
@@ -136,12 +137,8 @@ export async function GET(request: NextRequest) {
               opacity: 0.8,
             }}
           >
-            <span style={{ fontSize: '20px' }}>
-              Free Methodist Church
-            </span>
-            <span style={{ fontSize: '20px' }}>
-              Brooklyn, NY
-            </span>
+            <span style={{ fontSize: '20px' }}>Free Methodist Church</span>
+            <span style={{ fontSize: '20px' }}>Brooklyn, NY</span>
           </div>
         </div>
       ),

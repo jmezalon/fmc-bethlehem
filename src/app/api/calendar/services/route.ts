@@ -5,13 +5,14 @@ export async function GET(request: NextRequest) {
   try {
     // Generate ICS content for service times
     const icsContent = generateServiceTimesICS(DEFAULT_SERVICE_TIMES);
-    
+
     // Return ICS file
     return new NextResponse(icsContent, {
       status: 200,
       headers: {
         'Content-Type': 'text/calendar; charset=utf-8',
-        'Content-Disposition': 'attachment; filename="fmc-bethlehem-services.ics"',
+        'Content-Disposition':
+          'attachment; filename="fmc-bethlehem-services.ics"',
         'Cache-Control': 'no-cache, no-store, must-revalidate',
       },
     });

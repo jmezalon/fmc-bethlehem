@@ -2,7 +2,14 @@
 
 import { useRef, useState } from 'react';
 import { useTranslations } from 'next-intl';
-import { Play, Pause, Volume2, VolumeX, Maximize, Settings } from 'lucide-react';
+import {
+  Play,
+  Pause,
+  Volume2,
+  VolumeX,
+  Maximize,
+  Settings,
+} from 'lucide-react';
 
 interface VideoPlayerProps {
   src: string;
@@ -17,7 +24,13 @@ interface VideoPlayerProps {
   className?: string;
 }
 
-export function VideoPlayer({ src, title, poster, captions = [], className = '' }: VideoPlayerProps) {
+export function VideoPlayer({
+  src,
+  title,
+  poster,
+  captions = [],
+  className = '',
+}: VideoPlayerProps) {
   const videoRef = useRef<HTMLVideoElement>(null);
   const [isPlaying, setIsPlaying] = useState(false);
   const [isMuted, setIsMuted] = useState(false);
@@ -53,7 +66,7 @@ export function VideoPlayer({ src, title, poster, captions = [], className = '' 
   };
 
   return (
-    <div 
+    <div
       className={`relative bg-black rounded-lg overflow-hidden ${className}`}
       onMouseEnter={() => setShowControls(true)}
       onMouseLeave={() => setShowControls(false)}
@@ -69,7 +82,7 @@ export function VideoPlayer({ src, title, poster, captions = [], className = '' 
         aria-label={tA11y('videoDescription', { title })}
         crossOrigin="anonymous"
       >
-        {captions.map((caption) => (
+        {captions.map(caption => (
           <track
             key={caption.language}
             kind="subtitles"
@@ -80,7 +93,7 @@ export function VideoPlayer({ src, title, poster, captions = [], className = '' 
           />
         ))}
         <p>
-          Your browser does not support the video tag. 
+          Your browser does not support the video tag.
           <a href={src} className="text-primary underline">
             Download the video
           </a>
@@ -95,7 +108,9 @@ export function VideoPlayer({ src, title, poster, captions = [], className = '' 
               <button
                 onClick={togglePlay}
                 className="p-2 rounded-full bg-white/20 hover:bg-white/30 transition-colors focus:outline-none focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-black/50"
-                aria-label={isPlaying ? tA11y('pauseVideo') : tA11y('playVideo')}
+                aria-label={
+                  isPlaying ? tA11y('pauseVideo') : tA11y('playVideo')
+                }
               >
                 {isPlaying ? (
                   <Pause className="h-5 w-5" />

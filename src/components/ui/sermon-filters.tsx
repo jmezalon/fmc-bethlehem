@@ -24,16 +24,19 @@ export interface SermonFilters {
   year: string;
 }
 
-export function SermonFilters({ onFiltersChange, availableFilters }: SermonFiltersProps) {
+export function SermonFilters({
+  onFiltersChange,
+  availableFilters,
+}: SermonFiltersProps) {
   const t = useTranslations('watch.sermons.filters');
-  
+
   const [filters, setFilters] = useState<SermonFilters>({
     search: '',
     series: '',
     topic: '',
     language: '',
     speaker: '',
-    year: ''
+    year: '',
   });
 
   const [showFilters, setShowFilters] = useState(false);
@@ -53,7 +56,7 @@ export function SermonFilters({ onFiltersChange, availableFilters }: SermonFilte
       topic: '',
       language: '',
       speaker: '',
-      year: ''
+      year: '',
     });
   };
 
@@ -68,7 +71,7 @@ export function SermonFilters({ onFiltersChange, availableFilters }: SermonFilte
           type="text"
           placeholder={t('searchPlaceholder')}
           value={filters.search}
-          onChange={(e) => handleFilterChange('search', e.target.value)}
+          onChange={e => handleFilterChange('search', e.target.value)}
           className="w-full pl-10 pr-4 py-2 border border-input bg-background rounded-md focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent"
         />
       </div>
@@ -109,12 +112,14 @@ export function SermonFilters({ onFiltersChange, availableFilters }: SermonFilte
             </label>
             <select
               value={filters.series}
-              onChange={(e) => handleFilterChange('series', e.target.value)}
+              onChange={e => handleFilterChange('series', e.target.value)}
               className="w-full px-3 py-2 text-sm border border-input bg-background rounded-md focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent"
             >
               <option value="">{t('allSeries')}</option>
               {availableFilters.series.map(series => (
-                <option key={series} value={series}>{series}</option>
+                <option key={series} value={series}>
+                  {series}
+                </option>
               ))}
             </select>
           </div>
@@ -126,12 +131,14 @@ export function SermonFilters({ onFiltersChange, availableFilters }: SermonFilte
             </label>
             <select
               value={filters.topic}
-              onChange={(e) => handleFilterChange('topic', e.target.value)}
+              onChange={e => handleFilterChange('topic', e.target.value)}
               className="w-full px-3 py-2 text-sm border border-input bg-background rounded-md focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent"
             >
               <option value="">{t('allTopics')}</option>
               {availableFilters.topics.map(topic => (
-                <option key={topic} value={topic}>{topic}</option>
+                <option key={topic} value={topic}>
+                  {topic}
+                </option>
               ))}
             </select>
           </div>
@@ -143,12 +150,14 @@ export function SermonFilters({ onFiltersChange, availableFilters }: SermonFilte
             </label>
             <select
               value={filters.language}
-              onChange={(e) => handleFilterChange('language', e.target.value)}
+              onChange={e => handleFilterChange('language', e.target.value)}
               className="w-full px-3 py-2 text-sm border border-input bg-background rounded-md focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent"
             >
               <option value="">{t('allLanguages')}</option>
               {availableFilters.languages.map(language => (
-                <option key={language} value={language}>{language}</option>
+                <option key={language} value={language}>
+                  {language}
+                </option>
               ))}
             </select>
           </div>
@@ -160,12 +169,14 @@ export function SermonFilters({ onFiltersChange, availableFilters }: SermonFilte
             </label>
             <select
               value={filters.speaker}
-              onChange={(e) => handleFilterChange('speaker', e.target.value)}
+              onChange={e => handleFilterChange('speaker', e.target.value)}
               className="w-full px-3 py-2 text-sm border border-input bg-background rounded-md focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent"
             >
               <option value="">{t('allSpeakers')}</option>
               {availableFilters.speakers.map(speaker => (
-                <option key={speaker} value={speaker}>{speaker}</option>
+                <option key={speaker} value={speaker}>
+                  {speaker}
+                </option>
               ))}
             </select>
           </div>
@@ -177,12 +188,14 @@ export function SermonFilters({ onFiltersChange, availableFilters }: SermonFilte
             </label>
             <select
               value={filters.year}
-              onChange={(e) => handleFilterChange('year', e.target.value)}
+              onChange={e => handleFilterChange('year', e.target.value)}
               className="w-full px-3 py-2 text-sm border border-input bg-background rounded-md focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent"
             >
               <option value="">{t('allYears')}</option>
               {availableFilters.years.map(year => (
-                <option key={year} value={year.toString()}>{year}</option>
+                <option key={year} value={year.toString()}>
+                  {year}
+                </option>
               ))}
             </select>
           </div>

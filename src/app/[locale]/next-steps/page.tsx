@@ -13,7 +13,7 @@ export default function NextStepsPage() {
       description: t('salvation.description'),
       icon: Cross,
       href: '/next-steps/salvation',
-      color: 'bg-red-500'
+      color: 'bg-red-500',
     },
     {
       id: 'baptism',
@@ -21,7 +21,7 @@ export default function NextStepsPage() {
       description: t('baptism.description'),
       icon: Heart,
       href: '/next-steps/baptism',
-      color: 'bg-blue-500'
+      color: 'bg-blue-500',
     },
     {
       id: 'membership',
@@ -29,7 +29,7 @@ export default function NextStepsPage() {
       description: t('membership.description'),
       icon: Users,
       href: '/next-steps/membership',
-      color: 'bg-green-500'
+      color: 'bg-green-500',
     },
     {
       id: 'ministries',
@@ -37,7 +37,7 @@ export default function NextStepsPage() {
       description: t('ministries.description'),
       icon: HandHeart,
       href: '/next-steps/ministries',
-      color: 'bg-purple-500'
+      color: 'bg-purple-500',
     },
     {
       id: 'newMemberClass',
@@ -45,8 +45,8 @@ export default function NextStepsPage() {
       description: t('newMemberClass.description'),
       icon: GraduationCap,
       href: '/next-steps/new-member-class',
-      color: 'bg-orange-500'
-    }
+      color: 'bg-orange-500',
+    },
   ];
 
   return (
@@ -69,7 +69,7 @@ export default function NextStepsPage() {
       <section className="py-16">
         <Container>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {steps.map((step) => {
+            {steps.map(step => {
               const IconComponent = step.icon;
               return (
                 <Link
@@ -80,7 +80,9 @@ export default function NextStepsPage() {
                   <div className="bg-card border rounded-lg p-6 hover:shadow-lg transition-all duration-200 group-hover:border-primary/50">
                     <div className="space-y-4">
                       {/* Icon */}
-                      <div className={`w-12 h-12 rounded-lg ${step.color} flex items-center justify-center group-hover:scale-110 transition-transform duration-200`}>
+                      <div
+                        className={`w-12 h-12 rounded-lg ${step.color} flex items-center justify-center group-hover:scale-110 transition-transform duration-200`}
+                      >
                         <IconComponent className="h-6 w-6 text-white" />
                       </div>
 

@@ -9,7 +9,7 @@ export function generateOGImageUrl(params: {
     ...(params.subtitle && { subtitle: params.subtitle }),
     ...(params.type && { type: params.type }),
   });
-  
+
   return `${baseUrl}/api/og?${searchParams.toString()}`;
 }
 

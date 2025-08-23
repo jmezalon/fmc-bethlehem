@@ -9,7 +9,7 @@ export async function GET(request: NextRequest) {
     const authHeader = request.headers.get('authorization');
     const token = authHeader?.replace('Bearer ', '');
     const adminSecret = process.env.PRAYER_ADMIN_SECRET || 'prayer-admin-2024';
-    
+
     if (token !== adminSecret) {
       return NextResponse.json(
         { success: false, message: 'Unauthorized' },
@@ -18,7 +18,7 @@ export async function GET(request: NextRequest) {
     }
 
     const prayersFile = path.join(process.cwd(), 'data', 'prayers.json');
-    
+
     if (!existsSync(prayersFile)) {
       return NextResponse.json({ prayers: [] });
     }

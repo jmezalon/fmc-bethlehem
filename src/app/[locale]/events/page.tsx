@@ -21,17 +21,20 @@ export default function EventsPage() {
   const [selectedCategory, setSelectedCategory] = useState<string>('');
 
   // Get unique categories
-  const categories = Array.from(new Set(eventsData.map(event => event.category[locale])));
+  const categories = Array.from(
+    new Set(eventsData.map(event => event.category[locale]))
+  );
 
   // Filter events
   const filteredEvents = eventsData.filter(event => {
-    if (selectedCategory && event.category[locale] !== selectedCategory) return false;
+    if (selectedCategory && event.category[locale] !== selectedCategory)
+      return false;
     return true;
   });
 
   // Sort events by date
-  const sortedEvents = [...filteredEvents].sort((a, b) => 
-    new Date(a.date).getTime() - new Date(b.date).getTime()
+  const sortedEvents = [...filteredEvents].sort(
+    (a, b) => new Date(a.date).getTime() - new Date(b.date).getTime()
   );
 
   const handleExportICS = (event: any) => {
@@ -94,12 +97,14 @@ export default function EventsPage() {
               <Filter className="h-4 w-4 text-muted-foreground" />
               <select
                 value={selectedCategory}
-                onChange={(e) => setSelectedCategory(e.target.value)}
+                onChange={e => setSelectedCategory(e.target.value)}
                 className="px-3 py-2 text-sm border border-input bg-background rounded-md focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent"
               >
                 <option value="">{t('filters.allCategories')}</option>
                 {categories.map(category => (
-                  <option key={category} value={category}>{category}</option>
+                  <option key={category} value={category}>
+                    {category}
+                  </option>
                 ))}
               </select>
             </div>
@@ -176,7 +181,7 @@ export default function EventsPage() {
                 </button>
               </div>
             </div>
-            
+
             <div className="bg-background rounded-lg p-6 border">
               <CalendarSubscribe type="events" />
             </div>

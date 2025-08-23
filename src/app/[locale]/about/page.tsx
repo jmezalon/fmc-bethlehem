@@ -98,15 +98,9 @@ export default function AboutPage() {
             </div>
 
             <div className="prose prose-lg max-w-none text-muted-foreground">
-              <p className="mb-6">
-                {t('history.founding')}
-              </p>
-              <p className="mb-6">
-                {t('history.growth')}
-              </p>
-              <p>
-                {t('history.today')}
-              </p>
+              <p className="mb-6">{t('history.founding')}</p>
+              <p className="mb-6">{t('history.growth')}</p>
+              <p>{t('history.today')}</p>
             </div>
           </div>
         </Container>

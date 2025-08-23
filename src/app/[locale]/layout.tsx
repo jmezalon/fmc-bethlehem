@@ -6,7 +6,10 @@ import { notFound } from 'next/navigation';
 import { Header } from '@/components/ui/header';
 import { Footer } from '@/components/ui/footer';
 import { StructuredData } from '@/components/structured-data';
-import { generateOrganizationJsonLd, generateWebsiteJsonLd } from '@/lib/structured-data';
+import {
+  generateOrganizationJsonLd,
+  generateWebsiteJsonLd,
+} from '@/lib/structured-data';
 import '../globals.css';
 
 const inter = Inter({ subsets: ['latin'] });
@@ -27,8 +30,7 @@ export async function generateMetadata({
 
   return {
     title: seo?.title || 'FMCB',
-    description:
-      seo?.description || 'Welcome to FMCB - Your community church',
+    description: seo?.description || 'Welcome to FMCB - Your community church',
     keywords: ['church', 'community', 'bethlehem', 'faith', 'worship'],
     authors: [{ name: 'FMCB' }],
     creator: 'FMCB',

@@ -21,7 +21,12 @@ const baptismSchema = z.object({
   age: z.string().min(1, 'Please select your age range'),
   salvationDate: z.string().optional(),
   previousBaptism: z.string().min(1, 'Please select an option'),
-  baptismReason: z.string().min(10, 'Please explain why you want to be baptized (at least 10 characters)'),
+  baptismReason: z
+    .string()
+    .min(
+      10,
+      'Please explain why you want to be baptized (at least 10 characters)'
+    ),
   preferredDate: z.string().optional(),
   specialRequests: z.string().optional(),
   emergencyContact: z.string().min(1, 'Emergency contact is required'),
@@ -101,7 +106,7 @@ export default function BaptismPage() {
               {t('backToNextSteps')}
             </Link>
           </div>
-          
+
           <div className="flex items-center gap-4">
             <div className="w-12 h-12 rounded-lg bg-blue-500 flex items-center justify-center">
               <Heart className="h-6 w-6 text-white" />
@@ -110,9 +115,7 @@ export default function BaptismPage() {
               <h1 className="text-3xl font-bold text-foreground mb-2">
                 {t('title')}
               </h1>
-              <p className="text-muted-foreground">
-                {t('subtitle')}
-              </p>
+              <p className="text-muted-foreground">{t('subtitle')}</p>
             </div>
           </div>
         </Container>
@@ -135,9 +138,7 @@ export default function BaptismPage() {
                 <h2 className="text-2xl font-semibold text-card-foreground mb-2">
                   {t('form.title')}
                 </h2>
-                <p className="text-muted-foreground">
-                  {t('form.description')}
-                </p>
+                <p className="text-muted-foreground">{t('form.description')}</p>
               </div>
 
               <form onSubmit={handleSubmit(onSubmit)} className="space-y-6">
@@ -146,7 +147,7 @@ export default function BaptismPage() {
                   <h3 className="text-lg font-medium text-foreground">
                     {t('form.personalInfo')}
                   </h3>
-                  
+
                   <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                     <FormField
                       label={t('form.firstName')}

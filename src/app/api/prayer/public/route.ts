@@ -6,14 +6,14 @@ import path from 'path';
 export async function GET() {
   try {
     const prayersFile = path.join(process.cwd(), 'data', 'prayers.json');
-    
+
     if (!existsSync(prayersFile)) {
       return NextResponse.json({ prayers: [] });
     }
 
     const fileContent = await readFile(prayersFile, 'utf-8');
     const allPrayers = JSON.parse(fileContent);
-    
+
     // Filter only public prayers and remove sensitive information
     const publicPrayers = allPrayers
       .filter((prayer: any) => prayer.isPublic === true)

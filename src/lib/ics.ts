@@ -52,8 +52,8 @@ function escapeICSText(text: string): string {
 export function generateEventICS(event: ICSEvent): string {
   const now = new Date();
   const uid = `${event.id}@fmcbethlehem.org`;
-  
-  let ics = [
+
+  const ics = [
     'BEGIN:VCALENDAR',
     'VERSION:2.0',
     'PRODID:-//FMCB//Church Events//EN',
@@ -80,15 +80,12 @@ export function generateEventICS(event: ICSEvent): string {
   }
 
   if (event.organizer) {
-    ics.push(`ORGANIZER;CN=${escapeICSText(event.organizer.name)}:mailto:${event.organizer.email}`);
+    ics.push(
+      `ORGANIZER;CN=${escapeICSText(event.organizer.name)}:mailto:${event.organizer.email}`
+    );
   }
 
-  ics.push(
-    'STATUS:CONFIRMED',
-    'TRANSP:OPAQUE',
-    'END:VEVENT',
-    'END:VCALENDAR'
-  );
+  ics.push('STATUS:CONFIRMED', 'TRANSP:OPAQUE', 'END:VEVENT', 'END:VCALENDAR');
 
   return ics.join('\r\n');
 }
@@ -96,10 +93,13 @@ export function generateEventICS(event: ICSEvent): string {
 /**
  * Generates ICS content for multiple events
  */
-export function generateEventsICS(events: ICSEvent[], calendarName: string = 'FMCB Events'): string {
+export function generateEventsICS(
+  events: ICSEvent[],
+  calendarName: string = 'FMCB Events'
+): string {
   const now = new Date();
-  
-  let ics = [
+
+  const ics = [
     'BEGIN:VCALENDAR',
     'VERSION:2.0',
     'PRODID:-//FMCB//Church Events//EN',
@@ -112,7 +112,7 @@ export function generateEventsICS(events: ICSEvent[], calendarName: string = 'FM
 
   events.forEach(event => {
     const uid = `${event.id}@fmcbethlehem.org`;
-    
+
     ics.push(
       'BEGIN:VEVENT',
       `UID:${uid}`,
@@ -135,14 +135,12 @@ export function generateEventsICS(events: ICSEvent[], calendarName: string = 'FM
     }
 
     if (event.organizer) {
-      ics.push(`ORGANIZER;CN=${escapeICSText(event.organizer.name)}:mailto:${event.organizer.email}`);
+      ics.push(
+        `ORGANIZER;CN=${escapeICSText(event.organizer.name)}:mailto:${event.organizer.email}`
+      );
     }
 
-    ics.push(
-      'STATUS:CONFIRMED',
-      'TRANSP:OPAQUE',
-      'END:VEVENT'
-    );
+    ics.push('STATUS:CONFIRMED', 'TRANSP:OPAQUE', 'END:VEVENT');
   });
 
   ics.push('END:VCALENDAR');
@@ -154,8 +152,8 @@ export function generateEventsICS(events: ICSEvent[], calendarName: string = 'FM
  */
 export function generateServiceTimesICS(serviceTimes: ServiceTime[]): string {
   const now = new Date();
-  
-  let ics = [
+
+  const ics = [
     'BEGIN:VCALENDAR',
     'VERSION:2.0',
     'PRODID:-//FMCB//Service Times//EN',
@@ -168,23 +166,23 @@ export function generateServiceTimesICS(serviceTimes: ServiceTime[]): string {
 
   serviceTimes.forEach(service => {
     const uid = `service-${service.id}@fmcbethlehem.org`;
-    
+
     // Calculate next occurrence of this day of week
     const today = new Date();
     const daysUntilService = (service.dayOfWeek - today.getDay() + 7) % 7;
     const nextServiceDate = new Date(today);
     nextServiceDate.setDate(today.getDate() + daysUntilService);
-    
+
     // Parse start and end times
     const [startHour, startMinute] = service.startTime.split(':').map(Number);
     const [endHour, endMinute] = service.endTime.split(':').map(Number);
-    
+
     const startDateTime = new Date(nextServiceDate);
     startDateTime.setHours(startHour, startMinute, 0, 0);
-    
+
     const endDateTime = new Date(nextServiceDate);
     endDateTime.setHours(endHour, endMinute, 0, 0);
-    
+
     ics.push(
       'BEGIN:VEVENT',
       `UID:${uid}`,
@@ -192,7 +190,8 @@ export function generateServiceTimesICS(serviceTimes: ServiceTime[]): string {
       `DTSTART:${formatICSDate(startDateTime)}`,
       `DTEND:${formatICSDate(endDateTime)}`,
       `SUMMARY:${escapeICSText(service.name)}`,
-      'RRULE:FREQ=WEEKLY;BYDAY=' + ['SU', 'MO', 'TU', 'WE', 'TH', 'FR', 'SA'][service.dayOfWeek]
+      'RRULE:FREQ=WEEKLY;BYDAY=' +
+        ['SU', 'MO', 'TU', 'WE', 'TH', 'FR', 'SA'][service.dayOfWeek]
     );
 
     if (service.description) {
@@ -203,11 +202,7 @@ export function generateServiceTimesICS(serviceTimes: ServiceTime[]): string {
       ics.push(`LOCATION:${escapeICSText(service.location)}`);
     }
 
-    ics.push(
-      'STATUS:CONFIRMED',
-      'TRANSP:OPAQUE',
-      'END:VEVENT'
-    );
+    ics.push('STATUS:CONFIRMED', 'TRANSP:OPAQUE', 'END:VEVENT');
   });
 
   ics.push('END:VCALENDAR');
@@ -219,24 +214,27 @@ export function generateServiceTimesICS(serviceTimes: ServiceTime[]): string {
  */
 export function downloadICS(content: string, filename: string): void {
   if (typeof window === 'undefined') return;
-  
+
   const blob = new Blob([content], { type: 'text/calendar;charset=utf-8' });
   const url = window.URL.createObjectURL(blob);
-  
+
   const link = document.createElement('a');
   link.href = url;
   link.download = filename.endsWith('.ics') ? filename : `${filename}.ics`;
   document.body.appendChild(link);
   link.click();
   document.body.removeChild(link);
-  
+
   window.URL.revokeObjectURL(url);
 }
 
 /**
  * Converts event data from the events.json format to ICSEvent format
  */
-export function convertEventToICS(event: any, locale: 'en' | 'fr' | 'ht' = 'en'): ICSEvent {
+export function convertEventToICS(
+  event: any,
+  locale: 'en' | 'fr' | 'ht' = 'en'
+): ICSEvent {
   const startDate = new Date(event.date + 'T' + (event.time || '10:00'));
   const endDate = new Date(startDate);
   endDate.setHours(endDate.getHours() + 2); // Default 2-hour duration
@@ -250,8 +248,8 @@ export function convertEventToICS(event: any, locale: 'en' | 'fr' | 'ht' = 'en')
     endDate,
     organizer: {
       name: 'FMCB',
-      email: 'events@fmcbethlehem.org'
-    }
+      email: 'events@fmcbethlehem.org',
+    },
   };
 }
 
@@ -266,7 +264,8 @@ export const DEFAULT_SERVICE_TIMES: ServiceTime[] = [
     startTime: '10:00',
     endTime: '11:30',
     location: 'FMCB Sanctuary',
-    description: 'Join us for our weekly worship service with music, prayer, and biblical teaching.'
+    description:
+      'Join us for our weekly worship service with music, prayer, and biblical teaching.',
   },
   {
     id: 'monday-bible-study',
@@ -275,7 +274,7 @@ export const DEFAULT_SERVICE_TIMES: ServiceTime[] = [
     startTime: '19:00',
     endTime: '20:30',
     location: 'FMCB Fellowship Hall',
-    description: 'Weekly Bible study and discussion group.'
+    description: 'Weekly Bible study and discussion group.',
   },
   {
     id: 'wednesday-prayer',
@@ -284,6 +283,6 @@ export const DEFAULT_SERVICE_TIMES: ServiceTime[] = [
     startTime: '19:00',
     endTime: '20:00',
     location: 'FMCB Prayer Room',
-    description: 'Prayer, spiritual warfare, and intercession.'
-  }
+    description: 'Prayer, spiritual warfare, and intercession.',
+  },
 ];

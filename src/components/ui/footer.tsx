@@ -25,19 +25,21 @@ export function Footer() {
   };
 
   return (
-    <footer className="bg-muted/50 border-t" role="contentinfo">
+    <footer className="bg-white border-t" role="contentinfo">
       <Container>
         <div className="py-12">
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {/* Church Info & Address */}
             <div className="space-y-4">
-              <Link href={"/" as any} className="flex items-center space-x-2">
-                <img 
-                  src="/logo.jpeg" 
-                  alt="Free Methodist Church of Bethlehem Logo" 
+              <Link href={'/' as any} className="flex items-center space-x-2">
+                <img
+                  src="/logo.jpeg"
+                  alt="Free Methodist Church of Bethlehem Logo"
                   className="h-8 w-8"
                 />
-                <span className="font-bold text-lg text-foreground">Free Methodist Church of Bethlehem</span>
+                <span className="font-bold text-lg text-foreground">
+                  Free Methodist Church of Bethlehem
+                </span>
               </Link>
 
               <div className="space-y-2 text-sm text-muted-foreground">
@@ -74,9 +76,7 @@ export function Footer() {
                     {t('sundayWorship')}
                   </h4>
                   <p className="text-muted-foreground">{t('sunday')}</p>
-                  <p className="text-primary font-medium">
-                    9:00 - 11:30 AM
-                  </p>
+                  <p className="text-primary font-medium">9:00 - 11:30 AM</p>
                 </div>
 
                 {/* Sunday Afternoon Service */}
@@ -103,9 +103,7 @@ export function Footer() {
                     {t('wednesdayPrayer')}
                   </h4>
                   <p className="text-muted-foreground">{t('wednesday')}</p>
-                  <p className="text-primary font-medium">
-                    7:00 - 9:30 PM
-                  </p>
+                  <p className="text-primary font-medium">7:00 - 9:30 PM</p>
                 </div>
               </div>
             </div>
@@ -117,7 +115,7 @@ export function Footer() {
               <div className="space-y-3">
                 <div className="flex space-x-4">
                   <Link
-                    href="https://www.youtube.com/@FMCBethlehem-Brooklyn"
+                    href="https://www.youtube.com/@FMCBCHURCH"
                     target="_blank"
                     rel="noopener noreferrer"
                     className="p-2 text-muted-foreground hover:text-primary transition-colors"
@@ -127,7 +125,7 @@ export function Footer() {
                   </Link>
 
                   <Link
-                    href="https://www.facebook.com/fmcbethlehem.brooklyn"
+                    href="https://www.facebook.com/p/Free-Methodist-Church-of-Bethlehem-100069513882451/"
                     target="_blank"
                     rel="noopener noreferrer"
                     className="p-2 text-muted-foreground hover:text-primary transition-colors"
@@ -137,7 +135,7 @@ export function Footer() {
                   </Link>
 
                   <Link
-                    href="https://www.instagram.com/fmcbethlehem.brooklyn"
+                    href="https://www.instagram.com/fmcb.church/?hl=en"
                     target="_blank"
                     rel="noopener noreferrer"
                     className="p-2 text-muted-foreground hover:text-primary transition-colors"
@@ -156,7 +154,9 @@ export function Footer() {
                     methodistchurch1993@gmail.com
                   </Link>
                   <p className="flex items-center gap-2 text-muted-foreground">
-                    <span className="h-4 w-4 flex items-center justify-center text-xs">📞</span>
+                    <span className="h-4 w-4 flex items-center justify-center text-xs">
+                      📞
+                    </span>
                     (929) 343-9393
                   </p>
                 </div>
@@ -198,7 +198,9 @@ export function Footer() {
         {/* Bottom Bar */}
         <div className="border-t py-6">
           <div className="flex flex-col sm:flex-row justify-between items-center gap-4 text-sm text-muted-foreground">
-            <p>© 2025 Free Methodist Church Bethlehem. {t('allRightsReserved')}</p>
+            <p>
+              © 2025 Free Methodist Church Bethlehem. {t('allRightsReserved')}
+            </p>
             <div className="flex space-x-6">
               <Link
                 href="/privacy"

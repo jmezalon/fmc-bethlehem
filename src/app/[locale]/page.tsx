@@ -4,7 +4,17 @@ import { StructuredData } from '@/components/structured-data';
 import { generateEventJsonLd } from '@/lib/structured-data';
 import Link from 'next/link';
 import Image from 'next/image';
-import { Calendar, Clock, MapPin, Play, Users, Heart, BookOpen, MessageSquare, ArrowRight } from 'lucide-react';
+import {
+  Calendar,
+  Clock,
+  MapPin,
+  Play,
+  Users,
+  Heart,
+  BookOpen,
+  MessageSquare,
+  ArrowRight,
+} from 'lucide-react';
 import eventsData from '@/../../data/events.json';
 import sermonsData from '@/../../data/sermons.json';
 
@@ -17,7 +27,7 @@ export default function HomePage() {
 
   // Generate structured data for upcoming events
   const upcomingEvents = eventsData.slice(0, 3);
-  const eventStructuredData = upcomingEvents.map((event: any) => 
+  const eventStructuredData = upcomingEvents.map((event: any) =>
     generateEventJsonLd(event, locale)
   );
 
@@ -168,9 +178,11 @@ export default function HomePage() {
       <section className="py-16 bg-muted/30">
         <Container>
           <div className="flex items-center justify-between mb-8">
-            <h2 className="text-3xl font-bold text-foreground">{tHome('latestSermons')}</h2>
+            <h2 className="text-3xl font-bold text-foreground">
+              {tHome('latestSermons')}
+            </h2>
             <Link
-              href={"/watch/sermons" as any}
+              href={'/watch/sermons' as any}
               className="inline-flex items-center gap-2 text-primary hover:text-primary/80 font-medium transition-colors"
             >
               {tHome('viewAll')}
@@ -198,7 +210,8 @@ export default function HomePage() {
                     {sermon.title[locale] || sermon.title.en}
                   </h3>
                   <p className="text-sm text-muted-foreground mb-2">
-                    {tHome('speaker')}: {sermon.speaker[locale] || sermon.speaker.en}
+                    {tHome('speaker')}:{' '}
+                    {sermon.speaker[locale] || sermon.speaker.en}
                   </p>
                   <p className="text-sm text-muted-foreground mb-4">
                     {sermon.description[locale] || sermon.description.en}
@@ -256,8 +269,7 @@ export default function HomePage() {
                   </h3>
                   <div className="flex items-center gap-1 text-sm text-muted-foreground mb-2">
                     <MapPin className="h-4 w-4" />
-                    {event.location[locale] ||
-                      event.location.en}
+                    {event.location[locale] || event.location.en}
                   </div>
                   <p className="text-sm text-muted-foreground mb-4">
                     {event.description[locale] || event.description.en}

@@ -9,7 +9,7 @@ export async function POST(request: NextRequest) {
     const authHeader = request.headers.get('authorization');
     const token = authHeader?.replace('Bearer ', '');
     const adminSecret = process.env.PRAYER_ADMIN_SECRET || 'prayer-admin-2024';
-    
+
     if (token !== adminSecret) {
       return NextResponse.json(
         { success: false, message: 'Unauthorized' },
@@ -18,9 +18,9 @@ export async function POST(request: NextRequest) {
     }
 
     const { prayerId, isPublic } = await request.json();
-    
+
     const prayersFile = path.join(process.cwd(), 'data', 'prayers.json');
-    
+
     if (!existsSync(prayersFile)) {
       return NextResponse.json(
         { success: false, message: 'Prayers file not found' },
@@ -34,7 +34,7 @@ export async function POST(request: NextRequest) {
 
     // Find and update the prayer
     const prayerIndex = prayers.findIndex((p: any) => p.id === prayerId);
-    
+
     if (prayerIndex === -1) {
       return NextResponse.json(
         { success: false, message: 'Prayer not found' },
@@ -47,9 +47,9 @@ export async function POST(request: NextRequest) {
     // Write updated prayers back to file
     await writeFile(prayersFile, JSON.stringify(prayers, null, 2));
 
-    return NextResponse.json({ 
-      success: true, 
-      message: `Prayer visibility updated to ${isPublic ? 'public' : 'private'}` 
+    return NextResponse.json({
+      success: true,
+      message: `Prayer visibility updated to ${isPublic ? 'public' : 'private'}`,
     });
   } catch (error) {
     console.error('Error toggling prayer visibility:', error);

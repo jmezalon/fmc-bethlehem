@@ -20,12 +20,16 @@ const newMemberClassSchema = z.object({
   phone: z.string().min(10, 'Please enter a valid phone number'),
   age: z.string().min(1, 'Please select your age range'),
   membershipStatus: z.string().min(1, 'Please select your membership status'),
-  attendanceDuration: z.string().min(1, 'Please select how long you have been attending'),
+  attendanceDuration: z
+    .string()
+    .min(1, 'Please select how long you have been attending'),
   classPreference: z.string().min(1, 'Please select your class preference'),
   sessionPreference: z.string().min(1, 'Please select your session preference'),
   childcare: z.string().min(1, 'Please indicate if you need childcare'),
   childrenAges: z.string().optional(),
-  expectations: z.string().min(10, 'Please share your expectations (at least 10 characters)'),
+  expectations: z
+    .string()
+    .min(10, 'Please share your expectations (at least 10 characters)'),
   questions: z.string().optional(),
   specialNeeds: z.string().optional(),
 });
@@ -85,16 +89,34 @@ export default function NewMemberClassPage() {
 
   const membershipStatusOptions = [
     { value: 'visitor', label: t('form.membershipStatusOptions.visitor') },
-    { value: 'regular-attendee', label: t('form.membershipStatusOptions.regularAttendee') },
+    {
+      value: 'regular-attendee',
+      label: t('form.membershipStatusOptions.regularAttendee'),
+    },
     { value: 'new-member', label: t('form.membershipStatusOptions.newMember') },
-    { value: 'considering-membership', label: t('form.membershipStatusOptions.consideringMembership') },
+    {
+      value: 'considering-membership',
+      label: t('form.membershipStatusOptions.consideringMembership'),
+    },
   ];
 
   const attendanceDurationOptions = [
-    { value: 'less-than-month', label: t('form.attendanceDurationOptions.lessThanMonth') },
-    { value: '1-3-months', label: t('form.attendanceDurationOptions.1to3months') },
-    { value: '3-6-months', label: t('form.attendanceDurationOptions.3to6months') },
-    { value: '6-12-months', label: t('form.attendanceDurationOptions.6to12months') },
+    {
+      value: 'less-than-month',
+      label: t('form.attendanceDurationOptions.lessThanMonth'),
+    },
+    {
+      value: '1-3-months',
+      label: t('form.attendanceDurationOptions.1to3months'),
+    },
+    {
+      value: '3-6-months',
+      label: t('form.attendanceDurationOptions.3to6months'),
+    },
+    {
+      value: '6-12-months',
+      label: t('form.attendanceDurationOptions.6to12months'),
+    },
     { value: 'over-year', label: t('form.attendanceDurationOptions.overYear') },
   ];
 
@@ -105,10 +127,22 @@ export default function NewMemberClassPage() {
   ];
 
   const sessionPreferenceOptions = [
-    { value: 'sunday-morning', label: t('form.sessionPreferenceOptions.sundayMorning') },
-    { value: 'sunday-afternoon', label: t('form.sessionPreferenceOptions.sundayAfternoon') },
-    { value: 'weekday-evening', label: t('form.sessionPreferenceOptions.weekdayEvening') },
-    { value: 'saturday-morning', label: t('form.sessionPreferenceOptions.saturdayMorning') },
+    {
+      value: 'sunday-morning',
+      label: t('form.sessionPreferenceOptions.sundayMorning'),
+    },
+    {
+      value: 'sunday-afternoon',
+      label: t('form.sessionPreferenceOptions.sundayAfternoon'),
+    },
+    {
+      value: 'weekday-evening',
+      label: t('form.sessionPreferenceOptions.weekdayEvening'),
+    },
+    {
+      value: 'saturday-morning',
+      label: t('form.sessionPreferenceOptions.saturdayMorning'),
+    },
   ];
 
   const childcareOptions = [
@@ -130,7 +164,7 @@ export default function NewMemberClassPage() {
               {t('backToNextSteps')}
             </Link>
           </div>
-          
+
           <div className="flex items-center gap-4">
             <div className="w-12 h-12 rounded-lg bg-orange-500 flex items-center justify-center">
               <GraduationCap className="h-6 w-6 text-white" />
@@ -139,9 +173,7 @@ export default function NewMemberClassPage() {
               <h1 className="text-3xl font-bold text-foreground mb-2">
                 {t('title')}
               </h1>
-              <p className="text-muted-foreground">
-                {t('subtitle')}
-              </p>
+              <p className="text-muted-foreground">{t('subtitle')}</p>
             </div>
           </div>
         </Container>
@@ -164,9 +196,7 @@ export default function NewMemberClassPage() {
                 <h2 className="text-2xl font-semibold text-card-foreground mb-2">
                   {t('form.title')}
                 </h2>
-                <p className="text-muted-foreground">
-                  {t('form.description')}
-                </p>
+                <p className="text-muted-foreground">{t('form.description')}</p>
               </div>
 
               <form onSubmit={handleSubmit(onSubmit)} className="space-y-6">
@@ -175,7 +205,7 @@ export default function NewMemberClassPage() {
                   <h3 className="text-lg font-medium text-foreground">
                     {t('form.personalInfo')}
                   </h3>
-                  
+
                   <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                     <FormField
                       label={t('form.firstName')}

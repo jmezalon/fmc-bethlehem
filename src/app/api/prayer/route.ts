@@ -6,7 +6,7 @@ import path from 'path';
 export async function POST(request: NextRequest) {
   try {
     const data = await request.json();
-    
+
     // Generate initials from name or use "Anonymous"
     const getInitials = (name?: string) => {
       if (!name || name.trim() === '') return 'A.';
@@ -37,7 +37,7 @@ export async function POST(request: NextRequest) {
     // Read existing prayers or create empty array
     const prayersFile = path.join(dataDir, 'prayers.json');
     let prayers = [];
-    
+
     if (existsSync(prayersFile)) {
       try {
         const fileContent = await readFile(prayersFile, 'utf-8');
@@ -57,10 +57,10 @@ export async function POST(request: NextRequest) {
     // TODO: Send confirmation email using Resend
     console.log('Prayer request submitted:', prayerRequest.id);
 
-    return NextResponse.json({ 
-      success: true, 
+    return NextResponse.json({
+      success: true,
       message: 'Prayer request submitted successfully',
-      id: prayerRequest.id 
+      id: prayerRequest.id,
     });
   } catch (error) {
     console.error('Error processing prayer request:', error);

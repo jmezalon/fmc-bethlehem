@@ -4,7 +4,10 @@ import { useState, useMemo } from 'react';
 import { useTranslations, useLocale } from 'next-intl';
 import { Container } from '@/components/ui/container';
 import { GroupCard } from '@/components/ui/group-card';
-import { GroupFilters, type GroupFilters as GroupFiltersType } from '@/components/ui/group-filters';
+import {
+  GroupFilters,
+  type GroupFilters as GroupFiltersType,
+} from '@/components/ui/group-filters';
 import { Users, Search } from 'lucide-react';
 
 // Import groups data
@@ -17,15 +20,21 @@ export default function GroupsPage() {
   const [filters, setFilters] = useState<GroupFiltersType>({
     dayOfWeek: '',
     language: '',
-    lifeStage: ''
+    lifeStage: '',
   });
 
   // Get available filter options
   const availableFilters = useMemo(() => {
-    const daysOfWeek = Array.from(new Set(groupsData.map(group => group.dayOfWeek)));
-    const languages = Array.from(new Set(groupsData.map(group => group.language)));
-    const lifeStages = Array.from(new Set(groupsData.map(group => group.lifeStage)));
-    
+    const daysOfWeek = Array.from(
+      new Set(groupsData.map(group => group.dayOfWeek))
+    );
+    const languages = Array.from(
+      new Set(groupsData.map(group => group.language))
+    );
+    const lifeStages = Array.from(
+      new Set(groupsData.map(group => group.lifeStage))
+    );
+
     return { daysOfWeek, languages, lifeStages };
   }, []);
 
@@ -35,10 +44,16 @@ export default function GroupsPage() {
       // Search filter
       if (searchTerm) {
         const searchLower = searchTerm.toLowerCase();
-        const matchesName = group.name[locale].toLowerCase().includes(searchLower);
-        const matchesDescription = group.description[locale].toLowerCase().includes(searchLower);
-        const matchesLeader = group.leader[locale].toLowerCase().includes(searchLower);
-        
+        const matchesName = group.name[locale]
+          .toLowerCase()
+          .includes(searchLower);
+        const matchesDescription = group.description[locale]
+          .toLowerCase()
+          .includes(searchLower);
+        const matchesLeader = group.leader[locale]
+          .toLowerCase()
+          .includes(searchLower);
+
         if (!matchesName && !matchesDescription && !matchesLeader) {
           return false;
         }
@@ -65,16 +80,24 @@ export default function GroupsPage() {
 
   // Sort groups by day of week and time
   const sortedGroups = useMemo(() => {
-    const dayOrder = ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday'];
-    
+    const dayOrder = [
+      'Sunday',
+      'Monday',
+      'Tuesday',
+      'Wednesday',
+      'Thursday',
+      'Friday',
+      'Saturday',
+    ];
+
     return [...filteredGroups].sort((a, b) => {
       const dayA = dayOrder.indexOf(a.dayOfWeek);
       const dayB = dayOrder.indexOf(b.dayOfWeek);
-      
+
       if (dayA !== dayB) {
         return dayA - dayB;
       }
-      
+
       // If same day, sort by time
       return a.time.localeCompare(b.time);
     });
@@ -108,7 +131,7 @@ export default function GroupsPage() {
                   type="text"
                   placeholder={t('search.placeholder')}
                   value={searchTerm}
-                  onChange={(e) => setSearchTerm(e.target.value)}
+                  onChange={e => setSearchTerm(e.target.value)}
                   className="w-full pl-10 pr-4 py-3 border border-input bg-background rounded-lg focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent"
                 />
               </div>
@@ -162,7 +185,11 @@ export default function GroupsPage() {
                   <button
                     onClick={() => {
                       setSearchTerm('');
-                      setFilters({ dayOfWeek: '', language: '', lifeStage: '' });
+                      setFilters({
+                        dayOfWeek: '',
+                        language: '',
+                        lifeStage: '',
+                      });
                     }}
                     className="text-primary hover:text-primary/80 font-medium"
                   >
@@ -182,9 +209,7 @@ export default function GroupsPage() {
             <h2 className="text-3xl font-bold text-foreground mb-4">
               {t('cta.title')}
             </h2>
-            <p className="text-muted-foreground mb-8">
-              {t('cta.description')}
-            </p>
+            <p className="text-muted-foreground mb-8">{t('cta.description')}</p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <a
                 href="mailto:methodistchurch1993@gmail.com?subject=New Group Interest"

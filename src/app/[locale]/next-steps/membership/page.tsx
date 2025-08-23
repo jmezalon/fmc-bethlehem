@@ -27,7 +27,12 @@ const membershipSchema = z.object({
   salvationDate: z.string().optional(),
   baptismDate: z.string().optional(),
   previousChurch: z.string().optional(),
-  membershipReason: z.string().min(10, 'Please explain why you want to become a member (at least 10 characters)'),
+  membershipReason: z
+    .string()
+    .min(
+      10,
+      'Please explain why you want to become a member (at least 10 characters)'
+    ),
   ministryInterests: z.array(z.string()).optional(),
   skills: z.string().optional(),
   availability: z.string().optional(),
@@ -98,7 +103,7 @@ export default function MembershipPage() {
               {t('backToNextSteps')}
             </Link>
           </div>
-          
+
           <div className="flex items-center gap-4">
             <div className="w-12 h-12 rounded-lg bg-green-500 flex items-center justify-center">
               <Users className="h-6 w-6 text-white" />
@@ -107,9 +112,7 @@ export default function MembershipPage() {
               <h1 className="text-3xl font-bold text-foreground mb-2">
                 {t('title')}
               </h1>
-              <p className="text-muted-foreground">
-                {t('subtitle')}
-              </p>
+              <p className="text-muted-foreground">{t('subtitle')}</p>
             </div>
           </div>
         </Container>
@@ -132,9 +135,7 @@ export default function MembershipPage() {
                 <h2 className="text-2xl font-semibold text-card-foreground mb-2">
                   {t('form.title')}
                 </h2>
-                <p className="text-muted-foreground">
-                  {t('form.description')}
-                </p>
+                <p className="text-muted-foreground">{t('form.description')}</p>
               </div>
 
               <form onSubmit={handleSubmit(onSubmit)} className="space-y-6">
@@ -143,7 +144,7 @@ export default function MembershipPage() {
                   <h3 className="text-lg font-medium text-foreground">
                     {t('form.personalInfo')}
                   </h3>
-                  
+
                   <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                     <FormField
                       label={t('form.firstName')}
