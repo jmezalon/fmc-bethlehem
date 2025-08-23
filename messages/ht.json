@@ -2,12 +2,13 @@
   "nav": {
     "home": "Akèy",
     "planVisit": "Planifye yon Vizit",
-    "schedule": "Pwogram",
-    "watch": "Gade",
+    "schedule": "Orè",
+    "watch": "Gade Live",
     "events": "Aktivite yo",
-    "nextSteps": "Pwochen Etap yo",
-    "give": "Bay",
-    "prayer": "Lapriyè"
+    "groups": "Gwoup yo",
+    "nextSteps": "Etap Kap Vini yo",
+    "prayer": "Lapriyè",
+    "give": "Bay"
   },
   "hero": {
     "title": "Byenvini nan FMC Bethlehem",
@@ -190,6 +191,70 @@
       "title": "Pare pou Vin Jwenn Nou?",
       "description": "Nou ta renmen ou vin nan fanmi legliz nou an. Planifye premye vizit ou a jodi a.",
       "button": "Planifye yon Vizit"
+    }
+  },
+  "events": {
+    "title": "Aktivite yo",
+    "subtitle": "Vin jwenn nou nan aktivite legliz yo ak rasanbleman espesyal yo",
+    "upcoming": "Aktivite k ap vini yo",
+    "eventCount": "{count, plural, =0 {Pa gen aktivite} =1 {1 aktivite} other {# aktivite}}",
+    "views": {
+      "list": "Wè nan lis",
+      "calendar": "Wè nan kalandriye"
+    },
+    "filters": {
+      "allCategories": "Tout kategori yo"
+    },
+    "noEvents": {
+      "title": "Pa gen aktivite yo jwenn",
+      "description": "Pa gen aktivite k ap vini yo nan moman sa a. Tounen gade!"
+    },
+    "cta": {
+      "title": "Rete konekte",
+      "description": "Pa janm rate yon aktivite! Abone nan bilten nou an oswa kontakte nou pou plis enfòmasyon.",
+      "subscribe": "Abone nan mizajou yo",
+      "contact": "Kontakte nou"
+    }
+  },
+  "groups": {
+    "title": "Ti gwoup yo",
+    "subtitle": "Jwenn kominote ak grandi nan lafwa nan ministè ti gwoup nou yo",
+    "available": "Gwoup ki disponib yo",
+    "groupCount": "{count, plural, =0 {Pa gen gwoup} =1 {1 gwoup} other {# gwoup}}",
+    "search": {
+      "placeholder": "Chèche gwoup yo..."
+    },
+    "filters": {
+      "title": "Filtre gwoup yo",
+      "clearAll": "Efase tout",
+      "dayOfWeek": "Jou nan semèn nan",
+      "allDays": "Tout jou yo",
+      "language": "Lang",
+      "allLanguages": "Tout lang yo",
+      "lifeStage": "Etap lavi",
+      "allLifeStages": "Tout etap lavi yo"
+    },
+    "leader": "Lidè",
+    "members": "manm yo",
+    "status": {
+      "open": "Ouvè",
+      "filling": "K ap ranpli",
+      "full": "Plen"
+    },
+    "actions": {
+      "contact": "Kontakte pou antre",
+      "waitlist": "Antre nan lis atant"
+    },
+    "noGroups": {
+      "title": "Pa gen gwoup yo jwenn",
+      "description": "Pa gen gwoup ki matche ak rechèch ou a oswa filtre yo.",
+      "clearFilters": "Efase tout filtre yo"
+    },
+    "cta": {
+      "title": "Ou vle kòmanse yon gwoup?",
+      "description": "Ou gen yon ide pou yon nouvo ti gwoup? Nou ta renmen ede ou kòmanse!",
+      "startGroup": "Kòmanse yon nouvo gwoup",
+      "questions": "Poze kesyon yo"
     }
   }
 }

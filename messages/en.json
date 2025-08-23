@@ -3,10 +3,10 @@
     "home": "Home",
     "planVisit": "Plan a Visit",
     "schedule": "Schedule",
-    "watch": "Watch",
+    "watch": "Watch Live",
     "events": "Events",
+    "groups": "Groups",
     "nextSteps": "Next Steps",
-    "give": "Give",
     "prayer": "Prayer"
   },
   "hero": {
@@ -198,83 +198,124 @@
       "button": "Plan a Visit"
     }
   },
-  "watch": {
-    "live": {
-      "title": "Watch Live",
-      "subtitle": "Join us for live worship services and prayer meetings from anywhere in the world.",
-      "streamTitle": "FMC Bethlehem Live Stream",
-      "status": {
-        "live": "LIVE",
-        "offline": "Offline"
-      },
-      "nowPlaying": "Now Playing",
-      "nextService": "Next Service",
-      "currentService": {
-        "date": "Sunday, December 15, 2024",
-        "time": "9:00 AM - 11:30 AM EST",
-        "language": "Haitian Creole"
-      },
-      "interact": {
-        "title": "Interact",
-        "chat": "Join Live Chat",
-        "share": "Share Stream"
-      },
-      "upcoming": {
-        "title": "Upcoming Services",
-        "sunday": "Sunday",
-        "wednesday": "Wednesday",
-        "sundayMorning": "Morning Worship",
-        "sundayMorningTime": "9:00 - 11:30 AM",
-        "sundayAfternoon": "Afternoon Service",
-        "sundayAfternoonTime": "12:30 - 2:30 PM",
-        "wednesdayPrayer": "Prayer & Bible Study",
-        "wednesdayTime": "7:00 - 9:30 PM",
-        "creole": "Haitian Creole",
-        "englishCreole": "English & Creole",
-        "multiLang": "Multilingual"
-      },
-      "cta": {
-        "title": "Missed a Service?",
-        "description": "Browse our sermon archive to catch up on previous messages and teachings.",
-        "watchSermons": "Browse Sermons",
-        "planVisit": "Plan a Visit"
-      }
+  "watchLive": {
+    "nowPlaying": "Now Playing",
+    "nextService": "Next Service",
+    "currentService": {
+      "date": "Sunday, December 15, 2024",
+      "time": "9:00 AM - 11:30 AM EST",
+      "language": "Haitian Creole"
     },
-    "sermons": {
-      "title": "Sermon Archive",
-      "subtitle": "Explore our collection of sermons, teachings, and messages from our pastors.",
-      "backToLive": "Back to Live Stream",
+    "interact": {
+      "title": "Interact",
+      "chat": "Join Live Chat",
+      "share": "Share Stream"
+    },
+    "cta": {
+      "title": "Missed a Service?",
+      "description": "Browse our sermon archive to catch up on previous messages and teachings.",
+      "watchSermons": "Browse Sermons",
+      "planVisit": "Plan a Visit"
+    }
+  },
+  "events": {
+    "title": "Events",
+    "subtitle": "Join us for upcoming church events and special gatherings",
+    "upcoming": "Upcoming Events",
+    "eventCount": "{count, plural, =0 {No events} =1 {1 event} other {# events}}",
+    "views": {
+      "list": "List View",
+      "calendar": "Calendar View"
+    },
+    "filters": {
+      "allCategories": "All Categories"
+    },
+    "noEvents": {
+      "title": "No Events Found",
+      "description": "There are no upcoming events at this time. Check back soon!"
+    },
+    "cta": {
+      "title": "Stay Connected",
+      "description": "Never miss an event! Subscribe to our newsletter or contact us for more information.",
+      "subscribe": "Subscribe to Updates",
+      "contact": "Contact Us"
+    }
+  },
+  "groups": {
+    "title": "Small Groups",
+    "subtitle": "Find community and grow in faith through our small group ministries",
+    "available": "Available Groups",
+    "groupCount": "{count, plural, =0 {No groups} =1 {1 group} other {# groups}}",
+    "search": {
+      "placeholder": "Search groups..."
+    },
+    "filters": {
+      "title": "Filter Groups",
+      "clearAll": "Clear All",
+      "dayOfWeek": "Day of Week",
+      "allDays": "All Days",
+      "language": "Language",
+      "allLanguages": "All Languages",
+      "lifeStage": "Life Stage",
+      "allLifeStages": "All Life Stages"
+    },
+    "leader": "Leader",
+    "members": "members",
+    "status": {
+      "open": "Open",
+      "filling": "Filling Up",
+      "full": "Full"
+    },
+    "actions": {
+      "contact": "Contact to Join",
+      "waitlist": "Join Waitlist"
+    },
+    "noGroups": {
+      "title": "No Groups Found",
+      "description": "No groups match your current search or filters.",
+      "clearFilters": "Clear all filters"
+    },
+    "cta": {
+      "title": "Want to Start a Group?",
+      "description": "Have an idea for a new small group? We'd love to help you get started!",
+      "startGroup": "Start a New Group",
+      "questions": "Ask Questions"
+    }
+  },
+  "sermons": {
+    "title": "Sermon Archive",
+    "subtitle": "Explore our collection of sermons, teachings, and messages from our pastors.",
+    "backToLive": "Back to Live Stream",
+    "topic": "Topic",
+    "filters": {
+      "searchPlaceholder": "Search sermons...",
+      "showFilters": "Filters",
+      "clearAll": "Clear All",
+      "series": "Series",
       "topic": "Topic",
-      "filters": {
-        "searchPlaceholder": "Search sermons...",
-        "showFilters": "Filters",
-        "clearAll": "Clear All",
-        "series": "Series",
-        "topic": "Topic",
-        "language": "Language",
-        "speaker": "Speaker",
-        "year": "Year",
-        "allSeries": "All Series",
-        "allTopics": "All Topics",
-        "allLanguages": "All Languages",
-        "allSpeakers": "All Speakers",
-        "allYears": "All Years"
-      },
-      "results": {
-        "title": "Sermons",
-        "count": "{count} sermons found"
-      },
-      "noResults": {
-        "title": "No sermons found",
-        "description": "Try adjusting your search terms or filters to find what you're looking for.",
-        "clearFilters": "Clear Filters"
-      },
-      "cta": {
-        "title": "Join Us Live",
-        "description": "Experience worship with us in real-time during our live services.",
-        "watchLive": "Watch Live",
-        "planVisit": "Plan a Visit"
-      }
+      "language": "Language",
+      "speaker": "Speaker",
+      "year": "Year",
+      "allSeries": "All Series",
+      "allTopics": "All Topics",
+      "allLanguages": "All Languages",
+      "allSpeakers": "All Speakers",
+      "allYears": "All Years"
+    },
+    "results": {
+      "title": "Sermons",
+      "count": "{count} sermons found"
+    },
+    "noResults": {
+      "title": "No sermons found",
+      "description": "Try adjusting your search terms or filters to find what you're looking for.",
+      "clearFilters": "Clear Filters"
+    },
+    "cta": {
+      "title": "Join Us Live",
+      "description": "Experience worship with us in real-time during our live services.",
+      "watchLive": "Watch Live",
+      "planVisit": "Plan a Visit"
     }
   }
 }

@@ -1,0 +1,212 @@
+[
+  {
+    "id": "1",
+    "name": {
+      "en": "Adult Bible Study",
+      "ht": "Etid Bib Granmoun yo",
+      "fr": "Étude Biblique pour Adultes"
+    },
+    "description": {
+      "en": "Deep dive into God's Word with fellow believers. We explore scripture through discussion and prayer.",
+      "ht": "Nou fouye nan Pawòl Bondye a ak frè ak sè yo. Nou etidye Ekriti yo nan diskisyon ak lapriyè.",
+      "fr": "Plongée profonde dans la Parole de Dieu avec les croyants. Nous explorons les Écritures par la discussion et la prière."
+    },
+    "dayOfWeek": "Wednesday",
+    "time": "19:00",
+    "language": "English",
+    "lifeStage": "Adults",
+    "location": {
+      "en": "Church Fellowship Hall",
+      "ht": "Sal Kominyon Legliz la",
+      "fr": "Salle de Communion de l'Église"
+    },
+    "contactEmail": "biblestudy@fmcbethlehem.org",
+    "leader": {
+      "en": "Rev. WidMarc Pierre",
+      "ht": "Pastè WidMarc Pierre",
+      "fr": "Rév. WidMarc Pierre"
+    },
+    "capacity": 25,
+    "currentMembers": 18
+  },
+  {
+    "id": "2",
+    "name": {
+      "en": "Youth Group",
+      "ht": "Gwoup Jèn yo",
+      "fr": "Groupe de Jeunes"
+    },
+    "description": {
+      "en": "Fun, fellowship, and faith-building activities for teenagers. Games, worship, and life discussions.",
+      "ht": "Aktivite amizan, kominyon ak konstwi lafwa pou adolèsan yo. Jwèt, adorasyon ak diskisyon sou lavi.",
+      "fr": "Activités amusantes, communion et renforcement de la foi pour les adolescents. Jeux, adoration et discussions sur la vie."
+    },
+    "dayOfWeek": "Friday",
+    "time": "18:30",
+    "language": "English",
+    "lifeStage": "Youth",
+    "location": {
+      "en": "Youth Room",
+      "ht": "Chanm Jèn yo",
+      "fr": "Salle des Jeunes"
+    },
+    "contactEmail": "youth@fmcbethlehem.org",
+    "leader": {
+      "en": "Pastor Evans Pierre",
+      "ht": "Pastè Evans Pierre",
+      "fr": "Pasteur Evans Pierre"
+    },
+    "capacity": 30,
+    "currentMembers": 22
+  },
+  {
+    "id": "3",
+    "name": {
+      "en": "Women's Prayer Circle",
+      "ht": "Sèk Lapriyè Fanm yo",
+      "fr": "Cercle de Prière des Femmes"
+    },
+    "description": {
+      "en": "A supportive community of women gathering for prayer, encouragement, and spiritual growth.",
+      "ht": "Yon kominote fanm ki sipòte youn ak lòt yo ki rasanble pou lapriyè, ankourajman ak kwasans espirityèl.",
+      "fr": "Une communauté de femmes qui se soutiennent mutuellement, se rassemblant pour la prière, l'encouragement et la croissance spirituelle."
+    },
+    "dayOfWeek": "Tuesday",
+    "time": "10:00",
+    "language": "Haitian Creole",
+    "lifeStage": "Women",
+    "location": {
+      "en": "Prayer Room",
+      "ht": "Chanm Lapriyè",
+      "fr": "Salle de Prière"
+    },
+    "contactEmail": "womens.prayer@fmcbethlehem.org",
+    "leader": {
+      "en": "Sister Marie Joseph",
+      "ht": "Sè Marie Joseph",
+      "fr": "Sœur Marie Joseph"
+    },
+    "capacity": 20,
+    "currentMembers": 15
+  },
+  {
+    "id": "4",
+    "name": {
+      "en": "Men's Fellowship",
+      "ht": "Kominyon Mesye yo",
+      "fr": "Communion des Hommes"
+    },
+    "description": {
+      "en": "Brotherhood, accountability, and spiritual growth for men of all ages. Coffee, conversation, and Christ.",
+      "ht": "Fratènite, responsabilite ak kwasans espirityèl pou mesye nan tout laj. Kafe, konvèsasyon ak Kris.",
+      "fr": "Fraternité, responsabilité et croissance spirituelle pour les hommes de tous âges. Café, conversation et Christ."
+    },
+    "dayOfWeek": "Saturday",
+    "time": "08:00",
+    "language": "English",
+    "lifeStage": "Men",
+    "location": {
+      "en": "Church Fellowship Hall",
+      "ht": "Sal Kominyon Legliz la",
+      "fr": "Salle de Communion de l'Église"
+    },
+    "contactEmail": "mens.fellowship@fmcbethlehem.org",
+    "leader": {
+      "en": "Deacon Paul Williams",
+      "ht": "Dyak Paul Williams",
+      "fr": "Diacre Paul Williams"
+    },
+    "capacity": 15,
+    "currentMembers": 12
+  },
+  {
+    "id": "5",
+    "name": {
+      "en": "Children's Ministry",
+      "ht": "Ministè Timoun yo",
+      "fr": "Ministère des Enfants"
+    },
+    "description": {
+      "en": "Fun Bible lessons, crafts, and activities for children ages 4-12. Building faith foundations early.",
+      "ht": "Leson Bib amizan, travay men ak aktivite pou timoun ki gen 4-12 an. Konstwi fondasyon lafwa bonè.",
+      "fr": "Leçons bibliques amusantes, bricolages et activités pour les enfants de 4 à 12 ans. Construire les fondations de la foi tôt."
+    },
+    "dayOfWeek": "Sunday",
+    "time": "10:00",
+    "language": "English",
+    "lifeStage": "Children",
+    "location": {
+      "en": "Children's Classroom",
+      "ht": "Sal Klas Timoun yo",
+      "fr": "Salle de Classe des Enfants"
+    },
+    "contactEmail": "children@fmcbethlehem.org",
+    "leader": {
+      "en": "Sister Grace Thompson",
+      "ht": "Sè Grace Thompson",
+      "fr": "Sœur Grace Thompson"
+    },
+    "capacity": 40,
+    "currentMembers": 35
+  },
+  {
+    "id": "6",
+    "name": {
+      "en": "French Bible Study",
+      "ht": "Etid Bib nan lang Fransè",
+      "fr": "Étude Biblique en Français"
+    },
+    "description": {
+      "en": "Bible study conducted in French for our French-speaking congregation members.",
+      "ht": "Etid Bib yo fè nan lang Fransè pou manm kongregasyon nou yo ki pale Fransè.",
+      "fr": "Étude biblique menée en français pour nos membres de la congrégation francophones."
+    },
+    "dayOfWeek": "Thursday",
+    "time": "19:30",
+    "language": "French",
+    "lifeStage": "Adults",
+    "location": {
+      "en": "Conference Room",
+      "ht": "Sal Konferans",
+      "fr": "Salle de Conférence"
+    },
+    "contactEmail": "french.study@fmcbethlehem.org",
+    "leader": {
+      "en": "Brother Jean Baptiste",
+      "ht": "Frè Jean Baptiste",
+      "fr": "Frère Jean Baptiste"
+    },
+    "capacity": 15,
+    "currentMembers": 8
+  },
+  {
+    "id": "7",
+    "name": {
+      "en": "Senior Saints",
+      "ht": "Sen yo",
+      "fr": "Saints Aînés"
+    },
+    "description": {
+      "en": "Fellowship and spiritual encouragement for our senior members. Wisdom sharing and prayer support.",
+      "ht": "Kominyon ak ankourajman espirityèl pou manm granmoun nou yo. Pataje sajès ak sipò lapriyè.",
+      "fr": "Communion et encouragement spirituel pour nos membres aînés. Partage de sagesse et soutien par la prière."
+    },
+    "dayOfWeek": "Monday",
+    "time": "14:00",
+    "language": "Haitian Creole",
+    "lifeStage": "Seniors",
+    "location": {
+      "en": "Senior Lounge",
+      "ht": "Salon Granmoun yo",
+      "fr": "Salon des Aînés"
+    },
+    "contactEmail": "seniors@fmcbethlehem.org",
+    "leader": {
+      "en": "Elder Marie Claire",
+      "ht": "Ansyen Marie Claire",
+      "fr": "Ancienne Marie Claire"
+    },
+    "capacity": 25,
+    "currentMembers": 20
+  }
+]

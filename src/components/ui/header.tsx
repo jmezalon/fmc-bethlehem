@@ -18,6 +18,7 @@ export function Header() {
     { key: 'schedule', href: '/schedule' },
     { key: 'watch', href: '/watch/live' },
     { key: 'events', href: '/events' },
+    { key: 'groups', href: '/groups' },
     { key: 'nextSteps', href: '/next-steps' },
     { key: 'prayer', href: '/prayer' },
   ];
