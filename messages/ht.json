@@ -220,6 +220,18 @@
       "contact": "Kontakte nou"
     }
   },
+  "calendar": {
+    "subscribe": {
+      "title": "Abone nan Kalandriye a",
+      "description": "Ajoute aktivite nou yo ak orè sèvis yo nan aplikasyon kalandriye pèsonèl ou a.",
+      "complete": "Kalandriye Konplè",
+      "eventsOnly": "Aktivite yo Sèlman",
+      "servicesOnly": "Sèvis yo Sèlman",
+      "events": "Kalandriye Aktivite yo",
+      "services": "Kalandriye Sèvis yo",
+      "instructions": "Klike sou 'Abone' pou ajoute nan aplikasyon kalandriye ou a, oswa 'Telechaje' pou konsève fichye .ics la."
+    }
+  },
   "groups": {
     "title": "Ti gwoup yo",
     "subtitle": "Jwenn kominote ak grandi nan lafwa nan ministè ti gwoup nou yo",

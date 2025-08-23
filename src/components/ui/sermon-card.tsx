@@ -17,11 +17,19 @@ interface SermonCardProps {
       ht: string;
       fr: string;
     };
-    speaker: string;
+    speaker: {
+      en: string;
+      ht: string;
+      fr: string;
+    };
     date: string;
     duration: string;
     videoId: string;
-    series?: string;
+    series?: {
+      en: string;
+      ht: string;
+      fr: string;
+    };
     topic: string;
     language: string;
   };
@@ -58,7 +66,7 @@ export function SermonCard({ sermon }: SermonCardProps) {
           {sermon.series && (
             <div className="inline-flex items-center gap-1 bg-primary/10 text-primary px-2 py-1 rounded-full text-xs font-medium">
               <Tag className="h-3 w-3" />
-              {sermon.series}
+              {sermon.series[locale]}
             </div>
           )}
 
@@ -76,7 +84,7 @@ export function SermonCard({ sermon }: SermonCardProps) {
           <div className="grid grid-cols-2 gap-3 text-sm text-muted-foreground">
             <div className="flex items-center gap-2">
               <User className="h-4 w-4" />
-              <span className="truncate">{sermon.speaker}</span>
+              <span className="truncate">{sermon.speaker[locale]}</span>
             </div>
             <div className="flex items-center gap-2">
               <Calendar className="h-4 w-4" />

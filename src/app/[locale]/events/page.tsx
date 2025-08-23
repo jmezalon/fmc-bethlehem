@@ -5,6 +5,7 @@ import { useTranslations, useLocale } from 'next-intl';
 import { Container } from '@/components/ui/container';
 import { EventCard } from '@/components/ui/event-card';
 import { CalendarView } from '@/components/ui/calendar-view';
+import { CalendarSubscribe } from '@/components/ui/calendar-subscribe';
 import { downloadICS } from '@/utils/ics-export';
 import { Calendar, List, Filter } from 'lucide-react';
 
@@ -158,20 +159,26 @@ export default function EventsPage() {
       {/* Call to Action */}
       <section className="py-16 bg-muted/30">
         <Container>
-          <div className="text-center max-w-2xl mx-auto">
-            <h2 className="text-3xl font-bold text-foreground mb-4">
-              {t('cta.title')}
-            </h2>
-            <p className="text-muted-foreground mb-8">
-              {t('cta.description')}
-            </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <button className="inline-flex items-center gap-2 bg-primary text-primary-foreground px-6 py-3 rounded-md font-semibold hover:bg-primary/90 transition-colors">
-                {t('cta.subscribe')}
-              </button>
-              <button className="inline-flex items-center gap-2 border border-input bg-background px-6 py-3 rounded-md font-semibold hover:bg-accent hover:text-accent-foreground transition-colors">
-                {t('cta.contact')}
-              </button>
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 max-w-4xl mx-auto">
+            <div className="text-center lg:text-left">
+              <h2 className="text-3xl font-bold text-foreground mb-4">
+                {t('cta.title')}
+              </h2>
+              <p className="text-muted-foreground mb-8">
+                {t('cta.description')}
+              </p>
+              <div className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start">
+                <button className="inline-flex items-center gap-2 bg-primary text-primary-foreground px-6 py-3 rounded-md font-semibold hover:bg-primary/90 transition-colors">
+                  {t('cta.subscribe')}
+                </button>
+                <button className="inline-flex items-center gap-2 border border-input bg-background px-6 py-3 rounded-md font-semibold hover:bg-accent hover:text-accent-foreground transition-colors">
+                  {t('cta.contact')}
+                </button>
+              </div>
+            </div>
+            
+            <div className="bg-background rounded-lg p-6 border">
+              <CalendarSubscribe type="events" />
             </div>
           </div>
         </Container>

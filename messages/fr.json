@@ -220,6 +220,18 @@
       "contact": "Nous Contacter"
     }
   },
+  "calendar": {
+    "subscribe": {
+      "title": "S'abonner au Calendrier",
+      "description": "Ajoutez nos événements et horaires de service à votre application de calendrier personnel.",
+      "complete": "Calendrier Complet",
+      "eventsOnly": "Événements Seulement",
+      "servicesOnly": "Services Seulement",
+      "events": "Calendrier des Événements",
+      "services": "Calendrier des Services",
+      "instructions": "Cliquez sur 'S'abonner' pour ajouter à votre application de calendrier, ou 'Télécharger' pour sauvegarder le fichier .ics."
+    }
+  },
   "groups": {
     "title": "Petits Groupes",
     "subtitle": "Trouvez une communauté et grandissez dans la foi grâce à nos ministères de petits groupes",

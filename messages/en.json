@@ -29,13 +29,15 @@
   "serviceTimes": {
     "title": "Service Times",
     "sunday": "Sunday",
+    "wednesday": "Wednesday",
+    "monday": "Monday",
     "worship": "Worship",
-    "worshipTime": "9:00 AM & 11:00 AM",
-    "time": "9:00 AM & 11:00 AM",
+    "worshipTime": "8:00 AM & 12:30 PM",
+    "time": "8:00 AM - 11:30 AM",
     "prayer": "Prayer",
-    "prayerTime": "8:30 AM",
+    "prayerTime": "7:00 PM",
     "bible": "Bible Study",
-    "bibleTime": "10:00 AM"
+    "bibleTime": "5:30 PM"
   },
   "common": {
     "loading": "Loading...",
@@ -650,6 +652,18 @@
       "submitting": "Submitting..."
     }
   },
+  "calendar": {
+    "subscribe": {
+      "title": "Subscribe to Calendar",
+      "description": "Stay updated with all our events and service times",
+      "events": "Events Only",
+      "services": "Service Times Only",
+      "all": "Events & Services",
+      "download": "Download Calendar",
+      "subscribe": "Subscribe to Calendar",
+      "instructions": "Click to download or copy the link to subscribe in your calendar app"
+    }
+  },
   "give": {
     "title": "Give",
     "subtitle": "Your generosity helps us serve our community and spread God's love. Thank you for your faithful giving.",
@@ -715,40 +729,189 @@
       "message": "Your faithful giving enables us to serve our community, support missions, and maintain our facilities. Every gift, no matter the size, makes a difference in advancing God's kingdom."
     }
   },
-  "sermons": {
-    "title": "Sermon Archive",
-    "subtitle": "Explore our collection of sermons, teachings, and messages from our pastors.",
-    "backToLive": "Back to Live Stream",
-    "topic": "Topic",
-    "filters": {
-      "searchPlaceholder": "Search sermons...",
-      "showFilters": "Filters",
-      "clearAll": "Clear All",
-      "series": "Series",
+  "watch": {
+    "live": {
+      "title": "Watch Live",
+      "subtitle": "Join us for live worship services and experience community from anywhere",
+      "streamTitle": "FMC Bethlehem Live Stream",
+      "status": {
+        "live": "LIVE"
+      },
+      "nowPlaying": "Now Playing",
+      "nextService": "Next Service",
+      "currentService": {
+        "date": "Sunday, January 21, 2024",
+        "time": "11:00 AM - 12:30 PM",
+        "language": "English & Haitian Creole"
+      },
+      "interact": {
+        "title": "Interact",
+        "chat": "Join Live Chat",
+        "share": "Share Stream"
+      },
+      "upcoming": {
+        "title": "Upcoming Services",
+        "sunday": "Sunday",
+        "wednesday": "Wednesday",
+        "sundayMorning": "Morning Worship",
+        "sundayMorningTime": "8:00 AM",
+        "sundayAfternoon": "Afternoon Service",
+        "sundayAfternoonTime": "12:30 PM",
+        "wednesdayPrayer": "Prayer Meeting",
+        "wednesdayTime": "7:00 PM",
+        "creole": "Haitian Creole",
+        "englishCreole": "English & Haitian Creole",
+        "multiLang": "Multilingual"
+      },
+      "cta": {
+        "title": "Explore More",
+        "description": "Discover our sermon archive and plan your visit to join us in person.",
+        "watchSermons": "Watch Sermons",
+        "planVisit": "Plan a Visit"
+      }
+    },
+    "sermons": {
+      "title": "Sermon Archive",
+      "subtitle": "Explore our collection of sermons, teachings, and messages from our pastors.",
+      "backToLive": "Back to Live Stream",
       "topic": "Topic",
-      "language": "Language",
-      "speaker": "Speaker",
-      "year": "Year",
-      "allSeries": "All Series",
-      "allTopics": "All Topics",
-      "allLanguages": "All Languages",
-      "allSpeakers": "All Speakers",
-      "allYears": "All Years"
+      "filters": {
+        "searchPlaceholder": "Search sermons...",
+        "showFilters": "Filters",
+        "clearAll": "Clear All",
+        "series": "Series",
+        "topic": "Topic",
+        "language": "Language",
+        "speaker": "Speaker",
+        "year": "Year",
+        "allSeries": "All Series",
+        "allTopics": "All Topics",
+        "allLanguages": "All Languages",
+        "allSpeakers": "All Speakers",
+        "allYears": "All Years"
+      },
+      "results": {
+        "title": "Sermons",
+        "count": "{count} sermons found"
+      },
+      "noResults": {
+        "title": "No sermons found",
+        "description": "Try adjusting your search terms or filters to find what you're looking for.",
+        "clearFilters": "Clear Filters"
+      },
+      "cta": {
+        "title": "Join Us Live",
+        "description": "Experience worship with us in real-time during our live services.",
+        "watchLive": "Watch Live",
+        "planVisit": "Plan a Visit"
+      }
+    }
+  },
+  "about": {
+    "title": "About FMC Bethlehem",
+    "subtitle": "Learn about our mission, values, and the heart behind our church community",
+    "mission": {
+      "title": "Our Mission",
+      "description": "To glorify God by making disciples who love Jesus, love each other, and love our community through worship, fellowship, and service."
     },
-    "results": {
-      "title": "Sermons",
-      "count": "{count} sermons found"
+    "values": {
+      "love": {
+        "title": "Love",
+        "description": "We love God with all our heart, soul, mind, and strength, and love our neighbors as ourselves."
+      },
+      "community": {
+        "title": "Community",
+        "description": "We believe in the power of authentic relationships and genuine fellowship in Christ."
+      },
+      "service": {
+        "title": "Service",
+        "description": "We are called to serve others with humility, compassion, and the love of Christ."
+      },
+      "truth": {
+        "title": "Truth",
+        "description": "We are committed to the truth of God's Word and living according to His principles."
+      }
     },
-    "noResults": {
-      "title": "No sermons found",
-      "description": "Try adjusting your search terms or filters to find what you're looking for.",
-      "clearFilters": "Clear Filters"
+    "history": {
+      "title": "Our Story",
+      "founding": "FMC Bethlehem was founded in 1985 with a vision to create a welcoming space where people from all backgrounds could come together to worship God and grow in their faith.",
+      "growth": "Over the years, our church has grown from a small gathering of families to a vibrant community that serves the greater Bethlehem area with love and compassion.",
+      "today": "Today, we continue to be committed to our founding principles while embracing new ways to reach our community and make disciples of Jesus Christ."
     },
-    "cta": {
-      "title": "Join Us Live",
-      "description": "Experience worship with us in real-time during our live services.",
-      "watchLive": "Watch Live",
-      "planVisit": "Plan a Visit"
+    "leadership": {
+      "title": "Our Leadership",
+      "subtitle": "Meet the dedicated leaders who guide our church family",
+      "pastor": {
+        "name": "Pastor John Smith",
+        "title": "Senior Pastor",
+        "bio": "Pastor John has been serving FMC Bethlehem since 2010, bringing a heart for discipleship and community outreach."
+      },
+      "associate": {
+        "name": "Pastor Maria Rodriguez",
+        "title": "Associate Pastor",
+        "bio": "Pastor Maria leads our worship ministry and oversees our Spanish-speaking congregation with passion and dedication."
+      },
+      "youth": {
+        "name": "Pastor David Johnson",
+        "title": "Youth Pastor",
+        "bio": "Pastor David has been ministering to our youth and young adults for over 8 years, helping them grow in their faith."
+      }
+    }
+  },
+  "accessibility": {
+    "skipToMain": "Skip to main content",
+    "openMenu": "Open navigation menu",
+    "closeMenu": "Close navigation menu",
+    "languageSelector": "Select language",
+    "currentLanguage": "Current language: {language}",
+    "playVideo": "Play video",
+    "pauseVideo": "Pause video",
+    "videoDescription": "Video player for {title}"
+  },
+  "contact": {
+    "title": "Contact Us",
+    "subtitle": "We'd love to hear from you. Reach out with any questions or to learn more about our church family.",
+    "info": {
+      "title": "Get in Touch",
+      "address": {
+        "title": "Address",
+        "street": "123 Church Street",
+        "city": "Bethlehem, PA 18015"
+      },
+      "phone": {
+        "title": "Phone",
+        "number": "(610) 555-0123"
+      },
+      "email": {
+        "title": "Email",
+        "address": "info@fmcbethlehem.org"
+      },
+      "hours": {
+        "title": "Office Hours",
+        "sunday": "Sunday: 8:00 AM - 12:00 PM",
+        "wednesday": "Wednesday: 6:00 PM - 8:00 PM",
+        "office": "Monday - Friday: 9:00 AM - 5:00 PM"
+      }
+    },
+    "form": {
+      "title": "Send us a Message",
+      "firstName": "First Name",
+      "lastName": "Last Name",
+      "email": "Email Address",
+      "phone": "Phone Number",
+      "subject": "Subject",
+      "message": "Message",
+      "send": "Send Message",
+      "sending": "Sending...",
+      "success": {
+        "title": "Message Sent!",
+        "message": "Thank you for reaching out. We'll get back to you as soon as possible."
+      }
+    },
+    "map": {
+      "title": "Find Us",
+      "subtitle": "Visit us at our location in the heart of Bethlehem",
+      "placeholder": "Interactive map will be displayed here"
     }
   }
 }

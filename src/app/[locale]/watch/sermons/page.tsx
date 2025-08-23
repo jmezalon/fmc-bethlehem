@@ -1,7 +1,7 @@
 'use client';
 
 import { useState, useMemo } from 'react';
-import { useTranslations } from 'next-intl';
+import { useTranslations, useLocale } from 'next-intl';
 import { Container } from '@/components/ui/container';
 import { SermonFilters, type SermonFilters as SermonFiltersType } from '@/components/ui/sermon-filters';
 import { SermonCard } from '@/components/ui/sermon-card';
@@ -13,6 +13,7 @@ import sermonsData from '@/../../data/sermons.json';
 
 export default function SermonsPage() {
   const t = useTranslations('watch.sermons');
+  const locale = useLocale() as 'en' | 'ht' | 'fr';
   const [filters, setFilters] = useState<SermonFiltersType>({
     search: '',
     series: '',
@@ -24,10 +25,10 @@ export default function SermonsPage() {
 
   // Extract available filter options from data
   const availableFilters = useMemo(() => {
-    const series = Array.from(new Set(sermonsData.map((s: any) => s.series?.en).filter(Boolean)));
+    const series = Array.from(new Set(sermonsData.map((s: any) => s.series?.[locale]).filter(Boolean)));
     const topics = Array.from(new Set(sermonsData.map((s: any) => 'Faith & Spirituality')));
     const languages = Array.from(new Set(['English', 'Haitian Creole', 'French']));
-    const speakers = Array.from(new Set(sermonsData.map((s: any) => s.speaker?.en)));
+    const speakers = Array.from(new Set(sermonsData.map((s: any) => s.speaker?.[locale])));
     const years = Array.from(new Set(sermonsData.map((s: any) => new Date(s.date).getFullYear()))).sort((a: any, b: any) => b - a);
 
     return {
@@ -37,7 +38,7 @@ export default function SermonsPage() {
       speakers: speakers.sort(),
       years
     };
-  }, []);
+  }, [locale]);
 
   // Filter sermons based on current filters
   const filteredSermons = useMemo(() => {
@@ -52,14 +53,15 @@ export default function SermonsPage() {
           sermon.description.en.toLowerCase().includes(searchTerm) ||
           sermon.description.ht.toLowerCase().includes(searchTerm) ||
           sermon.description.fr.toLowerCase().includes(searchTerm) ||
-          sermon.speaker.toLowerCase().includes(searchTerm) ||
-          sermon.topic.toLowerCase().includes(searchTerm);
+          sermon.speaker.en.toLowerCase().includes(searchTerm) ||
+          sermon.speaker.ht.toLowerCase().includes(searchTerm) ||
+          sermon.speaker.fr.toLowerCase().includes(searchTerm);
         
         if (!matchesSearch) return false;
       }
 
       // Series filter
-      if (filters.series && sermon.series !== filters.series) return false;
+      if (filters.series && sermon.series?.[locale] !== filters.series) return false;
 
       // Topic filter
       if (filters.topic && sermon.topic !== filters.topic) return false;
@@ -68,7 +70,7 @@ export default function SermonsPage() {
       if (filters.language && sermon.language !== filters.language) return false;
 
       // Speaker filter
-      if (filters.speaker && sermon.speaker !== filters.speaker) return false;
+      if (filters.speaker && sermon.speaker[locale] !== filters.speaker) return false;
 
       // Year filter
       if (filters.year) {
@@ -78,7 +80,7 @@ export default function SermonsPage() {
 
       return true;
     });
-  }, [filters]);
+  }, [filters, locale]);
 
   return (
     <main>

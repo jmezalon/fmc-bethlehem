@@ -25,7 +25,7 @@ export function Footer() {
   };
 
   return (
-    <footer className="bg-muted/50 border-t">
+    <footer className="bg-muted/50 border-t" role="contentinfo">
       <Container>
         <div className="py-12">
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
@@ -169,18 +169,24 @@ export function Footer() {
                     {t('emailDescription')}
                   </p>
                   <form onSubmit={handleEmailSubmit} className="space-y-2">
+                    <label htmlFor="newsletter-email" className="sr-only">
+                      {t('emailPlaceholder')}
+                    </label>
                     <input
+                      id="newsletter-email"
                       type="email"
                       value={email}
                       onChange={e => setEmail(e.target.value)}
                       placeholder={t('emailPlaceholder')}
                       className="w-full px-3 py-2 text-sm border border-input bg-background rounded-md focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent"
                       required
+                      aria-describedby="newsletter-description"
                     />
                     <button
                       type="submit"
                       disabled={isSubmitting}
                       className="w-full px-4 py-2 bg-primary text-primary-foreground text-sm font-medium rounded-md hover:bg-primary/90 focus:outline-none focus:ring-2 focus:ring-primary focus:ring-offset-2 disabled:opacity-50 disabled:cursor-not-allowed transition-colors"
+                      aria-describedby="newsletter-description"
                     >
                       {isSubmitting ? '...' : t('subscribe')}
                     </button>

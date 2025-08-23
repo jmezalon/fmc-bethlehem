@@ -5,6 +5,8 @@ import { getMessages } from 'next-intl/server';
 import { notFound } from 'next/navigation';
 import { Header } from '@/components/ui/header';
 import { Footer } from '@/components/ui/footer';
+import { StructuredData } from '@/components/structured-data';
+import { generateOrganizationJsonLd, generateWebsiteJsonLd } from '@/lib/structured-data';
 import '../globals.css';
 
 const inter = Inter({ subsets: ['latin'] });
@@ -80,13 +82,21 @@ export default async function RootLayout({
   // side is the easiest way to get started
   const messages = await getMessages();
 
+  const structuredData = [
+    generateOrganizationJsonLd(locale as 'en' | 'ht' | 'fr'),
+    generateWebsiteJsonLd(locale as 'en' | 'ht' | 'fr'),
+  ];
+
   return (
     <html lang={locale}>
       <body className={inter.className}>
         <NextIntlClientProvider messages={messages}>
+          <StructuredData data={structuredData} />
           <div className="flex min-h-screen flex-col">
             <Header />
-            <main className="flex-1">{children}</main>
+            <main id="main-content" className="flex-1" role="main">
+              {children}
+            </main>
             <Footer />
           </div>
         </NextIntlClientProvider>

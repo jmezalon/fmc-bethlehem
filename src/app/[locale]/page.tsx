@@ -1,28 +1,28 @@
 import { useTranslations, useLocale } from 'next-intl';
 import { Container } from '@/components/ui/container';
+import { StructuredData } from '@/components/structured-data';
+import { generateEventJsonLd } from '@/lib/structured-data';
 import Link from 'next/link';
-import {
-  Calendar,
-  Clock,
-  MapPin,
-  Play,
-  ArrowRight,
-  Heart,
-  MessageSquare,
-  Users,
-} from 'lucide-react';
-import sermons from '../../../data/sermons.json';
-import events from '../../../data/events.json';
+import { Calendar, Clock, MapPin, Play, Users, Heart, BookOpen, MessageSquare, ArrowRight } from 'lucide-react';
+import eventsData from '@/../../data/events.json';
+import sermonsData from '@/../../data/sermons.json';
 
 export default function HomePage() {
   const t = useTranslations('hero');
   const tService = useTranslations('serviceTimes');
   const tHome = useTranslations('home');
 
-  const locale = useLocale();
+  const locale = useLocale() as 'en' | 'ht' | 'fr';
+
+  // Generate structured data for upcoming events
+  const upcomingEvents = eventsData.slice(0, 3);
+  const eventStructuredData = upcomingEvents.map((event: any) => 
+    generateEventJsonLd(event, locale)
+  );
 
   return (
     <main>
+      <StructuredData data={eventStructuredData} />
       {/* Hero Section */}
       <section className="bg-gradient-to-br from-primary/5 via-background to-primary/10">
         <Container>
@@ -54,7 +54,7 @@ export default function HomePage() {
                     {tService('prayer')}
                   </p>
                   <p className="text-sm text-muted-foreground">
-                    {tService('sunday')} • {tService('prayerTime')}
+                    {tService('wednesday')} • {tService('prayerTime')}
                   </p>
                 </div>
               </div>
@@ -65,7 +65,7 @@ export default function HomePage() {
                     {tService('bible')}
                   </p>
                   <p className="text-sm text-muted-foreground">
-                    {tService('sunday')} • {tService('bibleTime')}
+                    {tService('monday')} • {tService('bibleTime')}
                   </p>
                 </div>
               </div>
@@ -157,19 +157,17 @@ export default function HomePage() {
       <section className="py-16 bg-muted/30">
         <Container>
           <div className="flex items-center justify-between mb-8">
-            <h2 className="text-3xl font-bold text-foreground">
-              {tHome('latestSermons')}
-            </h2>
+            <h2 className="text-3xl font-bold text-foreground">{tHome('latestSermons')}</h2>
             <Link
-              href="/sermons"
-              className="inline-flex items-center gap-1 text-primary hover:text-primary/80 font-medium transition-colors"
+              href={"/watch/sermons" as any}
+              className="inline-flex items-center gap-2 text-primary hover:text-primary/80 font-medium transition-colors"
             >
-              {tHome('viewAll')} <ArrowRight className="h-4 w-4" />
+              {tHome('viewAll')}
+              <ArrowRight className="h-4 w-4" />
             </Link>
           </div>
-
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-            {sermons.slice(0, 3).map(sermon => (
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+            {sermonsData.slice(0, 3).map((sermon: any) => (
               <div
                 key={sermon.id}
                 className="bg-card rounded-lg border overflow-hidden hover:shadow-lg transition-shadow"
@@ -186,21 +184,16 @@ export default function HomePage() {
                     {sermon.duration}
                   </div>
                   <h3 className="text-lg font-semibold text-card-foreground mb-2">
-                    {sermon.title[locale as keyof typeof sermon.title] ||
-                      sermon.title.en}
+                    {sermon.title[locale] || sermon.title.en}
                   </h3>
                   <p className="text-sm text-muted-foreground mb-2">
-                    {tHome('speaker')}:{' '}
-                    {sermon.speaker[locale as keyof typeof sermon.speaker] ||
-                      sermon.speaker.en}
+                    {tHome('speaker')}: {sermon.speaker[locale] || sermon.speaker.en}
                   </p>
                   <p className="text-sm text-muted-foreground mb-4">
-                    {sermon.description[
-                      locale as keyof typeof sermon.description
-                    ] || sermon.description.en}
+                    {sermon.description[locale] || sermon.description.en}
                   </p>
                   <Link
-                    href={sermon.videoUrl as any}
+                    href={sermon.videoUrl || '#'}
                     target="_blank"
                     rel="noopener noreferrer"
                     className="inline-flex items-center gap-2 text-primary hover:text-primary/80 font-medium transition-colors"
@@ -231,7 +224,7 @@ export default function HomePage() {
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-            {events.slice(0, 3).map(event => (
+            {eventsData.slice(0, 3).map((event: any) => (
               <div
                 key={event.id}
                 className="bg-card rounded-lg border overflow-hidden hover:shadow-lg transition-shadow"
@@ -248,27 +241,23 @@ export default function HomePage() {
                     {event.time}
                   </div>
                   <h3 className="text-lg font-semibold text-card-foreground mb-2">
-                    {event.title[locale as keyof typeof event.title] ||
-                      event.title.en}
+                    {event.title[locale] || event.title.en}
                   </h3>
                   <div className="flex items-center gap-1 text-sm text-muted-foreground mb-2">
                     <MapPin className="h-4 w-4" />
-                    {event.location[locale as keyof typeof event.location] ||
+                    {event.location[locale] ||
                       event.location.en}
                   </div>
                   <p className="text-sm text-muted-foreground mb-4">
-                    {event.description[
-                      locale as keyof typeof event.description
-                    ] || event.description.en}
+                    {event.description[locale] || event.description.en}
                   </p>
                   <div className="flex items-center justify-between">
                     <span className="inline-flex items-center rounded-full bg-primary/10 px-2.5 py-0.5 text-xs font-medium text-primary">
-                      {event.category[locale as keyof typeof event.category] ||
-                        event.category.en}
+                      {event.category[locale] || event.category.en}
                     </span>
                     <Link
-                      href={`/events/${event.id}` as any}
-                      className="inline-flex items-center gap-1 text-primary hover:text-primary/80 font-medium transition-colors text-sm"
+                      href="#"
+                      className="inline-flex items-center gap-1 text-primary hover:text-primary/80 font-medium transition-colors"
                     >
                       {tHome('learnMore')} <ArrowRight className="h-3 w-3" />
                     </Link>
