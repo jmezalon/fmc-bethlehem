@@ -1,4 +1,28 @@
 {
+  "nav": {
+    "home": "Home",
+    "planVisit": "Plan a Visit",
+    "watch": "Watch",
+    "events": "Events",
+    "nextSteps": "Next Steps",
+    "give": "Give",
+    "prayer": "Prayer"
+  },
+  "hero": {
+    "title": "Welcome to FMC Bethlehem",
+    "ctaPlan": "Plan Your Visit",
+    "ctaWatch": "Watch Services"
+  },
+  "serviceTimes": {
+    "title": "Service Times",
+    "sunday": "Sunday",
+    "worship": "Worship",
+    "time": "9:00 AM & 11:00 AM",
+    "prayer": "Prayer",
+    "prayerTime": "8:30 AM",
+    "bible": "Bible Study",
+    "bibleTime": "10:00 AM"
+  },
   "common": {
     "loading": "Loading...",
     "error": "An error occurred",
@@ -12,7 +36,39 @@
     "close": "Close"
   },
   "seo": {
-    "title": "FMC Bethlehem",
-    "description": "Welcome to FMC Bethlehem - Your community church"
+    "title": "FMC Bethlehem - Free Methodist Church of Bethlehem",
+    "description": "Welcome to our community where we worship God with joy and live in fellowship with like-minded believers."
+  },
+  "footer": {
+    "viewMap": "View Map",
+    "serviceTimes": "Service Times",
+    "youthService": "Youth Service",
+    "youthTime": "6:00 PM",
+    "wednesday": "Wednesday",
+    "stayConnected": "Stay Connected",
+    "emailDescription": "Receive news and updates about church activities.",
+    "emailPlaceholder": "Enter your email",
+    "subscribe": "Subscribe",
+    "followUs": "Follow Us",
+    "allRightsReserved": "All rights reserved.",
+    "privacy": "Privacy",
+    "terms": "Terms"
+  },
+  "home": {
+    "planVisitCta": "Plan a Visit",
+    "watchLiveCta": "Watch Live",
+    "watchMessages": "Watch Messages",
+    "watchMessagesDesc": "Listen to the latest sermons and teachings.",
+    "nextSteps": "Next Steps",
+    "nextStepsDesc": "Discover how you can grow in your faith.",
+    "prayerRequests": "Prayer Requests",
+    "prayerRequestsDesc": "Submit your prayer requests with us.",
+    "latestSermons": "Latest Sermons",
+    "upcomingEvents": "Upcoming Events",
+    "viewAll": "View All",
+    "watchNow": "Watch Now",
+    "learnMore": "Learn More",
+    "duration": "Duration",
+    "speaker": "Speaker"
   }
 }

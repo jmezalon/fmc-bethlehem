@@ -3,18 +3,20 @@ import { Inter } from 'next/font/google';
 import { NextIntlClientProvider } from 'next-intl';
 import { getMessages } from 'next-intl/server';
 import { notFound } from 'next/navigation';
+import { Header } from '@/components/ui/header';
+import { Footer } from '@/components/ui/footer';
 import '../globals.css';
 
 const inter = Inter({ subsets: ['latin'] });
 
-const locales = ['en', 'es'];
+const locales = ['ht', 'fr', 'en'];
 
 export function generateStaticParams() {
-  return locales.map((locale) => ({ locale }));
+  return locales.map(locale => ({ locale }));
 }
 
 export async function generateMetadata({
-  params: { locale }
+  params: { locale },
 }: {
   params: { locale: string };
 }): Promise<Metadata> {
@@ -23,7 +25,8 @@ export async function generateMetadata({
 
   return {
     title: seo?.title || 'FMC Bethlehem',
-    description: seo?.description || 'Welcome to FMC Bethlehem - Your community church',
+    description:
+      seo?.description || 'Welcome to FMC Bethlehem - Your community church',
     keywords: ['church', 'community', 'bethlehem', 'faith', 'worship'],
     authors: [{ name: 'FMC Bethlehem' }],
     creator: 'FMC Bethlehem',
@@ -45,12 +48,14 @@ export async function generateMetadata({
       url: process.env.NEXT_PUBLIC_SITE_URL || 'https://fmc-bethlehem.com',
       siteName: seo?.title || 'FMC Bethlehem',
       title: seo?.title || 'FMC Bethlehem',
-      description: seo?.description || 'Welcome to FMC Bethlehem - Your community church',
+      description:
+        seo?.description || 'Welcome to FMC Bethlehem - Your community church',
     },
     twitter: {
       card: 'summary_large_image',
       title: seo?.title || 'FMC Bethlehem',
-      description: seo?.description || 'Welcome to FMC Bethlehem - Your community church',
+      description:
+        seo?.description || 'Welcome to FMC Bethlehem - Your community church',
     },
     viewport: {
       width: 'device-width',
@@ -61,7 +66,7 @@ export async function generateMetadata({
 
 export default async function RootLayout({
   children,
-  params: { locale }
+  params: { locale },
 }: {
   children: React.ReactNode;
   params: { locale: string };
@@ -79,8 +84,10 @@ export default async function RootLayout({
     <html lang={locale}>
       <body className={inter.className}>
         <NextIntlClientProvider messages={messages}>
-          <div className="min-h-screen bg-background text-foreground">
-            {children}
+          <div className="flex min-h-screen flex-col">
+            <Header />
+            <main className="flex-1">{children}</main>
+            <Footer />
           </div>
         </NextIntlClientProvider>
       </body>

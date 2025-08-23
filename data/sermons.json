@@ -1,0 +1,83 @@
+[
+  {
+    "id": "1",
+    "title": {
+      "en": "Walking in Faith",
+      "fr": "Marcher dans la Foi",
+      "ht": "Mache nan Lafwa"
+    },
+    "speaker": {
+      "en": "Pastor Jean-Claude",
+      "fr": "Pasteur Jean-Claude", 
+      "ht": "Pastè Jean-Claude"
+    },
+    "date": "2024-01-14",
+    "duration": "35:42",
+    "description": {
+      "en": "Discover how to trust God's plan even when the path seems unclear.",
+      "fr": "Découvrez comment faire confiance au plan de Dieu même quand le chemin semble incertain.",
+      "ht": "Dekouvri kijan pou nou fè konfyans nan plan Bondye a menm lè chemen an sanble pa klè."
+    },
+    "videoUrl": "https://youtube.com/watch?v=example1",
+    "thumbnail": "/images/sermons/sermon-1.jpg",
+    "series": {
+      "en": "Faith Journey",
+      "fr": "Voyage de Foi",
+      "ht": "Vwayaj Lafwa"
+    }
+  },
+  {
+    "id": "2", 
+    "title": {
+      "en": "Love in Action",
+      "fr": "L'Amour en Action",
+      "ht": "Renmen nan Aksyon"
+    },
+    "speaker": {
+      "en": "Pastor Marie",
+      "fr": "Pasteure Marie",
+      "ht": "Pastè Marie"
+    },
+    "date": "2024-01-07",
+    "duration": "42:18",
+    "description": {
+      "en": "Learn how to show Christ's love through practical service to others.",
+      "fr": "Apprenez comment montrer l'amour du Christ par le service pratique aux autres.",
+      "ht": "Aprann kijan pou nou montre renmen Kris la nan sèvis pratik pou lòt moun yo."
+    },
+    "videoUrl": "https://youtube.com/watch?v=example2",
+    "thumbnail": "/images/sermons/sermon-2.jpg",
+    "series": {
+      "en": "Living Like Jesus",
+      "fr": "Vivre Comme Jésus",
+      "ht": "Viv Tankou Jezi"
+    }
+  },
+  {
+    "id": "3",
+    "title": {
+      "en": "Hope for Tomorrow",
+      "fr": "Espoir pour Demain", 
+      "ht": "Espwa pou Demen"
+    },
+    "speaker": {
+      "en": "Pastor David",
+      "fr": "Pasteur David",
+      "ht": "Pastè David"
+    },
+    "date": "2023-12-31",
+    "duration": "38:55",
+    "description": {
+      "en": "Find strength and hope in God's promises for the new year ahead.",
+      "fr": "Trouvez force et espoir dans les promesses de Dieu pour la nouvelle année.",
+      "ht": "Jwenn fòs ak espwa nan pwomès Bondye yo pou nouvo ane a."
+    },
+    "videoUrl": "https://youtube.com/watch?v=example3",
+    "thumbnail": "/images/sermons/sermon-3.jpg",
+    "series": {
+      "en": "New Beginnings",
+      "fr": "Nouveaux Commencements",
+      "ht": "Nouvo Kòmansman"
+    }
+  }
+]

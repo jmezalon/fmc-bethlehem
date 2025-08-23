@@ -1,32 +1,284 @@
-import { useTranslations } from 'next-intl';
+import { useTranslations, useLocale } from 'next-intl';
 import { Container } from '@/components/ui/container';
+import Link from 'next/link';
+import {
+  Calendar,
+  Clock,
+  MapPin,
+  Play,
+  ArrowRight,
+  Heart,
+  MessageSquare,
+  Users,
+} from 'lucide-react';
+import sermons from '../../../data/sermons.json';
+import events from '../../../data/events.json';
 
 export default function HomePage() {
-  const t = useTranslations('common');
+  const t = useTranslations('hero');
+  const tService = useTranslations('serviceTimes');
+  const tHome = useTranslations('home');
+
+  const locale = useLocale();
 
   return (
     <main>
-      <Container>
-        <div className="py-16 text-center">
-          <h1 className="text-4xl font-bold tracking-tight text-gray-900 sm:text-6xl">
-            {t('welcome')}
-          </h1>
-          <p className="mt-6 text-lg leading-8 text-gray-600">
-            Welcome to FMC Bethlehem - Your community church
-          </p>
-          <div className="mt-10 flex items-center justify-center gap-x-6">
-            <a
-              href="#"
-              className="rounded-md bg-primary px-3.5 py-2.5 text-sm font-semibold text-primary-foreground shadow-sm hover:bg-primary/90 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary"
-            >
-              Get started
-            </a>
-            <a href="#" className="text-sm font-semibold leading-6 text-gray-900">
-              Learn more <span aria-hidden="true">→</span>
-            </a>
+      {/* Hero Section */}
+      <section className="bg-gradient-to-br from-primary/5 via-background to-primary/10">
+        <Container>
+          <div className="py-20 text-center">
+            <h1 className="text-4xl font-bold tracking-tight text-foreground sm:text-6xl mb-6">
+              {t('title')}
+            </h1>
+            <p className="text-xl text-muted-foreground mb-12 max-w-2xl mx-auto">
+              {t('subtitle')}
+            </p>
+
+            {/* Service Times Badges */}
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-4 max-w-4xl mx-auto mb-12">
+              <div className="flex items-center justify-center gap-3 p-4 rounded-lg bg-card border">
+                <Clock className="h-5 w-5 text-primary" />
+                <div className="text-left">
+                  <p className="font-semibold text-card-foreground">
+                    {tService('worship')}
+                  </p>
+                  <p className="text-sm text-muted-foreground">
+                    {tService('sunday')} • {tService('worshipTime')}
+                  </p>
+                </div>
+              </div>
+              <div className="flex items-center justify-center gap-3 p-4 rounded-lg bg-card border">
+                <Heart className="h-5 w-5 text-primary" />
+                <div className="text-left">
+                  <p className="font-semibold text-card-foreground">
+                    {tService('prayer')}
+                  </p>
+                  <p className="text-sm text-muted-foreground">
+                    {tService('sunday')} • {tService('prayerTime')}
+                  </p>
+                </div>
+              </div>
+              <div className="flex items-center justify-center gap-3 p-4 rounded-lg bg-card border">
+                <MessageSquare className="h-5 w-5 text-primary" />
+                <div className="text-left">
+                  <p className="font-semibold text-card-foreground">
+                    {tService('bible')}
+                  </p>
+                  <p className="text-sm text-muted-foreground">
+                    {tService('sunday')} • {tService('bibleTime')}
+                  </p>
+                </div>
+              </div>
+            </div>
+
+            {/* CTAs */}
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <Link
+                href="/plan-visit"
+                className="inline-flex items-center gap-2 rounded-md bg-primary px-6 py-3 text-base font-semibold text-primary-foreground shadow-sm hover:bg-primary/90 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary transition-colors"
+              >
+                <MapPin className="h-5 w-5" />
+                {tHome('planVisitCta')}
+              </Link>
+              <Link
+                href="/watch"
+                className="inline-flex items-center gap-2 rounded-md border border-input bg-background px-6 py-3 text-base font-semibold text-foreground shadow-sm hover:bg-accent hover:text-accent-foreground focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary transition-colors"
+              >
+                <Play className="h-5 w-5" />
+                {tHome('watchLiveCta')}
+              </Link>
+            </div>
           </div>
-        </div>
-      </Container>
+        </Container>
+      </section>
+
+      {/* Feature Tiles */}
+      <section className="py-16">
+        <Container>
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+            <div className="text-center p-8 rounded-lg bg-card border hover:shadow-lg transition-shadow">
+              <div className="mx-auto w-12 h-12 bg-primary/10 rounded-lg flex items-center justify-center mb-4">
+                <Play className="h-6 w-6 text-primary" />
+              </div>
+              <h3 className="text-xl font-semibold text-card-foreground mb-2">
+                {tHome('watchMessages')}
+              </h3>
+              <p className="text-muted-foreground mb-4">
+                {tHome('watchMessagesDesc')}
+              </p>
+              <Link
+                href="/watch"
+                className="inline-flex items-center gap-1 text-primary hover:text-primary/80 font-medium transition-colors"
+              >
+                {tHome('watchNow')} <ArrowRight className="h-4 w-4" />
+              </Link>
+            </div>
+
+            <div className="text-center p-8 rounded-lg bg-card border hover:shadow-lg transition-shadow">
+              <div className="mx-auto w-12 h-12 bg-primary/10 rounded-lg flex items-center justify-center mb-4">
+                <Users className="h-6 w-6 text-primary" />
+              </div>
+              <h3 className="text-xl font-semibold text-card-foreground mb-2">
+                {tHome('nextSteps')}
+              </h3>
+              <p className="text-muted-foreground mb-4">
+                {tHome('nextStepsDesc')}
+              </p>
+              <Link
+                href="/next-steps"
+                className="inline-flex items-center gap-1 text-primary hover:text-primary/80 font-medium transition-colors"
+              >
+                {tHome('learnMore')} <ArrowRight className="h-4 w-4" />
+              </Link>
+            </div>
+
+            <div className="text-center p-8 rounded-lg bg-card border hover:shadow-lg transition-shadow">
+              <div className="mx-auto w-12 h-12 bg-primary/10 rounded-lg flex items-center justify-center mb-4">
+                <Heart className="h-6 w-6 text-primary" />
+              </div>
+              <h3 className="text-xl font-semibold text-card-foreground mb-2">
+                {tHome('prayerRequests')}
+              </h3>
+              <p className="text-muted-foreground mb-4">
+                {tHome('prayerRequestsDesc')}
+              </p>
+              <Link
+                href="/prayer"
+                className="inline-flex items-center gap-1 text-primary hover:text-primary/80 font-medium transition-colors"
+              >
+                {tHome('learnMore')} <ArrowRight className="h-4 w-4" />
+              </Link>
+            </div>
+          </div>
+        </Container>
+      </section>
+
+      {/* Latest Sermons */}
+      <section className="py-16 bg-muted/30">
+        <Container>
+          <div className="flex items-center justify-between mb-8">
+            <h2 className="text-3xl font-bold text-foreground">
+              {tHome('latestSermons')}
+            </h2>
+            <Link
+              href="/sermons"
+              className="inline-flex items-center gap-1 text-primary hover:text-primary/80 font-medium transition-colors"
+            >
+              {tHome('viewAll')} <ArrowRight className="h-4 w-4" />
+            </Link>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+            {sermons.slice(0, 3).map(sermon => (
+              <div
+                key={sermon.id}
+                className="bg-card rounded-lg border overflow-hidden hover:shadow-lg transition-shadow"
+              >
+                <div className="aspect-video bg-muted flex items-center justify-center">
+                  <Play className="h-12 w-12 text-muted-foreground" />
+                </div>
+                <div className="p-6">
+                  <div className="flex items-center gap-2 text-sm text-muted-foreground mb-2">
+                    <Calendar className="h-4 w-4" />
+                    {new Date(sermon.date).toLocaleDateString()}
+                    <span>•</span>
+                    <Clock className="h-4 w-4" />
+                    {sermon.duration}
+                  </div>
+                  <h3 className="text-lg font-semibold text-card-foreground mb-2">
+                    {sermon.title[locale as keyof typeof sermon.title] ||
+                      sermon.title.en}
+                  </h3>
+                  <p className="text-sm text-muted-foreground mb-2">
+                    {tHome('speaker')}:{' '}
+                    {sermon.speaker[locale as keyof typeof sermon.speaker] ||
+                      sermon.speaker.en}
+                  </p>
+                  <p className="text-sm text-muted-foreground mb-4">
+                    {sermon.description[
+                      locale as keyof typeof sermon.description
+                    ] || sermon.description.en}
+                  </p>
+                  <Link
+                    href={sermon.videoUrl as any}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="inline-flex items-center gap-2 text-primary hover:text-primary/80 font-medium transition-colors"
+                  >
+                    <Play className="h-4 w-4" />
+                    {tHome('watchNow')}
+                  </Link>
+                </div>
+              </div>
+            ))}
+          </div>
+        </Container>
+      </section>
+
+      {/* Upcoming Events */}
+      <section className="py-16">
+        <Container>
+          <div className="flex items-center justify-between mb-8">
+            <h2 className="text-3xl font-bold text-foreground">
+              {tHome('upcomingEvents')}
+            </h2>
+            <Link
+              href="/events"
+              className="inline-flex items-center gap-1 text-primary hover:text-primary/80 font-medium transition-colors"
+            >
+              {tHome('viewAll')} <ArrowRight className="h-4 w-4" />
+            </Link>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+            {events.slice(0, 3).map(event => (
+              <div
+                key={event.id}
+                className="bg-card rounded-lg border overflow-hidden hover:shadow-lg transition-shadow"
+              >
+                <div className="aspect-video bg-muted flex items-center justify-center">
+                  <Calendar className="h-12 w-12 text-muted-foreground" />
+                </div>
+                <div className="p-6">
+                  <div className="flex items-center gap-2 text-sm text-muted-foreground mb-2">
+                    <Calendar className="h-4 w-4" />
+                    {new Date(event.date).toLocaleDateString()}
+                    <span>•</span>
+                    <Clock className="h-4 w-4" />
+                    {event.time}
+                  </div>
+                  <h3 className="text-lg font-semibold text-card-foreground mb-2">
+                    {event.title[locale as keyof typeof event.title] ||
+                      event.title.en}
+                  </h3>
+                  <div className="flex items-center gap-1 text-sm text-muted-foreground mb-2">
+                    <MapPin className="h-4 w-4" />
+                    {event.location[locale as keyof typeof event.location] ||
+                      event.location.en}
+                  </div>
+                  <p className="text-sm text-muted-foreground mb-4">
+                    {event.description[
+                      locale as keyof typeof event.description
+                    ] || event.description.en}
+                  </p>
+                  <div className="flex items-center justify-between">
+                    <span className="inline-flex items-center rounded-full bg-primary/10 px-2.5 py-0.5 text-xs font-medium text-primary">
+                      {event.category[locale as keyof typeof event.category] ||
+                        event.category.en}
+                    </span>
+                    <Link
+                      href={`/events/${event.id}` as any}
+                      className="inline-flex items-center gap-1 text-primary hover:text-primary/80 font-medium transition-colors text-sm"
+                    >
+                      {tHome('learnMore')} <ArrowRight className="h-3 w-3" />
+                    </Link>
+                  </div>
+                </div>
+              </div>
+            ))}
+          </div>
+        </Container>
+      </section>
     </main>
   );
 }

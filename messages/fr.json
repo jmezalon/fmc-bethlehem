@@ -1,0 +1,70 @@
+{
+  "nav": {
+    "home": "Accueil",
+    "planVisit": "Planifier une Visite",
+    "watch": "Regarder",
+    "events": "Événements",
+    "nextSteps": "Prochaines Étapes",
+    "give": "Donner",
+    "prayer": "Prière"
+  },
+  "hero": {
+    "title": "Bienvenue à FMC Bethlehem",
+    "ctaPlan": "Planifiez votre Visite",
+    "ctaWatch": "Regarder les Services"
+  },
+  "serviceTimes": {
+    "title": "Horaires des Services",
+    "sunday": "Dimanche",
+    "worship": "Culte",
+    "time": "9h00 et 11h00",
+    "prayer": "Prière",
+    "prayerTime": "8h30",
+    "bible": "Étude Biblique",
+    "bibleTime": "10h00"
+  },
+  "common": {
+    "loading": "Chargement...",
+    "error": "Une erreur s'est produite",
+    "welcome": "Bienvenue",
+    "home": "Accueil",
+    "about": "À propos",
+    "contact": "Contact"
+  },
+  "seo": {
+    "title": "FMC Bethlehem - Église Méthodiste Libre de Bethlehem",
+    "description": "Bienvenue dans notre communauté où nous adorons Dieu avec joie et vivons en communion avec des croyants partageant les mêmes idées."
+  },
+  "footer": {
+    "viewMap": "Voir la carte",
+    "serviceTimes": "Horaires des Services",
+    "youthService": "Service Jeunesse",
+    "youthTime": "18h00",
+    "wednesday": "Mercredi",
+    "stayConnected": "Restez Connecté",
+    "emailDescription": "Recevez les nouvelles et informations sur les activités de l'église.",
+    "emailPlaceholder": "Entrez votre email",
+    "subscribe": "S'abonner",
+    "followUs": "Suivez-nous",
+    "allRightsReserved": "Tous droits réservés.",
+    "privacy": "Confidentialité",
+    "terms": "Conditions"
+  },
+  "home": {
+    "planVisitCta": "Planifier une Visite",
+    "watchLiveCta": "Regarder en Direct",
+    "watchMessages": "Regarder les Messages",
+    "watchMessagesDesc": "Écoutez les derniers sermons et enseignements.",
+    "nextSteps": "Prochaines Étapes",
+    "nextStepsDesc": "Découvrez comment grandir dans votre foi.",
+    "prayerRequests": "Demandes de Prière",
+    "prayerRequestsDesc": "Soumettez vos demandes de prière avec nous.",
+    "latestSermons": "Derniers Sermons",
+    "upcomingEvents": "Événements à Venir",
+    "viewAll": "Voir Tout",
+    "watchNow": "Regarder Maintenant",
+    "learnMore": "En Savoir Plus",
+    "duration": "Durée",
+    "speaker": "Orateur"
+  }
+}

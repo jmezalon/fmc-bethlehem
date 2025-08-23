@@ -1,0 +1,70 @@
+{
+  "nav": {
+    "home": "Akèy",
+    "planVisit": "Planifye Vizit",
+    "watch": "Gade",
+    "events": "Aktivite yo",
+    "nextSteps": "Pwochen Etap yo",
+    "give": "Bay",
+    "prayer": "Lapriyè"
+  },
+  "hero": {
+    "title": "Byenvini nan FMC Bethlehem",
+    "ctaPlan": "Planifye Vizit ou",
+    "ctaWatch": "Gade Sèvis yo"
+  },
+  "serviceTimes": {
+    "title": "Lè Sèvis yo",
+    "sunday": "Dimanch",
+    "worship": "Adorasyon",
+    "time": "9:00 AM ak 11:00 AM",
+    "prayer": "Lapriyè",
+    "prayerTime": "8:30 AM",
+    "bible": "Etid Bib la",
+    "bibleTime": "10:00 AM"
+  },
+  "common": {
+    "loading": "Ap chaje...",
+    "error": "Gen yon erè ki rive",
+    "welcome": "Byenvini",
+    "home": "Akèy",
+    "about": "Konsènan",
+    "contact": "Kontak"
+  },
+  "seo": {
+    "title": "FMC Bethlehem - Legliz Metodis Lib Bethlehem",
+    "description": "Byenvini nan kominote nou an kote nou adore Bondye ak kè kontan ak nou viv nan kominote ak moun ki gen menm kwayans ak nou yo."
+  },
+  "footer": {
+    "viewMap": "Gade kat la",
+    "serviceTimes": "Lè Sèvis yo",
+    "youthService": "Sèvis Jèn yo",
+    "youthTime": "6:00 PM",
+    "wednesday": "Mèkredi",
+    "stayConnected": "Rete Konekte",
+    "emailDescription": "Resevwa nouvel ak enfomasyon sou aktivite legliz la.",
+    "emailPlaceholder": "Antre email ou a",
+    "subscribe": "Abone",
+    "followUs": "Swiv Nou",
+    "allRightsReserved": "Tout dwa yo rezève.",
+    "privacy": "Vi Prive",
+    "terms": "Kondisyon yo"
+  },
+  "home": {
+    "planVisitCta": "Planifye yon Vizit",
+    "watchLiveCta": "Gade Live",
+    "watchMessages": "Gade Mesaj yo",
+    "watchMessagesDesc": "Koute dènye prèch ak ansèyman yo.",
+    "nextSteps": "Pwochen Etap yo",
+    "nextStepsDesc": "Dekouvri kijan pou ou ka grandi nan lafwa ou.",
+    "prayerRequests": "Demann Lapriyè",
+    "prayerRequestsDesc": "Soumèt demann lapriyè ou yo ak nou.",
+    "latestSermons": "Dènye Prèch yo",
+    "upcomingEvents": "Aktivite ki Vini yo",
+    "viewAll": "Gade Tout",
+    "watchNow": "Gade Kounye a",
+    "learnMore": "Aprann Plis",
+    "duration": "Dire",
+    "speaker": "Prèchè"
+  }
+}

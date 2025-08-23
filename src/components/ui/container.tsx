@@ -15,10 +15,10 @@ const containerSizes = {
   full: 'max-w-full',
 };
 
-export function Container({ 
-  children, 
-  className, 
-  size = 'lg' 
+export function Container({
+  children,
+  className,
+  size = 'lg',
 }: ContainerProps) {
   return (
     <div

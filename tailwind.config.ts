@@ -9,17 +9,34 @@ const config: Config = {
   theme: {
     extend: {
       colors: {
+        // FMC Bethlehem Brand Colors
+        brand: {
+          maroon: "var(--brand-maroon)",
+          brown: "var(--brand-brown)",
+        },
+        flame: {
+          orange: "var(--flame-orange)",
+          yellow: "var(--flame-yellow)",
+        },
+        cool: {
+          gray: "var(--cool-gray)",
+        },
+        off: {
+          white: "var(--off-white)",
+        },
+        
+        // shadcn/ui theme colors using brand palette
         border: "hsl(var(--border))",
         input: "hsl(var(--input))",
         ring: "hsl(var(--ring))",
         background: "hsl(var(--background))",
         foreground: "hsl(var(--foreground))",
         primary: {
-          DEFAULT: "hsl(var(--primary))",
+          DEFAULT: "hsl(var(--primary))", // brand-maroon
           foreground: "hsl(var(--primary-foreground))",
         },
         secondary: {
-          DEFAULT: "hsl(var(--secondary))",
+          DEFAULT: "hsl(var(--secondary))", // brand-brown
           foreground: "hsl(var(--secondary-foreground))",
         },
         destructive: {
@@ -27,11 +44,11 @@ const config: Config = {
           foreground: "hsl(var(--destructive-foreground))",
         },
         muted: {
-          DEFAULT: "hsl(var(--muted))",
+          DEFAULT: "hsl(var(--muted))", // cool-gray
           foreground: "hsl(var(--muted-foreground))",
         },
         accent: {
-          DEFAULT: "hsl(var(--accent))",
+          DEFAULT: "hsl(var(--accent))", // flame-orange
           foreground: "hsl(var(--accent-foreground))",
         },
         popover: {
@@ -50,7 +67,7 @@ const config: Config = {
       },
     },
   },
-  plugins: [require("@tailwindcss/typography")],
+  plugins: [],
 }
 
 export default config

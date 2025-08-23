@@ -1,0 +1,80 @@
+[
+  {
+    "id": "1",
+    "title": {
+      "en": "Community Outreach Day",
+      "fr": "Journée de Sensibilisation Communautaire",
+      "ht": "Jou Sèvis Kominote a"
+    },
+    "date": "2024-02-10",
+    "time": "9:00 AM",
+    "location": {
+      "en": "Brooklyn Community Center",
+      "fr": "Centre Communautaire de Brooklyn",
+      "ht": "Sant Kominote Brooklyn"
+    },
+    "description": {
+      "en": "Join us as we serve our community with food distribution and prayer.",
+      "fr": "Rejoignez-nous pour servir notre communauté avec la distribution de nourriture et la prière.",
+      "ht": "Vin jwenn nou pou nou sèvi kominote nou an ak distribisyon manje ak lapriyè."
+    },
+    "category": {
+      "en": "Community Service",
+      "fr": "Service Communautaire", 
+      "ht": "Sèvis Kominote"
+    },
+    "image": "/images/events/outreach.jpg"
+  },
+  {
+    "id": "2",
+    "title": {
+      "en": "Youth Winter Retreat",
+      "fr": "Retraite d'Hiver des Jeunes",
+      "ht": "Retrèt Ivè Jèn yo"
+    },
+    "date": "2024-02-16",
+    "time": "6:00 PM",
+    "location": {
+      "en": "Camp Woodland, NY",
+      "fr": "Camp Woodland, NY",
+      "ht": "Camp Woodland, NY"
+    },
+    "description": {
+      "en": "A weekend of worship, fellowship, and spiritual growth for our youth.",
+      "fr": "Un week-end d'adoration, de communion et de croissance spirituelle pour nos jeunes.",
+      "ht": "Yon wikèn adorasyon, kominyon ak kwasans espirityèl pou jèn nou yo."
+    },
+    "category": {
+      "en": "Youth Event",
+      "fr": "Événement Jeunesse",
+      "ht": "Aktivite Jèn"
+    },
+    "image": "/images/events/youth-retreat.jpg"
+  },
+  {
+    "id": "3",
+    "title": {
+      "en": "Prayer & Fasting Week",
+      "fr": "Semaine de Prière et de Jeûne",
+      "ht": "Semèn Lapriyè ak Jèn"
+    },
+    "date": "2024-02-25",
+    "time": "6:00 AM",
+    "location": {
+      "en": "Church Sanctuary",
+      "fr": "Sanctuaire de l'Église",
+      "ht": "Sanktiyè Legliz la"
+    },
+    "description": {
+      "en": "Join us for a week of focused prayer and fasting for spiritual breakthrough.",
+      "fr": "Rejoignez-nous pour une semaine de prière et de jeûne concentrés pour une percée spirituelle.",
+      "ht": "Vin jwenn nou pou yon semèn lapriyè ak jèn konsantre pou yon viktwa espirityèl."
+    },
+    "category": {
+      "en": "Prayer Event",
+      "fr": "Événement de Prière",
+      "ht": "Aktivite Lapriyè"
+    },
+    "image": "/images/events/prayer-week.jpg"
+  }
+]

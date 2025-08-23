@@ -4,48 +4,61 @@
 
 @layer base {
   :root {
-    --background: 0 0% 100%;
-    --foreground: 222.2 84% 4.9%;
-    --card: 0 0% 100%;
-    --card-foreground: 222.2 84% 4.9%;
-    --popover: 0 0% 100%;
-    --popover-foreground: 222.2 84% 4.9%;
-    --primary: 221.2 83.2% 53.3%;
-    --primary-foreground: 210 40% 98%;
-    --secondary: 210 40% 96%;
-    --secondary-foreground: 222.2 84% 4.9%;
-    --muted: 210 40% 96%;
-    --muted-foreground: 215.4 16.3% 46.9%;
-    --accent: 210 40% 96%;
-    --accent-foreground: 222.2 84% 4.9%;
+    /* FMC Bethlehem Brand Colors */
+    --brand-maroon: #8a1f4f;
+    --brand-brown: #713a24;
+    --flame-orange: #e4a166;
+    --flame-yellow: #f0c66d;
+    --cool-gray: #c9d3d8;
+    --off-white: #f6f7f7;
+
+    /* Theme Colors using Brand Palette */
+    --background: 0 0% 96.5%; /* off-white */
+    --foreground: 345 65% 21%; /* brand-maroon dark */
+    --card: 0 0% 96.5%;
+    --card-foreground: 345 65% 21%;
+    --popover: 0 0% 96.5%;
+    --popover-foreground: 345 65% 21%;
+    --primary: 345 65% 33%; /* brand-maroon */
+    --primary-foreground: 0 0% 96.5%;
+    --secondary: 22 49% 29%; /* brand-brown */
+    --secondary-foreground: 0 0% 96.5%;
+    --muted: 200 20% 82%; /* cool-gray */
+    --muted-foreground: 345 30% 45%;
+    --accent: 32 65% 65%; /* flame-orange */
+    --accent-foreground: 345 65% 21%;
     --destructive: 0 84.2% 60.2%;
-    --destructive-foreground: 210 40% 98%;
-    --border: 214.3 31.8% 91.4%;
-    --input: 214.3 31.8% 91.4%;
-    --ring: 221.2 83.2% 53.3%;
+    --destructive-foreground: 0 0% 96.5%;
+    --border: 200 20% 82%;
+    --input: 200 20% 82%;
+    --ring: 345 65% 33%;
     --radius: 0.5rem;
+
+    /* Additional accent colors */
+    --flame-orange-hsl: 32 65% 65%;
+    --flame-yellow-hsl: 45 75% 68%;
   }
 
   .dark {
-    --background: 222.2 84% 4.9%;
-    --foreground: 210 40% 98%;
-    --card: 222.2 84% 4.9%;
-    --card-foreground: 210 40% 98%;
-    --popover: 222.2 84% 4.9%;
-    --popover-foreground: 210 40% 98%;
-    --primary: 217.2 91.2% 59.8%;
-    --primary-foreground: 222.2 84% 4.9%;
-    --secondary: 217.2 32.6% 17.5%;
-    --secondary-foreground: 210 40% 98%;
-    --muted: 217.2 32.6% 17.5%;
-    --muted-foreground: 215 20.2% 65.1%;
-    --accent: 217.2 32.6% 17.5%;
-    --accent-foreground: 210 40% 98%;
+    --background: 345 65% 8%;
+    --foreground: 0 0% 96.5%;
+    --card: 345 65% 8%;
+    --card-foreground: 0 0% 96.5%;
+    --popover: 345 65% 8%;
+    --popover-foreground: 0 0% 96.5%;
+    --primary: 345 65% 45%;
+    --primary-foreground: 345 65% 8%;
+    --secondary: 22 49% 35%;
+    --secondary-foreground: 0 0% 96.5%;
+    --muted: 200 20% 25%;
+    --muted-foreground: 200 20% 65%;
+    --accent: 32 65% 55%;
+    --accent-foreground: 345 65% 8%;
     --destructive: 0 62.8% 30.6%;
-    --destructive-foreground: 210 40% 98%;
-    --border: 217.2 32.6% 17.5%;
-    --input: 217.2 32.6% 17.5%;
-    --ring: 224.3 76.3% 94.1%;
+    --destructive-foreground: 0 0% 96.5%;
+    --border: 200 20% 25%;
+    --input: 200 20% 25%;
+    --ring: 345 65% 45%;
   }
 }
 
