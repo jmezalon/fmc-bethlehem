@@ -324,5 +324,76 @@
         "planVisit": "Planifye yon Vizit"
       }
     }
+  },
+  "give": {
+    "title": "Bay",
+    "subtitle": "Jenerozite ou a ede sipòte misyon nou an ak ministè nou an nan kominote a",
+    "tithely": {
+      "title": "Bay sou Entènèt ak Tithely",
+      "description": "Platfòm sekirite ak fasil pou nou itilize pou bay sou entènèt",
+      "embedTitle": "Entegrasyon Tithely",
+      "embedDescription": "Klike anba a pou bay nan sekirite nan Tithely",
+      "giveNow": "Bay Kounye a",
+      "features": {
+        "recurring": "Don Repete",
+        "recurringDesc": "Konfigire don otomatik chak mwa oswa chak semèn",
+        "textGive": "Bay pa Mesaj",
+        "textGiveDesc": "Bay rapidman lè w voye yon mesaj tèks",
+        "receipts": "Resi Taks yo",
+        "receiptsDesc": "Resi otomatik pou rezon depo taks yo"
+      },
+      "textToGive": {
+        "title": "Bay pa Mesaj Tèks",
+        "description": "Voye yon mesaj tèks pou bay rapidman ak fasil:",
+        "instructions": "Voye 'GIVE' pou konfigire kont ou a, apre sa voye nenpòt kantite",
+        "phoneNumber": "Voye 'GIVE' pou kòmanse",
+        "steps": {
+          "step1": "1. Voye 'GIVE' nan nimewo nou an",
+          "step2": "2. Swiv lyen sekirite a pou konfigire kont ou a",
+          "step3": "3. Don yo nan lavni: jis voye kantite a!"
+        }
+      }
+    },
+    "alternatives": {
+      "title": "Lòt Fason pou Bay",
+      "zelle": {
+        "title": "Zelle",
+        "description": "Voye dirèkteman nan aplikasyon bank ou a",
+        "sendTo": "Voye bay:",
+        "number": "(929) 343-9393",
+        "note": "Disponib nan pifò gwo bank yo ak inyon kredi yo"
+      },
+      "cashApp": {
+        "title": "Cash App",
+        "description": "Voye lè w ap itilize aplikasyon Cash App la",
+        "sendTo": "Voye bay:",
+        "handle": "$FMCBethlehem",
+        "note": "Telechaje Cash App nan depo aplikasyon ou a"
+      }
+    },
+    "faq": {
+      "title": "Kesyon yo Moun Yo Poze Souvan",
+      "subtitle": "Repons nan kesyon komen yo sou bay",
+      "security": {
+        "question": "Èske li an sekirite pou bay sou entènèt?",
+        "answer": "Wi, nou itilize chifreman nivo bank ak platfòm sekirite yo pou pwoteje tout enfòmasyon finansye ou yo."
+      },
+      "receipts": {
+        "question": "Èske mwen pral resevwa yon resi pou taks mwen yo?",
+        "answer": "Wi, w ap otomatikman resevwa resi yo pa imel pou tout don yo ou ka itilize pou depo taks yo."
+      },
+      "recurring": {
+        "question": "Èske mwen ka konfigire don otomatik yo?",
+        "answer": "Absoliman. Ou ka konfigire don repete chak semèn, chak mwa oswa chak ane nan platfòm sou entènèt nou an."
+      },
+      "contact": {
+        "question": "Sa ki rive si mwen gen pwoblèm pou bay?",
+        "answer": "Si ou gen nenpòt pwoblèm oswa kesyon sou bay, tanpri kontakte nou epi nou pral kontan ede ou."
+      }
+    },
+    "footer": {
+      "title": "Mèsi pou Jenerozite ou a",
+      "message": "Sipò ou a fè li posib pou nou kontinye sèvi kominote nou an ak pataje renmen Kris la ak lòt moun yo."
+    }
   }
 }

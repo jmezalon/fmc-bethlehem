@@ -698,7 +698,13 @@
       "textToGive": {
         "title": "Text to Give",
         "description": "Send a text message to give quickly and easily:",
-        "instructions": "Text any amount to (929) 343-9393"
+        "instructions": "Text 'GIVE' to setup your account, then text any amount",
+        "phoneNumber": "Text 'GIVE' to get started",
+        "steps": {
+          "step1": "1. Text 'GIVE' to our number",
+          "step2": "2. Follow the secure link to set up your account",
+          "step3": "3. Future gifts: just text the amount!"
+        }
       }
     },
     "alternatives": {

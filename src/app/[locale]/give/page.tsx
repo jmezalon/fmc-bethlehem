@@ -121,21 +121,42 @@ export default function GivePage() {
 
             {/* Text to Give Info */}
             <div className="mt-8 bg-blue-50 border border-blue-200 rounded-lg p-6">
-              <div className="flex items-center gap-4">
-                <div className="w-12 h-12 bg-blue-600 rounded-lg flex items-center justify-center">
+              <div className="flex items-start gap-4">
+                <div className="w-12 h-12 bg-blue-600 rounded-lg flex items-center justify-center flex-shrink-0">
                   <Smartphone className="h-6 w-6 text-white" />
                 </div>
                 <div className="flex-1">
-                  <h3 className="font-semibold text-gray-900 mb-1">
+                  <h3 className="font-semibold text-gray-900 mb-2">
                     {t('tithely.textToGive.title')}
                   </h3>
-                  <p className="text-gray-600 text-sm mb-2">
+                  <p className="text-gray-600 text-sm mb-4">
                     {t('tithely.textToGive.description')}
                   </p>
-                  <div className="bg-white rounded-md px-3 py-2 border">
-                    <span className="font-mono text-sm text-gray-900">
-                      {t('tithely.textToGive.instructions')}
-                    </span>
+                  
+                  {/* Setup Instructions */}
+                  <div className="space-y-3 mb-4">
+                    <div className="flex items-center gap-3">
+                      <div className="w-6 h-6 bg-blue-600 rounded-full flex items-center justify-center text-white text-xs font-bold">1</div>
+                      <span className="text-sm text-gray-700">{t('tithely.textToGive.steps.step1')}</span>
+                    </div>
+                    <div className="flex items-center gap-3">
+                      <div className="w-6 h-6 bg-blue-600 rounded-full flex items-center justify-center text-white text-xs font-bold">2</div>
+                      <span className="text-sm text-gray-700">{t('tithely.textToGive.steps.step2')}</span>
+                    </div>
+                    <div className="flex items-center gap-3">
+                      <div className="w-6 h-6 bg-blue-600 rounded-full flex items-center justify-center text-white text-xs font-bold">3</div>
+                      <span className="text-sm text-gray-700">{t('tithely.textToGive.steps.step3')}</span>
+                    </div>
+                  </div>
+
+                  {/* Phone Number Placeholder */}
+                  <div className="bg-white rounded-md px-4 py-3 border border-blue-200">
+                    <div className="text-center">
+                      <p className="text-xs text-gray-500 mb-1">Get your Tithely phone number and update here:</p>
+                      <span className="font-mono text-lg font-semibold text-blue-600">
+                        {t('tithely.textToGive.phoneNumber')}
+                      </span>
+                    </div>
                   </div>
                 </div>
               </div>

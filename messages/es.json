@@ -14,5 +14,76 @@
   "seo": {
     "title": "Free Methodist Church of Bethlehem",
     "description": "Bienvenido a Free Methodist Church of Bethlehem - Tu iglesia comunitaria"
+  },
+  "give": {
+    "title": "Dar",
+    "subtitle": "Tu generosidad ayuda a apoyar nuestra misión y ministerio en la comunidad",
+    "tithely": {
+      "title": "Dar en Línea con Tithely",
+      "description": "Nuestra plataforma segura y fácil de usar para dar en línea",
+      "embedTitle": "Integración de Tithely",
+      "embedDescription": "Haz clic abajo para dar de forma segura a través de Tithely",
+      "giveNow": "Dar Ahora",
+      "features": {
+        "recurring": "Donaciones Recurrentes",
+        "recurringDesc": "Configura donaciones automáticas mensuales o semanales",
+        "textGive": "Dar por Mensaje",
+        "textGiveDesc": "Da rápidamente enviando un mensaje de texto",
+        "receipts": "Recibos Fiscales",
+        "receiptsDesc": "Recibos automáticos para propósitos de deducción fiscal"
+      },
+      "textToGive": {
+        "title": "Dar por Mensaje de Texto",
+        "description": "Envía un mensaje de texto para dar de forma rápida y fácil:",
+        "instructions": "Envía 'GIVE' para configurar tu cuenta, luego envía cualquier cantidad",
+        "phoneNumber": "Envía 'GIVE' para comenzar",
+        "steps": {
+          "step1": "1. Envía 'GIVE' a nuestro número",
+          "step2": "2. Sigue el enlace seguro para configurar tu cuenta",
+          "step3": "3. Futuras donaciones: ¡solo envía la cantidad!"
+        }
+      }
+    },
+    "alternatives": {
+      "title": "Otras Formas de Dar",
+      "zelle": {
+        "title": "Zelle",
+        "description": "Envía directamente desde tu aplicación bancaria",
+        "sendTo": "Enviar a:",
+        "number": "(929) 343-9393",
+        "note": "Disponible a través de la mayoría de bancos y cooperativas de crédito principales"
+      },
+      "cashApp": {
+        "title": "Cash App",
+        "description": "Envía usando la aplicación Cash App",
+        "sendTo": "Enviar a:",
+        "handle": "$FMCBethlehem",
+        "note": "Descarga Cash App desde tu tienda de aplicaciones"
+      }
+    },
+    "faq": {
+      "title": "Preguntas Frecuentes",
+      "subtitle": "Respuestas a preguntas comunes sobre dar",
+      "security": {
+        "question": "¿Es seguro dar en línea?",
+        "answer": "Sí, utilizamos encriptación de nivel bancario y plataformas seguras para proteger toda tu información financiera."
+      },
+      "receipts": {
+        "question": "¿Recibiré un recibo para mis impuestos?",
+        "answer": "Sí, recibirás automáticamente recibos por correo electrónico para todas las donaciones que puedes usar para deducciones fiscales."
+      },
+      "recurring": {
+        "question": "¿Puedo configurar donaciones automáticas?",
+        "answer": "Absolutamente. Puedes configurar donaciones recurrentes semanales, mensuales o anuales a través de nuestra plataforma en línea."
+      },
+      "contact": {
+        "question": "¿Qué pasa si tengo problemas para dar?",
+        "answer": "Si tienes algún problema o pregunta sobre dar, por favor contáctanos y estaremos encantados de ayudarte."
+      }
+    },
+    "footer": {
+      "title": "Gracias por Tu Generosidad",
+      "message": "Tu apoyo hace posible que continuemos sirviendo a nuestra comunidad y compartiendo el amor de Cristo con otros."
+    }
   }
 }

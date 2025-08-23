@@ -326,5 +326,76 @@
         "planVisit": "Planifier une Visite"
       }
     }
+  },
+  "give": {
+    "title": "Donner",
+    "subtitle": "Votre générosité aide à soutenir notre mission et notre ministère dans la communauté",
+    "tithely": {
+      "title": "Donner en Ligne avec Tithely",
+      "description": "Notre plateforme sécurisée et facile à utiliser pour donner en ligne",
+      "embedTitle": "Intégration Tithely",
+      "embedDescription": "Cliquez ci-dessous pour donner en toute sécurité via Tithely",
+      "giveNow": "Donner Maintenant",
+      "features": {
+        "recurring": "Dons Récurrents",
+        "recurringDesc": "Configurez des dons automatiques mensuels ou hebdomadaires",
+        "textGive": "Donner par SMS",
+        "textGiveDesc": "Donnez rapidement en envoyant un SMS",
+        "receipts": "Reçus Fiscaux",
+        "receiptsDesc": "Reçus automatiques à des fins de déduction fiscale"
+      },
+      "textToGive": {
+        "title": "Donner par SMS",
+        "description": "Envoyez un SMS pour donner rapidement et facilement :",
+        "instructions": "Envoyez 'GIVE' pour configurer votre compte, puis envoyez n'importe quel montant",
+        "phoneNumber": "Envoyez 'GIVE' pour commencer",
+        "steps": {
+          "step1": "1. Envoyez 'GIVE' à notre numéro",
+          "step2": "2. Suivez le lien sécurisé pour configurer votre compte",
+          "step3": "3. Futurs dons : envoyez simplement le montant !"
+        }
+      }
+    },
+    "alternatives": {
+      "title": "Autres Façons de Donner",
+      "zelle": {
+        "title": "Zelle",
+        "description": "Envoyez directement depuis votre application bancaire",
+        "sendTo": "Envoyer à :",
+        "number": "(929) 343-9393",
+        "note": "Disponible via la plupart des grandes banques et coopératives de crédit"
+      },
+      "cashApp": {
+        "title": "Cash App",
+        "description": "Envoyez en utilisant l'application Cash App",
+        "sendTo": "Envoyer à :",
+        "handle": "$FMCBethlehem",
+        "note": "Téléchargez Cash App depuis votre magasin d'applications"
+      }
+    },
+    "faq": {
+      "title": "Questions Fréquentes",
+      "subtitle": "Réponses aux questions courantes sur les dons",
+      "security": {
+        "question": "Est-il sûr de donner en ligne ?",
+        "answer": "Oui, nous utilisons un cryptage de niveau bancaire et des plateformes sécurisées pour protéger toutes vos informations financières."
+      },
+      "receipts": {
+        "question": "Vais-je recevoir un reçu pour mes impôts ?",
+        "answer": "Oui, vous recevrez automatiquement des reçus par e-mail pour tous les dons que vous pouvez utiliser pour les déductions fiscales."
+      },
+      "recurring": {
+        "question": "Puis-je configurer des dons automatiques ?",
+        "answer": "Absolument. Vous pouvez configurer des dons récurrents hebdomadaires, mensuels ou annuels via notre plateforme en ligne."
+      },
+      "contact": {
+        "question": "Que faire si j'ai des problèmes pour donner ?",
+        "answer": "Si vous avez des problèmes ou des questions concernant les dons, veuillez nous contacter et nous serons heureux de vous aider."
+      }
+    },
+    "footer": {
+      "title": "Merci pour Votre Générosité",
+      "message": "Votre soutien nous permet de continuer à servir notre communauté et à partager l'amour du Christ avec les autres."
+    }
   }
 }
