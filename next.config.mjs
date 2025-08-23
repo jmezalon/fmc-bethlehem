@@ -11,6 +11,10 @@ const nextConfig = {
     domains: ['localhost'],
   },
   trailingSlash: false,
+  // Disable static optimization for dynamic rendering
+  generateBuildId: async () => {
+    return 'fmcb-build'
+  },
 };
 
 export default withNextIntl(nextConfig);

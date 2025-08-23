@@ -16,9 +16,7 @@ const inter = Inter({ subsets: ['latin'] });
 
 const locales = ['ht', 'fr', 'en'];
 
-export function generateStaticParams() {
-  return locales.map(locale => ({ locale }));
-}
+// Removed generateStaticParams to allow dynamic rendering
 
 export async function generateMetadata({
   params: { locale },
