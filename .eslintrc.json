@@ -1,10 +1,13 @@
 {
   "extends": [
     "next/core-web-vitals",
+    "next/typescript",
     "prettier"
   ],
   "plugins": ["prettier"],
   "rules": {
+    "react/no-unescaped-entities": "off",
+    "@next/next/no-img-element": "warn",
     "prettier/prettier": "error",
     "prefer-const": "error"
   }

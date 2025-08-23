@@ -10,6 +10,7 @@ const nextConfig = {
   images: {
     domains: ['localhost'],
   },
+  trailingSlash: false,
 };
 
 export default withNextIntl(nextConfig);

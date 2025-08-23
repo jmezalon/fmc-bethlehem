@@ -98,9 +98,7 @@ export default function PrivacyPolicyPage() {
                 </h2>
                 <div className="space-y-4 text-muted-foreground">
                   <p>
-                    We do not sell, trade, or otherwise transfer your personal
-                    information to third parties without your consent, except in
-                    the following circumstances:
+                    We do not sell, trade, or otherwise transfer your personal information to third parties without your consent, except in the following circumstances:
                   </p>
                   <ul className="list-disc pl-6 space-y-2">
                     <li>
@@ -185,7 +183,7 @@ export default function PrivacyPolicyPage() {
                   <p>
                     We may update this Privacy Policy from time to time. We will
                     notify you of any changes by posting the new Privacy Policy
-                    on this page and updating the "Last updated" date.
+                    on this page and updating the &quot;Last updated&quot; date.
                   </p>
                 </div>
               </div>

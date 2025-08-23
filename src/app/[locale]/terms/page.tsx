@@ -56,7 +56,7 @@ export default function TermsOfServicePage() {
                 <div className="space-y-4 text-muted-foreground">
                   <p>
                     Permission is granted to temporarily download one copy of
-                    the materials on FMCB's website for personal, non-commercial
+                    the materials on FMCB&apos;s website for personal, non-commercial
                     transitory viewing only. This is the grant of a license, not
                     a transfer of title, and under this license you may not:
                   </p>
@@ -89,7 +89,7 @@ export default function TermsOfServicePage() {
                 </h2>
                 <div className="space-y-4 text-muted-foreground">
                   <p>
-                    The materials on FMCB's website are provided on an 'as is'
+                    The materials on FMCB&apos;s website are provided on an &apos;as is&apos;
                     basis. FMCB makes no warranties, expressed or implied, and
                     hereby disclaims and negates all other warranties including
                     without limitation, implied warranties or conditions of
@@ -98,11 +98,7 @@ export default function TermsOfServicePage() {
                     of rights.
                   </p>
                   <p>
-                    Further, FMCB does not warrant or make any representations
-                    concerning the accuracy, likely results, or reliability of
-                    the use of the materials on its website or otherwise
-                    relating to such materials or on any sites linked to this
-                    site.
+                    Further, FMCB does not warrant or make any representations concerning the accuracy, likely results, or reliability of the use of the materials on its website or otherwise relating to such materials or on any sites linked to this site.
                   </p>
                 </div>
               </div>
@@ -132,12 +128,13 @@ export default function TermsOfServicePage() {
                   5. User Conduct
                 </h2>
                 <div className="space-y-4 text-muted-foreground">
-                  <p>When using our website, you agree to:</p>
+                  <p>
+                    When using our website, you agree to:
+                  </p>
                   <ul className="list-disc pl-6 space-y-2">
                     <li>Use the website only for lawful purposes</li>
                     <li>
-                      Not engage in any conduct that restricts or inhibits
-                      anyone's use or enjoyment of the website
+                      Not engage in any conduct that restricts or inhibits anyone&apos;s use or enjoyment of the website
                     </li>
                     <li>
                       Not transmit any content that is unlawful, harmful,
@@ -182,9 +179,7 @@ export default function TermsOfServicePage() {
                 </h2>
                 <div className="space-y-4 text-muted-foreground">
                   <p>
-                    Your privacy is important to us. Please review our Privacy
-                    Policy, which also governs your use of the website, to
-                    understand our practices.
+                    Your privacy is important to us. Please review our Privacy Policy, which also governs your use of the website, to understand our practices.
                   </p>
                 </div>
               </div>
