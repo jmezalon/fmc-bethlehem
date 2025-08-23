@@ -134,14 +134,18 @@ export default function PlanVisitPage() {
               </div>
             </div>
 
-            {/* Map Placeholder */}
-            <div className="bg-muted rounded-lg h-80 flex items-center justify-center">
-              <div className="text-center">
-                <MapPin className="h-12 w-12 text-muted-foreground mx-auto mb-4" />
-                <p className="text-muted-foreground">
-                  {t('location.mapPlaceholder')}
-                </p>
-              </div>
+            {/* Google Maps Embed */}
+            <div className="rounded-lg overflow-hidden h-80 border border-border">
+              <iframe
+                src="https://maps.google.com/maps?width=100%25&amp;height=320&amp;hl=en&amp;q=4415%20Glenwood%20Rd,%20Brooklyn,%20NY%2011203+(Free%20Methodist%20Church%20of%20Bethlehem)&amp;t=&amp;z=15&amp;ie=UTF8&amp;iwloc=B&amp;output=embed"
+                width="100%"
+                height="100%"
+                style={{ border: 0 }}
+                allowFullScreen
+                loading="lazy"
+                referrerPolicy="no-referrer-when-downgrade"
+                title="Free Methodist Church of Bethlehem Location"
+              />
             </div>
           </div>
         </Container>
