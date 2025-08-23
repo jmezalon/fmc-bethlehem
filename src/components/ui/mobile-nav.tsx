@@ -8,7 +8,7 @@ import { useEffect } from 'react';
 interface MobileNavProps {
   isOpen: boolean;
   onClose: () => void;
-  navItems: Array<{ key: string; href: string }>;
+  navItems: Array<{ href: string; label: string }>;
 }
 
 export function MobileNav({ isOpen, onClose, navItems }: MobileNavProps) {
@@ -80,12 +80,12 @@ export function MobileNav({ isOpen, onClose, navItems }: MobileNavProps) {
         <nav className="space-y-4">
           {navItems.map(item => (
             <Link
-              key={item.key}
+              key={item.href}
               href={item.href as any}
               onClick={onClose}
               className="block py-3 text-lg font-medium text-foreground hover:text-primary transition-colors border-b border-border last:border-b-0"
             >
-              {t(item.key)}
+              {item.label}
             </Link>
           ))}
 

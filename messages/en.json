@@ -7,7 +7,16 @@
     "events": "Events",
     "groups": "Groups",
     "nextSteps": "Next Steps",
-    "prayer": "Prayer"
+    "prayer": "Prayer",
+    "navigation": {
+      "home": "Home",
+      "events": "Events",
+      "groups": "Groups",
+      "nextSteps": "Next Steps",
+      "sermons": "Sermons",
+      "about": "About",
+      "contact": "Contact"
+    }
   },
   "hero": {
     "title": "Welcome to FMC Bethlehem",
@@ -280,6 +289,312 @@
       "description": "Have an idea for a new small group? We'd love to help you get started!",
       "startGroup": "Start a New Group",
       "questions": "Ask Questions"
+    }
+  },
+  "nextSteps": {
+    "title": "Next Steps",
+    "subtitle": "Take your next step in faith and grow deeper in your relationship with God",
+    "getStarted": "Get Started",
+    "support": {
+      "title": "Need Help?",
+      "description": "Our pastoral team is here to support you on your spiritual journey. Don't hesitate to reach out with any questions.",
+      "contact": "Contact Us",
+      "visitUs": "Visit Us"
+    },
+    "salvation": {
+      "title": "I Accepted Jesus",
+      "subtitle": "Share your decision to follow Christ with us",
+      "description": "Congratulations on accepting Jesus as your Lord and Savior! We'd love to celebrate with you and help you take your next steps in faith.",
+      "backToNextSteps": "Back to Next Steps",
+      "success": {
+        "title": "Thank You for Sharing!",
+        "message": "We're so excited to celebrate your decision with you. Someone from our pastoral team will be in touch soon to help you with your next steps in faith."
+      },
+      "form": {
+        "title": "Share Your Decision",
+        "description": "Tell us about your decision to follow Jesus so we can celebrate with you and provide support.",
+        "personalInfo": "Personal Information",
+        "firstName": "First Name",
+        "lastName": "Last Name",
+        "email": "Email Address",
+        "phone": "Phone Number",
+        "age": "Age Range",
+        "selectAge": "Select your age range",
+        "decisionInfo": "Your Decision",
+        "decisionDate": "When did you accept Jesus? (Optional)",
+        "testimony": "Brief Testimony",
+        "testimonyPlaceholder": "Share a brief testimony about your decision to follow Jesus...",
+        "prayerRequests": "Prayer Requests (Optional)",
+        "prayerRequestsPlaceholder": "Any prayer requests you'd like to share with us...",
+        "followUp": "Follow-up Preferences",
+        "followUpPreference": "How would you like us to follow up?",
+        "selectFollowUp": "Select follow-up preference",
+        "additionalComments": "Additional Comments (Optional)",
+        "additionalCommentsPlaceholder": "Anything else you'd like us to know...",
+        "submit": "Submit",
+        "submitting": "Submitting...",
+        "ageOptions": {
+          "under18": "Under 18",
+          "18to25": "18-25",
+          "26to35": "26-35",
+          "36to50": "36-50",
+          "51to65": "51-65",
+          "over65": "Over 65"
+        },
+        "followUpOptions": {
+          "phone": "Phone Call",
+          "email": "Email",
+          "inPerson": "In-Person Meeting",
+          "noContact": "No Follow-up Needed"
+        }
+      }
+    },
+    "baptism": {
+      "title": "Baptism",
+      "subtitle": "Take the next step in your faith journey through baptism",
+      "description": "Baptism is a beautiful declaration of your faith in Jesus Christ. Let us help you prepare for this important step.",
+      "backToNextSteps": "Back to Next Steps",
+      "success": {
+        "title": "Baptism Request Received!",
+        "message": "Thank you for your interest in baptism. Our pastoral team will contact you soon to discuss next steps and schedule your baptism."
+      },
+      "form": {
+        "title": "Baptism Request",
+        "description": "Please fill out this form to request baptism. Our team will contact you to discuss preparation and scheduling.",
+        "personalInfo": "Personal Information",
+        "firstName": "First Name",
+        "lastName": "Last Name",
+        "email": "Email Address",
+        "phone": "Phone Number",
+        "age": "Age Range",
+        "selectAge": "Select your age range",
+        "baptismInfo": "Baptism Information",
+        "salvationDate": "When did you accept Jesus? (Optional)",
+        "previousBaptism": "Have you been baptized before?",
+        "selectPreviousBaptism": "Select an option",
+        "baptismReason": "Why do you want to be baptized?",
+        "baptismReasonPlaceholder": "Please share why baptism is important to you...",
+        "preferredDate": "Preferred Baptism Date (Optional)",
+        "specialRequests": "Special Requests (Optional)",
+        "specialRequestsPlaceholder": "Any special requests or accommodations needed...",
+        "emergencyContact": "Emergency Contact Information",
+        "emergencyContactName": "Emergency Contact Name",
+        "emergencyContactPhone": "Emergency Contact Phone",
+        "submit": "Submit Request",
+        "submitting": "Submitting...",
+        "ageOptions": {
+          "under18": "Under 18",
+          "18to25": "18-25",
+          "26to35": "26-35",
+          "36to50": "36-50",
+          "51to65": "51-65",
+          "over65": "Over 65"
+        },
+        "previousBaptismOptions": {
+          "no": "No, this is my first baptism",
+          "yesInfant": "Yes, as an infant",
+          "yesAdult": "Yes, as an adult"
+        }
+      }
+    },
+    "membership": {
+      "title": "Church Membership",
+      "subtitle": "Become an official member of our church family",
+      "description": "Church membership is a commitment to be part of our community and participate in the life and mission of our church.",
+      "backToNextSteps": "Back to Next Steps",
+      "success": {
+        "title": "Membership Application Received!",
+        "message": "Thank you for your interest in becoming a member. Our leadership team will review your application and contact you soon about next steps."
+      },
+      "form": {
+        "title": "Membership Application",
+        "description": "Please complete this application to begin the membership process. Our team will contact you to discuss next steps.",
+        "personalInfo": "Personal Information",
+        "firstName": "First Name",
+        "lastName": "Last Name",
+        "email": "Email Address",
+        "phone": "Phone Number",
+        "address": "Street Address",
+        "city": "City",
+        "state": "State",
+        "zipCode": "ZIP Code",
+        "dateOfBirth": "Date of Birth",
+        "maritalStatus": "Marital Status",
+        "selectMaritalStatus": "Select marital status",
+        "spiritualInfo": "Spiritual Information",
+        "salvationDate": "When did you accept Jesus? (Optional)",
+        "baptismDate": "When were you baptized? (Optional)",
+        "previousChurch": "Previous Church (Optional)",
+        "membershipReason": "Why do you want to become a member?",
+        "membershipReasonPlaceholder": "Please share why membership is important to you...",
+        "ministryService": "Ministry & Service",
+        "skills": "Skills & Talents (Optional)",
+        "skillsPlaceholder": "What skills or talents would you like to use in ministry...",
+        "availability": "Availability (Optional)",
+        "availabilityPlaceholder": "When are you typically available to serve...",
+        "submit": "Submit Application",
+        "submitting": "Submitting...",
+        "maritalStatusOptions": {
+          "single": "Single",
+          "married": "Married",
+          "divorced": "Divorced",
+          "widowed": "Widowed"
+        }
+      }
+    },
+    "ministries": {
+      "title": "Join Ministries",
+      "subtitle": "Use your gifts and talents to serve God and others",
+      "description": "God has given each of us unique gifts and talents. Discover how you can use yours to make a difference in our church and community.",
+      "backToNextSteps": "Back to Next Steps",
+      "success": {
+        "title": "Ministry Interest Received!",
+        "message": "Thank you for your interest in serving! A ministry leader will contact you soon to discuss opportunities and next steps."
+      },
+      "form": {
+        "title": "Ministry Interest Form",
+        "description": "Tell us about your interests and how you'd like to serve. We'll connect you with the right ministry opportunities.",
+        "personalInfo": "Personal Information",
+        "firstName": "First Name",
+        "lastName": "Last Name",
+        "email": "Email Address",
+        "phone": "Phone Number",
+        "age": "Age Range",
+        "selectAge": "Select your age range",
+        "ministryInterests": "Ministry Interests",
+        "primaryMinistry": "Primary Ministry Interest",
+        "selectPrimaryMinistry": "Select your primary interest",
+        "experience": "Previous Ministry Experience (Optional)",
+        "experiencePlaceholder": "Describe any previous ministry or volunteer experience...",
+        "skills": "Skills & Talents (Optional)",
+        "skillsPlaceholder": "What skills or talents do you bring...",
+        "availabilityCommitment": "Availability & Commitment",
+        "availability": "When are you available?",
+        "selectAvailability": "Select your availability",
+        "timeCommitment": "Time Commitment",
+        "selectTimeCommitment": "Select time commitment per week",
+        "motivation": "Why do you want to serve?",
+        "motivationPlaceholder": "Share your motivation for serving in ministry...",
+        "additionalInfo": "Additional Information",
+        "backgroundCheckConsent": "I consent to a background check if required for this ministry position",
+        "additionalComments": "Additional Comments (Optional)",
+        "additionalCommentsPlaceholder": "Anything else you'd like us to know...",
+        "submit": "Submit Interest",
+        "submitting": "Submitting...",
+        "ageOptions": {
+          "under18": "Under 18",
+          "18to25": "18-25",
+          "26to35": "26-35",
+          "36to50": "36-50",
+          "51to65": "51-65",
+          "over65": "Over 65"
+        },
+        "ministryOptions": {
+          "worship": "Worship & Music",
+          "children": "Children's Ministry",
+          "youth": "Youth Ministry",
+          "hospitality": "Hospitality & Welcoming",
+          "outreach": "Community Outreach",
+          "prayer": "Prayer Ministry",
+          "media": "Media & Technology",
+          "administration": "Administration",
+          "maintenance": "Facilities & Maintenance",
+          "counseling": "Counseling & Care"
+        },
+        "availabilityOptions": {
+          "sundays": "Sunday Services",
+          "weekdays": "Weekday Mornings",
+          "evenings": "Weekday Evenings",
+          "weekends": "Weekends",
+          "flexible": "Flexible Schedule"
+        },
+        "timeCommitmentOptions": {
+          "1to2hours": "1-2 hours per week",
+          "3to5hours": "3-5 hours per week",
+          "6to10hours": "6-10 hours per week",
+          "10plusHours": "10+ hours per week"
+        }
+      }
+    },
+    "newMemberClass": {
+      "title": "New Member Class",
+      "subtitle": "Learn about our church, beliefs, and community",
+      "description": "Our New Member Class helps you understand our church's mission, values, and how to get connected in our community.",
+      "backToNextSteps": "Back to Next Steps",
+      "success": {
+        "title": "Class Registration Received!",
+        "message": "Thank you for registering for New Member Class! We'll contact you soon with class details and schedule information."
+      },
+      "form": {
+        "title": "New Member Class Registration",
+        "description": "Register for our next New Member Class to learn more about our church and get connected.",
+        "personalInfo": "Personal Information",
+        "firstName": "First Name",
+        "lastName": "Last Name",
+        "email": "Email Address",
+        "phone": "Phone Number",
+        "age": "Age Range",
+        "selectAge": "Select your age range",
+        "churchInfo": "Church Information",
+        "membershipStatus": "Current Status",
+        "selectMembershipStatus": "Select your current status",
+        "attendanceDuration": "How long have you been attending?",
+        "selectAttendanceDuration": "Select duration",
+        "classPreferences": "Class Preferences",
+        "classPreference": "Class Format Preference",
+        "selectClassPreference": "Select format preference",
+        "sessionPreference": "Session Time Preference",
+        "selectSessionPreference": "Select time preference",
+        "childcare": "Do you need childcare?",
+        "selectChildcare": "Select childcare need",
+        "childrenAges": "Children's Ages (if applicable)",
+        "childrenAgesPlaceholder": "e.g., 3, 7, 12",
+        "expectationsQuestions": "Expectations & Questions",
+        "expectations": "What do you hope to learn?",
+        "expectationsPlaceholder": "Share what you hope to gain from the class...",
+        "questions": "Questions (Optional)",
+        "questionsPlaceholder": "Any questions about the class or our church...",
+        "specialNeeds": "Special Needs (Optional)",
+        "specialNeedsPlaceholder": "Any accommodations or special needs...",
+        "submit": "Register for Class",
+        "submitting": "Submitting...",
+        "ageOptions": {
+          "under18": "Under 18",
+          "18to25": "18-25",
+          "26to35": "26-35",
+          "36to50": "36-50",
+          "51to65": "51-65",
+          "over65": "Over 65"
+        },
+        "membershipStatusOptions": {
+          "visitor": "First-time Visitor",
+          "regularAttendee": "Regular Attendee",
+          "newMember": "New Member",
+          "consideringMembership": "Considering Membership"
+        },
+        "attendanceDurationOptions": {
+          "lessThanMonth": "Less than a month",
+          "1to3months": "1-3 months",
+          "3to6months": "3-6 months",
+          "6to12months": "6-12 months",
+          "overYear": "Over a year"
+        },
+        "classPreferenceOptions": {
+          "inPerson": "In-Person Only",
+          "online": "Online Only",
+          "hybrid": "Hybrid (In-Person & Online)"
+        },
+        "sessionPreferenceOptions": {
+          "sundayMorning": "Sunday Morning",
+          "sundayAfternoon": "Sunday Afternoon",
+          "weekdayEvening": "Weekday Evening",
+          "saturdayMorning": "Saturday Morning"
+        },
+        "childcareOptions": {
+          "yes": "Yes, I need childcare",
+          "no": "No, I don't need childcare"
+        }
+      }
     }
   },
   "sermons": {

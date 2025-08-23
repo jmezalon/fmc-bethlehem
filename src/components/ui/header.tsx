@@ -12,15 +12,14 @@ export function Header() {
   const t = useTranslations('nav');
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
 
-  const navItems = [
-    { key: 'home', href: '/' },
-    { key: 'planVisit', href: '/plan-visit' },
-    { key: 'schedule', href: '/schedule' },
-    { key: 'watch', href: '/watch/live' },
-    { key: 'events', href: '/events' },
-    { key: 'groups', href: '/groups' },
-    { key: 'nextSteps', href: '/next-steps' },
-    { key: 'prayer', href: '/prayer' },
+  const navigationItems = [
+    { href: '/', label: t('navigation.home') },
+    { href: '/events', label: t('navigation.events') },
+    { href: '/groups', label: t('navigation.groups') },
+    { href: '/next-steps', label: t('navigation.nextSteps') },
+    { href: '/sermons', label: t('navigation.sermons') },
+    { href: '/about', label: t('navigation.about') },
+    { href: '/contact', label: t('navigation.contact') },
   ];
 
   return (
@@ -39,13 +38,13 @@ export function Header() {
 
           {/* Desktop Navigation - Center */}
           <nav className="hidden lg:flex items-center space-x-8 flex-1 justify-center">
-            {navItems.map(item => (
+            {navigationItems.map(item => (
               <Link
-                key={item.key}
+                key={item.href}
                 href={item.href as any}
                 className="text-sm font-medium text-muted-foreground hover:text-primary transition-colors"
               >
-                {t(item.key)}
+                {item.label}
               </Link>
             ))}
           </nav>
@@ -80,7 +79,7 @@ export function Header() {
       <MobileNav
         isOpen={isMobileMenuOpen}
         onClose={() => setIsMobileMenuOpen(false)}
-        navItems={navItems}
+        navItems={navigationItems}
       />
     </header>
   );
