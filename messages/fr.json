@@ -2,6 +2,7 @@
   "nav": {
     "home": "Accueil",
     "planVisit": "Planifier une Visite",
+    "schedule": "Horaire",
     "watch": "Regarder",
     "events": "Événements",
     "nextSteps": "Prochaines Étapes",
@@ -36,19 +37,76 @@
     "description": "Bienvenue dans notre communauté où nous adorons Dieu avec joie et vivons en communion avec des croyants partageant les mêmes idées."
   },
   "footer": {
-    "viewMap": "Voir la carte",
+    "churchInfo": "Informations de l'Église",
+    "address": "4415 Glenwood Rd, Brooklyn, NY 11203",
+    "phone": "Téléphone: (929) 343-9393",
+    "email": "Email: methodistchurch1993@gmail.com",
+    "directions": "Obtenir des Directions",
     "serviceTimes": "Horaires des Services",
-    "youthService": "Service Jeunesse",
-    "youthTime": "18h00",
+    "sunday": "Dimanche",
     "wednesday": "Mercredi",
+    "sundayWorship": "Culte du Matin",
+    "afternoonService": "Service de l'Après-midi",
+    "mondayBibleStudy": "Étude Biblique du Lundi",
+    "wednesdayPrayer": "Prière, Le Combat Spirituel",
     "stayConnected": "Restez Connecté",
-    "emailDescription": "Recevez les nouvelles et informations sur les activités de l'église.",
+    "emailDescription": "Recevez des mises à jour sur les services et événements",
     "emailPlaceholder": "Entrez votre email",
     "subscribe": "S'abonner",
-    "followUs": "Suivez-nous",
+    "followUs": "Connectez-vous avec Nous",
     "allRightsReserved": "Tous droits réservés.",
-    "privacy": "Confidentialité",
-    "terms": "Conditions"
+    "quickLinks": "Liens Rapides",
+    "privacy": "Politique de Confidentialité",
+    "terms": "Conditions d'Utilisation",
+    "copyright": " 2024 FMC Bethlehem. Tous droits réservés."
+  },
+  "planVisit": {
+    "title": "Planifier une Visite",
+    "subtitle": "Nous sommes ravis de vous accueillir à FMC Bethlehem. Voici tout ce que vous devez savoir pour votre première visite.",
+    "location": {
+      "title": "Notre Emplacement",
+      "address": "Notre Adresse",
+      "entrance": "Entrée sur E 45th St",
+      "directions": "Obtenir des Directions",
+      "mapPlaceholder": "La carte Google Maps apparaîtra ici"
+    },
+    "schedule": {
+      "title": "Horaires des Services",
+      "language": "Langue",
+      "addToCalendar": "Ajouter au Calendrier",
+      "morning": {
+        "title": "Service du Matin (Créole)",
+        "sunSchool": "École du Dimanche",
+        "worship": "Service d'Adoration",
+        "language": "Créole Haïtien"
+      },
+      "youth": {
+        "title": "Service Jeunesse / Après-midi",
+        "service": "Service Jeunesse et Après-midi",
+        "language": "Anglais et Créole"
+      }
+    },
+    "expect": {
+      "title": "À Quoi S'Attendre",
+      "dress": {
+        "title": "Code Vestimentaire",
+        "description": "Nous encourageons une tenue formelle pour les services.",
+        "leaders": "Les dirigeants portent une cravate"
+      },
+      "accessibility": {
+        "title": "Accessibilité",
+        "description": "Notre église est accessible aux fauteuils roulants."
+      },
+      "translation": {
+        "title": "Traduction",
+        "description": "Nous offrons parfois une traduction du créole vers l'anglais pour les visiteurs."
+      }
+    },
+    "contact": {
+      "title": "Des Questions?",
+      "description": "Si vous avez des questions ou besoin d'aide, n'hésitez pas à nous contacter.",
+      "button": "Nous Contacter"
+    }
   },
   "home": {
     "planVisitCta": "Planifier une Visite",
@@ -66,5 +124,72 @@
     "learnMore": "En Savoir Plus",
     "duration": "Durée",
     "speaker": "Orateur"
+  },
+  "schedule": {
+    "title": "Horaire Hebdomadaire",
+    "subtitle": "Rejoignez-nous tout au long de la semaine pour le culte, la prière et la communion fraternelle.",
+    "weeklyTitle": "Activités Hebdomadaires",
+    "specialTitle": "Événements Spéciaux",
+    "days": {
+      "sunday": "Dimanche",
+      "monday": "Lundi",
+      "tuesday": "Mardi",
+      "wednesday": "Mercredi",
+      "thursday": "Jeudi",
+      "friday": "Vendredi"
+    },
+    "sunday": {
+      "sunSchool": "École du Dimanche",
+      "sunSchoolDesc": "Étude biblique et communion fraternelle pour tous les âges",
+      "morningWorship": "Service de Culte du Matin",
+      "morningWorshipDesc": "Service principal en créole haïtien",
+      "afternoonWorship": "Service de Culte de l'Après-midi",
+      "afternoonWorshipDesc": "Service des jeunes et de l'après-midi en anglais et créole"
+    },
+    "monday": {
+      "kaseChenn": "Kase Chenn (Jeûne et Prière)",
+      "kaseChennDesc": "Service matinal de jeûne et de prière",
+      "youthBible": "Étude Biblique des Jeunes",
+      "youthBibleDesc": "Étude biblique axée sur les jeunes",
+      "generalBible": "Étude Biblique Générale",
+      "generalBibleDesc": "Étude biblique pour tous les membres"
+    },
+    "wednesday": {
+      "combat": "Mercredi de Combat Spirituel",
+      "combatDesc": "Service de prière de guerre spirituelle du mercredi"
+    },
+    "multiDay": {
+      "prayer": "Prière Multi-Jours (Zoom)",
+      "prayerDesc": "Réunion de prière en ligne via Zoom"
+    },
+    "zoom": {
+      "title": "Réunions de Prière en Ligne",
+      "description": "Rejoignez-nous pour la prière via Zoom du mardi au vendredi",
+      "meetingId": "ID de Réunion",
+      "passcode": "Code d'Accès",
+      "schedule": "Mardi - Vendredi: 11h30 - 12h15"
+    },
+    "special": {
+      "communion": {
+        "title": "Dimanche de la Sainte Cène",
+        "description": "Sainte communion avec vin et pain symbolisant la mort, l'ensevelissement, la résurrection et le retour du Christ. Pour les membres baptisés seulement.",
+        "frequency": "Premier dimanche de chaque mois"
+      },
+      "watchNight": {
+        "title": "Veillée de Prière",
+        "description": "Service spécial du soir avec prière et adoration",
+        "frequency": "Dernier vendredi de chaque mois: 20h00 - 00h00"
+      }
+    },
+    "pastors": {
+      "title": "Nos Pasteurs",
+      "senior": "Pasteur Principal",
+      "associate": "Pasteur Associé"
+    },
+    "contact": {
+      "title": "Prêt à Nous Rejoindre?",
+      "description": "Nous aimerions vous accueillir dans notre famille d'église. Planifiez votre première visite dès aujourd'hui.",
+      "button": "Planifier une Visite"
+    }
   }
 }

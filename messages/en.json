@@ -2,6 +2,7 @@
   "nav": {
     "home": "Home",
     "planVisit": "Plan a Visit",
+    "schedule": "Schedule",
     "watch": "Watch",
     "events": "Events",
     "nextSteps": "Next Steps",
@@ -40,19 +41,78 @@
     "description": "Welcome to our community where we worship God with joy and live in fellowship with like-minded believers."
   },
   "footer": {
-    "viewMap": "View Map",
+    "churchInfo": "Church Information",
+    "address": "4415 Glenwood Rd, Brooklyn, NY 11203",
+    "phone": "Phone: (929) 343-9393",
+    "email": "Email: methodistchurch1993@gmail.com",
+    "directions": "Get Directions",
     "serviceTimes": "Service Times",
-    "youthService": "Youth Service",
-    "youthTime": "6:00 PM",
+    "sunday": "Sunday",
+    "monday": "Monday",
     "wednesday": "Wednesday",
+    "sundayWorship": "Morning Worship",
+    "afternoonService": "Afternoon Service",
+    "mondayBibleStudy": "Monday Bible Study",
+    "wednesdayPrayer": "Prayer, Spiritual Warfare",
     "stayConnected": "Stay Connected",
-    "emailDescription": "Receive news and updates about church activities.",
+    "emailDescription": "Get updates about services and events",
     "emailPlaceholder": "Enter your email",
     "subscribe": "Subscribe",
-    "followUs": "Follow Us",
+    "socialMedia": "Connect With Us",
+    "followUs": "Connect With Us",
     "allRightsReserved": "All rights reserved.",
-    "privacy": "Privacy",
-    "terms": "Terms"
+    "quickLinks": "Quick Links",
+    "privacy": "Privacy Policy",
+    "terms": "Terms of Service",
+    "copyright": " 2025 Free Methodist Church Bethlehem. All rights reserved."
+  },
+  "planVisit": {
+    "title": "Plan a Visit",
+    "subtitle": "We're excited to welcome you to Free Methodist Church of Bethlehem. Here's everything you need to know for your first visit.",
+    "location": {
+      "title": "Our Location",
+      "address": "Our Address",
+      "entrance": "Entrance on E 45th St",
+      "directions": "Get Directions",
+      "mapPlaceholder": "Google Maps will appear here"
+    },
+    "schedule": {
+      "title": "Service Schedule",
+      "language": "Language",
+      "addToCalendar": "Add to Calendar",
+      "morning": {
+        "title": "Morning Service (Creole)",
+        "sunSchool": "Sunday School",
+        "worship": "Worship Service",
+        "language": "Haitian Creole"
+      },
+      "youth": {
+        "title": "Youth / Afternoon Service",
+        "service": "Youth and Afternoon Service",
+        "language": "English & Creole"
+      }
+    },
+    "expect": {
+      "title": "What to Expect",
+      "dress": {
+        "title": "Dress Code",
+        "description": "We encourage formal attire for services.",
+        "leaders": "Leaders wear ties"
+      },
+      "accessibility": {
+        "title": "Accessibility",
+        "description": "Our church is wheelchair accessible."
+      },
+      "translation": {
+        "title": "Translation",
+        "description": "We sometimes provide Creole to English translation for visitors."
+      }
+    },
+    "contact": {
+      "title": "Questions?",
+      "description": "If you have any questions or need help with anything, don't hesitate to contact us.",
+      "button": "Contact Us"
+    }
   },
   "home": {
     "planVisitCta": "Plan a Visit",
@@ -70,5 +130,72 @@
     "learnMore": "Learn More",
     "duration": "Duration",
     "speaker": "Speaker"
+  },
+  "schedule": {
+    "title": "Weekly Schedule",
+    "subtitle": "Join us throughout the week for worship, prayer, and fellowship.",
+    "weeklyTitle": "Weekly Activities",
+    "specialTitle": "Special Events",
+    "days": {
+      "sunday": "Sunday",
+      "monday": "Monday",
+      "tuesday": "Tuesday",
+      "wednesday": "Wednesday",
+      "thursday": "Thursday",
+      "friday": "Friday"
+    },
+    "sunday": {
+      "sunSchool": "Sunday School",
+      "sunSchoolDesc": "Bible study and fellowship for all ages",
+      "morningWorship": "Morning Worship Service",
+      "morningWorshipDesc": "Main worship service in Haitian Creole",
+      "afternoonWorship": "Afternoon Worship Service",
+      "afternoonWorshipDesc": "Youth and afternoon service in English & Creole"
+    },
+    "monday": {
+      "kaseChenn": "Kase Chenn (Fasting & Prayer)",
+      "kaseChennDesc": "Morning fasting and prayer service",
+      "youthBible": "Youth Bible Study",
+      "youthBibleDesc": "Bible study focused on young people",
+      "generalBible": "General Bible Study",
+      "generalBibleDesc": "Bible study for all members"
+    },
+    "wednesday": {
+      "combat": "Mercredi de Combat Spirituel",
+      "combatDesc": "Wednesday spiritual warfare prayer service"
+    },
+    "multiDay": {
+      "prayer": "Multi-Day Prayer (Zoom)",
+      "prayerDesc": "Online prayer meeting via Zoom"
+    },
+    "zoom": {
+      "title": "Online Prayer Meetings",
+      "description": "Join us for prayer via Zoom Tuesday through Friday",
+      "meetingId": "Meeting ID",
+      "passcode": "Passcode",
+      "schedule": "Tuesday - Friday: 11:30 AM - 12:15 PM"
+    },
+    "special": {
+      "communion": {
+        "title": "Lord's Communion Sunday",
+        "description": "Holy communion with wine and bread symbolizing Christ's death, burial, resurrection, and return. For baptized members only.",
+        "frequency": "First Sunday of each month"
+      },
+      "watchNight": {
+        "title": "Watch Night",
+        "description": "Special evening service of prayer and worship",
+        "frequency": "Last Friday of each month: 8:00 PM - 12:00 AM"
+      }
+    },
+    "pastors": {
+      "title": "Our Pastors",
+      "senior": "Senior Pastor",
+      "associate": "Associate Pastor"
+    },
+    "contact": {
+      "title": "Ready to Join Us?",
+      "description": "We'd love to have you join our church family. Plan your first visit today.",
+      "button": "Plan a Visit"
+    }
   }
 }

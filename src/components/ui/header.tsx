@@ -15,6 +15,7 @@ export function Header() {
   const navItems = [
     { key: 'home', href: '/' },
     { key: 'planVisit', href: '/plan-visit' },
+    { key: 'schedule', href: '/schedule' },
     { key: 'watch', href: '/watch' },
     { key: 'events', href: '/events' },
     { key: 'nextSteps', href: '/next-steps' },

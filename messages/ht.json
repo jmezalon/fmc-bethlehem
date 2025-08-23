@@ -1,7 +1,8 @@
 {
   "nav": {
     "home": "Akèy",
-    "planVisit": "Planifye Vizit",
+    "planVisit": "Planifye yon Vizit",
+    "schedule": "Pwogram",
     "watch": "Gade",
     "events": "Aktivite yo",
     "nextSteps": "Pwochen Etap yo",
@@ -36,19 +37,76 @@
     "description": "Byenvini nan kominote nou an kote nou adore Bondye ak kè kontan ak nou viv nan kominote ak moun ki gen menm kwayans ak nou yo."
   },
   "footer": {
-    "viewMap": "Gade kat la",
+    "churchInfo": "Enfòmasyon Legliz",
+    "address": "4415 Glenwood Rd, Brooklyn, NY 11203",
+    "phone": "Telefòn: (929) 343-9393",
+    "email": "Email: methodistchurch1993@gmail.com",
+    "directions": "Jwenn Direksyon",
     "serviceTimes": "Lè Sèvis yo",
-    "youthService": "Sèvis Jèn yo",
-    "youthTime": "6:00 PM",
-    "wednesday": "Mèkredi",
+    "sunday": "Dimanch",
+    "monday": "Lendi, Etid Bib Jèn yo e general",
+    "wednesday": "Mèkredi, Konba Spirityel",
+    "sundayWorship": "Adore Maten",
+    "afternoonService": "Sèvis Apremidi",
+    "wednesdayPrayer": "Lapriyè ak Etid Bib",
     "stayConnected": "Rete Konekte",
-    "emailDescription": "Resevwa nouvel ak enfomasyon sou aktivite legliz la.",
-    "emailPlaceholder": "Antre email ou a",
-    "subscribe": "Abone",
-    "followUs": "Swiv Nou",
+    "emailDescription": "Resevwa enfòmasyon sou sèvis ak aktivite yo",
+    "emailPlaceholder": "Antre imel ou",
+    "subscribe": "Abonnen",
+    "followUs": "Konekte ak Nou",
     "allRightsReserved": "Tout dwa yo rezève.",
-    "privacy": "Vi Prive",
-    "terms": "Kondisyon yo"
+    "quickLinks": "Lyen Rapid yo",
+    "privacy": "Politik Konfidansyalite",
+    "terms": "Kondisyon Sèvis",
+    "copyright": " 2024 FMC Bethlehem. Tout dwa yo rezève."
+  },
+  "planVisit": {
+    "title": "Planifye yon Vizit",
+    "subtitle": "Nou kontan pou nou wè ou nan FMC Bethlehem. Men tout sa ou bezwen konnen pou premye vizit ou a.",
+    "location": {
+      "title": "Kote nou ye",
+      "address": "Adrès nou an",
+      "entrance": "Antre nan E 45th St",
+      "directions": "Jwenn Direksyon",
+      "mapPlaceholder": "Kat Google Maps ap parèt isit la"
+    },
+    "schedule": {
+      "title": "Orè Sèvis yo",
+      "language": "Lang",
+      "addToCalendar": "Ajoute nan Kalandriye",
+      "morning": {
+        "title": "Sèvis Maten an (Kreyòl)",
+        "sunSchool": "Lekòl Dimanch",
+        "worship": "Sèvis Adorasyon",
+        "language": "Kreyòl Ayisyen"
+      },
+      "youth": {
+        "title": "Sèvis Jèn yo / Apremidi",
+        "service": "Sèvis Jèn ak Apremidi",
+        "language": "Anglè ak Kreyòl"
+      }
+    },
+    "expect": {
+      "title": "Sa pou Atann",
+      "dress": {
+        "title": "Kòd Abiman",
+        "description": "Nou ankouraje rad fòmèl pou sèvis yo.",
+        "leaders": "Lidè yo mete kravat"
+      },
+      "accessibility": {
+        "title": "Aksè",
+        "description": "Legliz nou an aksesib pou moun ki nan chèz woule."
+      },
+      "translation": {
+        "title": "Tradiksyon",
+        "description": "Nou gen tradiksyon Kreyòl nan Anglè pafwa pou vizitè yo."
+      }
+    },
+    "contact": {
+      "title": "Gen Kesyon?",
+      "description": "Si ou gen nenpòt kesyon oswa ou bezwen èd ak nenpòt bagay, pa ezite kontakte nou.",
+      "button": "Kontakte Nou"
+    }
   },
   "home": {
     "planVisitCta": "Planifye yon Vizit",
@@ -66,5 +124,72 @@
     "learnMore": "Aprann Plis",
     "duration": "Dire",
     "speaker": "Prèchè"
+  },
+  "schedule": {
+    "title": "Pwogram Semèn nan",
+    "subtitle": "Vin jwenn nou nan semèn nan pou adore, lapriyè, ak kominote.",
+    "weeklyTitle": "Aktivite Semèn nan",
+    "specialTitle": "Evènman Espesyal yo",
+    "days": {
+      "sunday": "Dimanch",
+      "monday": "Lendi",
+      "tuesday": "Madi",
+      "wednesday": "Mèkredi",
+      "thursday": "Jedi",
+      "friday": "Vandredi"
+    },
+    "sunday": {
+      "sunSchool": "Lekòl Dimanch",
+      "sunSchoolDesc": "Etid Bib ak kominote pou tout laj yo",
+      "morningWorship": "Sèvis Adore Maten an",
+      "morningWorshipDesc": "Sèvis prensipal nan nan lang Kreyòl",
+      "afternoonWorship": "Sèvis Adore Apremidi an",
+      "afternoonWorshipDesc": "Sèvis jèn yo ak apremidi nan Anglè ak Kreyòl"
+    },
+    "monday": {
+      "kaseChenn": "Kase Chenn (Jèn ak Lapriyè)",
+      "kaseChennDesc": "Sèvis jèn ak lapriyè nan maten",
+      "youthBible": "Etid Bib Jèn yo",
+      "youthBibleDesc": "Etid Bib ki konsantre sou jèn yo",
+      "generalBible": "Etid Bib Jeneral",
+      "generalBibleDesc": "Etid Bib pou tout manm yo"
+    },
+    "wednesday": {
+      "combat": "Mèkredi de Combat Spirituel",
+      "combatDesc": "Sèvis lapriyè kont move lespri yo nan Mèkredi"
+    },
+    "multiDay": {
+      "prayer": "Lapriyè Plizyè Jou (Zoom)",
+      "prayerDesc": "Reyinyon lapriyè sou entènèt nan Zoom"
+    },
+    "zoom": {
+      "title": "Reyinyon Lapriyè sou Entènèt",
+      "description": "Vin jwenn nou pou lapriyè nan Zoom Madi rive Vandredi",
+      "meetingId": "ID Reyinyon",
+      "passcode": "Kòd Pase",
+      "schedule": "Madi - Vandredi: 11:30 AM - 12:15 PM"
+    },
+    "special": {
+      "communion": {
+        "title": "Dimanch Kominyon Senyè a",
+        "description": "Kominyon sen ak diven ak pen ki simbolize lanmò Kris la, antèman, rezireksyon, ak retou li. Pou manm ki batize yo sèlman.",
+        "frequency": "Premye Dimanch nan chak mwa"
+      },
+      "watchNight": {
+        "title": "Watch Night",
+        "description": "Sèvis espesyal aswè ak lapriyè ak adore",
+        "frequency": "Dènye Vandredi nan chak mwa: 8:00 PM - 12:00 AM"
+      }
+    },
+    "pastors": {
+      "title": "Pastè Nou yo",
+      "senior": "Pastè Prensipal",
+      "associate": "Pastè Asosye"
+    },
+    "contact": {
+      "title": "Pare pou Vin Jwenn Nou?",
+      "description": "Nou ta renmen ou vin nan fanmi legliz nou an. Planifye premye vizit ou a jodi a.",
+      "button": "Planifye yon Vizit"
+    }
   }
 }
