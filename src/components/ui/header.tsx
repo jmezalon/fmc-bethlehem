@@ -4,7 +4,7 @@ import { useState } from 'react';
 import { useTranslations } from 'next-intl';
 import Link from 'next/link';
 import { Container } from './container';
-import { Menu, X, Heart } from 'lucide-react';
+import { Menu, X, Heart, ChevronDown } from 'lucide-react';
 import { LanguageSwitcher } from './language-switcher';
 import { SkipLink } from './skip-link';
 import { FocusTrap } from './focus-trap';
@@ -17,12 +17,10 @@ export function Header() {
   const navigationItems = [
     { href: '/', label: t('navigation.home') },
     { href: '/events', label: t('navigation.events') },
-    { href: '/groups', label: t('navigation.groups') },
     { href: '/next-steps', label: t('navigation.nextSteps') },
-    { href: '/prayer', label: t('navigation.prayer') },
     { href: '/watch/sermons', label: t('navigation.sermons') },
+    { href: '/venue-booking', label: 'Book Venue' },
     { href: '/about', label: t('navigation.about') },
-    { href: '/contact', label: t('navigation.contact') },
   ];
 
   return (

@@ -41,6 +41,7 @@ export default function AdminPortalPage() {
     { value: 'ministries', label: 'Ministries' },
     { value: 'new-member-class', label: 'New Member Class' },
     { value: 'salvation', label: 'Salvation' },
+    { value: 'venue-booking', label: 'Venue Bookings' },
   ];
 
   const handleLogin = async (e: React.FormEvent) => {
@@ -97,6 +98,7 @@ export default function AdminPortalPage() {
       ministries: 'bg-purple-100 text-purple-800',
       'new-member-class': 'bg-orange-100 text-orange-800',
       salvation: 'bg-red-100 text-red-800',
+      'venue-booking': 'bg-indigo-100 text-indigo-800',
     };
     return colors[type as keyof typeof colors] || 'bg-gray-100 text-gray-800';
   };
