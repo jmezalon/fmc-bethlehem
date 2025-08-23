@@ -25,6 +25,20 @@
     "bible": "Étude Biblique",
     "bibleTime": "10h00"
   },
+  "watch": {
+    "title": "Regarder les Services",
+    "subtitle": "Rejoignez-nous en ligne pour les services de culte en direct ou rattrapez les sermons précédents",
+    "liveStream": "Diffusion en Direct",
+    "liveStreamDesc": "Regardez nos services en direct pendant qu'ils se déroulent. Rejoignez notre communauté pour le culte et la communion en temps réel.",
+    "sermonArchive": "Archive des Sermons",
+    "sermonArchiveDesc": "Parcourez notre collection de sermons et messages passés. Étudiez la parole de Dieu à votre rythme.",
+    "serviceSchedule": "Horaire des Services",
+    "sundayService": "Culte du Dimanche",
+    "wednesdayPrayer": "Prière du Mercredi",
+    "watchLive": "Regarder en Direct",
+    "browseSermons": "Parcourir les Sermons",
+    "archiveInfo": "Accédez à des centaines de sermons et d'études bibliques de notre équipe pastorale"
+  },
   "common": {
     "loading": "Chargement...",
     "error": "Une erreur s'est produite",
@@ -241,6 +255,8 @@
       "placeholder": "Rechercher des groupes..."
     },
     "filters": {
+      "showFilters": "Filtres",
+      "hideFilters": "Masquer les Filtres",
       "title": "Filtrer les Groupes",
       "clearAll": "Tout Effacer",
       "dayOfWeek": "Jour de la Semaine",
@@ -271,6 +287,44 @@
       "description": "Vous avez une idée pour un nouveau petit groupe? Nous aimerions vous aider à commencer!",
       "startGroup": "Créer un Nouveau Groupe",
       "questions": "Poser des Questions"
+    }
+  },
+  "watchPages": {
+    "sermons": {
+      "title": "Archive des Sermons",
+      "subtitle": "Explorez notre collection de sermons, enseignements et messages de nos pasteurs.",
+      "backToLive": "Retour au Direct",
+      "filters": {
+        "searchPlaceholder": "Rechercher des sermons...",
+        "showFilters": "Filtres",
+        "hideFilters": "Masquer les Filtres",
+        "clearAll": "Tout Effacer",
+        "series": "Série",
+        "topic": "Sujet",
+        "language": "Langue",
+        "speaker": "Orateur",
+        "year": "Année",
+        "allSeries": "Toutes les Séries",
+        "allTopics": "Tous les Sujets",
+        "allLanguages": "Toutes les Langues",
+        "allSpeakers": "Tous les Orateurs",
+        "allYears": "Toutes les Années"
+      },
+      "results": {
+        "title": "Résultats",
+        "count": "{count, plural, =0 {Aucun sermon} =1 {1 sermon} other {# sermons}}"
+      },
+      "noResults": {
+        "title": "Aucun Résultat",
+        "description": "Aucun sermon ne correspond à votre recherche.",
+        "clearFilters": "Effacer les Filtres"
+      },
+      "cta": {
+        "title": "Rejoignez-nous en Direct",
+        "description": "Participez à nos services en direct chaque dimanche.",
+        "watchLive": "Regarder en Direct",
+        "planVisit": "Planifier une Visite"
+      }
     }
   }
 }

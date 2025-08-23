@@ -15,7 +15,7 @@ import { Play, ArrowLeft } from 'lucide-react';
 import sermonsData from '@/../../data/sermons.json';
 
 export default function SermonsPage() {
-  const t = useTranslations('watch.sermons');
+  const t = useTranslations('watchPages.sermons');
   const locale = useLocale() as 'en' | 'ht' | 'fr';
   const [filters, setFilters] = useState<SermonFiltersType>({
     search: '',

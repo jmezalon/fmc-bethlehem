@@ -15,8 +15,8 @@ import {
   MessageSquare,
   ArrowRight,
 } from 'lucide-react';
-import eventsData from '@/../../data/events.json';
-import sermonsData from '@/../../data/sermons.json';
+import eventsData from '../../../data/events.json';
+import sermonsData from '../../../data/sermons.json';
 
 export default function HomePage() {
   const t = useTranslations('hero');
@@ -117,59 +117,56 @@ export default function HomePage() {
       <section className="py-16">
         <Container>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            <div className="text-center p-8 rounded-lg bg-card border hover:shadow-lg transition-shadow">
-              <div className="mx-auto w-12 h-12 bg-primary/10 rounded-lg flex items-center justify-center mb-4">
-                <Play className="h-6 w-6 text-primary" />
+            <Link href="/watch" className="block">
+              <div className="text-center p-8 rounded-lg bg-card border hover:shadow-lg transition-shadow cursor-pointer">
+                <div className="mx-auto w-12 h-12 bg-primary/10 rounded-lg flex items-center justify-center mb-4">
+                  <Play className="h-6 w-6 text-primary" />
+                </div>
+                <h3 className="text-xl font-semibold text-card-foreground mb-2">
+                  {tHome('watchMessages')}
+                </h3>
+                <p className="text-muted-foreground mb-4">
+                  {tHome('watchMessagesDesc')}
+                </p>
+                <span className="inline-flex items-center gap-1 text-primary hover:text-primary/80 font-medium transition-colors">
+                  {tHome('watchNow')} <ArrowRight className="h-4 w-4" />
+                </span>
               </div>
-              <h3 className="text-xl font-semibold text-card-foreground mb-2">
-                {tHome('watchMessages')}
-              </h3>
-              <p className="text-muted-foreground mb-4">
-                {tHome('watchMessagesDesc')}
-              </p>
-              <Link
-                href="/watch"
-                className="inline-flex items-center gap-1 text-primary hover:text-primary/80 font-medium transition-colors"
-              >
-                {tHome('watchNow')} <ArrowRight className="h-4 w-4" />
-              </Link>
-            </div>
+            </Link>
 
-            <div className="text-center p-8 rounded-lg bg-card border hover:shadow-lg transition-shadow">
-              <div className="mx-auto w-12 h-12 bg-primary/10 rounded-lg flex items-center justify-center mb-4">
-                <Users className="h-6 w-6 text-primary" />
+            <Link href="/next-steps" className="block">
+              <div className="text-center p-8 rounded-lg bg-card border hover:shadow-lg transition-shadow cursor-pointer">
+                <div className="mx-auto w-12 h-12 bg-primary/10 rounded-lg flex items-center justify-center mb-4">
+                  <Users className="h-6 w-6 text-primary" />
+                </div>
+                <h3 className="text-xl font-semibold text-card-foreground mb-2">
+                  {tHome('nextSteps')}
+                </h3>
+                <p className="text-muted-foreground mb-4">
+                  {tHome('nextStepsDesc')}
+                </p>
+                <span className="inline-flex items-center gap-1 text-primary hover:text-primary/80 font-medium transition-colors">
+                  {tHome('learnMore')} <ArrowRight className="h-4 w-4" />
+                </span>
               </div>
-              <h3 className="text-xl font-semibold text-card-foreground mb-2">
-                {tHome('nextSteps')}
-              </h3>
-              <p className="text-muted-foreground mb-4">
-                {tHome('nextStepsDesc')}
-              </p>
-              <Link
-                href="/next-steps"
-                className="inline-flex items-center gap-1 text-primary hover:text-primary/80 font-medium transition-colors"
-              >
-                {tHome('learnMore')} <ArrowRight className="h-4 w-4" />
-              </Link>
-            </div>
+            </Link>
 
-            <div className="text-center p-8 rounded-lg bg-card border hover:shadow-lg transition-shadow">
-              <div className="mx-auto w-12 h-12 bg-primary/10 rounded-lg flex items-center justify-center mb-4">
-                <Heart className="h-6 w-6 text-primary" />
+            <Link href="/prayer" className="block">
+              <div className="text-center p-8 rounded-lg bg-card border hover:shadow-lg transition-shadow cursor-pointer">
+                <div className="mx-auto w-12 h-12 bg-primary/10 rounded-lg flex items-center justify-center mb-4">
+                  <Heart className="h-6 w-6 text-primary" />
+                </div>
+                <h3 className="text-xl font-semibold text-card-foreground mb-2">
+                  {tHome('prayerRequests')}
+                </h3>
+                <p className="text-muted-foreground mb-4">
+                  {tHome('prayerRequestsDesc')}
+                </p>
+                <span className="inline-flex items-center gap-1 text-primary hover:text-primary/80 font-medium transition-colors">
+                  {tHome('learnMore')} <ArrowRight className="h-4 w-4" />
+                </span>
               </div>
-              <h3 className="text-xl font-semibold text-card-foreground mb-2">
-                {tHome('prayerRequests')}
-              </h3>
-              <p className="text-muted-foreground mb-4">
-                {tHome('prayerRequestsDesc')}
-              </p>
-              <Link
-                href="/prayer"
-                className="inline-flex items-center gap-1 text-primary hover:text-primary/80 font-medium transition-colors"
-              >
-                {tHome('learnMore')} <ArrowRight className="h-4 w-4" />
-              </Link>
-            </div>
+            </Link>
           </div>
         </Container>
       </section>
@@ -279,7 +276,7 @@ export default function HomePage() {
                       {event.category[locale] || event.category.en}
                     </span>
                     <Link
-                      href="#"
+                      href={`/events?event=${event.id}`}
                       className="inline-flex items-center gap-1 text-primary hover:text-primary/80 font-medium transition-colors"
                     >
                       {tHome('learnMore')} <ArrowRight className="h-3 w-3" />

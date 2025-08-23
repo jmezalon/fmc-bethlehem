@@ -28,7 +28,7 @@ export function SermonFilters({
   onFiltersChange,
   availableFilters,
 }: SermonFiltersProps) {
-  const t = useTranslations('watch.sermons.filters');
+  const t = useTranslations('watchPages.sermons.filters');
 
   const [filters, setFilters] = useState<SermonFilters>({
     search: '',
@@ -80,12 +80,16 @@ export function SermonFilters({
       <div className="flex items-center justify-between">
         <button
           onClick={() => setShowFilters(!showFilters)}
-          className="flex items-center gap-2 px-4 py-2 border border-input bg-background rounded-md hover:bg-accent hover:text-accent-foreground transition-colors"
+          className={`flex items-center gap-2 px-4 py-2 border border-input rounded-md transition-colors ${
+            showFilters 
+              ? 'bg-primary text-primary-foreground' 
+              : 'bg-background hover:bg-accent hover:text-accent-foreground'
+          }`}
         >
           <Filter className="h-4 w-4" />
-          {t('showFilters')}
+          {showFilters ? t('hideFilters') : t('showFilters')}
           {hasActiveFilters && (
-            <span className="bg-primary text-primary-foreground text-xs px-2 py-0.5 rounded-full">
+            <span className="bg-background text-foreground text-xs px-2 py-0.5 rounded-full ml-2">
               {Object.values(filters).filter(v => v !== '').length}
             </span>
           )}

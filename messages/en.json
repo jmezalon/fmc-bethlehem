@@ -39,6 +39,20 @@
     "bible": "Bible Study",
     "bibleTime": "5:30 PM"
   },
+  "watch": {
+    "title": "Watch Services",
+    "subtitle": "Join us online for live worship services or catch up on previous sermons",
+    "liveStream": "Live Stream",
+    "liveStreamDesc": "Watch our services live as they happen. Join our community in real-time worship and fellowship.",
+    "sermonArchive": "Sermon Archive",
+    "sermonArchiveDesc": "Browse our collection of past sermons and messages. Study God's word at your own pace.",
+    "serviceSchedule": "Service Schedule",
+    "sundayService": "Sunday Worship",
+    "wednesdayPrayer": "Wednesday Prayer",
+    "watchLive": "Watch Live",
+    "browseSermons": "Browse Sermons",
+    "archiveInfo": "Access hundreds of sermons and Bible studies from our pastoral team"
+  },
   "common": {
     "loading": "Loading...",
     "error": "An error occurred",
@@ -729,7 +743,7 @@
       "message": "Your faithful giving enables us to serve our community, support missions, and maintain our facilities. Every gift, no matter the size, makes a difference in advancing God's kingdom."
     }
   },
-  "watch": {
+  "watchPages": {
     "live": {
       "title": "Watch Live",
       "subtitle": "Join us for live worship services and experience community from anywhere",
@@ -778,6 +792,7 @@
       "filters": {
         "searchPlaceholder": "Search sermons...",
         "showFilters": "Filters",
+        "hideFilters": "Hide Filters",
         "clearAll": "Clear All",
         "series": "Series",
         "topic": "Topic",

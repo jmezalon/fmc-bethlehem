@@ -25,6 +25,20 @@
     "bible": "Etid Bib la",
     "bibleTime": "10:00 AM"
   },
+  "watch": {
+    "title": "Gade Sèvis yo",
+    "subtitle": "Vin jwenn nou sou entènèt pou sèvis adòrasyon yo oswa gade sèmon yo ki te pase yo",
+    "liveStream": "Difizyon Dirèk",
+    "liveStreamDesc": "Gade sèvis nou yo pandan y ap fèt. Vin jwenn kominote nou an pou adòrasyon ak kominyon nan tan reyèl.",
+    "sermonArchive": "Achiv Sèmon yo",
+    "sermonArchiveDesc": "Gade koleksyon sèmon ak mesaj yo ki te pase yo. Etidye pawòl Bondye a nan vitès ou.",
+    "serviceSchedule": "Orè Sèvis yo",
+    "sundayService": "Adòrasyon Dimanch",
+    "wednesdayPrayer": "Lapriyè Mèkredi",
+    "watchLive": "Gade Dirèk",
+    "browseSermons": "Gade Sèmon yo",
+    "archiveInfo": "Gen aksè nan dè santèn sèmon ak etid Bib yo nan ekip pastè nou an"
+  },
   "common": {
     "loading": "Ap chaje...",
     "error": "Gen yon erè ki rive",
@@ -271,6 +285,44 @@
       "description": "Ou gen yon ide pou yon nouvo ti gwoup? Nou ta renmen ede ou kòmanse!",
       "startGroup": "Kòmanse yon nouvo gwoup",
       "questions": "Poze kesyon yo"
+    }
+  },
+  "watchPages": {
+    "sermons": {
+      "title": "Achiv Sèmon yo",
+      "subtitle": "Gade koleksyon sèmon, ansèyman ak mesaj yo nan pastè nou yo.",
+      "backToLive": "Tounen nan Difizyon Dirèk",
+      "filters": {
+        "searchPlaceholder": "Chèche sèmon yo...",
+        "showFilters": "Filtè yo",
+        "hideFilters": "Kache Filtè yo",
+        "clearAll": "Efase Tout",
+        "series": "Seri",
+        "topic": "Sijè",
+        "language": "Lang",
+        "speaker": "Moun k ap pale a",
+        "year": "Ane",
+        "allSeries": "Tout Seri yo",
+        "allTopics": "Tout Sijè yo",
+        "allLanguages": "Tout Lang yo",
+        "allSpeakers": "Tout Moun k ap pale yo",
+        "allYears": "Tout Ane yo"
+      },
+      "results": {
+        "title": "Rezilta yo",
+        "count": "{count, plural, =0 {Pa gen sèmon} =1 {1 sèmon} other {# sèmon}}"
+      },
+      "noResults": {
+        "title": "Pa gen Rezilta",
+        "description": "Pa gen sèmon ki koresponn ak rechèch ou an.",
+        "clearFilters": "Efase Filtè yo"
+      },
+      "cta": {
+        "title": "Vin jwenn nou nan Dirèk",
+        "description": "Patisipe nan sèvis nou yo chak dimanch.",
+        "watchLive": "Gade nan Dirèk",
+        "planVisit": "Planifye yon Vizit"
+      }
     }
   }
 }

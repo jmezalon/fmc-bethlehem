@@ -7,7 +7,7 @@ import Link from 'next/link';
 import { Calendar, Clock, Users, MessageCircle, Share2 } from 'lucide-react';
 
 export default function LivePage() {
-  const t = useTranslations('watch');
+  const t = useTranslations('watchPages');
   const tCommon = useTranslations('common');
 
   // This would typically come from a CMS or environment variable
