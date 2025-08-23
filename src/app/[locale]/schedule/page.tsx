@@ -346,7 +346,7 @@ export default function SchedulePage() {
                 {t('pastors.senior')}
               </h3>
               <p className="text-lg text-primary font-medium">
-                Rev. WidMarc Pierre
+                Rev. Widmarc Pierre
               </p>
             </div>
 
