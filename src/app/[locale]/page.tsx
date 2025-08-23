@@ -57,7 +57,7 @@ export default function HomePage() {
 
             {/* Service Times Badges */}
             <div className="grid grid-cols-1 md:grid-cols-3 gap-4 max-w-4xl mx-auto mb-12">
-              <div className="flex items-center justify-center gap-3 p-4 rounded-lg bg-white/90 backdrop-blur-sm border border-white/20">
+              <div className="flex items-center justify-start gap-3 p-4 rounded-lg bg-white/90 backdrop-blur-sm border border-white/20">
                 <Clock className="h-5 w-5 text-primary" />
                 <div className="text-left">
                   <p className="font-semibold text-gray-900">
@@ -68,7 +68,7 @@ export default function HomePage() {
                   </p>
                 </div>
               </div>
-              <div className="flex items-center justify-center gap-3 p-4 rounded-lg bg-white/90 backdrop-blur-sm border border-white/20">
+              <div className="flex items-center justify-start gap-3 p-4 rounded-lg bg-white/90 backdrop-blur-sm border border-white/20">
                 <Heart className="h-5 w-5 text-primary" />
                 <div className="text-left">
                   <p className="font-semibold text-gray-900">
@@ -79,7 +79,7 @@ export default function HomePage() {
                   </p>
                 </div>
               </div>
-              <div className="flex items-center justify-center gap-3 p-4 rounded-lg bg-white/90 backdrop-blur-sm border border-white/20">
+              <div className="flex items-center justify-start gap-3 p-4 rounded-lg bg-white/90 backdrop-blur-sm border border-white/20">
                 <MessageSquare className="h-5 w-5 text-primary" />
                 <div className="text-left">
                   <p className="font-semibold text-gray-900">
@@ -134,16 +134,16 @@ export default function HomePage() {
               </div>
             </Link>
 
-            <Link href="/next-steps" className="block">
+            <Link href="/groups" className="block">
               <div className="text-center p-8 rounded-lg bg-card border hover:shadow-lg transition-shadow cursor-pointer">
                 <div className="mx-auto w-12 h-12 bg-primary/10 rounded-lg flex items-center justify-center mb-4">
                   <Users className="h-6 w-6 text-primary" />
                 </div>
                 <h3 className="text-xl font-semibold text-card-foreground mb-2">
-                  {tHome('nextSteps')}
+                  {tHome('smallGroups')}
                 </h3>
                 <p className="text-muted-foreground mb-4">
-                  {tHome('nextStepsDesc')}
+                  {tHome('smallGroupsDesc')}
                 </p>
                 <span className="inline-flex items-center gap-1 text-primary hover:text-primary/80 font-medium transition-colors">
                   {tHome('learnMore')} <ArrowRight className="h-4 w-4" />

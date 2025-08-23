@@ -127,8 +127,8 @@
     "watchLiveCta": "Regarder en Direct",
     "watchMessages": "Regarder les Messages",
     "watchMessagesDesc": "Écoutez les derniers sermons et enseignements.",
-    "nextSteps": "Prochaines Étapes",
-    "nextStepsDesc": "Découvrez comment grandir dans votre foi.",
+    "smallGroups": "Petits Groupes",
+    "smallGroupsDesc": "Trouvez la communauté et grandissez dans la foi ensemble.",
     "prayerRequests": "Demandes de Prière",
     "prayerRequestsDesc": "Soumettez vos demandes de prière avec nous.",
     "latestSermons": "Derniers Sermons",
@@ -150,7 +150,8 @@
       "tuesday": "Mardi",
       "wednesday": "Mercredi",
       "thursday": "Jeudi",
-      "friday": "Vendredi"
+      "friday": "Vendredi",
+      "saturday": "Samedi"
     },
     "sunday": {
       "sunSchool": "École du Dimanche",
@@ -171,6 +172,10 @@
     "wednesday": {
       "combat": "Mercredi de Combat Spirituel",
       "combatDesc": "Service de prière de guerre spirituelle du mercredi"
+    },
+    "saturday": {
+      "fasting": "Jeûne et Prière",
+      "fastingDesc": "Service matinal de jeûne et de prière"
     },
     "multiDay": {
       "prayer": "Prière Multi-Jours (Zoom)",
@@ -193,6 +198,11 @@
         "title": "Nuit de Veille",
         "description": "Service spécial du soir de prière et d'adoration",
         "frequency": "Dernier vendredi de chaque mois : 20h00 - 00h00"
+      },
+      "marriageMinistry": {
+        "title": "Ministère du Mariage",
+        "description": "Ministère axé sur le renforcement des mariages et des relations",
+        "frequency": "Dernier samedi de chaque mois : 18h30 - 21h00"
       }
     },
     "pastors": {

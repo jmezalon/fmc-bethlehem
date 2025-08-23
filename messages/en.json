@@ -148,8 +148,8 @@
     "watchLiveCta": "Watch Live",
     "watchMessages": "Watch Messages",
     "watchMessagesDesc": "Listen to the latest sermons and teachings.",
-    "nextSteps": "Next Steps",
-    "nextStepsDesc": "Discover how you can grow in your faith.",
+    "smallGroups": "Small Groups",
+    "smallGroupsDesc": "Find community and grow in faith together.",
     "prayerRequests": "Prayer Requests",
     "prayerRequestsDesc": "Submit your prayer requests with us.",
     "latestSermons": "Latest Sermons",
@@ -171,7 +171,8 @@
       "tuesday": "Tuesday",
       "wednesday": "Wednesday",
       "thursday": "Thursday",
-      "friday": "Friday"
+      "friday": "Friday",
+      "saturday": "Saturday"
     },
     "sunday": {
       "sunSchool": "Sunday School",
@@ -192,6 +193,10 @@
     "wednesday": {
       "combat": "Mercredi de Combat Spirituel",
       "combatDesc": "Wednesday spiritual warfare prayer service"
+    },
+    "saturday": {
+      "fasting": "Fasting and Prayer",
+      "fastingDesc": "Morning fasting and prayer service"
     },
     "multiDay": {
       "prayer": "Multi-Day Prayer (Zoom)",
@@ -214,6 +219,11 @@
         "title": "Watch Night",
         "description": "Special evening service of prayer and worship",
         "frequency": "Last Friday of each month: 8:00 PM - 12:00 AM"
+      },
+      "marriageMinistry": {
+        "title": "Marriage Ministry",
+        "description": "Ministry focused on strengthening marriages and relationships",
+        "frequency": "Last Saturday of each month: 6:30 PM - 9:00 PM"
       }
     },
     "pastors": {

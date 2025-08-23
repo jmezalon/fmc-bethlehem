@@ -129,6 +129,18 @@ export default function SchedulePage() {
         },
       ],
     },
+    {
+      day: 'saturday',
+      events: [
+        {
+          time: '8:00 AM - 12:00 PM',
+          title: t('saturday.fasting'),
+          description: t('saturday.fastingDesc'),
+          icon: Droplets,
+          type: 'prayer',
+        },
+      ],
+    },
   ];
 
   const specialEvents = [
@@ -146,6 +158,13 @@ export default function SchedulePage() {
       icon: Moon,
       type: 'watchnight',
     },
+    {
+      title: t('special.marriageMinistry.title'),
+      description: t('special.marriageMinistry.description'),
+      frequency: t('special.marriageMinistry.frequency'),
+      icon: Heart,
+      type: 'marriage',
+    },
   ];
 
   const getEventTypeColor = (type: string) => {
@@ -162,6 +181,8 @@ export default function SchedulePage() {
         return 'bg-purple-50 text-purple-700 border-purple-200';
       case 'watchnight':
         return 'bg-indigo-50 text-indigo-700 border-indigo-200';
+      case 'marriage':
+        return 'bg-pink-50 text-pink-700 border-pink-200';
       default:
         return 'bg-muted text-muted-foreground border-border';
     }

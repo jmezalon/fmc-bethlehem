@@ -127,8 +127,8 @@
     "watchLiveCta": "Gade Live",
     "watchMessages": "Gade Mesaj yo",
     "watchMessagesDesc": "Koute dènye prèch ak ansèyman yo.",
-    "nextSteps": "Pwochen Etap yo",
-    "nextStepsDesc": "Dekouvri kijan pou ou ka grandi nan lafwa ou.",
+    "smallGroups": "Ti Gwoup yo",
+    "smallGroupsDesc": "Jwenn kominote ak grandi nan lafwa ansanm.",
     "prayerRequests": "Demann Lapriyè",
     "prayerRequestsDesc": "Soumèt demann lapriyè ou yo ak nou.",
     "latestSermons": "Dènye Prèch yo",
@@ -150,7 +150,8 @@
       "tuesday": "Madi",
       "wednesday": "Mèkredi",
       "thursday": "Jedi",
-      "friday": "Vandredi"
+      "friday": "Vandredi",
+      "saturday": "Samdi"
     },
     "sunday": {
       "sunSchool": "Lekòl Dimanch",
@@ -171,6 +172,10 @@
     "wednesday": {
       "combat": "Mèkredi Konba Espirityèl",
       "combatDesc": "Sèvis lapriyè lagè espirityèl Mèkredi"
+    },
+    "saturday": {
+      "fasting": "Jèn ak Lapriyè",
+      "fastingDesc": "Sèvis maten pou jèn ak lapriyè"
     },
     "multiDay": {
       "prayer": "Lapriyè Plizyè Jou (Zoom)",
@@ -193,6 +198,11 @@
         "title": "Nwit Veye",
         "description": "Sèvis espesyal aswè pou lapriyè ak adore",
         "frequency": "Dènye vandredi nan chak mwa: 8:00 PM - 12:00 AM"
+      },
+      "marriageMinistry": {
+        "title": "Ministè Maryaj",
+        "description": "Ministè ki konsantre sou ranfòse maryaj ak relasyon yo",
+        "frequency": "Dènye samdi nan chak mwa: 6:30 PM - 9:00 PM"
       }
     },
     "pastors": {

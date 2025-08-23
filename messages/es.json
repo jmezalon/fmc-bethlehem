@@ -247,7 +247,8 @@
     "watchLiveCta": "Ver en Vivo",
     "watchMessages": "Ver Mensajes",
     "watchMessagesDesc": "Escucha los sermones y enseñanzas más recientes.",
-    "nextStepsDesc": "Descubre cómo puedes crecer en tu fe.",
+    "smallGroups": "Grupos Pequeños",
+    "smallGroupsDesc": "Encuentra comunidad y crece en la fe juntos.",
     "prayerRequestsDesc": "Envía tus peticiones de oración con nosotros.",
     "latestSermons": "Sermones Recientes",
     "upcomingEvents": "Próximos Eventos",
@@ -573,7 +574,8 @@
       "tuesday": "Martes",
       "wednesday": "Miércoles",
       "thursday": "Jueves",
-      "friday": "Viernes"
+      "friday": "Viernes",
+      "saturday": "Sábado"
     },
     "sunday": {
       "sunSchool": "Escuela Dominical",
@@ -595,8 +597,12 @@
       "combat": "Miércoles de Combate Espiritual",
       "combatDesc": "Servicio de oración de guerra espiritual del miércoles"
     },
+    "saturday": {
+      "fasting": "Ayuno y Oración",
+      "fastingDesc": "Servicio matutino de ayuno y oración"
+    },
     "multiDay": {
-      "prayer": "Oración Multi-Día (Zoom)",
+      "prayer": "Oración de Varios Días (Zoom)",
       "prayerDesc": "Reunión de oración en línea vía Zoom"
     },
     "zoom": {
@@ -616,6 +622,11 @@
         "title": "Noche de Vigilia",
         "description": "Servicio especial nocturno de oración y adoración",
         "frequency": "Último viernes de cada mes: 8:00 PM - 12:00 AM"
+      },
+      "marriageMinistry": {
+        "title": "Ministerio Matrimonial",
+        "description": "Ministerio enfocado en fortalecer matrimonios y relaciones",
+        "frequency": "Último sábado de cada mes: 6:30 PM - 9:00 PM"
       }
     },
     "pastors": {
@@ -748,20 +759,37 @@
         "placeholder": "Buscar grupos..."
       },
       "filters": {
-        "showFilters": "Filtros",
-        "hideFilters": "Ocultar Filtros",
-        "allCategories": "Todas las Categorías",
+        "title": "Filtros",
+        "clearAll": "Limpiar Todo",
+        "dayOfWeek": "Día de la Semana",
+        "language": "Idioma",
+        "lifeStage": "Etapa de Vida",
         "allDays": "Todos los Días",
-        "allTimes": "Todos los Horarios"
+        "allLanguages": "Todos los Idiomas",
+        "allLifeStages": "Todas las Etapas"
       },
       "noGroups": {
         "title": "No se Encontraron Grupos",
-        "description": "No hay grupos que coincidan con tus criterios de búsqueda."
+        "description": "No hay grupos que coincidan con tus criterios de búsqueda.",
+        "clearFilters": "Limpiar filtros"
       },
       "cta": {
         "title": "¿Interesado en Unirte?",
         "description": "Nos encantaría ayudarte a encontrar el grupo perfecto para ti.",
-        "contact": "Contáctanos"
+        "contact": "Contáctanos",
+        "startGroup": "Iniciar un Grupo",
+        "questions": "Hacer Preguntas"
+      },
+      "leader": "Líder",
+      "members": "miembros",
+      "status": {
+        "open": "Abierto",
+        "filling": "Llenándose",
+        "full": "Lleno"
+      },
+      "actions": {
+        "contact": "Contactar",
+        "waitlist": "Lista de Espera"
       }
     },
     "about": {
