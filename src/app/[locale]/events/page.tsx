@@ -2,12 +2,13 @@
 
 import { useState } from 'react';
 import { useTranslations, useLocale } from 'next-intl';
+import Link from 'next/link';
 import { Container } from '@/components/ui/container';
 import { EventCard } from '@/components/ui/event-card';
 import { CalendarView } from '@/components/ui/calendar-view';
 import { CalendarSubscribe } from '@/components/ui/calendar-subscribe';
 import { downloadICS } from '@/utils/ics-export';
-import { Calendar, List, Filter } from 'lucide-react';
+import { Calendar, List, Filter, Mail, Phone } from 'lucide-react';
 
 // Import events data
 import eventsData from '@/../../data/events.json';
@@ -173,12 +174,20 @@ export default function EventsPage() {
                 {t('cta.description')}
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start">
-                <button className="inline-flex items-center gap-2 bg-primary text-primary-foreground px-6 py-3 rounded-md font-semibold hover:bg-primary/90 transition-colors">
+                <a
+                  href="mailto:methodistchurch1993@gmail.com?subject=Newsletter Subscription&body=I would like to subscribe to your newsletter for updates about services and events."
+                  className="inline-flex items-center gap-2 bg-primary text-primary-foreground px-6 py-3 rounded-md font-semibold hover:bg-primary/90 transition-colors"
+                >
+                  <Mail className="h-5 w-5" />
                   {t('cta.subscribe')}
-                </button>
-                <button className="inline-flex items-center gap-2 border border-input bg-background px-6 py-3 rounded-md font-semibold hover:bg-accent hover:text-accent-foreground transition-colors">
+                </a>
+                <Link
+                  href="/contact"
+                  className="inline-flex items-center gap-2 border border-input bg-background px-6 py-3 rounded-md font-semibold hover:bg-accent hover:text-accent-foreground transition-colors"
+                >
+                  <Phone className="h-5 w-5" />
                   {t('cta.contact')}
-                </button>
+                </Link>
               </div>
             </div>
 

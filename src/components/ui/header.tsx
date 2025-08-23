@@ -16,6 +16,7 @@ export function Header() {
 
   const navigationItems = [
     { href: '/', label: t('navigation.home') },
+    { href: '/schedule', label: t('schedule') },
     { href: '/events', label: t('navigation.events') },
     { href: '/next-steps', label: t('navigation.nextSteps') },
     { href: '/watch/sermons', label: t('navigation.sermons') },

@@ -14,7 +14,7 @@ import '../globals.css';
 
 const inter = Inter({ subsets: ['latin'] });
 
-const locales = ['ht', 'fr', 'en'];
+const locales = ['ht', 'fr', 'en', 'es'];
 
 // Removed generateStaticParams to allow dynamic rendering
 

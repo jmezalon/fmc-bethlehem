@@ -9,6 +9,7 @@ import { cn } from '@/lib/utils';
 const locales = [
   { code: 'ht', name: 'Kreyòl', flag: '🇭🇹' },
   { code: 'fr', name: 'Français', flag: '🇫🇷' },
+  { code: 'es', name: 'Español', flag: '🇪🇸' },
   { code: 'en', name: 'English', flag: '🇺🇸' },
 ];
 

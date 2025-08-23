@@ -8,7 +8,17 @@
     "groups": "Gwoup yo",
     "nextSteps": "Etap Kap Vini yo",
     "prayer": "Lapriyè",
-    "give": "Bay"
+    "give": "Bay",
+    "navigation": {
+      "home": "Akèy",
+      "events": "Aktivite yo",
+      "groups": "Gwoup yo",
+      "nextSteps": "Pwochen Etap yo",
+      "prayer": "Lapriyè",
+      "sermons": "Prèch yo",
+      "about": "Konsènan",
+      "contact": "Kontak"
+    }
   },
   "hero": {
     "title": "Byenvini nan FMCB",
@@ -47,6 +57,10 @@
     "about": "Konsènan",
     "contact": "Kontak"
   },
+  "navigation": {
+    "menu": "Meni",
+    "close": "Fèmen"
+  },
   "seo": {
     "title": "FMCB - Legliz Metodis Lib Bethlehem",
     "description": "Byenvini nan kominote nou an kote nou adore Bondye ak kè kontan ak nou viv nan kominote ak moun ki gen menm kwayans ak nou yo."
@@ -63,6 +77,7 @@
     "wednesday": "Mèkredi, Konba Spirityel",
     "sundayWorship": "Adore Maten",
     "afternoonService": "Sèvis Apremidi",
+    "mondayBibleStudy": "Etid Bib Lendi",
     "wednesdayPrayer": "Lapriyè ak Etid Bib",
     "stayConnected": "Rete Konekte",
     "emailDescription": "Resevwa enfòmasyon sou sèvis ak aktivite yo",
@@ -84,22 +99,6 @@
       "entrance": "Antre nan E 45th St",
       "directions": "Jwenn Direksyon",
       "mapPlaceholder": "Kat Google Maps ap parèt isit la"
-    },
-    "schedule": {
-      "title": "Orè Sèvis yo",
-      "language": "Lang",
-      "addToCalendar": "Ajoute nan Kalandriye",
-      "morning": {
-        "title": "Sèvis Maten an (Kreyòl)",
-        "sunSchool": "Lekòl Dimanch",
-        "worship": "Sèvis Adorasyon",
-        "language": "Kreyòl Ayisyen"
-      },
-      "youth": {
-        "title": "Sèvis Jèn yo / Apremidi",
-        "service": "Sèvis Jèn ak Apremidi",
-        "language": "Anglè ak Kreyòl"
-      }
     },
     "expect": {
       "title": "Sa pou Atann",
@@ -144,7 +143,7 @@
     "title": "Pwogram Semèn nan",
     "subtitle": "Vin jwenn nou nan semèn nan pou adore, lapriyè, ak kominote.",
     "weeklyTitle": "Aktivite Semèn nan",
-    "specialTitle": "Evènman Espesyal yo",
+    "specialTitle": "Aktivite Espesyal yo",
     "days": {
       "sunday": "Dimanch",
       "monday": "Lendi",
@@ -156,22 +155,22 @@
     "sunday": {
       "sunSchool": "Lekòl Dimanch",
       "sunSchoolDesc": "Etid Bib ak kominote pou tout laj yo",
-      "morningWorship": "Sèvis Adore Maten an",
-      "morningWorshipDesc": "Sèvis prensipal nan nan lang Kreyòl",
-      "afternoonWorship": "Sèvis Adore Apremidi an",
-      "afternoonWorshipDesc": "Sèvis jèn yo ak apremidi nan Anglè ak Kreyòl"
+      "morningWorship": "Sèvis Adore Maten",
+      "morningWorshipDesc": "Sèvis prensipal adore nan Kreyòl Ayisyen",
+      "afternoonWorship": "Sèvis Adore Apremidi",
+      "afternoonWorshipDesc": "Sèvis jèn ak apremidi nan Anglè ak Kreyòl"
     },
     "monday": {
       "kaseChenn": "Kase Chenn (Jèn ak Lapriyè)",
-      "kaseChennDesc": "Sèvis jèn ak lapriyè nan maten",
+      "kaseChennDesc": "Sèvis maten jèn ak lapriyè",
       "youthBible": "Etid Bib Jèn yo",
       "youthBibleDesc": "Etid Bib ki konsantre sou jèn yo",
       "generalBible": "Etid Bib Jeneral",
       "generalBibleDesc": "Etid Bib pou tout manm yo"
     },
     "wednesday": {
-      "combat": "Mèkredi de Combat Spirituel",
-      "combatDesc": "Sèvis lapriyè kont move lespri yo nan Mèkredi"
+      "combat": "Mèkredi Konba Espirityèl",
+      "combatDesc": "Sèvis lapriyè lagè espirityèl Mèkredi"
     },
     "multiDay": {
       "prayer": "Lapriyè Plizyè Jou (Zoom)",
@@ -187,13 +186,13 @@
     "special": {
       "communion": {
         "title": "Dimanch Kominyon Senyè a",
-        "description": "Kominyon sen ak diven ak pen ki simbolize lanmò Kris la, antèman, rezireksyon, ak retou li. Pou manm ki batize yo sèlman.",
-        "frequency": "Premye Dimanch nan chak mwa"
+        "description": "Sen kominyon ak diven ak pen ki simbolize lanmò, antèman, rezireksyon ak retou Kris la. Pou manm ki batize yo sèlman.",
+        "frequency": "Premye dimanch nan chak mwa"
       },
       "watchNight": {
-        "title": "Watch Night",
-        "description": "Sèvis espesyal aswè ak lapriyè ak adore",
-        "frequency": "Dènye Vandredi nan chak mwa: 8:00 PM - 12:00 AM"
+        "title": "Nwit Veye",
+        "description": "Sèvis espesyal aswè pou lapriyè ak adore",
+        "frequency": "Dènye vandredi nan chak mwa: 8:00 PM - 12:00 AM"
       }
     },
     "pastors": {
@@ -285,6 +284,500 @@
       "description": "Ou gen yon ide pou yon nouvo ti gwoup? Nou ta renmen ede ou kòmanse!",
       "startGroup": "Kòmanse yon nouvo gwoup",
       "questions": "Poze kesyon yo"
+    }
+  },
+  "nextSteps": {
+    "title": "Pwochen Etap yo",
+    "subtitle": "Pran pwochen etap ou nan lafwa ak vin pi pre ak Bondye",
+    "getStarted": "Kòmanse",
+    "support": {
+      "title": "Ou bezwen èd?",
+      "description": "Ekip pastè nou an la pou sipòte ou nan vwayaj spirityèl ou a. Pa ezite kontakte nou ak nenpòt kesyon.",
+      "contact": "Kontakte nou",
+      "visitUs": "Vizite nou"
+    },
+    "salvation": {
+      "title": "Aksepte Jezi",
+      "subtitle": "Pataje desizyon ou pou swiv Kris ak nou",
+      "description": "Felisitasyon pou aksepte Jezi kòm Senyè ak Sovè ou! Nou ta renmen selebre ak ou ak ede ou nan pwochen etap yo nan lafwa.",
+      "backToNextSteps": "Tounen nan Pwochen Etap yo",
+      "success": {
+        "title": "Mèsi pou Pataje!",
+        "message": "Nou kontan anpil pou selebre desizyon ou ak ou. Yon moun nan ekip pastè nou an pral kontakte ou byento pou ede ou ak pwochen etap yo nan lafwa."
+      },
+      "form": {
+        "title": "Pataje Desizyon ou",
+        "description": "Di nou sou desizyon ou pou swiv Jezi pou nou ka selebre ak ou ak bay sipò.",
+        "personalInfo": "Enfòmasyon Pèsonèl",
+        "firstName": "Premye Non",
+        "lastName": "Dènye Non",
+        "email": "Adrès Imel",
+        "phone": "Nimewo Telefòn",
+        "age": "Gwoup Laj",
+        "selectAge": "Chwazi gwoup laj ou",
+        "decisionInfo": "Desizyon ou",
+        "decisionDate": "Ki lè ou te aksepte Jezi? (Opsyonèl)",
+        "testimony": "Temwayaj Kout",
+        "testimonyPlaceholder": "Pataje yon temwayaj kout sou desizyon ou pou swiv Jezi...",
+        "prayerRequests": "Demann Lapriyè (Opsyonèl)",
+        "prayerRequestsPlaceholder": "Gen demann lapriyè ou ta renmen pataje ak nou...",
+        "followUp": "Preferans Swivi",
+        "followUpPreference": "Kijan ou ta renmen nou swiv ak ou?",
+        "selectFollowUp": "Chwazi preferans swivi",
+        "additionalComments": "Kòmantè Adisyonèl (Opsyonèl)",
+        "additionalCommentsPlaceholder": "Gen lòt bagay ou ta renmen nou konnen...",
+        "submit": "Soumèt",
+        "submitting": "Ap soumèt...",
+        "ageOptions": {
+          "under18": "Anba 18",
+          "18to25": "18-25",
+          "26to35": "26-35",
+          "36to50": "36-50",
+          "51to65": "51-65",
+          "over65": "Sou 65"
+        },
+        "followUpOptions": {
+          "phone": "Apèl Telefòn",
+          "email": "Imel",
+          "inPerson": "Rankontre Nan Pèsòn",
+          "noContact": "Pa gen bezwen swivi"
+        }
+      }
+    },
+    "baptism": {
+      "title": "Batèm",
+      "subtitle": "Pran pwochen etap nan vwayaj lafwa ou nan batèm",
+      "description": "Batèm se yon deklarasyon bèl nan lafwa ou nan Jezi Kris. Ann ede ou prepare pou etap enpòtan sa a.",
+      "backToNextSteps": "Tounen nan Pwochen Etap yo",
+      "success": {
+        "title": "Demann Batèm Resevwa!",
+        "message": "Mèsi pou enterè ou nan batèm. Ekip pastè nou an pral kontakte ou byento pou diskite pwochen etap yo ak pwograme batèm ou."
+      },
+      "form": {
+        "title": "Demann Batèm",
+        "description": "Tanpri ranpli fòm sa a pou mande batèm. Ekip nou an pral kontakte ou pou diskite preparasyon ak pwogram.",
+        "personalInfo": "Enfòmasyon Pèsonèl",
+        "firstName": "Premye Non",
+        "lastName": "Dènye Non",
+        "email": "Adrès Imel",
+        "phone": "Nimewo Telefòn",
+        "age": "Gwoup Laj",
+        "selectAge": "Chwazi gwoup laj ou",
+        "baptismInfo": "Enfòmasyon Batèm",
+        "salvationDate": "Ki lè ou te aksepte Jezi? (Opsyonèl)",
+        "previousBaptism": "Èske yo te batize ou deja?",
+        "selectPreviousBaptism": "Chwazi yon opsyon",
+        "baptismReason": "Poukisa ou vle yo batize ou?",
+        "baptismReasonPlaceholder": "Tanpri pataje poukisa batèm nan enpòtan pou ou...",
+        "preferredDate": "Dat Batèm ou Prefere (Opsyonèl)",
+        "specialRequests": "Demann Espesyal (Opsyonèl)",
+        "specialRequestsPlaceholder": "Gen demann espesyal oswa akòmodman ou bezwen...",
+        "emergencyContact": "Enfòmasyon Kontak Ijans",
+        "emergencyContactName": "Non Kontak Ijans",
+        "emergencyContactPhone": "Telefòn Kontak Ijans",
+        "submit": "Soumèt Demann",
+        "submitting": "Ap soumèt...",
+        "ageOptions": {
+          "under18": "Anba 18",
+          "18to25": "18-25",
+          "26to35": "26-35",
+          "36to50": "36-50",
+          "51to65": "51-65",
+          "over65": "Sou 65"
+        },
+        "previousBaptismOptions": {
+          "no": "Non, sa se premye batèm mwen",
+          "yesInfant": "Wi, kòm yon ti bebe",
+          "yesAdult": "Wi, kòm yon granmoun"
+        }
+      }
+    },
+    "membership": {
+      "title": "Manm Legliz",
+      "subtitle": "Vin yon manm ofisyèl nan fanmi legliz nou an",
+      "description": "Manm legliz se yon angajman pou ou fè pati kominote nou an ak patisipe nan lavi ak misyon legliz nou an.",
+      "backToNextSteps": "Tounen nan Pwochen Etap yo",
+      "success": {
+        "title": "Aplikasyon Manm Resevwa!",
+        "message": "Mèsi pou enterè ou nan vin yon manm. Ekip dirijan nou an pral gade aplikasyon ou ak kontakte ou byento sou pwochen etap yo."
+      },
+      "form": {
+        "title": "Aplikasyon Manm",
+        "description": "Tanpri konplete aplikasyon sa a pou kòmanse pwosè manm nan. Ekip nou an pral kontakte ou pou diskite pwochen etap yo.",
+        "personalInfo": "Enfòmasyon Pèsonèl",
+        "firstName": "Premye Non",
+        "lastName": "Dènye Non",
+        "email": "Adrès Imel",
+        "phone": "Nimewo Telefòn",
+        "address": "Adrès Kay",
+        "city": "Vil",
+        "state": "Eta",
+        "zipCode": "Kòd Postal",
+        "dateOfBirth": "Dat Nesans",
+        "maritalStatus": "Estati Marital",
+        "selectMaritalStatus": "Chwazi estati marital",
+        "spiritualInfo": "Enfòmasyon Spirityèl",
+        "salvationDate": "Ki lè ou te aksepte Jezi? (Opsyonèl)",
+        "baptismDate": "Ki lè yo te batize ou? (Opsyonèl)",
+        "previousChurch": "Legliz Anvan an (Opsyonèl)",
+        "membershipReason": "Poukisa ou vle vin yon manm?",
+        "membershipReasonPlaceholder": "Tanpri pataje poukisa manm nan enpòtan pou ou...",
+        "ministryService": "Ministè ak Sèvis",
+        "skills": "Kapasite ak Talan yo (Opsyonèl)",
+        "skillsPlaceholder": "Ki kapasite oswa talan ou ta renmen itilize nan ministè...",
+        "availability": "Disponibilite (Opsyonèl)",
+        "availabilityPlaceholder": "Ki lè ou toujou disponib pou sèvi...",
+        "submit": "Soumèt Aplikasyon",
+        "submitting": "Ap soumèt...",
+        "maritalStatusOptions": {
+          "single": "Selibatè",
+          "married": "Marye",
+          "divorced": "Divòse",
+          "widowed": "Vèv/Vèf"
+        }
+      }
+    },
+    "newMemberClass": {
+      "title": "Klas Nouvo Manm",
+      "subtitle": "Aprann sou legliz nou an, kwayans nou yo, ak kominote nou an",
+      "description": "Klas Nouvo Manm nou an ede ou konprann misyon legliz nou an, valè nou yo, ak kijan pou ou konekte nan kominote nou an.",
+      "backToNextSteps": "Tounen nan Pwochen Etap yo",
+      "success": {
+        "title": "Enskripsyon Klas Resevwa!",
+        "message": "Mèsi pou enskripsyon ou nan Klas Nouvo Manm! Nou pral kontakte ou byento ak detay klas yo ak enfòmasyon orè."
+      },
+      "form": {
+        "title": "Enskripsyon Klas Nouvo Manm",
+        "description": "Enskri pou pwochen Klas Nouvo Manm nou an pou aprann plis sou legliz nou an ak konekte.",
+        "personalInfo": "Enfòmasyon Pèsonèl",
+        "firstName": "Premye Non",
+        "lastName": "Dènye Non",
+        "email": "Adrès Imel",
+        "phone": "Nimewo Telefòn",
+        "age": "Gwoup Laj",
+        "selectAge": "Chwazi gwoup laj ou",
+        "churchInfo": "Enfòmasyon Legliz",
+        "membershipStatus": "Estati Aktyèl",
+        "selectMembershipStatus": "Chwazi estati aktyèl ou",
+        "attendanceDuration": "Depi konbyen tan ou ap vini?",
+        "selectAttendanceDuration": "Chwazi dire",
+        "classPreferences": "Preferans Klas",
+        "classPreference": "Preferans Fòma Klas",
+        "selectClassPreference": "Chwazi preferans fòma",
+        "sessionPreference": "Preferans Tan Sesyon",
+        "selectSessionPreference": "Chwazi preferans tan",
+        "childcare": "Èske ou bezwen gadè timoun?",
+        "selectChildcare": "Chwazi bezwen gadè timoun",
+        "childrenAges": "Laj Timoun yo (si sa konsènen ou)",
+        "childrenAgesPlaceholder": "egzanp: 3, 7, 12",
+        "expectationsQuestions": "Atant ak Kesyon",
+        "expectations": "Kisa ou espere aprann?",
+        "expectationsPlaceholder": "Pataje sa ou espere jwenn nan klas la...",
+        "questions": "Kesyon (Opsyonèl)",
+        "questionsPlaceholder": "Gen kesyon sou klas la oswa legliz nou an...",
+        "specialNeeds": "Bezwen Espesyal (Opsyonèl)",
+        "specialNeedsPlaceholder": "Gen akòmodman oswa bezwen espesyal...",
+        "submit": "Enskri pou Klas",
+        "submitting": "Ap soumèt...",
+        "ageOptions": {
+          "under18": "Anba 18",
+          "18to25": "18-25",
+          "26to35": "26-35",
+          "36to50": "36-50",
+          "51to65": "51-65",
+          "over65": "Sou 65"
+        },
+        "membershipStatusOptions": {
+          "visitor": "Premye Vizitè",
+          "regularAttendee": "Moun ki Vini Regilyèman",
+          "newMember": "Nouvo Manm",
+          "consideringMembership": "Ap Konsidere Manm"
+        },
+        "attendanceDurationOptions": {
+          "lessThanMonth": "Mwens pase yon mwa",
+          "1to3months": "1-3 mwa",
+          "3to6months": "3-6 mwa",
+          "6to12months": "6-12 mwa",
+          "overYear": "Sou yon ane"
+        },
+        "classPreferenceOptions": {
+          "inPerson": "Nan Pèsòn Sèlman",
+          "online": "Sou Entènèt Sèlman",
+          "hybrid": "Melanje (Nan Pèsòn ak Sou Entènèt)"
+        },
+        "sessionPreferenceOptions": {
+          "sundayMorning": "Dimanch Maten",
+          "sundayAfternoon": "Dimanch Apremidi",
+          "weekdayEvening": "Aswè nan Semèn",
+          "saturdayMorning": "Samdi Maten"
+        },
+        "childcareOptions": {
+          "yes": "Wi, mwen bezwen gadè timoun",
+          "no": "Non, mwen pa bezwen gadè timoun"
+        }
+      }
+    },
+    "ministries": {
+      "title": "Jwenn yon Ministè",
+      "subtitle": "Itilize don ak talan ou yo pou sèvi Bondye ak lòt moun yo",
+      "description": "Bondye bay chak nan nou don ak talan inik. Dekouvri kijan ou ka itilize pa ou yo pou fè yon diferans nan legliz nou an ak kominote a.",
+      "backToNextSteps": "Tounen nan Pwochen Etap yo",
+      "success": {
+        "title": "Enterè Ministè Resevwa!",
+        "message": "Mèsi pou enterè ou nan sèvi! Yon dirijan ministè pral kontakte ou byento pou diskite opòtinite yo ak pwochen etap yo."
+      },
+      "form": {
+        "title": "Fòm Enterè Ministè",
+        "description": "Di nou sou enterè ou yo ak kijan ou ta renmen sèvi. Nou pral konekte ou ak bon opòtinite ministè yo.",
+        "personalInfo": "Enfòmasyon Pèsonèl",
+        "firstName": "Premye Non",
+        "lastName": "Dènye Non",
+        "email": "Adrès Imel",
+        "phone": "Nimewo Telefòn",
+        "age": "Gwoup Laj",
+        "selectAge": "Chwazi gwoup laj ou",
+        "ministryInterests": "Enterè Ministè",
+        "primaryMinistry": "Enterè Ministè Prensipal",
+        "selectPrimaryMinistry": "Chwazi enterè prensipal ou",
+        "experience": "Eksperyans Ministè Anvan (Opsyonèl)",
+        "experiencePlaceholder": "Dekri nenpòt eksperyans ministè oswa volontè anvan...",
+        "skills": "Kapasite ak Talan (Opsyonèl)",
+        "skillsPlaceholder": "Ki kapasite oswa talan ou gen...",
+        "availabilityCommitment": "Disponibilite ak Angajman",
+        "availability": "Ki lè ou disponib?",
+        "selectAvailability": "Chwazi disponibilite ou",
+        "timeCommitment": "Angajman Tan",
+        "selectTimeCommitment": "Chwazi angajman tan chak semèn",
+        "motivation": "Poukisa ou vle sèvi?",
+        "motivationPlaceholder": "Pataje motivasyon ou pou sèvi nan ministè...",
+        "additionalInfo": "Enfòmasyon Adisyonèl",
+        "backgroundCheckConsent": "Mwen aksepte yon rechèch background si yo mande l pou pozisyon ministè sa a",
+        "additionalComments": "Kòmantè Adisyonèl (Opsyonèl)",
+        "additionalCommentsPlaceholder": "Gen lòt bagay ou ta renmen nou konnen...",
+        "submit": "Soumèt Enterè",
+        "submitting": "Ap soumèt...",
+        "ageOptions": {
+          "under18": "Anba 18",
+          "18to25": "18-25",
+          "26to35": "26-35",
+          "36to50": "36-50",
+          "51to65": "51-65",
+          "over65": "Sou 65"
+        },
+        "ministryOptions": {
+          "worship": "Adoration ak Mizik",
+          "children": "Ministè Timoun",
+          "youth": "Ministè Jèn",
+          "hospitality": "Ospitalite ak Akèy",
+          "outreach": "Travay Kominote",
+          "prayer": "Ministè Lapriyè",
+          "media": "Medya ak Teknoloji",
+          "administration": "Administrasyon",
+          "maintenance": "Entretyen ak Konsèvasyon",
+          "counseling": "Konsèy ak Swen"
+        },
+        "availabilityOptions": {
+          "sundays": "Sèvis Dimanch",
+          "weekdays": "Maten nan Semèn",
+          "evenings": "Aswè nan Semèn",
+          "weekends": "Wikenn",
+          "flexible": "Orè Fleksib"
+        },
+        "timeCommitmentOptions": {
+          "1to2hours": "1-2 èdtan chak semèn",
+          "3to5hours": "3-5 èdtan chak semèn",
+          "6to10hours": "6-10 èdtan chak semèn",
+          "10plushours": "10+ èdtan chak semèn"
+        }
+      }
+    }
+  },
+  "prayer": {
+    "title": "Demann Lapriyè",
+    "subtitle": "Pataje demann lapriyè ou yo ak kominote nou an ak ekip pastè nou an",
+    "submitAnother": "Soumèt Yon Lòt Lapriyè",
+    "form": {
+      "name": {
+        "label": "Non ou (opsyonèl)",
+        "placeholder": "Antre non ou"
+      },
+      "email": {
+        "label": "Imel (opsyonèl)",
+        "placeholder": "Antre imel ou"
+      },
+      "phone": {
+        "label": "Telefòn (opsyonèl)",
+        "placeholder": "Antre nimewo telefòn ou"
+      },
+      "request": {
+        "label": "Demann Lapriyè ou",
+        "placeholder": "Pataje demann lapriyè ou ak nou..."
+      },
+      "urgent": {
+        "label": "Sa se yon demann ijan",
+        "description": "Tcheke si ou bezwen lapriyè imedya"
+      },
+      "anonymous": {
+        "label": "Soumèt sa a san yo pa konnen ki moun ou ye",
+        "description": "Demann ou an ap rete konfidansyèl"
+      },
+      "updates": {
+        "label": "Mwen ta renmen resevwa nouvel yo sou lapriyè mwen an",
+        "description": "Nou ka kontakte ou ak nouvel yo oswa ankourajman"
+      }
+    },
+    "wall": {
+      "title": "Mi Lapriyè",
+      "subtitle": "Gade ak lapriyè pou demann kominote nou an yo",
+      "anonymous": "Moun ki pa konnen",
+      "prayedFor": "Moun ki te lapriyè pou sa",
+      "prayForThis": "Lapriyè pou sa a",
+      "showMore": "Montre Plis",
+      "showLess": "Montre Mwens",
+      "noRequests": {
+        "title": "Pa gen Demann Lapriyè",
+        "description": "Pa gen demann lapriyè kounye a. Vin premye moun ki soumèt youn!"
+      }
+    },
+    "success": {
+      "title": "Demann ou Soumèt!",
+      "message": "Mèsi pou ou pataje demann lapriyè ou ak nou. Ekip pastè nou an ak kominote nou an ap lapriyè pou ou."
+    },
+    "submit": {
+      "button": "Soumèt Demann Lapriyè",
+      "submitting": "Ap soumèt..."
+    }
+  },
+  "watchLive": {
+    "nowPlaying": "Kounye a y ap jwe",
+    "nextService": "Pwochen Sèvis",
+    "currentService": {
+      "title": "Sèvis Kounye a",
+      "description": "Vin jwenn nou pou adòrasyon ak kominyon nan tan reyèl"
+    },
+    "cta": {
+      "title": "Ou rate yon Sèvis?",
+      "description": "Gade achiv sèmon nou yo pou ou ka jwenn mesaj ak ansèyman yo ki te pase yo.",
+      "watchSermons": "Gade Sèmon yo",
+      "planVisit": "Planifye yon Vizit"
+    }
+  },
+  "about": {
+    "title": "Konsènan FMCB",
+    "subtitle": "Aprann konsènan misyon nou an, valè nou yo, ak kè ki dèyè kominote legliz nou an",
+    "mission": {
+      "title": "Misyon nou an",
+      "description": "Nou gen misyon pou nou fè disip yo, nou adore Bondye ak kè kontan, ak nou sèvi kominote nou an ak renmen Kris la."
+    },
+    "values": {
+      "title": "Valè nou yo",
+      "faith": {
+        "title": "Lafwa",
+        "description": "Nou kwè nan pouvwa Pawòl Bondye a ak transfòmasyon nan Jezi Kris"
+      },
+      "community": {
+        "title": "Kominote",
+        "description": "Nou valorize relasyon otantik ak sipò nou bay youn ak lòt"
+      },
+      "service": {
+        "title": "Sèvis",
+        "description": "Nou angaje nou pou nou sèvi kominote nou an ak mond lan ak renmen ak konpasyon"
+      }
+    },
+    "history": {
+      "title": "Istwa nou an",
+      "founding": "FMCB te etabli nan 1985 ak yon vizyon pou kreye yon espas akèy kote moun ki soti nan tout background yo ka vini ansanm pou adore Bondye ak grandi nan lafwa yo.",
+      "growth": "Nan kous ane yo, legliz nou an te grandi depi yon ti rasanbleman fanmi yo rive yon kominote vivan ki sèvi zòn Bethlehem nan pi gwo a ak renmen ak konpasyon.",
+      "today": "Jodi a, nou kontinye angaje nou nan prensip fondatè nou yo pandan n ap anbrase nouvo fason pou nou rive jwenn kominote nou an ak fè disip Jezi Kris yo."
+    },
+    "leadership": {
+      "title": "Dirijan nou yo",
+      "subtitle": "Rankontre ak dirijan yo ki angaje yo ki gide fanmi legliz nou an",
+      "pastor": {
+        "name": "Pastè John Smith",
+        "title": "Pastè Prensipal",
+        "bio": "Pastè John ap sèvi FMCB depi 2010, li gen yon kè pou disipla ak travay kominote."
+      },
+      "associate": {
+        "name": "Pastè Maria Rodriguez",
+        "title": "Pastè Asosye",
+        "bio": "Pastè Maria dirije ministè adore nou an ak li sipèvize kongregasyon Panyòl nou an ak pasyon ak devoueman."
+      },
+      "youth": {
+        "name": "Pastè David Johnson",
+        "title": "Pastè Jèn",
+        "bio": "Pastè David ap fè ministè ak jèn nou yo ak jèn granmoun yo depi plis pase 8 ane, li ede yo grandi nan lafwa yo."
+      }
+    },
+    "cta": {
+      "title": "Vin Jwenn Fanmi nou an",
+      "description": "Nou ta renmen wè ou nan FMCB. Planifye premye vizit ou ak kòmanse vwayaj ou ak nou.",
+      "planVisit": "Planifye yon Vizit",
+      "contact": "Kontakte nou"
+    }
+  },
+  "accessibility": {
+    "skipToMain": "Sote ale nan kontni prensipal la",
+    "openMenu": "Ouvri meni navigasyon an",
+    "closeMenu": "Fèmen meni navigasyon an",
+    "playVideo": "Jwe videyo a",
+    "pauseVideo": "Poze videyo a",
+    "videoDescription": "Jwè videyo pou {title}"
+  },
+  "contact": {
+    "title": "Kontakte nou",
+    "subtitle": "Nou ta renmen tande nan men ou. Kontakte nou ak nenpòt kesyon oswa pou aprann plis sou fanmi legliz nou an.",
+    "info": {
+      "title": "Enfòmasyon Kontak",
+      "address": {
+        "title": "Adrès",
+        "street": "4415 Glenwood Road",
+        "city": "Brooklyn, NY 11203"
+      },
+      "phone": {
+        "title": "Telefòn",
+        "number": "(929) 343-9393"
+      },
+      "email": {
+        "title": "Imel",
+        "address": "methodistchurch1993@gmail.com"
+      },
+      "hours": {
+        "title": "Lè Biwo a",
+        "sunday": "Dimanch: 8:00 AM - 12:00 PM",
+        "wednesday": "Mèkredi: 6:00 PM - 8:00 PM",
+        "office": "Lendi - Vandredi: 9:00 AM - 5:00 PM"
+      }
+    },
+    "form": {
+      "title": "Voye nou yon Mesaj",
+      "firstName": "Premye Non",
+      "lastName": "Dènye Non",
+      "email": "Adrès Imel",
+      "phone": "Nimewo Telefòn",
+      "subject": "Sijè",
+      "message": "Mesaj",
+      "send": "Voye Mesaj",
+      "sending": "Ap voye...",
+      "success": {
+        "title": "Mesaj Voye!",
+        "message": "Mèsi pou ou kontakte nou. Nou pral reponn ou nan kèk jou k ap vini yo."
+      }
+    },
+    "success": {
+      "title": "Mesaj Voye!",
+      "description": "Mèsi pou ou kontakte nou. Nou pral reponn ou nan kèk jou k ap vini yo."
+    },
+    "map": {
+      "title": "Jwenn Nou",
+      "subtitle": "Vizite nou nan kote nou an nan kè Brooklyn an",
+      "placeholder": "Kat entèaktif la pral parèt isit la"
+    },
+    "cta": {
+      "title": "Vizite nou",
+      "description": "Nou ta renmen wè ou nan pèsòn! Vin jwenn nou pou nenpòt nan sèvis nou yo.",
+      "planVisit": "Planifye yon Vizit",
+      "directions": "Jwenn Direksyon yo"
     }
   },
   "watchPages": {

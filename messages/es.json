@@ -1,4 +1,25 @@
 {
+  "nav": {
+    "home": "Inicio",
+    "planVisit": "Planificar una Visita",
+    "schedule": "Horario",
+    "watch": "Ver en Vivo",
+    "events": "Eventos",
+    "groups": "Grupos",
+    "nextSteps": "Próximos Pasos",
+    "prayer": "Oración",
+    "give": "Dar",
+    "navigation": {
+      "home": "Inicio",
+      "events": "Eventos",
+      "groups": "Grupos",
+      "nextSteps": "Próximos Pasos",
+      "prayer": "Oración",
+      "sermons": "Sermones",
+      "about": "Acerca de",
+      "contact": "Contacto"
+    }
+  },
   "common": {
     "loading": "Cargando...",
     "error": "Ocurrió un error",
@@ -14,6 +35,599 @@
   "seo": {
     "title": "Free Methodist Church of Bethlehem",
     "description": "Bienvenido a Free Methodist Church of Bethlehem - Tu iglesia comunitaria"
+  },
+  "hero": {
+    "title": "Bienvenido a Free Methodist Church of Bethlehem",
+    "subtitle": "Únete a nosotros para adoración, compañerismo y crecimiento espiritual en nuestra comunidad amorosa",
+    "ctaPlan": "Planifica Tu Visita",
+    "ctaWatch": "Ver Servicios"
+  },
+  "serviceTimes": {
+    "title": "Horarios de Servicio",
+    "sunday": "Domingo",
+    "wednesday": "Miércoles",
+    "monday": "Lunes",
+    "worship": "Adoración",
+    "worshipTime": "8:00 AM y 12:30 PM",
+    "time": "8:00 AM - 11:30 AM",
+    "prayer": "Oración",
+    "prayerTime": "7:00 PM",
+    "bible": "Estudio Bíblico",
+    "bibleTime": "5:30 PM"
+  },
+  "watch": {
+    "title": "Ver Servicios",
+    "subtitle": "Únete a nosotros en línea para servicios de adoración en vivo o ponte al día con sermones anteriores",
+    "liveStream": "Transmisión en Vivo",
+    "liveStreamDesc": "Mira nuestros servicios en vivo mientras suceden. Únete a nuestra comunidad en adoración y compañerismo en tiempo real.",
+    "sermonArchive": "Archivo de Sermones",
+    "sermonArchiveDesc": "Navega nuestra colección de sermones y mensajes pasados. Estudia la palabra de Dios a tu propio ritmo.",
+    "serviceSchedule": "Horario de Servicios",
+    "sundayService": "Adoración Dominical",
+    "wednesdayPrayer": "Oración del Miércoles",
+    "watchLive": "Ver en Vivo",
+    "browseSermons": "Explorar Sermones",
+    "archiveInfo": "Accede a cientos de sermones y estudios bíblicos de nuestro equipo pastoral"
+  },
+  "footer": {
+    "churchInfo": "Información de la Iglesia",
+    "address": "4415 Glenwood Rd, Brooklyn, NY 11203",
+    "phone": "Teléfono: (929) 343-9393",
+    "email": "Email: methodistchurch1993@gmail.com",
+    "directions": "Obtener Direcciones",
+    "serviceTimes": "Horarios de Servicio",
+    "sunday": "Domingo",
+    "monday": "Lunes",
+    "wednesday": "Miércoles",
+    "sundayWorship": "Adoración Matutina",
+    "afternoonService": "Servicio Vespertino",
+    "mondayBibleStudy": "Estudio Bíblico del Lunes",
+    "wednesdayPrayer": "Oración, Guerra Espiritual",
+    "stayConnected": "Mantente Conectado",
+    "emailDescription": "Recibe actualizaciones sobre servicios y eventos",
+    "emailPlaceholder": "Ingresa tu email",
+    "subscribe": "Suscribirse",
+    "socialMedia": "Síguenos",
+    "followUs": "Síguenos",
+    "facebook": "Facebook",
+    "instagram": "Instagram",
+    "youtube": "YouTube",
+    "quickLinks": "Enlaces Rápidos",
+    "privacy": "Política de Privacidad",
+    "terms": "Términos de Servicio",
+    "allRightsReserved": "Todos los derechos reservados.",
+    "copyright": "© 2025 Free Methodist Church of Bethlehem. Todos los derechos reservados."
+  },
+  "planVisit": {
+    "title": "Planifica Tu Visita",
+    "subtitle": "Nos encantaría conocerte y darte la bienvenida a nuestra familia de iglesia",
+    "form": {
+      "title": "Información de Visita",
+      "firstName": "Nombre",
+      "lastName": "Apellido",
+      "email": "Correo Electrónico",
+      "phone": "Teléfono",
+      "visitDate": "Fecha de Visita Preferida",
+      "service": "Servicio",
+      "serviceOptions": {
+        "sunday": "Domingo - Adoración Matutina",
+        "wednesday": "Miércoles - Oración y Estudio Bíblico"
+      },
+      "guests": "Número de Invitados",
+      "childcare": "¿Necesitas cuidado infantil?",
+      "questions": "Preguntas o Comentarios",
+      "submit": "Planificar Visita",
+      "submitting": "Enviando...",
+      "success": {
+        "title": "¡Visita Programada!",
+        "message": "Gracias por planificar tu visita. Nos pondremos en contacto contigo pronto con más detalles."
+      }
+    },
+    "expect": {
+      "title": "Qué Esperar",
+      "dress": {
+        "title": "Código de Vestimenta",
+        "description": "Recomendamos vestimenta formal para los servicios.",
+        "leaders": "Los líderes usan corbata"
+      },
+      "accessibility": {
+        "title": "Accesibilidad",
+        "description": "Nuestra iglesia es accesible para sillas de ruedas."
+      },
+      "translation": {
+        "title": "Traducción",
+        "description": "A veces proporcionamos traducción del criollo al inglés para los visitantes."
+      }
+    },
+    "contact": {
+      "title": "¿Preguntas?",
+      "description": "Si tienes alguna pregunta o necesitas ayuda con algo, no dudes en contactarnos.",
+      "button": "Contáctanos"
+    },
+    "location": {
+      "title": "Nuestra Ubicación",
+      "address": "Nuestra Dirección",
+      "entrance": "Entrada en E 45th St",
+      "directions": "Obtener Direcciones",
+      "mapPlaceholder": "Google Maps aparecerá aquí"
+    }
+  },
+  "watchLive": {
+    "title": "Ver en Vivo",
+    "subtitle": "Únete a nuestros servicios en línea",
+    "currentService": "Servicio Actual",
+    "nextService": "Próximo Servicio",
+    "noLiveService": "No hay servicio en vivo en este momento",
+    "joinService": "Unirse al Servicio",
+    "upcomingServices": "Próximos Servicios"
+  },
+  "prayer": {
+    "title": "Peticiones de Oración",
+    "subtitle": "Comparte tus peticiones de oración con nuestra familia de iglesia",
+    "form": {
+      "title": "Enviar Petición de Oración",
+      "firstName": "Nombre",
+      "lastName": "Apellido",
+      "email": "Correo Electrónico",
+      "phone": "Teléfono (Opcional)",
+      "requestType": "Tipo de Petición",
+      "requestTypes": {
+        "personal": "Personal",
+        "family": "Familia",
+        "health": "Salud",
+        "financial": "Financiera",
+        "spiritual": "Espiritual",
+        "other": "Otro"
+      },
+      "request": "Petición de Oración",
+      "anonymous": "Mantener anónimo",
+      "updates": "Recibir actualizaciones de oración",
+      "submit": "Enviar Petición",
+      "submitting": "Enviando...",
+      "success": {
+        "title": "¡Petición Recibida!",
+        "message": "Gracias por compartir tu petición. Nuestro equipo de oración estará orando por ti."
+      }
+    }
+  },
+  "watchPages": {
+    "live": {
+      "title": "Transmisión en Vivo",
+      "subtitle": "Únete a nuestro servicio en vivo"
+    },
+    "sermons": {
+      "title": "Sermones",
+      "subtitle": "Escucha mensajes pasados y estudios bíblicos"
+    }
+  },
+  "home": {
+    "hero": {
+      "title": "Bienvenido a FMCB",
+      "subtitle": "Una comunidad donde puedes encontrar esperanza, propósito y pertenencia en Cristo",
+      "cta": {
+        "primary": "Planificar una Visita",
+        "secondary": "Ver en Vivo"
+      },
+      "serviceTimes": {
+        "worship": "Adoración",
+        "prayer": "Oración",
+        "bible": "Estudio Bíblico"
+      }
+    },
+    "features": {
+      "watchMessages": {
+        "title": "Ver Mensajes",
+        "description": "Mira nuestros sermones más recientes y estudios bíblicos"
+      },
+      "nextSteps": {
+        "title": "Próximos Pasos",
+        "description": "Descubre cómo puedes crecer en tu fe y conectarte con nuestra comunidad"
+      },
+      "prayerRequests": {
+        "title": "Peticiones de Oración",
+        "description": "Comparte tus peticiones de oración con nuestra familia de la iglesia"
+      }
+    },
+    "nextSteps": "Próximos Pasos",
+    "prayerRequests": "Peticiones de Oración",
+    "sermons": {
+      "title": "Sermones Recientes",
+      "viewAll": "Ver Todos los Sermones"
+    },
+    "events": {
+      "title": "Próximos Eventos",
+      "viewAll": "Ver Todos los Eventos"
+    },
+    "visit": {
+      "title": "Planifica Tu Primera Visita",
+      "description": "Nos encantaría conocerte. Planifica tu visita y descubre lo que hace especial a FMCB.",
+      "button": "Planificar una Visita"
+    },
+    "planVisitCta": "Planificar una Visita",
+    "watchLiveCta": "Ver en Vivo",
+    "watchMessages": "Ver Mensajes",
+    "watchMessagesDesc": "Escucha los sermones y enseñanzas más recientes.",
+    "nextStepsDesc": "Descubre cómo puedes crecer en tu fe.",
+    "prayerRequestsDesc": "Envía tus peticiones de oración con nosotros.",
+    "latestSermons": "Sermones Recientes",
+    "upcomingEvents": "Próximos Eventos",
+    "viewAll": "Ver Todos",
+    "watchNow": "Ver Ahora",
+    "learnMore": "Aprender Más",
+    "duration": "Duración",
+    "speaker": "Orador"
+  },
+  "nextSteps": {
+    "title": "Próximos Pasos",
+    "subtitle": "Descubre cómo puedes crecer en tu fe y conectarte más profundamente con Dios y nuestra comunidad",
+    "getStarted": "Comenzar",
+    "support": {
+      "title": "¿Necesitas Ayuda?",
+      "description": "Nuestro equipo pastoral está aquí para apoyarte en tu jornada espiritual. No dudes en contactarnos con cualquier pregunta.",
+      "contact": "Contáctanos",
+      "visitUs": "Visítanos"
+    },
+    "salvation": {
+      "title": "Salvación",
+      "subtitle": "Comparte tu decisión de seguir a Cristo con nosotros",
+      "description": "Comienza tu relación con Jesucristo y experimenta el amor transformador de Dios",
+      "backToNextSteps": "Volver a Próximos Pasos",
+      "form": {
+        "title": "Decisión de Salvación",
+        "description": "Cuéntanos sobre tu decisión de seguir a Jesús para que podamos celebrar contigo y brindarte apoyo",
+        "personalInfo": "Información Personal",
+        "firstName": "Nombre",
+        "lastName": "Apellido",
+        "email": "Correo Electrónico",
+        "phone": "Teléfono",
+        "age": "Rango de Edad",
+        "selectAge": "Selecciona tu rango de edad",
+        "decisionInfo": "Tu Decisión",
+        "decisionDate": "¿Cuándo aceptaste a Jesús? (Opcional)",
+        "testimony": "Testimonio Breve",
+        "testimonyPlaceholder": "Comparte un breve testimonio sobre tu decisión de seguir a Jesús...",
+        "followUp": "Preferencias de Seguimiento",
+        "followUpPreference": "¿Cómo te gustaría que te contactemos?",
+        "selectFollowUp": "Selecciona preferencia de seguimiento",
+        "additionalComments": "Comentarios Adicionales (Opcional)",
+        "additionalCommentsPlaceholder": "Cualquier otra cosa que te gustaría que sepamos...",
+        "ageOptions": {
+          "under18": "Menor de 18",
+          "18to25": "18-25",
+          "26to35": "26-35",
+          "36to50": "36-50",
+          "51to65": "51-65",
+          "over65": "Más de 65"
+        },
+        "followUpOptions": {
+          "phone": "Llamada Telefónica",
+          "email": "Correo Electrónico",
+          "inPerson": "Reunión en Persona",
+          "noContact": "No Necesito Seguimiento"
+        },
+        "submit": "Enviar Decisión",
+        "submitting": "Enviando...",
+        "success": {
+          "title": "¡Decisión Recibida!",
+          "message": "Gracias por compartir tu decisión con nosotros. Nos pondremos en contacto contigo pronto."
+        }
+      }
+    },
+    "baptism": {
+      "title": "Bautismo",
+      "subtitle": "Da el siguiente paso en tu fe a través del bautismo",
+      "description": "Da el siguiente paso en tu fe a través del bautismo y declara públicamente tu compromiso con Cristo",
+      "backToNextSteps": "Volver a Próximos Pasos",
+      "form": {
+        "title": "Solicitud de Bautismo",
+        "description": "Por favor completa este formulario para solicitar el bautismo. Nuestro equipo se pondrá en contacto contigo para discutir la preparación y programación",
+        "personalInfo": "Información Personal",
+        "firstName": "Nombre",
+        "lastName": "Apellido",
+        "email": "Correo Electrónico",
+        "phone": "Teléfono",
+        "age": "Rango de Edad",
+        "selectAge": "Selecciona tu rango de edad",
+        "baptismInfo": "Información del Bautismo",
+        "salvationDate": "¿Cuándo aceptaste a Jesús? (Opcional)",
+        "baptismReason": "¿Por qué quieres ser bautizado?",
+        "baptismReasonPlaceholder": "Por favor comparte por qué el bautismo es importante para ti...",
+        "preferredDate": "Fecha Preferida de Bautismo (Opcional)",
+        "specialRequests": "Solicitudes Especiales (Opcional)",
+        "specialRequestsPlaceholder": "Cualquier solicitud especial o acomodación necesaria...",
+        "emergencyContact": "Información de Contacto de Emergencia",
+        "emergencyContactName": "Nombre del Contacto de Emergencia",
+        "emergencyContactPhone": "Teléfono del Contacto de Emergencia",
+        "selectPreviousBaptism": "Selecciona una opción",
+        "ageOptions": {
+          "under18": "Menor de 18",
+          "18to25": "18-25",
+          "26to35": "26-35",
+          "36to50": "36-50",
+          "51to65": "51-65",
+          "over65": "Más de 65"
+        },
+        "previousBaptism": "¿Has sido bautizado antes?",
+        "previousBaptismOptions": {
+          "no": "No, este es mi primer bautismo",
+          "yesInfant": "Sí, cuando era bebé",
+          "yesAdult": "Sí, cuando era adulto"
+        },
+        "submit": "Solicitar Bautismo",
+        "submitting": "Enviando...",
+        "success": {
+          "title": "¡Solicitud de Bautismo Recibida!",
+          "message": "Gracias por tu interés en el bautismo. Nuestro equipo pastoral se pondrá en contacto contigo pronto para discutir los próximos pasos y programar tu bautismo."
+        }
+      }
+    },
+    "membership": {
+      "title": "Membresía",
+      "subtitle": "Conviértete en miembro oficial de nuestra familia de iglesia",
+      "description": "Únete oficialmente a nuestra familia de la iglesia y participa plenamente en la vida de nuestra comunidad",
+      "backToNextSteps": "Volver a Próximos Pasos",
+      "form": {
+        "title": "Solicitud de Membresía",
+        "description": "Por favor completa esta solicitud para comenzar el proceso de membresía. Nuestro equipo se pondrá en contacto contigo para discutir los próximos pasos",
+        "personalInfo": "Información Personal",
+        "firstName": "Nombre",
+        "lastName": "Apellido",
+        "email": "Correo Electrónico",
+        "phone": "Teléfono",
+        "address": "Dirección",
+        "city": "Ciudad",
+        "state": "Estado",
+        "zipCode": "Código Postal",
+        "dateOfBirth": "Fecha de Nacimiento",
+        "selectMaritalStatus": "Selecciona estado civil",
+        "spiritualInfo": "Información Espiritual",
+        "salvationDate": "¿Cuándo aceptaste a Jesús? (Opcional)",
+        "baptismDate": "¿Cuándo fuiste bautizado? (Opcional)",
+        "membershipReason": "¿Por qué quieres ser miembro?",
+        "membershipReasonPlaceholder": "Por favor comparte por qué la membresía es importante para ti...",
+        "ministryService": "Ministerio y Servicio",
+        "skills": "Habilidades y Talentos (Opcional)",
+        "skillsPlaceholder": "Qué habilidades o talentos te gustaría usar en el ministerio...",
+        "availability": "Disponibilidad (Opcional)",
+        "availabilityPlaceholder": "Cuándo estás típicamente disponible para servir...",
+        "maritalStatus": "Estado Civil",
+        "maritalOptions": {
+          "single": "Soltero",
+          "married": "Casado",
+          "divorced": "Divorciado",
+          "widowed": "Viudo"
+        },
+        "previousChurch": "Iglesia Anterior (Opcional)",
+        "submit": "Solicitar Membresía",
+        "submitting": "Enviando...",
+        "success": {
+          "title": "¡Solicitud de Membresía Recibida!",
+          "message": "Gracias por tu interés en ser miembro. Nuestro equipo de liderazgo revisará tu solicitud y se pondrá en contacto contigo pronto sobre los próximos pasos."
+        }
+      }
+    },
+    "newMemberClass": {
+      "title": "Clase de Nuevos Miembros",
+      "subtitle": "Aprende sobre nuestra iglesia, creencias y comunidad",
+      "description": "Aprende sobre nuestra iglesia, creencias y cómo puedes involucrarte en nuestra comunidad",
+      "backToNextSteps": "Volver a Próximos Pasos",
+      "form": {
+        "title": "Registro para Clase de Nuevos Miembros",
+        "description": "Regístrate para nuestra próxima Clase de Nuevos Miembros para aprender más sobre nuestra iglesia y conectarte",
+        "personalInfo": "Información Personal",
+        "firstName": "Nombre",
+        "lastName": "Apellido",
+        "email": "Correo Electrónico",
+        "phone": "Teléfono",
+        "age": "Rango de Edad",
+        "selectAge": "Selecciona tu rango de edad",
+        "churchInfo": "Información de la Iglesia",
+        "membershipStatus": "Estado Actual",
+        "selectMembershipStatus": "Selecciona tu estado actual",
+        "selectAttendanceDuration": "Selecciona duración",
+        "classPreferences": "Preferencias de Clase",
+        "classPreference": "Preferencia de Formato de Clase",
+        "selectClassPreference": "Selecciona preferencia de formato",
+        "sessionPreference": "Preferencia de Horario de Sesión",
+        "selectSessionPreference": "Selecciona preferencia de horario",
+        "childcare": "¿Necesitas cuidado infantil?",
+        "selectChildcare": "Selecciona necesidad de cuidado infantil",
+        "childrenAges": "Edades de los Niños (si aplica)",
+        "childrenAgesPlaceholder": "ej., 3, 7, 12",
+        "expectationsQuestions": "Expectativas y Preguntas",
+        "expectations": "¿Qué esperas aprender?",
+        "expectationsPlaceholder": "Comparte lo que esperas obtener de la clase...",
+        "specialNeeds": "Necesidades Especiales (Opcional)",
+        "specialNeedsPlaceholder": "Cualquier acomodación o necesidad especial...",
+        "attendanceDuration": "¿Cuánto tiempo has estado asistiendo?",
+        "ageOptions": {
+          "under18": "Menor de 18",
+          "18to25": "18-25",
+          "26to35": "26-35",
+          "36to50": "36-50",
+          "51to65": "51-65",
+          "over65": "Más de 65"
+        },
+        "interests": "¿En qué áreas te gustaría involucrarte?",
+        "interestOptions": {
+          "worship": "Equipo de Adoración",
+          "children": "Ministerio Infantil",
+          "youth": "Ministerio Juvenil",
+          "outreach": "Alcance Comunitario",
+          "hospitality": "Hospitalidad",
+          "prayer": "Equipo de Oración"
+        },
+        "questions": "Preguntas o Comentarios",
+        "membershipStatusOptions": {
+          "visitor": "Visitante por Primera Vez",
+          "regularAttendee": "Asistente Regular",
+          "newMember": "Nuevo Miembro",
+          "consideringMembership": "Considerando Membresía"
+        },
+        "attendanceDurationOptions": {
+          "lessThanMonth": "Menos de un mes",
+          "1to3months": "1-3 meses",
+          "3to6months": "3-6 meses",
+          "6to12months": "6-12 meses",
+          "overYear": "Más de un año"
+        },
+        "classPreferenceOptions": {
+          "inPerson": "Solo en Persona",
+          "online": "Solo en Línea",
+          "hybrid": "Híbrido (En Persona y En Línea)"
+        },
+        "sessionPreferenceOptions": {
+          "sundayMorning": "Domingo por la Mañana",
+          "sundayAfternoon": "Domingo por la Tarde",
+          "weekdayEvening": "Noche Entre Semana",
+          "saturdayMorning": "Sábado por la Mañana"
+        },
+        "childcareOptions": {
+          "yes": "Sí, necesito cuidado infantil",
+          "no": "No, no necesito cuidado infantil"
+        },
+        "submit": "Registrarse para la Clase",
+        "submitting": "Enviando...",
+        "success": {
+          "title": "¡Registro de Clase Recibido!",
+          "message": "¡Gracias por registrarte para la Clase de Nuevos Miembros! Te contactaremos pronto con los detalles de la clase e información del horario."
+        }
+      }
+    },
+    "ministries": {
+      "title": "Ministerios",
+      "subtitle": "Usa tus dones y talentos para servir a Dios y a otros",
+      "description": "Encuentra tu lugar para servir y usar tus dones para impactar nuestra comunidad",
+      "backToNextSteps": "Volver a Próximos Pasos",
+      "form": {
+        "title": "Formulario de Interés en Ministerios",
+        "description": "Cuéntanos sobre tus intereses y cómo te gustaría servir. Te conectaremos con las oportunidades de ministerio adecuadas",
+        "personalInfo": "Información Personal",
+        "firstName": "Nombre",
+        "lastName": "Apellido",
+        "email": "Correo Electrónico",
+        "phone": "Teléfono",
+        "age": "Rango de Edad",
+        "selectAge": "Selecciona tu rango de edad",
+        "ministryInterests": "Intereses de Ministerio",
+        "primaryMinistry": "Interés Principal de Ministerio",
+        "selectPrimaryMinistry": "Selecciona tu interés principal",
+        "availabilityCommitment": "Disponibilidad y Compromiso",
+        "selectAvailability": "Selecciona tu disponibilidad",
+        "timeCommitment": "Compromiso de Tiempo",
+        "selectTimeCommitment": "Selecciona compromiso de tiempo por semana",
+        "motivation": "¿Por qué quieres servir?",
+        "motivationPlaceholder": "Comparte tu motivación para servir en el ministerio...",
+        "additionalInfo": "Información Adicional",
+        "backgroundCheckConsent": "Consiento a una verificación de antecedentes si es requerida para esta posición de ministerio",
+        "additionalComments": "Comentarios Adicionales (Opcional)",
+        "additionalCommentsPlaceholder": "Cualquier otra cosa que te gustaría que sepamos...",
+        "ministryOptions": {
+          "worship": "Equipo de Adoración",
+          "children": "Ministerio Infantil",
+          "youth": "Ministerio Juvenil",
+          "seniors": "Ministerio de Adultos Mayores",
+          "outreach": "Alcance Comunitario",
+          "hospitality": "Hospitalidad",
+          "prayer": "Equipo de Oración",
+          "media": "Equipo de Medios",
+          "maintenance": "Mantenimiento de Instalaciones"
+        },
+        "experience": "Experiencia Previa en Ministerio (Opcional)",
+        "experiencePlaceholder": "Describe cualquier experiencia previa en ministerio o voluntariado...",
+        "skills": "Habilidades y Talentos (Opcional)",
+        "skillsPlaceholder": "Qué habilidades o talentos aportas...",
+        "availability": "¿Cuándo estás disponible?",
+        "availabilityOptions": {
+          "sunday_morning": "Domingo por la mañana",
+          "sunday_evening": "Domingo por la noche",
+          "wednesday": "Miércoles por la noche",
+          "weekdays": "Días de semana",
+          "special_events": "Eventos especiales"
+        },
+        "submit": "Enviar Interés",
+        "submitting": "Enviando...",
+        "ageOptions": {
+          "under18": "Menor de 18",
+          "18to25": "18-25",
+          "26to35": "26-35",
+          "36to50": "36-50",
+          "51to65": "51-65",
+          "over65": "Más de 65"
+        },
+        "success": {
+          "title": "¡Interés en Ministerio Recibido!",
+          "message": "¡Gracias por tu interés en servir! Un líder de ministerio se pondrá en contacto contigo pronto para discutir oportunidades y próximos pasos."
+        }
+      }
+    }
+  },
+  "schedule": {
+    "title": "Horario Semanal",
+    "subtitle": "Únete a nosotros durante la semana para adoración, oración y compañerismo.",
+    "weeklyTitle": "Actividades Semanales",
+    "specialTitle": "Eventos Especiales",
+    "days": {
+      "sunday": "Domingo",
+      "monday": "Lunes",
+      "tuesday": "Martes",
+      "wednesday": "Miércoles",
+      "thursday": "Jueves",
+      "friday": "Viernes"
+    },
+    "sunday": {
+      "sunSchool": "Escuela Dominical",
+      "sunSchoolDesc": "Estudio bíblico y compañerismo para todas las edades",
+      "morningWorship": "Servicio de Adoración Matutino",
+      "morningWorshipDesc": "Servicio principal de adoración en criollo haitiano",
+      "afternoonWorship": "Servicio de Adoración Vespertino",
+      "afternoonWorshipDesc": "Servicio juvenil y vespertino en inglés y criollo"
+    },
+    "monday": {
+      "kaseChenn": "Kase Chenn (Ayuno y Oración)",
+      "kaseChennDesc": "Servicio matutino de ayuno y oración",
+      "youthBible": "Estudio Bíblico Juvenil",
+      "youthBibleDesc": "Estudio bíblico enfocado en jóvenes",
+      "generalBible": "Estudio Bíblico General",
+      "generalBibleDesc": "Estudio bíblico para todos los miembros"
+    },
+    "wednesday": {
+      "combat": "Miércoles de Combate Espiritual",
+      "combatDesc": "Servicio de oración de guerra espiritual del miércoles"
+    },
+    "multiDay": {
+      "prayer": "Oración Multi-Día (Zoom)",
+      "prayerDesc": "Reunión de oración en línea vía Zoom"
+    },
+    "zoom": {
+      "title": "Reuniones de Oración en Línea",
+      "description": "Únete a nosotros para oración vía Zoom de martes a viernes",
+      "meetingId": "ID de Reunión",
+      "passcode": "Código de Acceso",
+      "schedule": "Martes - Viernes: 11:30 AM - 12:15 PM"
+    },
+    "special": {
+      "communion": {
+        "title": "Domingo de Santa Cena",
+        "description": "Santa comunión con vino y pan simbolizando la muerte, sepultura, resurrección y regreso de Cristo. Solo para miembros bautizados.",
+        "frequency": "Primer domingo de cada mes"
+      },
+      "watchNight": {
+        "title": "Noche de Vigilia",
+        "description": "Servicio especial nocturno de oración y adoración",
+        "frequency": "Último viernes de cada mes: 8:00 PM - 12:00 AM"
+      }
+    },
+    "pastors": {
+      "title": "Nuestros Pastores",
+      "senior": "Pastor Principal",
+      "associate": "Pastor Asociado"
+    },
+    "contact": {
+      "title": "¿Listo para Unirte a Nosotros?",
+      "description": "Nos encantaría que te unas a nuestra familia de iglesia. Planifica tu primera visita hoy.",
+      "button": "Planificar una Visita"
+    }
   },
   "give": {
     "title": "Dar",
@@ -85,5 +699,183 @@
       "title": "Gracias por Tu Generosidad",
       "message": "Tu apoyo hace posible que continuemos sirviendo a nuestra comunidad y compartiendo el amor de Cristo con otros."
     }
-  }
+  },
+  "events": {
+      "title": "Eventos",
+      "subtitle": "Únete a nosotros para próximos eventos de la iglesia y reuniones especiales",
+      "upcoming": "Próximos Eventos",
+      "eventCount": "{count, plural, =0 {Sin eventos} =1 {1 evento} other {# eventos}}",
+      "views": {
+        "list": "Vista de Lista",
+        "calendar": "Vista de Calendario"
+      },
+      "filters": {
+        "allCategories": "Todas las Categorías"
+      },
+      "calendar": {
+        "today": "Hoy",
+        "more": "más"
+      },
+      "noEvents": {
+        "title": "No se Encontraron Eventos",
+        "description": "No hay eventos próximos en este momento. ¡Vuelve pronto!"
+      },
+      "cta": {
+        "title": "Mantente Conectado",
+        "description": "¡Nunca te pierdas un evento! Suscríbete a nuestro boletín o contáctanos para más información.",
+        "subscribe": "Suscribirse a Actualizaciones",
+        "contact": "Contáctanos"
+      }
+    },
+    "calendar": {
+      "subscribe": {
+        "title": "Suscribirse al Calendario",
+        "description": "Agrega nuestros eventos y horarios de servicio a tu aplicación de calendario personal.",
+        "complete": "Calendario Completo",
+        "eventsOnly": "Solo Eventos",
+        "servicesOnly": "Solo Servicios",
+        "events": "Calendario de Eventos",
+        "services": "Calendario de Servicios",
+        "instructions": "Haz clic en 'Suscribirse' para agregar a tu aplicación de calendario, o 'Descargar' para guardar el archivo .ics."
+      }
+    },
+    "groups": {
+      "title": "Grupos Pequeños",
+      "subtitle": "Encuentra comunidad y crece en la fe a través de nuestros ministerios de grupos pequeños",
+      "available": "Grupos Disponibles",
+      "groupCount": "{count, plural, =0 {Sin grupos} =1 {1 grupo} other {# grupos}}",
+      "search": {
+        "placeholder": "Buscar grupos..."
+      },
+      "filters": {
+        "showFilters": "Filtros",
+        "hideFilters": "Ocultar Filtros",
+        "allCategories": "Todas las Categorías",
+        "allDays": "Todos los Días",
+        "allTimes": "Todos los Horarios"
+      },
+      "noGroups": {
+        "title": "No se Encontraron Grupos",
+        "description": "No hay grupos que coincidan con tus criterios de búsqueda."
+      },
+      "cta": {
+        "title": "¿Interesado en Unirte?",
+        "description": "Nos encantaría ayudarte a encontrar el grupo perfecto para ti.",
+        "contact": "Contáctanos"
+      }
+    },
+    "about": {
+      "title": "Acerca de FMCB",
+      "subtitle": "Descubre nuestra misión, valores y el corazón de nuestra comunidad de iglesia",
+      "mission": {
+        "title": "Nuestra Misión",
+        "description": "Estamos dedicados a hacer discípulos, adorar a Dios con gozo y servir a nuestra comunidad con el amor de Cristo."
+      },
+      "values": {
+        "title": "Nuestros Valores",
+        "faith": {
+          "title": "Fe",
+          "description": "Creemos en el poder de la Palabra de Dios y la transformación a través de Jesucristo"
+        },
+        "community": {
+          "title": "Comunidad",
+          "description": "Valoramos las relaciones auténticas y el apoyo mutuo"
+        },
+        "service": {
+          "title": "Servicio",
+          "description": "Estamos comprometidos a servir a nuestra comunidad y al mundo con amor y compasión"
+        }
+      },
+      "history": {
+        "title": "Nuestra Historia",
+        "founding": "FMCB fue fundada en 1985 con la visión de crear un espacio acogedor donde personas de todos los orígenes pudieran reunirse para adorar a Dios y crecer en la fe.",
+        "growth": "A lo largo de los años, nuestra iglesia ha crecido de una pequeña reunión de familias a una comunidad vibrante que sirve al área metropolitana de Bethlehem con amor y compasión.",
+        "today": "Hoy, continuamos comprometidos con nuestros principios fundacionales mientras abrazamos nuevas formas de alcanzar a nuestra comunidad y hacer discípulos de Jesucristo."
+      },
+      "leadership": {
+        "title": "Nuestro Liderazgo",
+        "subtitle": "Conoce a los líderes dedicados que guían a nuestra familia de iglesia",
+        "pastor": {
+          "name": "Pastor John Smith",
+          "title": "Pastor Principal",
+          "bio": "El Pastor John ha servido a FMCB desde 2010, trayendo un corazón para el discipulado y el alcance comunitario."
+        },
+        "associate": {
+          "name": "Pastora Maria Rodriguez",
+          "title": "Pastora Asociada",
+          "bio": "La Pastora Maria lidera nuestro ministerio de adoración y supervisa nuestra congregación de habla hispana con pasión y dedicación."
+        },
+        "youth": {
+          "name": "Pastor David Johnson",
+          "title": "Pastor de Jóvenes",
+          "bio": "El Pastor David ha ministrado a nuestros jóvenes y adultos jóvenes durante más de 8 años, ayudándolos a crecer en su fe."
+        }
+      },
+      "cta": {
+        "title": "Únete a Nuestra Familia",
+        "description": "Nos encantaría verte en FMCB. Planifica tu primera visita y comienza tu jornada con nosotros.",
+        "planVisit": "Planificar una Visita",
+        "contact": "Contáctanos"
+      }
+    },
+    "accessibility": {
+      "skipToMain": "Saltar al contenido principal",
+      "openMenu": "Abrir menú de navegación",
+      "closeMenu": "Cerrar menú de navegación",
+      "playVideo": "Reproducir video",
+      "pauseVideo": "Pausar video",
+      "videoDescription": "Reproductor de video para {title}"
+    },
+    "contact": {
+      "title": "Contáctanos",
+      "subtitle": "Nos encantaría saber de ti. Contáctanos para cualquier pregunta o para aprender más sobre nuestra familia de iglesia.",
+      "info": {
+        "title": "Información de Contacto",
+        "address": {
+          "title": "Dirección",
+          "street": "4415 Glenwood Road",
+          "city": "Brooklyn, NY 11203"
+        },
+        "phone": {
+          "title": "Teléfono",
+          "number": "(929) 343-9393"
+        },
+        "email": {
+          "title": "Correo Electrónico",
+          "address": "methodistchurch1993@gmail.com"
+        },
+        "hours": {
+          "title": "Horarios de Oficina",
+          "sunday": "Domingo: 8:00 AM - 12:00 PM",
+          "wednesday": "Miércoles: 6:00 PM - 8:00 PM",
+          "office": "Lunes - Viernes: 9:00 AM - 5:00 PM"
+        }
+      },
+      "form": {
+        "title": "Envíanos un Mensaje",
+        "firstName": "Nombre",
+        "lastName": "Apellido",
+        "email": "Correo Electrónico",
+        "phone": "Teléfono",
+        "subject": "Asunto",
+        "message": "Mensaje",
+        "send": "Enviar Mensaje",
+        "sending": "Enviando...",
+        "success": {
+          "title": "¡Mensaje Enviado!",
+          "message": "Gracias por contactarnos. Te responderemos en los próximos días."
+        }
+      },
+      "cta": {
+        "title": "Visítanos",
+        "description": "¡Nos encantaría verte en persona! Únete a nosotros para uno de nuestros servicios.",
+        "planVisit": "Planificar una Visita",
+        "directions": "Obtener Direcciones"
+      },
+      "map": {
+        "title": "Encuéntranos",
+        "subtitle": "Visítanos en nuestra ubicación en el corazón de Brooklyn",
+        "placeholder": "El mapa interactivo se mostrará aquí"
+      }
+    }
 }

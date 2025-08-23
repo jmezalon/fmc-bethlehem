@@ -8,7 +8,17 @@
     "groups": "Groupes",
     "nextSteps": "Prochaines Étapes",
     "give": "Donner",
-    "prayer": "Prière"
+    "prayer": "Prière",
+    "navigation": {
+      "home": "Accueil",
+      "events": "Événements",
+      "groups": "Groupes",
+      "nextSteps": "Prochaines Étapes",
+      "prayer": "Prière",
+      "sermons": "Sermons",
+      "about": "À propos",
+      "contact": "Contact"
+    }
   },
   "hero": {
     "title": "Bienvenue à FMCB",
@@ -47,6 +57,10 @@
     "about": "À propos",
     "contact": "Contact"
   },
+  "navigation": {
+    "menu": "Menu",
+    "close": "Fermer"
+  },
   "seo": {
     "title": "FMCB - Église Méthodiste Libre de Bethlehem",
     "description": "Bienvenue dans notre communauté où nous adorons Dieu avec joie et vivons en communion avec des croyants partageant les mêmes idées."
@@ -59,6 +73,7 @@
     "directions": "Obtenir des Directions",
     "serviceTimes": "Horaires des Services",
     "sunday": "Dimanche",
+    "monday": "Lundi",
     "wednesday": "Mercredi",
     "sundayWorship": "Culte du Matin",
     "afternoonService": "Service de l'Après-midi",
@@ -84,22 +99,6 @@
       "entrance": "Entrée sur E 45th St",
       "directions": "Obtenir des Directions",
       "mapPlaceholder": "La carte Google Maps apparaîtra ici"
-    },
-    "schedule": {
-      "title": "Horaires des Services",
-      "language": "Langue",
-      "addToCalendar": "Ajouter au Calendrier",
-      "morning": {
-        "title": "Service du Matin (Créole)",
-        "sunSchool": "École du Dimanche",
-        "worship": "Service d'Adoration",
-        "language": "Créole Haïtien"
-      },
-      "youth": {
-        "title": "Service Jeunesse / Après-midi",
-        "service": "Service Jeunesse et Après-midi",
-        "language": "Anglais et Créole"
-      }
     },
     "expect": {
       "title": "À Quoi S'Attendre",
@@ -156,15 +155,15 @@
     "sunday": {
       "sunSchool": "École du Dimanche",
       "sunSchoolDesc": "Étude biblique et communion fraternelle pour tous les âges",
-      "morningWorship": "Service de Culte du Matin",
-      "morningWorshipDesc": "Service principal en créole haïtien",
+      "morningWorship": "Service de Culte Matinal",
+      "morningWorshipDesc": "Service principal de culte en créole haïtien",
       "afternoonWorship": "Service de Culte de l'Après-midi",
-      "afternoonWorshipDesc": "Service des jeunes et de l'après-midi en anglais et créole"
+      "afternoonWorshipDesc": "Service jeunesse et de l'après-midi en anglais et créole"
     },
     "monday": {
       "kaseChenn": "Kase Chenn (Jeûne et Prière)",
       "kaseChennDesc": "Service matinal de jeûne et de prière",
-      "youthBible": "Étude Biblique des Jeunes",
+      "youthBible": "Étude Biblique Jeunesse",
       "youthBibleDesc": "Étude biblique axée sur les jeunes",
       "generalBible": "Étude Biblique Générale",
       "generalBibleDesc": "Étude biblique pour tous les membres"
@@ -187,13 +186,13 @@
     "special": {
       "communion": {
         "title": "Dimanche de la Sainte Cène",
-        "description": "Sainte communion avec vin et pain symbolisant la mort, l'ensevelissement, la résurrection et le retour du Christ. Pour les membres baptisés seulement.",
+        "description": "Sainte communion avec du vin et du pain symbolisant la mort, l'enterrement, la résurrection et le retour du Christ. Pour les membres baptisés seulement.",
         "frequency": "Premier dimanche de chaque mois"
       },
       "watchNight": {
-        "title": "Veillée de Prière",
-        "description": "Service spécial du soir avec prière et adoration",
-        "frequency": "Dernier vendredi de chaque mois: 20h00 - 00h00"
+        "title": "Nuit de Veille",
+        "description": "Service spécial du soir de prière et d'adoration",
+        "frequency": "Dernier vendredi de chaque mois : 20h00 - 00h00"
       }
     },
     "pastors": {
@@ -202,7 +201,7 @@
       "associate": "Pasteur Associé"
     },
     "contact": {
-      "title": "Prêt à Nous Rejoindre?",
+      "title": "Prêt à Nous Rejoindre ?",
       "description": "Nous aimerions vous accueillir dans notre famille d'église. Planifiez votre première visite dès aujourd'hui.",
       "button": "Planifier une Visite"
     }
@@ -287,6 +286,495 @@
       "description": "Vous avez une idée pour un nouveau petit groupe? Nous aimerions vous aider à commencer!",
       "startGroup": "Créer un Nouveau Groupe",
       "questions": "Poser des Questions"
+    }
+  },
+  "nextSteps": {
+    "title": "Prochaines Étapes",
+    "subtitle": "Prenez votre prochaine étape dans la foi et approfondissez votre relation avec Dieu",
+    "getStarted": "Commencer",
+    "support": {
+      "title": "Besoin d'aide?",
+      "description": "Notre équipe pastorale est là pour vous soutenir dans votre parcours spirituel. N'hésitez pas à nous contacter avec toutes vos questions.",
+      "contact": "Nous contacter",
+      "visitUs": "Nous rendre visite"
+    },
+    "salvation": {
+      "title": "Accepter Jésus",
+      "subtitle": "Partagez votre décision de suivre le Christ avec nous",
+      "description": "Félicitations pour avoir accepté Jésus comme votre Seigneur et Sauveur! Nous aimerions célébrer avec vous et vous aider dans vos prochaines étapes de foi.",
+      "backToNextSteps": "Retour aux Prochaines Étapes",
+      "success": {
+        "title": "Merci de Partager!",
+        "message": "Nous sommes très excités de célébrer votre décision avec vous. Quelqu'un de notre équipe pastorale vous contactera bientôt pour vous aider avec vos prochaines étapes de foi."
+      },
+      "form": {
+        "title": "Partagez Votre Décision",
+        "description": "Parlez-nous de votre décision de suivre Jésus pour que nous puissions célébrer avec vous et vous offrir notre soutien.",
+        "personalInfo": "Informations Personnelles",
+        "firstName": "Prénom",
+        "lastName": "Nom de Famille",
+        "email": "Adresse E-mail",
+        "phone": "Numéro de Téléphone",
+        "age": "Tranche d'Âge",
+        "selectAge": "Sélectionnez votre tranche d'âge",
+        "decisionInfo": "Votre Décision",
+        "decisionDate": "Quand avez-vous accepté Jésus? (Optionnel)",
+        "testimony": "Témoignage Bref",
+        "testimonyPlaceholder": "Partagez un bref témoignage sur votre décision de suivre Jésus...",
+        "prayerRequests": "Demandes de Prière (Optionnel)",
+        "prayerRequestsPlaceholder": "Des demandes de prière que vous aimeriez partager avec nous...",
+        "followUp": "Préférences de Suivi",
+        "followUpPreference": "Comment aimeriez-vous que nous vous suivions?",
+        "selectFollowUp": "Sélectionnez la préférence de suivi",
+        "additionalComments": "Commentaires Supplémentaires (Optionnel)",
+        "additionalCommentsPlaceholder": "Autre chose que vous aimeriez que nous sachions...",
+        "submit": "Soumettre",
+        "submitting": "Soumission...",
+        "ageOptions": {
+          "under18": "Moins de 18",
+          "18to25": "18-25",
+          "26to35": "26-35",
+          "36to50": "36-50",
+          "51to65": "51-65",
+          "over65": "Plus de 65"
+        },
+        "followUpOptions": {
+          "phone": "Appel Téléphonique",
+          "email": "E-mail",
+          "inPerson": "Rencontre en Personne",
+          "noContact": "Pas de Suivi Nécessaire"
+        }
+      }
+    },
+    "baptism": {
+      "title": "Baptême",
+      "subtitle": "Prenez la prochaine étape de votre parcours de foi par le baptême",
+      "description": "Le baptême est une belle déclaration de votre foi en Jésus-Christ. Laissez-nous vous aider à vous préparer pour cette étape importante.",
+      "backToNextSteps": "Retour aux Prochaines Étapes",
+      "success": {
+        "title": "Demande de Baptême Reçue!",
+        "message": "Merci pour votre intérêt pour le baptême. Notre équipe pastorale vous contactera bientôt pour discuter des prochaines étapes et programmer votre baptême."
+      },
+      "form": {
+        "title": "Demande de Baptême",
+        "description": "Veuillez remplir ce formulaire pour demander le baptême. Notre équipe vous contactera pour discuter de la préparation et de la programmation.",
+        "personalInfo": "Informations Personnelles",
+        "firstName": "Prénom",
+        "lastName": "Nom de Famille",
+        "email": "Adresse E-mail",
+        "phone": "Numéro de Téléphone",
+        "age": "Tranche d'Âge",
+        "selectAge": "Sélectionnez votre tranche d'âge",
+        "baptismInfo": "Informations sur le Baptême",
+        "salvationDate": "Quand avez-vous accepté Jésus? (Optionnel)",
+        "previousBaptism": "Avez-vous été baptisé auparavant?",
+        "selectPreviousBaptism": "Sélectionnez une option",
+        "baptismReason": "Pourquoi voulez-vous être baptisé?",
+        "baptismReasonPlaceholder": "Veuillez partager pourquoi le baptême est important pour vous...",
+        "preferredDate": "Date de Baptême Préférée (Optionnel)",
+        "specialRequests": "Demandes Spéciales (Optionnel)",
+        "specialRequestsPlaceholder": "Des demandes spéciales ou des accommodements nécessaires...",
+        "emergencyContact": "Informations de Contact d'Urgence",
+        "emergencyContactName": "Nom du Contact d'Urgence",
+        "emergencyContactPhone": "Téléphone du Contact d'Urgence",
+        "submit": "Soumettre la Demande",
+        "submitting": "Soumission...",
+        "ageOptions": {
+          "under18": "Moins de 18",
+          "18to25": "18-25",
+          "26to35": "26-35",
+          "36to50": "36-50",
+          "51to65": "51-65",
+          "over65": "Plus de 65"
+        },
+        "previousBaptismOptions": {
+          "no": "Non, c'est mon premier baptême",
+          "yesInfant": "Oui, en tant que nourrisson",
+          "yesAdult": "Oui, en tant qu'adulte"
+        }
+      }
+    },
+    "membership": {
+      "title": "Adhésion à l'Église",
+      "subtitle": "Devenez membre officiel de notre famille d'église",
+      "description": "L'adhésion à l'église est un engagement à faire partie de notre communauté et à participer à la vie et à la mission de notre église.",
+      "backToNextSteps": "Retour aux Prochaines Étapes",
+      "success": {
+        "title": "Demande d'Adhésion Reçue!",
+        "message": "Merci pour votre intérêt à devenir membre. Notre équipe de direction examinera votre demande et vous contactera bientôt concernant les prochaines étapes."
+      },
+      "form": {
+        "title": "Demande d'Adhésion",
+        "description": "Veuillez compléter cette demande pour commencer le processus d'adhésion. Notre équipe vous contactera pour discuter des prochaines étapes.",
+        "personalInfo": "Informations Personnelles",
+        "firstName": "Prénom",
+        "lastName": "Nom de Famille",
+        "email": "Adresse E-mail",
+        "phone": "Numéro de Téléphone",
+        "address": "Adresse",
+        "city": "Ville",
+        "state": "État",
+        "zipCode": "Code Postal",
+        "dateOfBirth": "Date de Naissance",
+        "maritalStatus": "État Civil",
+        "selectMaritalStatus": "Sélectionnez l'état civil",
+        "spiritualInfo": "Informations Spirituelles",
+        "salvationDate": "Quand avez-vous accepté Jésus? (Optionnel)",
+        "baptismDate": "Quand avez-vous été baptisé? (Optionnel)",
+        "previousChurch": "Église Précédente (Optionnel)",
+        "membershipReason": "Pourquoi voulez-vous devenir membre?",
+        "membershipReasonPlaceholder": "Veuillez partager pourquoi l'adhésion est importante pour vous...",
+        "ministryService": "Ministère et Service",
+        "skills": "Compétences et Talents (Optionnel)",
+        "skillsPlaceholder": "Quelles compétences ou talents aimeriez-vous utiliser dans le ministère...",
+        "availability": "Disponibilité (Optionnel)",
+        "availabilityPlaceholder": "Quand êtes-vous généralement disponible pour servir...",
+        "submit": "Soumettre la Demande",
+        "submitting": "Soumission...",
+        "maritalStatusOptions": {
+          "single": "Célibataire",
+          "married": "Marié(e)",
+          "divorced": "Divorcé(e)",
+          "widowed": "Veuf/Veuve"
+        }
+      }
+    },
+    "newMemberClass": {
+      "title": "Classe Nouveaux Membres",
+      "subtitle": "Apprenez sur notre église, nos croyances et notre communauté",
+      "description": "Notre Classe Nouveaux Membres vous aide à comprendre la mission de notre église, nos valeurs et comment vous connecter dans notre communauté.",
+      "backToNextSteps": "Retour aux Prochaines Étapes",
+      "success": {
+        "title": "Inscription à la Classe Reçue!",
+        "message": "Merci de vous être inscrit à la Classe Nouveaux Membres! Nous vous contacterons bientôt avec les détails de la classe et les informations d'horaire."
+      },
+      "form": {
+        "title": "Inscription Classe Nouveaux Membres",
+        "description": "Inscrivez-vous à notre prochaine Classe Nouveaux Membres pour en apprendre plus sur notre église et vous connecter.",
+        "personalInfo": "Informations Personnelles",
+        "firstName": "Prénom",
+        "lastName": "Nom de Famille",
+        "email": "Adresse E-mail",
+        "phone": "Numéro de Téléphone",
+        "age": "Tranche d'Âge",
+        "selectAge": "Sélectionnez votre tranche d'âge",
+        "churchInfo": "Informations sur l'Église",
+        "membershipStatus": "Statut Actuel",
+        "selectMembershipStatus": "Sélectionnez votre statut actuel",
+        "attendanceDuration": "Depuis combien de temps assistez-vous?",
+        "selectAttendanceDuration": "Sélectionnez la durée",
+        "classPreferences": "Préférences de Classe",
+        "classPreference": "Préférence de Format de Classe",
+        "selectClassPreference": "Sélectionnez la préférence de format",
+        "sessionPreference": "Préférence d'Horaire de Session",
+        "selectSessionPreference": "Sélectionnez la préférence d'horaire",
+        "childcare": "Avez-vous besoin de garde d'enfants?",
+        "selectChildcare": "Sélectionnez le besoin de garde d'enfants",
+        "childrenAges": "Âges des Enfants (si applicable)",
+        "childrenAgesPlaceholder": "ex: 3, 7, 12",
+        "expectationsQuestions": "Attentes et Questions",
+        "expectations": "Qu'espérez-vous apprendre?",
+        "expectationsPlaceholder": "Partagez ce que vous espérez tirer de la classe...",
+        "questions": "Questions (Optionnel)",
+        "questionsPlaceholder": "Des questions sur la classe ou notre église...",
+        "specialNeeds": "Besoins Spéciaux (Optionnel)",
+        "specialNeedsPlaceholder": "Des accommodements ou besoins spéciaux...",
+        "submit": "S'inscrire à la Classe",
+        "submitting": "Soumission...",
+        "ageOptions": {
+          "under18": "Moins de 18",
+          "18to25": "18-25",
+          "26to35": "26-35",
+          "36to50": "36-50",
+          "51to65": "51-65",
+          "over65": "Plus de 65"
+        },
+        "membershipStatusOptions": {
+          "visitor": "Visiteur pour la Première Fois",
+          "regularAttendee": "Participant Régulier",
+          "newMember": "Nouveau Membre",
+          "consideringMembership": "Considérant l'Adhésion"
+        },
+        "attendanceDurationOptions": {
+          "lessThanMonth": "Moins d'un mois",
+          "1to3months": "1-3 mois",
+          "3to6months": "3-6 mois",
+          "6to12months": "6-12 mois",
+          "overYear": "Plus d'un an"
+        },
+        "classPreferenceOptions": {
+          "inPerson": "En Personne Seulement",
+          "online": "En Ligne Seulement",
+          "hybrid": "Hybride (En Personne et En Ligne)"
+        },
+        "sessionPreferenceOptions": {
+          "sundayMorning": "Dimanche Matin",
+          "sundayAfternoon": "Dimanche Après-midi",
+          "weekdayEvening": "Soir en Semaine",
+          "saturdayMorning": "Samedi Matin"
+        },
+        "childcareOptions": {
+          "yes": "Oui, j'ai besoin de garde d'enfants",
+          "no": "Non, je n'ai pas besoin de garde d'enfants"
+        }
+      }
+    },
+    "ministries": {
+      "title": "Rejoindre les Ministères",
+      "subtitle": "Utilisez vos dons et talents pour servir Dieu et les autres",
+      "description": "Dieu a donné à chacun de nous des dons et talents uniques. Découvrez comment vous pouvez utiliser les vôtres pour faire une différence dans notre église et notre communauté.",
+      "backToNextSteps": "Retour aux Prochaines Étapes",
+      "success": {
+        "title": "Intérêt pour le Ministère Reçu!",
+        "message": "Merci pour votre intérêt à servir! Un responsable de ministère vous contactera bientôt pour discuter des opportunités et des prochaines étapes."
+      },
+      "form": {
+        "title": "Formulaire d'Intérêt pour le Ministère",
+        "description": "Parlez-nous de vos intérêts et de la façon dont vous aimeriez servir. Nous vous mettrons en contact avec les bonnes opportunités de ministère.",
+        "personalInfo": "Informations Personnelles",
+        "firstName": "Prénom",
+        "lastName": "Nom de Famille",
+        "email": "Adresse E-mail",
+        "phone": "Numéro de Téléphone",
+        "age": "Tranche d'Âge",
+        "selectAge": "Sélectionnez votre tranche d'âge",
+        "ministryInterests": "Intérêts pour le Ministère",
+        "primaryMinistry": "Intérêt Principal pour le Ministère",
+        "selectPrimaryMinistry": "Sélectionnez votre intérêt principal",
+        "experience": "Expérience Ministérielle Précédente (Optionnel)",
+        "experiencePlaceholder": "Décrivez toute expérience ministérielle ou bénévole précédente...",
+        "skills": "Compétences et Talents (Optionnel)",
+        "skillsPlaceholder": "Quelles compétences ou talents apportez-vous...",
+        "availabilityCommitment": "Disponibilité et Engagement",
+        "availability": "Quand êtes-vous disponible?",
+        "selectAvailability": "Sélectionnez votre disponibilité",
+        "timeCommitment": "Engagement de Temps",
+        "selectTimeCommitment": "Sélectionnez l'engagement de temps par semaine",
+        "motivation": "Pourquoi voulez-vous servir?",
+        "motivationPlaceholder": "Partagez votre motivation pour servir dans le ministère...",
+        "additionalInfo": "Informations Supplémentaires",
+        "backgroundCheckConsent": "Je consens à une vérification des antécédents si nécessaire pour ce poste de ministère",
+        "additionalComments": "Commentaires Supplémentaires (Optionnel)",
+        "additionalCommentsPlaceholder": "Autre chose que vous aimeriez que nous sachions...",
+        "submit": "Soumettre l'Intérêt",
+        "submitting": "Soumission...",
+        "ageOptions": {
+          "under18": "Moins de 18",
+          "18to25": "18-25",
+          "26to35": "26-35",
+          "36to50": "36-50",
+          "51to65": "51-65",
+          "over65": "Plus de 65"
+        },
+        "ministryOptions": {
+          "worship": "Adoration et Musique",
+          "children": "Ministère des Enfants",
+          "youth": "Ministère des Jeunes",
+          "hospitality": "Hospitalité et Accueil",
+          "outreach": "Sensibilisation Communautaire",
+          "prayer": "Ministère de la Prière",
+          "media": "Médias et Technologie",
+          "administration": "Administration",
+          "maintenance": "Installations et Maintenance",
+          "counseling": "Conseil et Soins"
+        },
+        "availabilityOptions": {
+          "sundays": "Services du Dimanche",
+          "weekdays": "Matins en Semaine",
+          "evenings": "Soirées en Semaine",
+          "weekends": "Week-ends",
+          "flexible": "Horaire Flexible"
+        },
+        "timeCommitmentOptions": {
+          "1to2hours": "1-2 heures par semaine",
+          "3to5hours": "3-5 heures par semaine",
+          "6to10hours": "6-10 heures par semaine",
+          "10plushours": "10+ heures par semaine"
+        }
+      }
+    }
+  },
+  "prayer": {
+    "title": "Demandes de Prière",
+    "subtitle": "Partagez vos demandes de prière avec notre communauté et notre équipe pastorale",
+    "submitAnother": "Soumettre une Autre Prière",
+    "form": {
+      "name": {
+        "label": "Votre nom (optionnel)",
+        "placeholder": "Entrez votre nom"
+      },
+      "email": {
+        "label": "Email (optionnel)",
+        "placeholder": "Entrez votre email"
+      },
+      "phone": {
+        "label": "Téléphone (optionnel)",
+        "placeholder": "Entrez votre numéro de téléphone"
+      },
+      "request": {
+        "label": "Votre Demande de Prière",
+        "placeholder": "Partagez votre demande de prière avec nous..."
+      },
+      "urgent": {
+        "label": "Ceci est une demande urgente",
+        "description": "Cochez si vous avez besoin de prière immédiate"
+      },
+      "anonymous": {
+        "label": "Soumettre ceci anonymement",
+        "description": "Votre demande restera confidentielle"
+      },
+      "updates": {
+        "label": "J'aimerais recevoir des mises à jour sur ma prière",
+        "description": "Nous pouvons vous contacter avec des nouvelles ou des encouragements"
+      }
+    },
+    "wall": {
+      "title": "Mur de Prière",
+      "subtitle": "Voir et prier pour les demandes de notre communauté",
+      "anonymous": "Anonyme",
+      "prayedFor": "Ont prié pour ceci",
+      "prayForThis": "Prier pour ceci",
+      "showMore": "Voir Plus",
+      "showLess": "Voir Moins",
+      "noRequests": {
+        "title": "Aucune Demande de Prière",
+        "description": "Il n'y a pas de demandes de prière pour le moment. Soyez le premier à en soumettre une!"
+      }
+    },
+    "success": {
+      "title": "Demande Soumise!",
+      "message": "Merci de partager votre demande de prière avec nous. Notre équipe pastorale et notre communauté prieront pour vous."
+    },
+    "submit": {
+      "button": "Soumettre la Demande de Prière",
+      "submitting": "Soumission en cours..."
+    }
+  },
+  "watchLive": {
+    "nowPlaying": "En cours de lecture",
+    "nextService": "Prochain Service",
+    "currentService": {
+      "title": "Service Actuel",
+      "description": "Rejoignez-nous pour l'adoration et la communion en temps réel"
+    },
+    "cta": {
+      "title": "Vous avez manqué un Service?",
+      "description": "Parcourez notre archive de sermons pour rattraper les messages et enseignements précédents.",
+      "watchSermons": "Parcourir les Sermons",
+      "planVisit": "Planifier une Visite"
+    }
+  },
+  "about": {
+    "title": "À propos de FMCB",
+    "subtitle": "Découvrez notre mission, nos valeurs et le cœur de notre communauté d'église",
+    "mission": {
+      "title": "Notre Mission",
+      "description": "Nous sommes dédiés à faire des disciples, adorer Dieu avec joie, et servir notre communauté avec l'amour du Christ."
+    },
+    "values": {
+      "title": "Nos Valeurs",
+      "faith": {
+        "title": "Foi",
+        "description": "Nous croyons au pouvoir de la Parole de Dieu et à la transformation par Jésus-Christ"
+      },
+      "community": {
+        "title": "Communauté",
+        "description": "Nous valorisons les relations authentiques et le soutien mutuel"
+      },
+      "service": {
+        "title": "Service",
+        "description": "Nous nous engageons à servir notre communauté et le monde avec amour et compassion"
+      }
+    },
+    "history": {
+      "title": "Notre Histoire",
+      "founding": "FMCB a été fondée en 1985 avec une vision de créer un espace accueillant où les personnes de tous horizons peuvent se rassembler pour adorer Dieu et grandir dans leur foi.",
+      "growth": "Au fil des années, notre église a grandi d'un petit rassemblement de familles à une communauté dynamique qui sert la grande région de Bethlehem avec amour et compassion.",
+      "today": "Aujourd'hui, nous continuons à nous engager envers nos principes fondateurs tout en embrassant de nouvelles façons d'atteindre notre communauté et de faire des disciples de Jésus-Christ."
+    },
+    "leadership": {
+      "title": "Notre Direction",
+      "subtitle": "Rencontrez les dirigeants dévoués qui guident notre famille d'église",
+      "pastor": {
+        "name": "Pasteur John Smith",
+        "title": "Pasteur Principal",
+        "bio": "Le Pasteur John sert FMCB depuis 2010, apportant un cœur pour le discipulat et la sensibilisation communautaire."
+      },
+      "associate": {
+        "name": "Pasteur Maria Rodriguez",
+        "title": "Pasteur Associé",
+        "bio": "Le Pasteur Maria dirige notre ministère d'adoration et supervise notre congrégation hispanophone avec passion et dévouement."
+      },
+      "youth": {
+        "name": "Pasteur David Johnson",
+        "title": "Pasteur des Jeunes",
+        "bio": "Le Pasteur David fait du ministère auprès de nos jeunes et jeunes adultes depuis plus de 8 ans, les aidant à grandir dans leur foi."
+      }
+    },
+    "cta": {
+      "title": "Rejoignez Notre Famille",
+      "description": "Nous aimerions vous voir à FMCB. Planifiez votre première visite et commencez votre parcours avec nous.",
+      "planVisit": "Planifier une Visite",
+      "contact": "Nous Contacter"
+    }
+  },
+  "accessibility": {
+    "skipToMain": "Aller au contenu principal",
+    "openMenu": "Ouvrir le menu de navigation",
+    "closeMenu": "Fermer le menu de navigation",
+    "playVideo": "Lire la vidéo",
+    "pauseVideo": "Mettre en pause la vidéo",
+    "videoDescription": "Lecteur vidéo pour {title}"
+  },
+  "contact": {
+    "title": "Nous Contacter",
+    "subtitle": "Nous aimerions avoir de vos nouvelles. Contactez-nous pour toute question ou pour en savoir plus sur notre famille d'église.",
+    "info": {
+      "title": "Informations de Contact",
+      "address": {
+        "title": "Adresse",
+        "street": "4415 Glenwood Road",
+        "city": "Brooklyn, NY 11203"
+      },
+      "phone": {
+        "title": "Téléphone",
+        "number": "(929) 343-9393"
+      },
+      "email": {
+        "title": "Email",
+        "address": "methodistchurch1993@gmail.com"
+      },
+      "hours": {
+        "title": "Heures de Bureau",
+        "sunday": "Dimanche: 8:00 AM - 12:00 PM",
+        "wednesday": "Mercredi: 6:00 PM - 8:00 PM",
+        "office": "Lundi - Vendredi: 9:00 AM - 5:00 PM"
+      }
+    },
+    "form": {
+      "title": "Envoyez-nous un Message",
+      "firstName": "Prénom",
+      "lastName": "Nom de Famille",
+      "email": "Adresse Email",
+      "phone": "Numéro de Téléphone",
+      "subject": "Sujet",
+      "message": "Message",
+      "send": "Envoyer le Message",
+      "sending": "Envoi en cours...",
+      "success": {
+        "title": "Message Envoyé!",
+        "message": "Merci de nous avoir contactés. Nous vous répondrons dans les prochains jours."
+      }
+    },
+    "success": {
+      "title": "Message Envoyé!",
+      "description": "Merci de nous avoir contactés. Nous vous répondrons dans les prochains jours."
+    },
+    "cta": {
+      "title": "Visitez-nous",
+      "description": "Nous aimerions vous voir en personne! Rejoignez-nous pour l'un de nos services.",
+      "planVisit": "Planifier une Visite",
+      "directions": "Obtenir des Directions"
     }
   },
   "watchPages": {
