@@ -4,31 +4,31 @@
 
 @layer base {
   :root {
-    /* FMC Bethlehem Brand Colors */
+    /* FMCB Brand Colors */
     --brand-maroon: #8a1f4f;
     --brand-brown: #713a24;
     --flame-orange: #e4a166;
     --flame-yellow: #f0c66d;
     --cool-gray: #c9d3d8;
-    --off-white: #f6f7f7;
+    --off-white: #ffffff;
 
     /* Theme Colors using Brand Palette */
-    --background: 0 0% 96.5%; /* off-white */
+    --background: 0 0% 100%; /* pure white */
     --foreground: 345 65% 21%; /* brand-maroon dark */
-    --card: 0 0% 96.5%;
+    --card: 0 0% 100%;
     --card-foreground: 345 65% 21%;
-    --popover: 0 0% 96.5%;
+    --popover: 0 0% 100%;
     --popover-foreground: 345 65% 21%;
     --primary: 345 65% 33%; /* brand-maroon */
-    --primary-foreground: 0 0% 96.5%;
+    --primary-foreground: 0 0% 100%;
     --secondary: 22 49% 29%; /* brand-brown */
-    --secondary-foreground: 0 0% 96.5%;
+    --secondary-foreground: 0 0% 100%;
     --muted: 200 20% 82%; /* cool-gray */
     --muted-foreground: 345 30% 45%;
     --accent: 32 65% 65%; /* flame-orange */
     --accent-foreground: 345 65% 21%;
     --destructive: 0 84.2% 60.2%;
-    --destructive-foreground: 0 0% 96.5%;
+    --destructive-foreground: 0 0% 100%;
     --border: 200 20% 82%;
     --input: 200 20% 82%;
     --ring: 345 65% 33%;
@@ -41,21 +41,21 @@
 
   .dark {
     --background: 345 65% 8%;
-    --foreground: 0 0% 96.5%;
+    --foreground: 0 0% 100%;
     --card: 345 65% 8%;
-    --card-foreground: 0 0% 96.5%;
+    --card-foreground: 0 0% 100%;
     --popover: 345 65% 8%;
-    --popover-foreground: 0 0% 96.5%;
+    --popover-foreground: 0 0% 100%;
     --primary: 345 65% 45%;
     --primary-foreground: 345 65% 8%;
     --secondary: 22 49% 35%;
-    --secondary-foreground: 0 0% 96.5%;
+    --secondary-foreground: 0 0% 100%;
     --muted: 200 20% 25%;
     --muted-foreground: 200 20% 65%;
     --accent: 32 65% 55%;
     --accent-foreground: 345 65% 8%;
     --destructive: 0 62.8% 30.6%;
-    --destructive-foreground: 0 0% 96.5%;
+    --destructive-foreground: 0 0% 100%;
     --border: 200 20% 25%;
     --input: 200 20% 25%;
     --ring: 345 65% 45%;
@@ -64,9 +64,10 @@
 
 @layer base {
   * {
-    @apply border-border;
+    border-color: hsl(var(--border));
   }
   body {
-    @apply bg-background text-foreground;
+    background-color: hsl(var(--background));
+    color: hsl(var(--foreground));
   }
 }

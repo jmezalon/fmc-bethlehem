@@ -130,7 +130,7 @@ export function generateOrganizationJsonLd(locale: 'en' | 'ht' | 'fr') {
     '@type': 'Organization',
     '@id': `${baseUrl}/#organization`,
     name: 'Free Methodist Church Bethlehem',
-    alternateName: 'FMC Bethlehem',
+    alternateName: 'FMCB',
     url: baseUrl,
     logo: `${baseUrl}/api/og?title=FMC%20Bethlehem`,
     description: 'Free Methodist Church in Brooklyn, NY serving the community with worship, prayer, and Bible study.',
@@ -169,7 +169,7 @@ export function generateWebsiteJsonLd(locale: 'en' | 'ht' | 'fr') {
     '@type': 'WebSite',
     '@id': `${baseUrl}/#website`,
     url: baseUrl,
-    name: 'FMC Bethlehem',
+    name: 'FMCB',
     description: 'Free Methodist Church in Brooklyn, NY',
     publisher: {
       '@id': `${baseUrl}/#organization`,

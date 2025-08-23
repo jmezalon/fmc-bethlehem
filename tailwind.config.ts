@@ -9,7 +9,7 @@ const config: Config = {
   theme: {
     extend: {
       colors: {
-        // FMC Bethlehem Brand Colors
+        // FMCB Brand Colors
         brand: {
           maroon: "var(--brand-maroon)",
           brown: "var(--brand-brown)",

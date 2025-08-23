@@ -32,14 +32,14 @@ export default function PlanVisitPage() {
       startTime.setHours(9, 0, 0, 0);
       endTime = new Date(nextSunday);
       endTime.setHours(11, 30, 0, 0);
-      title = 'FMC Bethlehem - Morning Worship Service';
+      title = 'FMCB - Morning Worship Service';
       description = 'Sunday School: 8:00 AM\\nWorship Service: 9:00-11:30 AM\\nLanguage: Haitian Creole';
     } else {
       startTime = new Date(nextSunday);
       startTime.setHours(12, 30, 0, 0);
       endTime = new Date(nextSunday);
       endTime.setHours(14, 30, 0, 0);
-      title = 'FMC Bethlehem - Youth/Afternoon Service';
+      title = 'FMCB - Youth/Afternoon Service';
       description = 'Youth and Afternoon Service\\nLanguages: English & Haitian Creole';
     }
 
@@ -50,7 +50,7 @@ export default function PlanVisitPage() {
     const icsContent = [
       'BEGIN:VCALENDAR',
       'VERSION:2.0',
-      'PRODID:-//FMC Bethlehem//Church Service//EN',
+      'PRODID:-//FMCB//Church Service//EN',
       'BEGIN:VEVENT',
       `DTSTART:${formatDate(startTime)}`,
       `DTEND:${formatDate(endTime)}`,

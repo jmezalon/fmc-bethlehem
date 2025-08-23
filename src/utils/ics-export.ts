@@ -48,7 +48,7 @@ export function generateICS(event: EventData, locale: 'en' | 'ht' | 'fr' = 'en')
   const icsContent = [
     'BEGIN:VCALENDAR',
     'VERSION:2.0',
-    'PRODID:-//FMC Bethlehem//Event Calendar//EN',
+    'PRODID:-//FMCB//Event Calendar//EN',
     'CALSCALE:GREGORIAN',
     'METHOD:PUBLISH',
     'BEGIN:VEVENT',

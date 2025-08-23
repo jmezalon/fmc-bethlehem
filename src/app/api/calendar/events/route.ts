@@ -11,7 +11,7 @@ export async function GET(request: NextRequest) {
     const icsEvents = eventsData.map(event => convertEventToICS(event, locale));
     
     // Generate ICS content
-    const icsContent = generateEventsICS(icsEvents, 'FMC Bethlehem Events');
+    const icsContent = generateEventsICS(icsEvents, 'FMCB Events');
     
     // Return ICS file
     return new NextResponse(icsContent, {

@@ -35,7 +35,7 @@ export function generatePageMetadata(params: {
       title: params.title,
       description: params.description,
       url: url,
-      siteName: 'FMC Bethlehem',
+      siteName: 'FMCB',
       images: [
         {
           url: ogImage,

@@ -14,12 +14,12 @@ export async function GET(request: NextRequest) {
     let ics = [
       'BEGIN:VCALENDAR',
       'VERSION:2.0',
-      'PRODID:-//FMC Bethlehem//Complete Calendar//EN',
+      'PRODID:-//FMCB//Complete Calendar//EN',
       'CALSCALE:GREGORIAN',
       'METHOD:PUBLISH',
-      'X-WR-CALNAME:FMC Bethlehem Complete Calendar',
+      'X-WR-CALNAME:FMCB Complete Calendar',
       'X-WR-TIMEZONE:America/New_York',
-      'X-WR-CALDESC:All events and service times from FMC Bethlehem',
+      'X-WR-CALDESC:All events and service times from FMCB',
     ];
 
     const now = new Date();

@@ -26,13 +26,20 @@ export async function generateMetadata({
   const seo = messages.seo as any;
 
   return {
-    title: seo?.title || 'FMC Bethlehem',
+    title: seo?.title || 'FMCB',
     description:
-      seo?.description || 'Welcome to FMC Bethlehem - Your community church',
+      seo?.description || 'Welcome to FMCB - Your community church',
     keywords: ['church', 'community', 'bethlehem', 'faith', 'worship'],
-    authors: [{ name: 'FMC Bethlehem' }],
-    creator: 'FMC Bethlehem',
-    publisher: 'FMC Bethlehem',
+    authors: [{ name: 'FMCB' }],
+    creator: 'FMCB',
+    publisher: 'FMCB',
+    icons: {
+      icon: [
+        { url: '/favicon.jpeg', type: 'image/jpeg' },
+        { url: '/logo.jpeg', sizes: '32x32', type: 'image/jpeg' },
+      ],
+      apple: '/logo.jpeg',
+    },
     robots: {
       index: true,
       follow: true,
@@ -48,16 +55,16 @@ export async function generateMetadata({
       type: 'website',
       locale: locale,
       url: process.env.NEXT_PUBLIC_SITE_URL || 'https://fmc-bethlehem.com',
-      siteName: seo?.title || 'FMC Bethlehem',
-      title: seo?.title || 'FMC Bethlehem',
+      siteName: seo?.title || 'FMCB',
+      title: seo?.title || 'FMCB',
       description:
-        seo?.description || 'Welcome to FMC Bethlehem - Your community church',
+        seo?.description || 'Welcome to FMCB - Your community church',
     },
     twitter: {
       card: 'summary_large_image',
-      title: seo?.title || 'FMC Bethlehem',
+      title: seo?.title || 'FMCB',
       description:
-        seo?.description || 'Welcome to FMC Bethlehem - Your community church',
+        seo?.description || 'Welcome to FMCB - Your community church',
     },
     viewport: {
       width: 'device-width',

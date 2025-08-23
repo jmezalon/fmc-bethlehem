@@ -11,7 +11,7 @@
     "prayer": "Prière"
   },
   "hero": {
-    "title": "Bienvenue à FMC Bethlehem",
+    "title": "Bienvenue à FMCB",
     "ctaPlan": "Planifiez votre Visite",
     "ctaWatch": "Regarder les Services"
   },
@@ -34,7 +34,7 @@
     "contact": "Contact"
   },
   "seo": {
-    "title": "FMC Bethlehem - Église Méthodiste Libre de Bethlehem",
+    "title": "FMCB - Église Méthodiste Libre de Bethlehem",
     "description": "Bienvenue dans notre communauté où nous adorons Dieu avec joie et vivons en communion avec des croyants partageant les mêmes idées."
   },
   "footer": {
@@ -59,11 +59,11 @@
     "quickLinks": "Liens Rapides",
     "privacy": "Politique de Confidentialité",
     "terms": "Conditions d'Utilisation",
-    "copyright": " 2024 FMC Bethlehem. Tous droits réservés."
+    "copyright": " 2024 FMCB. Tous droits réservés."
   },
   "planVisit": {
     "title": "Planifier une Visite",
-    "subtitle": "Nous sommes ravis de vous accueillir à FMC Bethlehem. Voici tout ce que vous devez savoir pour votre première visite.",
+    "subtitle": "Nous sommes ravis de vous accueillir à FMCB. Voici tout ce que vous devez savoir pour votre première visite.",
     "location": {
       "title": "Notre Emplacement",
       "address": "Notre Adresse",

@@ -36,10 +36,12 @@ export function Header() {
           <div className="flex h-16 items-center justify-between">
             {/* Logo */}
             <Link href={"/" as any} className="flex items-center space-x-2 focus:outline-none focus:ring-2 focus:ring-primary focus:ring-offset-2 rounded-md">
-              <div className="h-8 w-8 rounded bg-primary flex items-center justify-center">
-                <span className="text-primary-foreground font-bold text-sm">FMC</span>
-              </div>
-              <span className="font-bold text-lg">FMC Bethlehem</span>
+              <img 
+                src="/logo.jpeg" 
+                alt="Free Methodist Church of Bethlehem Logo" 
+                className="h-10 w-10"
+              />
+              <span className="font-bold text-lg">FMCB</span>
             </Link>
 
             {/* Desktop Navigation */}

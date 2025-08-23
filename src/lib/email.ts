@@ -15,7 +15,7 @@ export async function sendEmail(options: EmailOptions) {
     throw new Error('RESEND_API_KEY environment variable is not set');
   }
 
-  const { to, subject, html, text, from = 'FMC Bethlehem <noreply@fmcbethlehem.org>' } = options;
+  const { to, subject, html, text, from = 'FMCB <noreply@fmcbethlehem.org>' } = options;
 
   try {
     const emailData: any = {
@@ -54,7 +54,7 @@ export const emailTemplates = {
           <p>${request}</p>
         </div>
         <p style="color: #666; font-size: 14px;">
-          This prayer request was submitted through the FMC Bethlehem website.
+          This prayer request was submitted through the FMCB website.
         </p>
       </div>
     `,
@@ -67,7 +67,7 @@ Public: ${isPublic ? 'Yes' : 'No'}
 Prayer Request:
 ${request}
 
-This prayer request was submitted through the FMC Bethlehem website.
+This prayer request was submitted through the FMCB website.
     `
   }),
 
@@ -84,7 +84,7 @@ This prayer request was submitted through the FMC Bethlehem website.
         </div>
         <p>We look forward to seeing you there!</p>
         <p style="color: #666; font-size: 14px;">
-          This is an automated reminder from FMC Bethlehem.
+          This is an automated reminder from FMCB.
         </p>
       </div>
     `,
@@ -97,15 +97,15 @@ Location: ${eventLocation}
 
 We look forward to seeing you there!
 
-This is an automated reminder from FMC Bethlehem.
+This is an automated reminder from FMCB.
     `
   }),
 
   newsletterSubscription: (email: string) => ({
-    subject: 'Welcome to FMC Bethlehem Newsletter',
+    subject: 'Welcome to FMCB Newsletter',
     html: `
       <div style="font-family: Arial, sans-serif; max-width: 600px; margin: 0 auto;">
-        <h2 style="color: #8B1538;">Welcome to FMC Bethlehem!</h2>
+        <h2 style="color: #8B1538;">Welcome to FMCB!</h2>
         <p>Thank you for subscribing to our newsletter. You'll now receive updates about:</p>
         <ul>
           <li>Upcoming events and activities</li>
@@ -120,7 +120,7 @@ This is an automated reminder from FMC Bethlehem.
       </div>
     `,
     text: `
-Welcome to FMC Bethlehem!
+Welcome to FMCB!
 
 Thank you for subscribing to our newsletter. You'll now receive updates about:
 - Upcoming events and activities

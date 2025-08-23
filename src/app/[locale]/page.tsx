@@ -3,6 +3,7 @@ import { Container } from '@/components/ui/container';
 import { StructuredData } from '@/components/structured-data';
 import { generateEventJsonLd } from '@/lib/structured-data';
 import Link from 'next/link';
+import Image from 'next/image';
 import { Calendar, Clock, MapPin, Play, Users, Heart, BookOpen, MessageSquare, ArrowRight } from 'lucide-react';
 import eventsData from '@/../../data/events.json';
 import sermonsData from '@/../../data/sermons.json';
@@ -24,47 +25,57 @@ export default function HomePage() {
     <main>
       <StructuredData data={eventStructuredData} />
       {/* Hero Section */}
-      <section className="bg-gradient-to-br from-primary/5 via-background to-primary/10">
+      <section className="relative overflow-hidden">
+        <div className="absolute inset-0">
+          <Image
+            src="/fmcb-hero.png"
+            alt="FMCB Church Building"
+            fill
+            className="object-cover"
+            priority
+          />
+          <div className="absolute inset-0 bg-black/50" />
+        </div>
         <Container>
-          <div className="py-20 text-center">
-            <h1 className="text-4xl font-bold tracking-tight text-foreground sm:text-6xl mb-6">
+          <div className="relative py-20 text-center text-white">
+            <h1 className="text-4xl font-bold tracking-tight sm:text-6xl mb-6">
               {t('title')}
             </h1>
-            <p className="text-xl text-muted-foreground mb-12 max-w-2xl mx-auto">
+            <p className="text-xl text-white/90 mb-12 max-w-2xl mx-auto">
               {t('subtitle')}
             </p>
 
             {/* Service Times Badges */}
             <div className="grid grid-cols-1 md:grid-cols-3 gap-4 max-w-4xl mx-auto mb-12">
-              <div className="flex items-center justify-center gap-3 p-4 rounded-lg bg-card border">
+              <div className="flex items-center justify-center gap-3 p-4 rounded-lg bg-white/90 backdrop-blur-sm border border-white/20">
                 <Clock className="h-5 w-5 text-primary" />
                 <div className="text-left">
-                  <p className="font-semibold text-card-foreground">
+                  <p className="font-semibold text-gray-900">
                     {tService('worship')}
                   </p>
-                  <p className="text-sm text-muted-foreground">
+                  <p className="text-sm text-gray-600">
                     {tService('sunday')} • {tService('worshipTime')}
                   </p>
                 </div>
               </div>
-              <div className="flex items-center justify-center gap-3 p-4 rounded-lg bg-card border">
+              <div className="flex items-center justify-center gap-3 p-4 rounded-lg bg-white/90 backdrop-blur-sm border border-white/20">
                 <Heart className="h-5 w-5 text-primary" />
                 <div className="text-left">
-                  <p className="font-semibold text-card-foreground">
+                  <p className="font-semibold text-gray-900">
                     {tService('prayer')}
                   </p>
-                  <p className="text-sm text-muted-foreground">
+                  <p className="text-sm text-gray-600">
                     {tService('wednesday')} • {tService('prayerTime')}
                   </p>
                 </div>
               </div>
-              <div className="flex items-center justify-center gap-3 p-4 rounded-lg bg-card border">
+              <div className="flex items-center justify-center gap-3 p-4 rounded-lg bg-white/90 backdrop-blur-sm border border-white/20">
                 <MessageSquare className="h-5 w-5 text-primary" />
                 <div className="text-left">
-                  <p className="font-semibold text-card-foreground">
+                  <p className="font-semibold text-gray-900">
                     {tService('bible')}
                   </p>
-                  <p className="text-sm text-muted-foreground">
+                  <p className="text-sm text-gray-600">
                     {tService('monday')} • {tService('bibleTime')}
                   </p>
                 </div>

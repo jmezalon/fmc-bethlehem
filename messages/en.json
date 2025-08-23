@@ -21,7 +21,7 @@
     }
   },
   "hero": {
-    "title": "Welcome to FMC Bethlehem",
+    "title": "Welcome to Free Methodist Church of Bethlehem",
     "subtitle": "Join us for worship, fellowship, and spiritual growth in our loving community",
     "ctaPlan": "Plan Your Visit",
     "ctaWatch": "Watch Services"
@@ -52,7 +52,7 @@
     "close": "Close"
   },
   "seo": {
-    "title": "FMC Bethlehem - Free Methodist Church of Bethlehem",
+    "title": "FMCB - Free Methodist Church of Bethlehem",
     "description": "Welcome to our community where we worship God with joy and live in fellowship with like-minded believers."
   },
   "footer": {
@@ -733,7 +733,7 @@
     "live": {
       "title": "Watch Live",
       "subtitle": "Join us for live worship services and experience community from anywhere",
-      "streamTitle": "FMC Bethlehem Live Stream",
+      "streamTitle": "FMCB Live Stream",
       "status": {
         "live": "LIVE"
       },
@@ -808,7 +808,7 @@
     }
   },
   "about": {
-    "title": "About FMC Bethlehem",
+    "title": "About FMCB",
     "subtitle": "Learn about our mission, values, and the heart behind our church community",
     "mission": {
       "title": "Our Mission",
@@ -834,7 +834,7 @@
     },
     "history": {
       "title": "Our Story",
-      "founding": "FMC Bethlehem was founded in 1985 with a vision to create a welcoming space where people from all backgrounds could come together to worship God and grow in their faith.",
+      "founding": "FMCB was founded in 1985 with a vision to create a welcoming space where people from all backgrounds could come together to worship God and grow in their faith.",
       "growth": "Over the years, our church has grown from a small gathering of families to a vibrant community that serves the greater Bethlehem area with love and compassion.",
       "today": "Today, we continue to be committed to our founding principles while embracing new ways to reach our community and make disciples of Jesus Christ."
     },
@@ -844,7 +844,7 @@
       "pastor": {
         "name": "Pastor John Smith",
         "title": "Senior Pastor",
-        "bio": "Pastor John has been serving FMC Bethlehem since 2010, bringing a heart for discipleship and community outreach."
+        "bio": "Pastor John has been serving FMCB since 2010, bringing a heart for discipleship and community outreach."
       },
       "associate": {
         "name": "Pastor Maria Rodriguez",

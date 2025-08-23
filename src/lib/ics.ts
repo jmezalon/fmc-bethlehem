@@ -1,6 +1,6 @@
 /**
  * ICS (iCalendar) helper library for generating calendar files
- * Supports events and service times for FMC Bethlehem
+ * Supports events and service times for FMCB
  */
 
 export interface ICSEvent {
@@ -56,7 +56,7 @@ export function generateEventICS(event: ICSEvent): string {
   let ics = [
     'BEGIN:VCALENDAR',
     'VERSION:2.0',
-    'PRODID:-//FMC Bethlehem//Church Events//EN',
+    'PRODID:-//FMCB//Church Events//EN',
     'CALSCALE:GREGORIAN',
     'METHOD:PUBLISH',
     'BEGIN:VEVENT',
@@ -96,18 +96,18 @@ export function generateEventICS(event: ICSEvent): string {
 /**
  * Generates ICS content for multiple events
  */
-export function generateEventsICS(events: ICSEvent[], calendarName: string = 'FMC Bethlehem Events'): string {
+export function generateEventsICS(events: ICSEvent[], calendarName: string = 'FMCB Events'): string {
   const now = new Date();
   
   let ics = [
     'BEGIN:VCALENDAR',
     'VERSION:2.0',
-    'PRODID:-//FMC Bethlehem//Church Events//EN',
+    'PRODID:-//FMCB//Church Events//EN',
     'CALSCALE:GREGORIAN',
     'METHOD:PUBLISH',
     `X-WR-CALNAME:${escapeICSText(calendarName)}`,
     'X-WR-TIMEZONE:America/New_York',
-    'X-WR-CALDESC:Events and activities from FMC Bethlehem',
+    'X-WR-CALDESC:Events and activities from FMCB',
   ];
 
   events.forEach(event => {
@@ -158,12 +158,12 @@ export function generateServiceTimesICS(serviceTimes: ServiceTime[]): string {
   let ics = [
     'BEGIN:VCALENDAR',
     'VERSION:2.0',
-    'PRODID:-//FMC Bethlehem//Service Times//EN',
+    'PRODID:-//FMCB//Service Times//EN',
     'CALSCALE:GREGORIAN',
     'METHOD:PUBLISH',
-    'X-WR-CALNAME:FMC Bethlehem Service Times',
+    'X-WR-CALNAME:FMCB Service Times',
     'X-WR-TIMEZONE:America/New_York',
-    'X-WR-CALDESC:Regular service times at FMC Bethlehem',
+    'X-WR-CALDESC:Regular service times at FMCB',
   ];
 
   serviceTimes.forEach(service => {
@@ -249,14 +249,14 @@ export function convertEventToICS(event: any, locale: 'en' | 'fr' | 'ht' = 'en')
     startDate,
     endDate,
     organizer: {
-      name: 'FMC Bethlehem',
+      name: 'FMCB',
       email: 'events@fmcbethlehem.org'
     }
   };
 }
 
 /**
- * Default service times for FMC Bethlehem
+ * Default service times for FMCB
  */
 export const DEFAULT_SERVICE_TIMES: ServiceTime[] = [
   {
@@ -265,7 +265,7 @@ export const DEFAULT_SERVICE_TIMES: ServiceTime[] = [
     dayOfWeek: 0, // Sunday
     startTime: '10:00',
     endTime: '11:30',
-    location: 'FMC Bethlehem Sanctuary',
+    location: 'FMCB Sanctuary',
     description: 'Join us for our weekly worship service with music, prayer, and biblical teaching.'
   },
   {
@@ -274,7 +274,7 @@ export const DEFAULT_SERVICE_TIMES: ServiceTime[] = [
     dayOfWeek: 1, // Monday
     startTime: '19:00',
     endTime: '20:30',
-    location: 'FMC Bethlehem Fellowship Hall',
+    location: 'FMCB Fellowship Hall',
     description: 'Weekly Bible study and discussion group.'
   },
   {
@@ -283,7 +283,7 @@ export const DEFAULT_SERVICE_TIMES: ServiceTime[] = [
     dayOfWeek: 3, // Wednesday
     startTime: '19:00',
     endTime: '20:00',
-    location: 'FMC Bethlehem Prayer Room',
+    location: 'FMCB Prayer Room',
     description: 'Prayer, spiritual warfare, and intercession.'
   }
 ];
