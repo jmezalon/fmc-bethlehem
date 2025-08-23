@@ -17,6 +17,7 @@ export function Header() {
     { href: '/events', label: t('navigation.events') },
     { href: '/groups', label: t('navigation.groups') },
     { href: '/next-steps', label: t('navigation.nextSteps') },
+    { href: '/prayer', label: t('navigation.prayer') },
     { href: '/sermons', label: t('navigation.sermons') },
     { href: '/about', label: t('navigation.about') },
     { href: '/contact', label: t('navigation.contact') },
