@@ -5,14 +5,37 @@ import { Container } from '@/components/ui/container';
 import { YouTubeEmbed } from '@/components/ui/youtube-embed';
 import Link from 'next/link';
 import { Calendar, Clock, Users, MessageCircle, Share2 } from 'lucide-react';
+import { useState, useEffect } from 'react';
+import { getCurrentServiceInfo, formatServiceTime, getDayName, type CurrentServiceInfo } from '@/lib/live-stream';
 
 export default function LivePage() {
   const t = useTranslations('watchPages');
   const tCommon = useTranslations('common');
+  
+  const [serviceInfo, setServiceInfo] = useState<CurrentServiceInfo>({
+    isLive: false,
+    currentService: null,
+    nextService: null,
+    timeUntilNext: null
+  });
 
   // This would typically come from a CMS or environment variable
-  const liveVideoId = 'dQw4w9WgXcQ'; // Replace with actual live stream video ID
-  const isLive = true; // This would be determined by checking if stream is active
+  const liveVideoId = 'ye3CPI-qC8E'; // Replace with actual live stream video ID
+  
+  // Update service info every minute
+  useEffect(() => {
+    const updateServiceInfo = () => {
+      setServiceInfo(getCurrentServiceInfo());
+    };
+    
+    // Initial update
+    updateServiceInfo();
+    
+    // Update every minute
+    const interval = setInterval(updateServiceInfo, 60000);
+    
+    return () => clearInterval(interval);
+  }, []);
 
   const upcomingServices = [
     {
@@ -42,10 +65,14 @@ export default function LivePage() {
         <Container>
           <div className="text-center">
             <div className="flex items-center justify-center gap-2 mb-4">
-              {isLive && (
+              {serviceInfo.isLive ? (
                 <div className="flex items-center gap-2 bg-red-600 text-white px-3 py-1 rounded-full text-sm font-medium">
                   <div className="w-2 h-2 bg-white rounded-full animate-pulse" />
                   {t('live.status.live')}
+                </div>
+              ) : (
+                <div className="flex items-center gap-2 bg-gray-600 text-white px-3 py-1 rounded-full text-sm font-medium">
+                  {t('live.status.offline')}
                 </div>
               )}
             </div>
@@ -76,21 +103,55 @@ export default function LivePage() {
             <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-12">
               <div className="space-y-4">
                 <h2 className="text-2xl font-bold text-foreground">
-                  {isLive ? t('live.nowPlaying') : t('live.nextService')}
+                  {serviceInfo.isLive ? t('live.nowPlaying') : t('live.nextService')}
                 </h2>
                 <div className="space-y-3">
-                  <div className="flex items-center gap-3 text-muted-foreground">
-                    <Calendar className="h-5 w-5" />
-                    <span>{t('live.currentService.date')}</span>
-                  </div>
-                  <div className="flex items-center gap-3 text-muted-foreground">
-                    <Clock className="h-5 w-5" />
-                    <span>{t('live.currentService.time')}</span>
-                  </div>
-                  <div className="flex items-center gap-3 text-muted-foreground">
-                    <Users className="h-5 w-5" />
-                    <span>{t('live.currentService.language')}</span>
-                  </div>
+                  {serviceInfo.isLive && serviceInfo.currentService ? (
+                    <>
+                      <div className="flex items-center gap-3 text-muted-foreground">
+                        <Calendar className="h-5 w-5" />
+                        <span>{getDayName(serviceInfo.currentService.day)}</span>
+                      </div>
+                      <div className="flex items-center gap-3 text-muted-foreground">
+                        <Clock className="h-5 w-5" />
+                        <span>{formatServiceTime(serviceInfo.currentService)}</span>
+                      </div>
+                      <div className="flex items-center gap-3 text-muted-foreground">
+                        <Users className="h-5 w-5" />
+                        <span>{serviceInfo.currentService.language}</span>
+                      </div>
+                      <div className="text-sm text-muted-foreground mt-2">
+                        <p>{serviceInfo.currentService.description}</p>
+                      </div>
+                    </>
+                  ) : serviceInfo.nextService ? (
+                    <>
+                      <div className="flex items-center gap-3 text-muted-foreground">
+                        <Calendar className="h-5 w-5" />
+                        <span>{getDayName(serviceInfo.nextService.day)}</span>
+                      </div>
+                      <div className="flex items-center gap-3 text-muted-foreground">
+                        <Clock className="h-5 w-5" />
+                        <span>{formatServiceTime(serviceInfo.nextService)}</span>
+                      </div>
+                      <div className="flex items-center gap-3 text-muted-foreground">
+                        <Users className="h-5 w-5" />
+                        <span>{serviceInfo.nextService.language}</span>
+                      </div>
+                      <div className="text-sm text-muted-foreground mt-2">
+                        <p>{serviceInfo.nextService.description}</p>
+                        {serviceInfo.timeUntilNext && (
+                          <p className="font-medium text-primary mt-1">
+                            Starts in {serviceInfo.timeUntilNext}
+                          </p>
+                        )}
+                      </div>
+                    </>
+                  ) : (
+                    <div className="text-muted-foreground">
+                      <p>No upcoming services scheduled</p>
+                    </div>
+                  )}
                 </div>
               </div>
 
@@ -99,11 +160,46 @@ export default function LivePage() {
                   {t('live.interact.title')}
                 </h3>
                 <div className="space-y-3">
-                  <button className="flex items-center gap-3 w-full p-3 border rounded-lg hover:bg-muted/50 transition-colors">
+                  <button 
+                    onClick={() => {
+                      if (serviceInfo.isLive) {
+                        // Open YouTube live chat - this would typically open in a new window
+                        window.open(`https://www.youtube.com/live_chat?v=${liveVideoId}`, '_blank');
+                      } else {
+                        alert('Live chat is only available during live services');
+                      }
+                    }}
+                    className={`flex items-center gap-3 w-full p-3 border rounded-lg transition-colors ${
+                      serviceInfo.isLive 
+                        ? 'hover:bg-muted/50 cursor-pointer' 
+                        : 'opacity-50 cursor-not-allowed'
+                    }`}
+                    disabled={!serviceInfo.isLive}
+                  >
                     <MessageCircle className="h-5 w-5 text-primary" />
                     <span>{t('live.interact.chat')}</span>
                   </button>
-                  <button className="flex items-center gap-3 w-full p-3 border rounded-lg hover:bg-muted/50 transition-colors">
+                  <button 
+                    onClick={() => {
+                      const shareUrl = window.location.href;
+                      const shareText = serviceInfo.isLive 
+                        ? `Join us live now at FMC Bethlehem! ${serviceInfo.currentService?.name}` 
+                        : 'Watch live services at FMC Bethlehem';
+                      
+                      if (navigator.share) {
+                        navigator.share({
+                          title: 'FMC Bethlehem Live Stream',
+                          text: shareText,
+                          url: shareUrl
+                        });
+                      } else {
+                        // Fallback: copy to clipboard
+                        navigator.clipboard.writeText(`${shareText} - ${shareUrl}`);
+                        alert('Link copied to clipboard!');
+                      }
+                    }}
+                    className="flex items-center gap-3 w-full p-3 border rounded-lg hover:bg-muted/50 transition-colors cursor-pointer"
+                  >
                     <Share2 className="h-5 w-5 text-primary" />
                     <span>{t('live.interact.share')}</span>
                   </button>

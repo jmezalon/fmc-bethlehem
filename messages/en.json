@@ -765,7 +765,8 @@
       "subtitle": "Join us for live worship services and experience community from anywhere",
       "streamTitle": "FMCB Live Stream",
       "status": {
-        "live": "LIVE"
+        "live": "LIVE",
+        "offline": "OFFLINE"
       },
       "nowPlaying": "Now Playing",
       "nextService": "Next Service",

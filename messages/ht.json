@@ -826,6 +826,42 @@
         "watchLive": "Gade nan Dirèk",
         "planVisit": "Planifye yon Vizit"
       }
+    },
+    "live": {
+      "title": "Gade nan Dirèk",
+      "subtitle": "Vin jwenn nou pou sèvis adorasyon yo nan dirèk ak viv kominote a depi nenpòt kote",
+      "streamTitle": "Difizyon Dirèk FMCB",
+      "status": {
+        "live": "NAN DIRÈK",
+        "offline": "PA KONEKTE"
+      },
+      "nowPlaying": "K ap jwe kounye a",
+      "nextService": "Pwochen Sèvis",
+      "interact": {
+        "title": "Entèaksyon",
+        "chat": "Antre nan Chat Dirèk la",
+        "share": "Pataje Difizyon an"
+      },
+      "upcoming": {
+        "title": "Sèvis k ap Vini yo",
+        "sundayMorning": "Adorasòn Dimanch Maten",
+        "sundayMorningTime": "9:00 AM - 11:30 AM",
+        "sundayAfternoon": "Sèvis Dimanch Apremidi",
+        "sundayAfternoonTime": "12:30 PM - 2:30 PM",
+        "wednesdayPrayer": "Sèvis Lapriyè",
+        "wednesdayTime": "7:00 PM - 9:00 PM",
+        "sunday": "Dimanch",
+        "wednesday": "Mèkredi",
+        "creole": "Kreyòl Ayisyen",
+        "englishCreole": "Anglè ak Kreyòl Ayisyen",
+        "multiLang": "Plizyè Lang"
+      },
+      "cta": {
+        "title": "Vin Jwenn Nou nan Dirèk",
+        "description": "Pa rate sèvis nou yo nan dirèk. Vin jwenn kominote nou an nan adorasòn ak kominyon.",
+        "watchSermons": "Gade Prèdikasyon yo",
+        "planVisit": "Planifye yon Vizit"
+      }
     }
   },
   "give": {

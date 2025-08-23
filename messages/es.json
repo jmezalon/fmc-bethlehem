@@ -193,7 +193,39 @@
   "watchPages": {
     "live": {
       "title": "Transmisión en Vivo",
-      "subtitle": "Únete a nuestro servicio en vivo"
+      "subtitle": "Únete a nuestros servicios de adoración en vivo y experimenta la comunidad desde cualquier lugar",
+      "streamTitle": "Transmisión en Vivo FMCB",
+      "status": {
+        "live": "EN VIVO",
+        "offline": "DESCONECTADO"
+      },
+      "nowPlaying": "Reproduciendo Ahora",
+      "nextService": "Próximo Servicio",
+      "interact": {
+        "title": "Interactuar",
+        "chat": "Unirse al Chat en Vivo",
+        "share": "Compartir Transmisión"
+      },
+      "upcoming": {
+        "title": "Servicios Próximos",
+        "sundayMorning": "Adoración Dominical Matutina",
+        "sundayMorningTime": "9:00 AM - 11:30 AM",
+        "sundayAfternoon": "Servicio Dominical Vespertino",
+        "sundayAfternoonTime": "12:30 PM - 2:30 PM",
+        "wednesdayPrayer": "Servicio de Oración",
+        "wednesdayTime": "7:00 PM - 9:00 PM",
+        "sunday": "Domingo",
+        "wednesday": "Miércoles",
+        "creole": "Criollo Haitiano",
+        "englishCreole": "Inglés y Criollo Haitiano",
+        "multiLang": "Multilingüe"
+      },
+      "cta": {
+        "title": "Únete a Nosotros en Vivo",
+        "description": "No te pierdas nuestros servicios en vivo. Únete a nuestra comunidad en adoración y compañerismo.",
+        "watchSermons": "Ver Sermones",
+        "planVisit": "Planificar una Visita"
+      }
     },
     "sermons": {
       "title": "Sermones",
@@ -712,21 +744,21 @@
     }
   },
   "events": {
-      "title": "Eventos",
-      "subtitle": "Únete a nosotros para próximos eventos de la iglesia y reuniones especiales",
-      "upcoming": "Próximos Eventos",
-      "eventCount": "{count, plural, =0 {Sin eventos} =1 {1 evento} other {# eventos}}",
-      "views": {
-        "list": "Vista de Lista",
-        "calendar": "Vista de Calendario"
-      },
-      "filters": {
-        "allCategories": "Todas las Categorías"
-      },
-      "calendar": {
-        "today": "Hoy",
-        "more": "más"
-      },
+    "title": "Eventos",
+    "subtitle": "Únete a nosotros para próximos eventos de la iglesia y reuniones especiales",
+    "upcoming": "Próximos Eventos",
+    "eventCount": "{count, plural, =0 {Sin eventos} =1 {1 evento} other {# eventos}}",
+    "views": {
+      "live": "EN VIVO",
+      "offline": "DESCONECTADO",
+      "list": "Vista de Lista",
+      "calendar": "Vista de Calendario"
+    },
+    "filters": {
+      "allCategories": "Todas las Categorías",
+      "today": "Hoy",
+      "more": "más"
+    },
       "noEvents": {
         "title": "No se Encontraron Eventos",
         "description": "No hay eventos próximos en este momento. ¡Vuelve pronto!"

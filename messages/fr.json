@@ -823,6 +823,42 @@
         "watchLive": "Regarder en Direct",
         "planVisit": "Planifier une Visite"
       }
+    },
+    "live": {
+      "title": "Regarder en Direct",
+      "subtitle": "Rejoignez-nous pour les services de culte en direct et vivez la communauté de n'importe où",
+      "streamTitle": "Diffusion en Direct FMCB",
+      "status": {
+        "live": "EN DIRECT",
+        "offline": "HORS LIGNE"
+      },
+      "nowPlaying": "En Cours",
+      "nextService": "Prochain Service",
+      "interact": {
+        "title": "Interagir",
+        "chat": "Rejoindre le Chat en Direct",
+        "share": "Partager la Diffusion"
+      },
+      "upcoming": {
+        "title": "Services à Venir",
+        "sundayMorning": "Culte Dominical Matinal",
+        "sundayMorningTime": "9:00 - 11:30",
+        "sundayAfternoon": "Service Dominical de l'Après-midi",
+        "sundayAfternoonTime": "12:30 - 14:30",
+        "wednesdayPrayer": "Service de Prière",
+        "wednesdayTime": "19:00 - 21:00",
+        "sunday": "Dimanche",
+        "wednesday": "Mercredi",
+        "creole": "Créole Haïtien",
+        "englishCreole": "Anglais et Créole Haïtien",
+        "multiLang": "Multilingue"
+      },
+      "cta": {
+        "title": "Rejoignez-nous en Direct",
+        "description": "Ne manquez pas nos services en direct. Rejoignez notre communauté dans l'adoration et la communion.",
+        "watchSermons": "Regarder les Sermons",
+        "planVisit": "Planifier une Visite"
+      }
     }
   },
   "give": {
