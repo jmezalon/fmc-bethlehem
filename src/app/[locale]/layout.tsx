@@ -57,14 +57,21 @@ export async function generateMetadata({
       url: process.env.NEXT_PUBLIC_SITE_URL || 'https://fmc-bethlehem.com',
       siteName: seo?.title || 'FMCB',
       title: seo?.title || 'FMCB',
-      description:
-        seo?.description || 'Welcome to FMCB - Your community church',
+      description: 'Come worship and fellowship with us today',
+      images: [
+        {
+          url: '/share-image.png',
+          width: 1200,
+          height: 630,
+          alt: 'Free Methodist Church of Bethlehem - Come worship and fellowship with us today',
+        },
+      ],
     },
     twitter: {
       card: 'summary_large_image',
       title: seo?.title || 'FMCB',
-      description:
-        seo?.description || 'Welcome to FMCB - Your community church',
+      description: 'Come worship and fellowship with us today',
+      images: ['/share-image.png'],
     },
     viewport: {
       width: 'device-width',
