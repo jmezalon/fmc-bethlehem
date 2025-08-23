@@ -1,277 +1,118 @@
-'use client';
-
-import { useTranslations } from 'next-intl';
+import YouTubePlayer from '@/components/YouTubePlayer';
 import { Container } from '@/components/ui/container';
-import { YouTubeEmbed } from '@/components/ui/youtube-embed';
-import Link from 'next/link';
-import { Calendar, Clock, Users, MessageCircle, Share2 } from 'lucide-react';
-import { useState, useEffect } from 'react';
-import { getCurrentServiceInfo, formatServiceTime, getDayName, type CurrentServiceInfo } from '@/lib/live-stream';
+import { getCurrentServiceInfo, formatServiceTime, getDayName } from '@/lib/live-stream';
+import { CalendarIcon, ClockIcon, UsersIcon } from 'lucide-react';
+import LiveInteractionButtons from '@/components/LiveInteractionButtons';
 
-export default function LivePage() {
-  const t = useTranslations('watchPages');
-  const tCommon = useTranslations('common');
-  
-  const [serviceInfo, setServiceInfo] = useState<CurrentServiceInfo>({
-    isLive: false,
-    currentService: null,
-    nextService: null,
-    timeUntilNext: null
-  });
+async function fetchLive() {
+  try {
+    const baseUrl = process.env.NEXT_PUBLIC_BASE_URL || 'http://localhost:3000';
+    const res = await fetch(`${baseUrl}/api/youtube/live`, {
+      cache: 'no-store',
+    });
+    if (!res.ok) return { status: 'error', videoId: null } as const;
+    const data = await res.json();
+    return data as { status: 'live'|'offline'|'error'; videoId: string | null };
+  } catch (error) {
+    return { status: 'error', videoId: null } as const;
+  }
+}
 
-  // This would typically come from a CMS or environment variable
-  const liveVideoId = 'ye3CPI-qC8E'; // Replace with actual live stream video ID
-  
-  // Update service info every minute
-  useEffect(() => {
-    const updateServiceInfo = () => {
-      setServiceInfo(getCurrentServiceInfo());
-    };
-    
-    // Initial update
-    updateServiceInfo();
-    
-    // Update every minute
-    const interval = setInterval(updateServiceInfo, 60000);
-    
-    return () => clearInterval(interval);
-  }, []);
+export default async function LivePage() {
+  const data = await fetchLive();
+  const serviceInfo = getCurrentServiceInfo();
+  const nextService = serviceInfo.nextService;
 
-  const upcomingServices = [
-    {
-      title: t('live.upcoming.sundayMorning'),
-      time: t('live.upcoming.sundayMorningTime'),
-      language: t('live.upcoming.creole'),
-      day: t('live.upcoming.sunday'),
-    },
-    {
-      title: t('live.upcoming.sundayAfternoon'),
-      time: t('live.upcoming.sundayAfternoonTime'),
-      language: t('live.upcoming.englishCreole'),
-      day: t('live.upcoming.sunday'),
-    },
-    {
-      title: t('live.upcoming.wednesdayPrayer'),
-      time: t('live.upcoming.wednesdayTime'),
-      language: t('live.upcoming.multiLang'),
-      day: t('live.upcoming.wednesday'),
-    },
-  ];
+  // Fallback to ensure we always have a video
+  const videoId = data.videoId || 'ye3CPI-qC8E';
+  const status = data.status || 'offline';
 
   return (
-    <main>
-      {/* Hero Section */}
-      <section className="bg-gradient-to-br from-primary/5 via-background to-primary/10 py-16">
-        <Container>
-          <div className="text-center">
-            <div className="flex items-center justify-center gap-2 mb-4">
-              {serviceInfo.isLive ? (
-                <div className="flex items-center gap-2 bg-red-600 text-white px-3 py-1 rounded-full text-sm font-medium">
-                  <div className="w-2 h-2 bg-white rounded-full animate-pulse" />
-                  {t('live.status.live')}
-                </div>
-              ) : (
-                <div className="flex items-center gap-2 bg-gray-600 text-white px-3 py-1 rounded-full text-sm font-medium">
-                  {t('live.status.offline')}
-                </div>
-              )}
-            </div>
-            <h1 className="text-4xl font-bold tracking-tight text-foreground sm:text-5xl mb-4">
-              {t('live.title')}
-            </h1>
-            <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
-              {t('live.subtitle')}
-            </p>
-          </div>
-        </Container>
-      </section>
+    <div className="min-h-screen bg-background">
+      {/* Status Badge */}
+      <div className="flex justify-center pt-6 pb-2">
+        <div className="inline-flex items-center px-4 py-2 rounded-full text-sm font-medium bg-slate-100 text-slate-700">
+          {status === 'live' ? 'LIVE' : 'OFFLINE'}
+        </div>
+      </div>
 
-      {/* Live Stream Section */}
-      <section className="py-16">
-        <Container>
-          <div className="max-w-4xl mx-auto">
-            <div className="aspect-video mb-8">
-              <YouTubeEmbed
-                videoId={liveVideoId}
-                title={t('live.streamTitle')}
-                autoplay={false}
-                className="w-full h-full"
-              />
-            </div>
+      {/* Header */}
+      <div className="text-center pb-8">
+        <h1 className="text-4xl md:text-5xl font-bold text-slate-900 mb-4">
+          Watch Live
+        </h1>
+        <p className="text-lg text-slate-600 max-w-2xl mx-auto px-4">
+          Join us for live worship services and experience community from anywhere
+        </p>
+      </div>
 
-            {/* Stream Info */}
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-12">
-              <div className="space-y-4">
-                <h2 className="text-2xl font-bold text-foreground">
-                  {serviceInfo.isLive ? t('live.nowPlaying') : t('live.nextService')}
-                </h2>
-                <div className="space-y-3">
-                  {serviceInfo.isLive && serviceInfo.currentService ? (
-                    <>
-                      <div className="flex items-center gap-3 text-muted-foreground">
-                        <Calendar className="h-5 w-5" />
-                        <span>{getDayName(serviceInfo.currentService.day)}</span>
-                      </div>
-                      <div className="flex items-center gap-3 text-muted-foreground">
-                        <Clock className="h-5 w-5" />
-                        <span>{formatServiceTime(serviceInfo.currentService)}</span>
-                      </div>
-                      <div className="flex items-center gap-3 text-muted-foreground">
-                        <Users className="h-5 w-5" />
-                        <span>{serviceInfo.currentService.language}</span>
-                      </div>
-                      <div className="text-sm text-muted-foreground mt-2">
-                        <p>{serviceInfo.currentService.description}</p>
-                      </div>
-                    </>
-                  ) : serviceInfo.nextService ? (
-                    <>
-                      <div className="flex items-center gap-3 text-muted-foreground">
-                        <Calendar className="h-5 w-5" />
-                        <span>{getDayName(serviceInfo.nextService.day)}</span>
-                      </div>
-                      <div className="flex items-center gap-3 text-muted-foreground">
-                        <Clock className="h-5 w-5" />
-                        <span>{formatServiceTime(serviceInfo.nextService)}</span>
-                      </div>
-                      <div className="flex items-center gap-3 text-muted-foreground">
-                        <Users className="h-5 w-5" />
-                        <span>{serviceInfo.nextService.language}</span>
-                      </div>
-                      <div className="text-sm text-muted-foreground mt-2">
-                        <p>{serviceInfo.nextService.description}</p>
-                        {serviceInfo.timeUntilNext && (
-                          <p className="font-medium text-primary mt-1">
-                            Starts in {serviceInfo.timeUntilNext}
-                          </p>
-                        )}
-                      </div>
-                    </>
-                  ) : (
-                    <div className="text-muted-foreground">
-                      <p>No upcoming services scheduled</p>
-                    </div>
-                  )}
-                </div>
-              </div>
+      {/* Video Player */}
+      <Container className="pb-8">
+        <div className="max-w-4xl mx-auto">
+          <YouTubePlayer 
+            videoId={videoId} 
+            title={status === 'live' ? 'Live Stream' : 'Recent Livestream'} 
+            autoplay={status === 'live'}
+          />
+        </div>
+      </Container>
 
-              <div className="space-y-4">
-                <h3 className="text-xl font-semibold text-foreground">
-                  {t('live.interact.title')}
-                </h3>
-                <div className="space-y-3">
-                  <button 
-                    onClick={() => {
-                      if (serviceInfo.isLive) {
-                        // Open YouTube live chat - this would typically open in a new window
-                        window.open(`https://www.youtube.com/live_chat?v=${liveVideoId}`, '_blank');
-                      } else {
-                        alert('Live chat is only available during live services');
-                      }
-                    }}
-                    className={`flex items-center gap-3 w-full p-3 border rounded-lg transition-colors ${
-                      serviceInfo.isLive 
-                        ? 'hover:bg-muted/50 cursor-pointer' 
-                        : 'opacity-50 cursor-not-allowed'
-                    }`}
-                    disabled={!serviceInfo.isLive}
-                  >
-                    <MessageCircle className="h-5 w-5 text-primary" />
-                    <span>{t('live.interact.chat')}</span>
-                  </button>
-                  <button 
-                    onClick={() => {
-                      const shareUrl = window.location.href;
-                      const shareText = serviceInfo.isLive 
-                        ? `Join us live now at FMC Bethlehem! ${serviceInfo.currentService?.name}` 
-                        : 'Watch live services at FMC Bethlehem';
-                      
-                      if (navigator.share) {
-                        navigator.share({
-                          title: 'FMC Bethlehem Live Stream',
-                          text: shareText,
-                          url: shareUrl
-                        });
-                      } else {
-                        // Fallback: copy to clipboard
-                        navigator.clipboard.writeText(`${shareText} - ${shareUrl}`);
-                        alert('Link copied to clipboard!');
-                      }
-                    }}
-                    className="flex items-center gap-3 w-full p-3 border rounded-lg hover:bg-muted/50 transition-colors cursor-pointer"
-                  >
-                    <Share2 className="h-5 w-5 text-primary" />
-                    <span>{t('live.interact.share')}</span>
-                  </button>
-                </div>
-              </div>
-            </div>
-          </div>
-        </Container>
-      </section>
-
-      {/* Upcoming Services */}
-      <section className="py-16 bg-muted/30">
-        <Container>
-          <div className="max-w-4xl mx-auto">
-            <h2 className="text-3xl font-bold text-foreground mb-8 text-center">
-              {t('live.upcoming.title')}
+      {/* Bottom Sections */}
+      <Container className="pb-12">
+        <div className="max-w-4xl mx-auto grid md:grid-cols-2 gap-8">
+          {/* Next Service */}
+          <div className="bg-white rounded-lg border border-slate-200 p-6">
+            <h2 className="text-xl font-semibold text-slate-900 mb-4">
+              Next Service
             </h2>
-
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-              {upcomingServices.map((service, index) => (
-                <div key={index} className="bg-card border rounded-lg p-6">
-                  <h3 className="font-semibold text-card-foreground mb-3">
-                    {service.title}
-                  </h3>
-                  <div className="space-y-2 text-sm text-muted-foreground">
-                    <div className="flex items-center gap-2">
-                      <Calendar className="h-4 w-4" />
-                      <span>{service.day}</span>
-                    </div>
-                    <div className="flex items-center gap-2">
-                      <Clock className="h-4 w-4" />
-                      <span>{service.time}</span>
-                    </div>
-                    <div className="flex items-center gap-2">
-                      <Users className="h-4 w-4" />
-                      <span>{service.language}</span>
-                    </div>
-                  </div>
+            
+            {nextService ? (
+              <div className="space-y-3">
+                <div className="flex items-center gap-3 text-slate-600">
+                  <CalendarIcon className="w-5 h-5" />
+                  <span>{getDayName(nextService.day)}</span>
                 </div>
-              ))}
-            </div>
+                
+                <div className="flex items-center gap-3 text-slate-600">
+                  <ClockIcon className="w-5 h-5" />
+                  <span>{formatServiceTime(nextService)}</span>
+                </div>
+                
+                <div className="flex items-center gap-3 text-slate-600">
+                  <UsersIcon className="w-5 h-5" />
+                  <span>{nextService.language}</span>
+                </div>
+                
+                <p className="text-sm text-slate-500 mt-4">
+                  {nextService.description}
+                </p>
+                
+                {serviceInfo.timeUntilNext && (
+                  <p className="text-sm font-medium text-slate-700">
+                    Starts in {serviceInfo.timeUntilNext}
+                  </p>
+                )}
+              </div>
+            ) : (
+              <p className="text-slate-500">
+                No upcoming services scheduled
+              </p>
+            )}
           </div>
-        </Container>
-      </section>
 
-      {/* Call to Action */}
-      <section className="py-16">
-        <Container>
-          <div className="text-center max-w-2xl mx-auto">
-            <h2 className="text-3xl font-bold text-foreground mb-4">
-              {t('live.cta.title')}
+          {/* Interact */}
+          <div className="bg-white rounded-lg border border-slate-200 p-6">
+            <h2 className="text-xl font-semibold text-slate-900 mb-4">
+              Interact
             </h2>
-            <p className="text-muted-foreground mb-8">
-              {t('live.cta.description')}
-            </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Link
-                href={'/watch/sermons' as any}
-                className="inline-flex items-center gap-2 bg-primary text-primary-foreground px-6 py-3 rounded-md font-semibold hover:bg-primary/90 transition-colors"
-              >
-                {t('live.cta.watchSermons')}
-              </Link>
-              <Link
-                href={'/plan-visit' as any}
-                className="inline-flex items-center gap-2 border border-input bg-background px-6 py-3 rounded-md font-semibold hover:bg-accent hover:text-accent-foreground transition-colors"
-              >
-                {t('live.cta.planVisit')}
-              </Link>
-            </div>
+            
+            <LiveInteractionButtons 
+              isLive={status === 'live'} 
+              videoId={videoId} 
+            />
           </div>
-        </Container>
-      </section>
-    </main>
+        </div>
+      </Container>
+    </div>
   );
 }
