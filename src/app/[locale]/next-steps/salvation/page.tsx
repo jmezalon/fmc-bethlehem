@@ -56,7 +56,9 @@ export default function SalvationPage() {
       if (response.ok) {
         setShowSuccess(true);
         reset();
-        window.scrollTo({ top: 0, behavior: 'smooth' });
+        if (typeof window !== 'undefined') {
+          window.scrollTo({ top: 0, behavior: 'smooth' });
+        }
       } else {
         throw new Error('Failed to submit form');
       }

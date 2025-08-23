@@ -205,6 +205,10 @@
     "filters": {
       "allCategories": "Toutes les Catégories"
     },
+    "calendar": {
+      "today": "Aujourd'hui",
+      "more": "plus"
+    },
     "noEvents": {
       "title": "Aucun Événement Trouvé",
       "description": "Il n'y a pas d'événements à venir en ce moment. Revenez bientôt!"

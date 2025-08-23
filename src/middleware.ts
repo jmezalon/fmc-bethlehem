@@ -5,10 +5,10 @@ export default createMiddleware({
   locales: ['ht', 'fr', 'en'],
 
   // Used when no locale matches
-  defaultLocale: 'ht',
+  defaultLocale: 'en',
 });
 
 export const config = {
   // Match only internationalized pathnames
-  matcher: ['/', '/(ht|fr|en)/:path*'],
+  matcher: ['/', '/((?!api|_next|_vercel|.*\\..*).*)'],
 };

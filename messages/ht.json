@@ -205,6 +205,10 @@
     "filters": {
       "allCategories": "Tout kategori yo"
     },
+    "calendar": {
+      "today": "Jodi a",
+      "more": "pi plis"
+    },
     "noEvents": {
       "title": "Pa gen aktivite yo jwenn",
       "description": "Pa gen aktivite k ap vini yo nan moman sa a. Tounen gade!"

@@ -243,6 +243,10 @@
     "filters": {
       "allCategories": "All Categories"
     },
+    "calendar": {
+      "today": "Today",
+      "more": "more"
+    },
     "noEvents": {
       "title": "No Events Found",
       "description": "There are no upcoming events at this time. Check back soon!"
@@ -666,7 +670,7 @@
       "textToGive": {
         "title": "Text to Give",
         "description": "Send a text message to give quickly and easily:",
-        "instructions": "Text any amount to (555) 123-GIVE"
+        "instructions": "Text any amount to (929) 343-9393"
       }
     },
     "alternatives": {
@@ -675,14 +679,14 @@
         "title": "Zelle",
         "description": "Send directly from your bank app",
         "sendTo": "Send to:",
-        "number": "(555) 123-4567",
+        "number": "(929) 343-9393",
         "note": "Available through most major banks and credit unions"
       },
       "cashApp": {
         "title": "Cash App",
         "description": "Send using the Cash App mobile app",
         "sendTo": "Send to:",
-        "handle": "$FMCBethlehem",
+        "handle": "$FMCB1993",
         "note": "Include your name in the note for proper record keeping"
       }
     },

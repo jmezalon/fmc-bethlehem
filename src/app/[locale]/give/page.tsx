@@ -59,7 +59,11 @@ export default function GivePage() {
                   </p>
                   <Button 
                     className="bg-brandMaroon hover:bg-brandMaroon/90 text-white"
-                    onClick={() => window.open('https://tithe.ly/give_new/www/#/tithely/give-one-time/5891075', '_blank')}
+                    onClick={() => {
+                      if (typeof window !== 'undefined') {
+                        window.open('https://tithe.ly/give_new/www/#/tithely/give-one-time/5891075', '_blank');
+                      }
+                    }}
                   >
                     {t('tithely.giveNow')}
                   </Button>

@@ -154,27 +154,19 @@ export default function PrayerPage() {
                   label={t('form.name')}
                   error={errors.name?.message}
                   required={false}
-                >
-                  <input
-                    {...register('name')}
-                    type="text"
-                    className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"
-                    placeholder={t('form.namePlaceholder')}
-                  />
-                </FormField>
+                  {...register('name')}
+                  type="text"
+                  placeholder={t('form.namePlaceholder')}
+                />
 
                 <FormField
                   label={t('form.email')}
                   error={errors.email?.message}
                   required
-                >
-                  <input
-                    {...register('email')}
-                    type="email"
-                    className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"
-                    placeholder={t('form.emailPlaceholder')}
-                  />
-                </FormField>
+                  {...register('email')}
+                  type="email"
+                  placeholder={t('form.emailPlaceholder')}
+                />
               </div>
 
               {/* Prayer Request */}
@@ -187,14 +179,10 @@ export default function PrayerPage() {
                   label={t('form.request')}
                   error={errors.request?.message}
                   required
-                >
-                  <textarea
-                    {...register('request')}
-                    rows={6}
-                    className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent resize-vertical"
-                    placeholder={t('form.requestPlaceholder')}
-                  />
-                </TextareaField>
+                  {...register('request')}
+                  rows={6}
+                  placeholder={t('form.requestPlaceholder')}
+                />
               </div>
 
               {/* Privacy Settings */}
