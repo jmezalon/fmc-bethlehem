@@ -8,6 +8,7 @@
     "groups": "Groups",
     "nextSteps": "Next Steps",
     "prayer": "Prayer",
+    "give": "Give",
     "navigation": {
       "home": "Home",
       "events": "Events",
@@ -21,6 +22,7 @@
   },
   "hero": {
     "title": "Welcome to FMC Bethlehem",
+    "subtitle": "Join us for worship, fellowship, and spiritual growth in our loving community",
     "ctaPlan": "Plan Your Visit",
     "ctaWatch": "Watch Services"
   },
@@ -28,6 +30,7 @@
     "title": "Service Times",
     "sunday": "Sunday",
     "worship": "Worship",
+    "worshipTime": "9:00 AM & 11:00 AM",
     "time": "9:00 AM & 11:00 AM",
     "prayer": "Prayer",
     "prayerTime": "8:30 AM",
