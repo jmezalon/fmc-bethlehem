@@ -1,0 +1,18 @@
+{
+  "common": {
+    "loading": "Cargando...",
+    "error": "Ocurrió un error",
+    "welcome": "Bienvenido",
+    "home": "Inicio",
+    "about": "Acerca de",
+    "contact": "Contacto"
+  },
+  "navigation": {
+    "menu": "Menú",
+    "close": "Cerrar"
+  },
+  "seo": {
+    "title": "FMC Bethlehem",
+    "description": "Bienvenido a FMC Bethlehem - Tu iglesia comunitaria"
+  }
+}
