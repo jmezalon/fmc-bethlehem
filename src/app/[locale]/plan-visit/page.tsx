@@ -151,91 +151,183 @@ export default function PlanVisitPage() {
         </Container>
       </section>
 
-      {/* Service Schedule */}
+      {/* Weekly Schedule */}
       <section className="py-16 bg-muted/30">
         <Container>
           <h2 className="text-3xl font-bold text-foreground mb-8 text-center flex items-center justify-center gap-3">
-            <Clock className="h-8 w-8 text-primary" />
-            {t('schedule.title')}
+            <Calendar className="h-8 w-8 text-primary" />
+            Weekly Schedule
           </h2>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-4xl mx-auto">
-            {/* Morning Service */}
+          <div className="space-y-6 max-w-5xl mx-auto">
+            {/* Sunday Services */}
             <div className="bg-card border rounded-lg p-6">
-              <h3 className="text-xl font-semibold text-card-foreground mb-4">
-                {t('schedule.morning.title')}
+              <h3 className="text-2xl font-semibold text-card-foreground mb-4 flex items-center gap-2">
+                <Clock className="h-6 w-6 text-primary" />
+                Sunday Services
               </h3>
-              <div className="space-y-3 mb-6">
-                <div className="flex items-center gap-3">
-                  <Clock className="h-5 w-5 text-primary" />
-                  <div>
-                    <p className="font-medium">
-                      {t('schedule.morning.sunSchool')}
-                    </p>
-                    <p className="text-sm text-muted-foreground">8:00 AM</p>
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+                <div className="space-y-3">
+                  <div className="flex items-center gap-3">
+                    <div className="w-2 h-2 bg-primary rounded-full"></div>
+                    <div>
+                      <p className="font-medium">First Service</p>
+                      <p className="text-sm text-muted-foreground">Sunday School: 8:00 AM</p>
+                      <p className="text-sm text-muted-foreground">Worship: 9:00 - 11:30 AM</p>
+                    </div>
                   </div>
                 </div>
-                <div className="flex items-center gap-3">
-                  <Users className="h-5 w-5 text-primary" />
-                  <div>
-                    <p className="font-medium">
-                      {t('schedule.morning.worship')}
-                    </p>
-                    <p className="text-sm text-muted-foreground">
-                      9:00 AM - 11:30 AM
-                    </p>
-                  </div>
-                </div>
-                <div className="flex items-center gap-3">
-                  <Languages className="h-5 w-5 text-primary" />
-                  <div>
-                    <p className="font-medium">{t('schedule.language')}</p>
-                    <p className="text-sm text-muted-foreground">
-                      {t('schedule.morning.language')}
-                    </p>
+                <div className="space-y-3">
+                  <div className="flex items-center gap-3">
+                    <div className="w-2 h-2 bg-primary rounded-full"></div>
+                    <div>
+                      <p className="font-medium">Second Service</p>
+                      <p className="text-sm text-muted-foreground">Worship: 12:30 - 2:30 PM</p>
+                    </div>
                   </div>
                 </div>
               </div>
-              <button
-                onClick={() => generateICS('morning')}
-                className="w-full flex items-center justify-center gap-2 bg-primary text-primary-foreground px-4 py-2 rounded-md font-semibold hover:bg-primary/90 transition-colors"
-              >
-                <Download className="h-4 w-4" />
-                {t('schedule.addToCalendar')}
-              </button>
+              <div className="mt-4 p-3 bg-primary/10 rounded-md">
+                <p className="text-sm text-primary font-medium">
+                  First Sunday of each month: Special Lord's Communion Sunday for Baptised Members
+                </p>
+              </div>
             </div>
 
-            {/* Youth/Afternoon Service */}
+            {/* Monday */}
             <div className="bg-card border rounded-lg p-6">
-              <h3 className="text-xl font-semibold text-card-foreground mb-4">
-                {t('schedule.youth.title')}
+              <h3 className="text-xl font-semibold text-card-foreground mb-4 flex items-center gap-2">
+                <Clock className="h-5 w-5 text-primary" />
+                Monday
               </h3>
-              <div className="space-y-3 mb-6">
+              <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
                 <div className="flex items-center gap-3">
-                  <Users className="h-5 w-5 text-primary" />
+                  <div className="w-2 h-2 bg-primary rounded-full"></div>
                   <div>
-                    <p className="font-medium">{t('schedule.youth.service')}</p>
-                    <p className="text-sm text-muted-foreground">
-                      12:30 PM - 2:30 PM
-                    </p>
+                    <p className="font-medium">Kase Chenn</p>
+                    <p className="text-sm text-muted-foreground">Fasting & Prayer</p>
+                    <p className="text-sm text-muted-foreground">8:00 AM - 12:00 PM</p>
                   </div>
                 </div>
                 <div className="flex items-center gap-3">
-                  <Languages className="h-5 w-5 text-primary" />
+                  <div className="w-2 h-2 bg-primary rounded-full"></div>
                   <div>
-                    <p className="font-medium">{t('schedule.language')}</p>
-                    <p className="text-sm text-muted-foreground">
-                      {t('schedule.youth.language')}
-                    </p>
+                    <p className="font-medium">Youth Bible Study</p>
+                    <p className="text-sm text-muted-foreground">5:30 - 7:00 PM</p>
+                  </div>
+                </div>
+                <div className="flex items-center gap-3">
+                  <div className="w-2 h-2 bg-primary rounded-full"></div>
+                  <div>
+                    <p className="font-medium">General Bible Study</p>
+                    <p className="text-sm text-muted-foreground">7:15 - 9:00 PM</p>
                   </div>
                 </div>
               </div>
+            </div>
+
+            {/* Tuesday - Friday */}
+            <div className="bg-card border rounded-lg p-6">
+              <h3 className="text-xl font-semibold text-card-foreground mb-4 flex items-center gap-2">
+                <Clock className="h-5 w-5 text-primary" />
+                Tuesday - Friday
+              </h3>
+              <div className="flex items-center gap-3">
+                <div className="w-2 h-2 bg-primary rounded-full"></div>
+                <div className="w-full">
+                  <p className="font-medium">Multi-Day Prayer (Zoom)</p>
+                  <p className="text-sm text-muted-foreground">11:30 AM - 12:15 PM</p>
+                  <div className="mt-3 p-3 bg-blue-50 rounded text-sm">
+                    <p className="font-medium text-blue-800 mb-2">Zoom Details:</p>
+                    <p className="text-blue-700">Meeting ID: 457 357 0961</p>
+                    <p className="text-blue-700 mb-3">Passcode: a5ia6i</p>
+                    <a
+                      href="https://zoom.us/j/4573570961?pwd=a5ia6i"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="inline-flex items-center gap-2 bg-blue-600 text-white px-4 py-2 rounded-md text-sm font-medium hover:bg-blue-700 transition-colors"
+                    >
+                      <svg className="h-4 w-4" viewBox="0 0 24 24" fill="currentColor">
+                        <path d="M19.777 4.43a1.5 1.5 0 0 0-1.061-.44H5.284a1.5 1.5 0 0 0-1.061.44 1.5 1.5 0 0 0-.44 1.061v12.018a1.5 1.5 0 0 0 .44 1.061 1.5 1.5 0 0 0 1.061.44h13.432a1.5 1.5 0 0 0 1.061-.44 1.5 1.5 0 0 0 .44-1.061V5.491a1.5 1.5 0 0 0-.44-1.061zM8.5 15.5v-7l5.5 3.5-5.5 3.5z"/>
+                      </svg>
+                      Join Zoom Meeting
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            {/* Wednesday */}
+            <div className="bg-card border rounded-lg p-6">
+              <h3 className="text-xl font-semibold text-card-foreground mb-4 flex items-center gap-2">
+                <Clock className="h-5 w-5 text-primary" />
+                Wednesday
+              </h3>
+              <div className="flex items-center gap-3">
+                <div className="w-2 h-2 bg-primary rounded-full"></div>
+                <div>
+                  <p className="font-medium">Mercredi de Combat Spirituel</p>
+                  <p className="text-sm text-muted-foreground">Prayer Service</p>
+                  <p className="text-sm text-muted-foreground">7:00 - 9:30 PM</p>
+                </div>
+              </div>
+            </div>
+
+            {/* Saturday */}
+            <div className="bg-card border rounded-lg p-6">
+              <h3 className="text-xl font-semibold text-card-foreground mb-4 flex items-center gap-2">
+                <Clock className="h-5 w-5 text-primary" />
+                Saturday
+              </h3>
+              <div className="flex items-center gap-3">
+                <div className="w-2 h-2 bg-primary rounded-full"></div>
+                <div>
+                  <p className="font-medium">Fasting & Prayer</p>
+                  <p className="text-sm text-muted-foreground">8:00 AM - 12:00 PM</p>
+                </div>
+              </div>
+            </div>
+
+            {/* Special Events */}
+            <div className="bg-card border rounded-lg p-6">
+              <h3 className="text-xl font-semibold text-card-foreground mb-4 flex items-center gap-2">
+                <Calendar className="h-5 w-5 text-primary" />
+                Special Events
+              </h3>
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+                <div className="space-y-3">
+                  <div className="flex items-center gap-3">
+                    <div className="w-2 h-2 bg-primary rounded-full"></div>
+                    <div>
+                      <p className="font-medium">Watch Night</p>
+                      <p className="text-sm text-muted-foreground">Last Friday of each month</p>
+                      <p className="text-sm text-muted-foreground">8:00 PM - 12:00 AM</p>
+                      </div>
+                  </div>
+                </div>
+                <div className="space-y-3">
+                  <div className="flex items-center gap-3">
+                    <div className="w-2 h-2 bg-primary rounded-full"></div>
+                    <div>
+                      <p className="font-medium">Marriage Ministry</p>
+                      <p className="text-sm text-muted-foreground">Last Saturday of each month</p>
+                      <p className="text-sm text-muted-foreground">6:30 PM - 9:00 PM</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          {/* Calendar Download Buttons */}
+          <div className="mt-8 text-center">
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <button
-                onClick={() => generateICS('youth')}
-                className="w-full flex items-center justify-center gap-2 bg-primary text-primary-foreground px-4 py-2 rounded-md font-semibold hover:bg-primary/90 transition-colors"
+                onClick={() => generateICS('morning')}
+                className="flex items-center justify-center gap-2 bg-primary text-primary-foreground px-6 py-3 rounded-md font-semibold hover:bg-primary/90 transition-colors"
               >
                 <Download className="h-4 w-4" />
-                {t('schedule.addToCalendar')}
+                Add Sunday Services to Calendar
               </button>
             </div>
           </div>
