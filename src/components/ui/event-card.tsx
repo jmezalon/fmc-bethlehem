@@ -1,7 +1,7 @@
 'use client';
 
 import { useTranslations, useLocale } from 'next-intl';
-import { Calendar, Clock, MapPin, Users, Download } from 'lucide-react';
+import { Calendar, Clock, MapPin, Download } from 'lucide-react';
 
 interface EventCardProps {
   event: {
@@ -10,11 +10,13 @@ interface EventCardProps {
       en: string;
       ht: string;
       fr: string;
+      es: string;
     };
     description: {
       en: string;
       ht: string;
       fr: string;
+      es: string;
     };
     date: string;
     time: string;
@@ -22,23 +24,29 @@ interface EventCardProps {
       en: string;
       ht: string;
       fr: string;
+      es: string;
     };
     category: {
       en: string;
       ht: string;
       fr: string;
+      es: string;
     };
+    image?: string;
     isRecurring?: boolean;
   };
   onExportICS: (event: any) => void;
+  onLearnMore: (event: any) => void;
 }
 
-export function EventCard({ event, onExportICS }: EventCardProps) {
+export function EventCard({ event, onExportICS, onLearnMore }: EventCardProps) {
   const t = useTranslations('events');
-  const locale = useLocale() as 'en' | 'ht' | 'fr';
+  const locale = useLocale() as 'en' | 'ht' | 'fr' | 'es';
 
   const formatDate = (dateString: string) => {
-    const date = new Date(dateString);
+    // Parse date in local timezone to avoid UTC conversion issues
+    const [year, month, day] = dateString.split('-');
+    const date = new Date(parseInt(year), parseInt(month) - 1, parseInt(day));
     return date.toLocaleDateString(
       locale === 'en' ? 'en-US' : locale === 'fr' ? 'fr-FR' : 'en-US',
       {
@@ -68,10 +76,33 @@ export function EventCard({ event, onExportICS }: EventCardProps) {
 
   return (
     <div
-      className={`bg-card border rounded-lg p-6 hover:shadow-lg transition-shadow ${
+      className={`bg-card border rounded-lg overflow-hidden hover:shadow-lg transition-shadow ${
         !isUpcoming ? 'opacity-75' : ''
       }`}
     >
+      {/* Event Image */}
+      {event.image && (
+        <div className="relative h-48 w-full">
+          <img 
+            src={event.image} 
+            alt={event.title[locale]}
+            className="w-full h-full object-cover"
+          />
+          <div className="absolute top-4 left-4">
+            <span
+              className={`inline-flex items-center px-3 py-1 rounded-full text-xs font-medium backdrop-blur-sm ${
+                isUpcoming
+                  ? 'bg-primary/90 text-white'
+                  : 'bg-black/50 text-white'
+              }`}
+            >
+              {event.category[locale]}
+            </span>
+          </div>
+        </div>
+      )}
+      
+      <div className="p-6">
       <div className="space-y-4">
         {/* Header */}
         <div className="flex items-start justify-between">
@@ -92,10 +123,10 @@ export function EventCard({ event, onExportICS }: EventCardProps) {
                 </span>
               )}
             </div>
-            <h3 className="text-xl font-semibold text-card-foreground mb-2">
+            <h3 className="text-xl font-semibold text-card-foreground mb-2 line-clamp-1" title={event.title[locale]}>
               {event.title[locale]}
             </h3>
-            <p className="text-muted-foreground text-sm line-clamp-2">
+            <p className="text-muted-foreground text-sm line-clamp-1">
               {event.description[locale]}
             </p>
           </div>
@@ -130,11 +161,15 @@ export function EventCard({ event, onExportICS }: EventCardProps) {
         {/* Action Button */}
         {isUpcoming && (
           <div className="pt-4 border-t border-border">
-            <button className="w-full bg-primary text-primary-foreground px-4 py-2 rounded-md font-medium hover:bg-primary/90 transition-colors">
-              {t('learnMore')}
+            <button 
+              onClick={() => onLearnMore(event)}
+              className="w-full bg-primary text-primary-foreground px-4 py-2 rounded-md font-medium hover:bg-primary/90 transition-colors"
+            >
+              {t('cta.learnMore')}
             </button>
           </div>
         )}
+      </div>
       </div>
     </div>
   );

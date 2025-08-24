@@ -2,79 +2,91 @@
   {
     "id": "1",
     "title": {
-      "en": "Community Outreach Day",
-      "fr": "Journée de Sensibilisation Communautaire",
-      "ht": "Jou Sèvis Kominote a"
+      "en": "Back to School Fast and BBQ",
+      "fr": "Retour à l'école, jeûne et BBQ",
+      "ht": "Retournen lekol, jèn ak BBQ",
+      "es": "Ayuno y BBQ de Regreso a Clases"
     },
-    "date": "2024-02-10",
-    "time": "9:00 AM",
+    "date": "2025-09-01",
+    "time": "8:00 AM",
     "location": {
-      "en": "Brooklyn Community Center",
-      "fr": "Centre Communautaire de Brooklyn",
-      "ht": "Sant Kominote Brooklyn"
+      "en": "Free Methodist Church of Bethlehem",
+      "fr": "Église Méthodiste Libre de Bethlehem",
+      "ht": "Legliz Metodis Lib Beteleem",
+      "es": "Iglesia Metodista Libre de Belén"
     },
     "description": {
-      "en": "Join us as we serve our community with food distribution and prayer.",
-      "fr": "Rejoignez-nous pour servir notre communauté avec la distribution de nourriture et la prière.",
-      "ht": "Vin jwenn nou pou nou sèvi kominote nou an ak distribisyon manje ak lapriyè."
+      "en": "Bring all the kids to come seek the Lord before the school year starts in this fast and prayer. Let's have some fun after at the BBQ.",
+      "fr": "Amenez tous les enfants pour chercher le Seigneur avant le début de l'année scolaire dans ce temps de jeûne et de prière. Rejoignez-nous ensuite pour un BBQ convivial.",
+      "ht": "Pote tout timoun yo pou nou chèche Seyè a anvan lekòl la kòmanse nan jèn ak lapriyè sa a. Apre sa, ann pran plezi ansanm nan BBQ la.",
+      "es": "Trae a todos los niños para buscar al Señor antes de que comience el año escolar en este ayuno y oración. Después disfrutemos juntos en el BBQ."
     },
     "category": {
-      "en": "Community Service",
-      "fr": "Service Communautaire", 
-      "ht": "Sèvis Kominote"
+      "en": "Fasting and Prayer",
+      "fr": "Jeûne et Prière",
+      "ht": "Jèn ak Lapriyè",
+      "es": "Ayuno y Oración"
     },
-    "image": "/images/events/outreach.jpg"
+    "image": "https://res.cloudinary.com/dasjawxzd/image/upload/v1755652676/updates-app/dsldx2cowcbfxp9j2oqq.jpg"
   },
   {
     "id": "2",
     "title": {
-      "en": "Youth Winter Retreat",
-      "fr": "Retraite d'Hiver des Jeunes",
-      "ht": "Retrèt Ivè Jèn yo"
+      "en": "Marriage Ministry Meeting",
+      "fr": "Réunion du Ministère du Mariage",
+      "ht": "Reyinyon Ministè Maryaj",
+      "es": "Reunión del Ministerio de Matrimonios"
     },
-    "date": "2024-02-16",
-    "time": "6:00 PM",
+    "date": "2025-08-30",
+    "time": "6:30 PM",
     "location": {
-      "en": "Camp Woodland, NY",
-      "fr": "Camp Woodland, NY",
-      "ht": "Camp Woodland, NY"
+      "en": "Free Methodist Church of Bethlehem",
+      "fr": "Église Méthodiste Libre de Bethlehem",
+      "ht": "Legliz Metodis Lib Beteleem",
+      "es": "Iglesia Metodista Libre de Belén"
     },
     "description": {
-      "en": "A weekend of worship, fellowship, and spiritual growth for our youth.",
-      "fr": "Un week-end d'adoration, de communion et de croissance spirituelle pour nos jeunes.",
-      "ht": "Yon wikèn adorasyon, kominyon ak kwasans espirityèl pou jèn nou yo."
+      "en": "Strong family starts with a strong marriage. Join us for a Marriage Ministry Meeting to learn how to build a strong marriage.",
+      "fr": "Une famille forte commence par un mariage solide. Rejoignez-nous pour une réunion du Ministère du Mariage afin d'apprendre à bâtir un mariage solide.",
+      "ht": "Yon fanmi solid kòmanse ak yon maryaj solid. Vin jwenn nou nan Reyinyon Ministè Maryaj la pou aprann kijan pou bati yon maryaj solid.",
+      "es": "Una familia fuerte comienza con un matrimonio sólido. Únete a nosotros en la Reunión del Ministerio de Matrimonios para aprender cómo construir un matrimonio fuerte."
     },
     "category": {
-      "en": "Youth Event",
-      "fr": "Événement Jeunesse",
-      "ht": "Aktivite Jèn"
+      "en": "Marriage Ministry",
+      "fr": "Ministère du Mariage",
+      "ht": "Ministè Maryaj",
+      "es": "Ministerio de Matrimonios"
     },
-    "image": "/images/events/youth-retreat.jpg"
+    "image": "https://res.cloudinary.com/dasjawxzd/image/upload/v1754447937/updates-app/u2a2brjtqolgyhvydse8.jpg"
   },
   {
     "id": "3",
     "title": {
-      "en": "Prayer & Fasting Week",
-      "fr": "Semaine de Prière et de Jeûne",
-      "ht": "Semèn Lapriyè ak Jèn"
+      "en": "Fundraising Concert with Brother Davidson",
+      "fr": "Concert de Levée de Fonds avec Frère Davidson",
+      "ht": "Konsè Levasyon Lajan ak Frè Davidson",
+      "es": "Concierto de Recaudación de Fondos con el Hermano Davidson"
     },
-    "date": "2024-02-25",
-    "time": "6:00 AM",
+    "date": "2025-09-13",
+    "time": "7:00 PM",
     "location": {
-      "en": "Church Sanctuary",
-      "fr": "Sanctuaire de l'Église",
-      "ht": "Sanktiyè Legliz la"
+      "en": "Free Methodist Church of Bethlehem",
+      "fr": "Église Méthodiste Libre de Bethlehem",
+      "ht": "Legliz Metodis Lib Beteleem",
+      "es": "Iglesia Metodista Libre de Belén"
     },
     "description": {
-      "en": "Join us for a week of focused prayer and fasting for spiritual breakthrough.",
-      "fr": "Rejoignez-nous pour une semaine de prière et de jeûne concentrés pour une percée spirituelle.",
-      "ht": "Vin jwenn nou pou yon semèn lapriyè ak jèn konsantre pou yon viktwa espirityèl."
+      "en": "Join us for a fundraising concert with Brother Davidson. All proceeds will go to support our people with disabilities in Haiti.",
+      "fr": "Rejoignez-nous pour un concert de levée de fonds avec le Frère Davidson. Tous les bénéfices iront soutenir nos frères et sœurs en situation de handicap en Haïti.",
+      "ht": "Vin jwenn nou nan yon konsè levasyon lajan ak Frè Davidson. Tout benefis yo ap ale pou sipòte moun ki gen andikap ann Ayiti.",
+      "es": "Acompáñanos en un concierto de recaudación de fondos con el Hermano Davidson. Todos los ingresos serán destinados a apoyar a nuestras personas con discapacidades en Haití."
     },
     "category": {
-      "en": "Prayer Event",
-      "fr": "Événement de Prière",
-      "ht": "Aktivite Lapriyè"
+      "en": "Fundraising",
+      "fr": "Levée de Fonds",
+      "ht": "Levasyon Lajan",
+      "es": "Recaudación de Fondos"
     },
-    "image": "/images/events/prayer-week.jpg"
+    "image": "https://res.cloudinary.com/dasjawxzd/image/upload/v1754057683/updates-app/go7eyqjx3oxa2u5ad6h2.jpg"
   }
 ]

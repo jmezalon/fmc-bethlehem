@@ -47,7 +47,6 @@ export async function GET() {
       { headers: { 'Cache-Control': 'public, s-maxage=120, stale-while-revalidate=300' } },
     );
   } catch (err: any) {
-    console.error('YouTube API Error:', err);
     // If YouTube API fails, return fallback video
     return NextResponse.json(
       {

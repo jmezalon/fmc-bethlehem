@@ -1,29 +1,29 @@
 interface Event {
   id: string;
-  title: { en: string; ht: string; fr: string };
-  description: { en: string; ht: string; fr: string };
+  title: { en: string; ht: string; fr: string; es: string };
+  description: { en: string; ht: string; fr: string; es: string };
   date: string;
   time: string;
-  location: { en: string; ht: string; fr: string };
+  location: { en: string; ht: string; fr: string; es: string };
   image?: string;
   category: string;
 }
 
 interface Sermon {
   id: string;
-  title: { en: string; ht: string; fr: string };
-  description: { en: string; ht: string; fr: string };
-  speaker: { en: string; ht: string; fr: string };
+  title: { en: string; ht: string; fr: string; es: string };
+  description: { en: string; ht: string; fr: string; es: string };
+  speaker: { en: string; ht: string; fr: string; es: string };
   date: string;
   duration: string;
   videoUrl?: string;
   audioUrl?: string;
-  series?: { en: string; ht: string; fr: string };
+  series?: { en: string; ht: string; fr: string; es: string };
   topics: string[];
   language: string;
 }
 
-export function generateEventJsonLd(event: Event, locale: 'en' | 'ht' | 'fr') {
+export function generateEventJsonLd(event: Event, locale: 'en' | 'ht' | 'fr' | 'es') {
   const baseUrl = process.env.NEXT_PUBLIC_SITE_URL || 'http://localhost:3000';
 
   return {
@@ -67,7 +67,7 @@ export function generateEventJsonLd(event: Event, locale: 'en' | 'ht' | 'fr') {
 
 export function generateSermonJsonLd(
   sermon: Sermon,
-  locale: 'en' | 'ht' | 'fr'
+  locale: 'en' | 'ht' | 'fr' | 'es'
 ) {
   const baseUrl = process.env.NEXT_PUBLIC_SITE_URL || 'http://localhost:3000';
 
@@ -127,7 +127,7 @@ export function generateSermonJsonLd(
   };
 }
 
-export function generateOrganizationJsonLd(locale: 'en' | 'ht' | 'fr') {
+export function generateOrganizationJsonLd(locale: 'en' | 'ht' | 'fr' | 'es') {
   const baseUrl = process.env.NEXT_PUBLIC_SITE_URL || 'http://localhost:3000';
 
   return {
@@ -167,7 +167,7 @@ export function generateOrganizationJsonLd(locale: 'en' | 'ht' | 'fr') {
   };
 }
 
-export function generateWebsiteJsonLd(locale: 'en' | 'ht' | 'fr') {
+export function generateWebsiteJsonLd(locale: 'en' | 'ht' | 'fr' | 'es') {
   const baseUrl = process.env.NEXT_PUBLIC_SITE_URL || 'http://localhost:3000';
 
   return {

@@ -1,9 +1,15 @@
+'use client';
+
+import { useState } from 'react';
 import { useTranslations, useLocale } from 'next-intl';
+import Link from 'next/link';
+import Image from 'next/image';
 import { Container } from '@/components/ui/container';
 import { StructuredData } from '@/components/structured-data';
 import { generateEventJsonLd } from '@/lib/structured-data';
-import Link from 'next/link';
-import Image from 'next/image';
+import { Button } from '@/components/ui/button';
+import { EventDetailModal } from '@/components/ui/event-detail-modal';
+import { downloadICS } from '@/utils/ics-export';
 import {
   Calendar,
   Clock,
@@ -22,8 +28,13 @@ export default function HomePage() {
   const t = useTranslations('hero');
   const tService = useTranslations('serviceTimes');
   const tHome = useTranslations('home');
+  const locale = useLocale() as 'en' | 'ht' | 'fr' | 'es';
+  const [selectedEvent, setSelectedEvent] = useState<any>(null);
+  const [isModalOpen, setIsModalOpen] = useState(false);
 
-  const locale = useLocale() as 'en' | 'ht' | 'fr';
+  const handleExportICS = (event: any) => {
+    downloadICS(event, locale);
+  };
 
   // Generate structured data for upcoming events
   const upcomingEvents = eventsData.slice(0, 3);
@@ -251,36 +262,47 @@ export default function HomePage() {
                 className="bg-card rounded-lg border overflow-hidden hover:shadow-lg transition-shadow"
               >
                 <div className="aspect-video bg-muted flex items-center justify-center">
-                  <Calendar className="h-12 w-12 text-muted-foreground" />
+                <img 
+                  src={event.image} 
+                  alt={event.title[locale]}
+                  className="w-full h-full object-cover"
+                />
                 </div>
                 <div className="p-6">
                   <div className="flex items-center gap-2 text-sm text-muted-foreground mb-2">
                     <Calendar className="h-4 w-4" />
-                    {new Date(event.date).toLocaleDateString()}
+                    {(() => {
+                      const [year, month, day] = event.date.split('-');
+                      const date = new Date(parseInt(year), parseInt(month) - 1, parseInt(day));
+                      return date.toLocaleDateString();
+                    })()}
                     <span>•</span>
                     <Clock className="h-4 w-4" />
                     {event.time}
                   </div>
-                  <h3 className="text-lg font-semibold text-card-foreground mb-2">
+                  <h3 className="text-lg font-semibold text-card-foreground mb-2 line-clamp-1">
                     {event.title[locale] || event.title.en}
                   </h3>
                   <div className="flex items-center gap-1 text-sm text-muted-foreground mb-2">
                     <MapPin className="h-4 w-4" />
                     {event.location[locale] || event.location.en}
                   </div>
-                  <p className="text-sm text-muted-foreground mb-4">
+                  <p className="text-sm text-muted-foreground mb-4 line-clamp-1">
                     {event.description[locale] || event.description.en}
                   </p>
                   <div className="flex items-center justify-between">
                     <span className="inline-flex items-center rounded-full bg-primary/10 px-2.5 py-0.5 text-xs font-medium text-primary">
                       {event.category[locale] || event.category.en}
                     </span>
-                    <Link
-                      href={`/events?event=${event.id}`}
+                    <button
+                      onClick={() => {
+                        setSelectedEvent(event);
+                        setIsModalOpen(true);
+                      }}
                       className="inline-flex items-center gap-1 text-primary hover:text-primary/80 font-medium transition-colors"
                     >
                       {tHome('learnMore')} <ArrowRight className="h-3 w-3" />
-                    </Link>
+                    </button>
                   </div>
                 </div>
               </div>
@@ -288,6 +310,17 @@ export default function HomePage() {
           </div>
         </Container>
       </section>
+
+      {/* Event Detail Modal */}
+      <EventDetailModal
+        event={selectedEvent}
+        isOpen={isModalOpen}
+        onClose={() => {
+          setIsModalOpen(false);
+          setSelectedEvent(null);
+        }}
+        onExportICS={handleExportICS}
+      />
     </main>
   );
 }

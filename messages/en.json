@@ -281,7 +281,12 @@
       "title": "Stay Connected",
       "description": "Never miss an event! Subscribe to our newsletter or contact us for more information.",
       "subscribe": "Subscribe to Updates",
-      "contact": "Contact Us"
+      "contact": "Contact Us",
+      "learnMore": "Learn More",
+      "eventDescription": "Description",
+      "register": "Register",
+      "exportToCalendar": "Export to Calendar",
+      "recurring": "Recurring"
     }
   },
   "groups": {

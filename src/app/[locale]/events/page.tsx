@@ -5,6 +5,7 @@ import { useTranslations, useLocale } from 'next-intl';
 import Link from 'next/link';
 import { Container } from '@/components/ui/container';
 import { EventCard } from '@/components/ui/event-card';
+import { EventDetailModal } from '@/components/ui/event-detail-modal';
 import { CalendarView } from '@/components/ui/calendar-view';
 import { CalendarSubscribe } from '@/components/ui/calendar-subscribe';
 import { downloadICS } from '@/utils/ics-export';
@@ -17,9 +18,11 @@ type ViewMode = 'list' | 'calendar';
 
 export default function EventsPage() {
   const t = useTranslations('events');
-  const locale = useLocale() as 'en' | 'ht' | 'fr';
+  const locale = useLocale() as 'en' | 'ht' | 'fr' | 'es';
   const [viewMode, setViewMode] = useState<ViewMode>('list');
   const [selectedCategory, setSelectedCategory] = useState<string>('');
+  const [selectedEvent, setSelectedEvent] = useState<any>(null);
+  const [isModalOpen, setIsModalOpen] = useState(false);
 
   // Get unique categories
   const categories = Array.from(
@@ -134,6 +137,10 @@ export default function EventsPage() {
                       key={event.id}
                       event={event}
                       onExportICS={handleExportICS}
+                      onLearnMore={(event) => {
+                        setSelectedEvent(event);
+                        setIsModalOpen(true);
+                      }}
                     />
                   ))}
                 </div>
@@ -197,6 +204,17 @@ export default function EventsPage() {
           </div>
         </Container>
       </section>
+
+      {/* Event Detail Modal */}
+      <EventDetailModal
+        event={selectedEvent}
+        isOpen={isModalOpen}
+        onClose={() => {
+          setIsModalOpen(false);
+          setSelectedEvent(null);
+        }}
+        onExportICS={handleExportICS}
+      />
     </main>
   );
 }

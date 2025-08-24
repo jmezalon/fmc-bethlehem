@@ -4,11 +4,13 @@ export interface EventData {
     en: string;
     ht: string;
     fr: string;
+    es: string;
   };
   description: {
     en: string;
     ht: string;
     fr: string;
+    es: string;
   };
   date: string;
   time: string;
@@ -16,13 +18,14 @@ export interface EventData {
     en: string;
     ht: string;
     fr: string;
+    es: string;
   };
   category: string;
 }
 
 export function generateICS(
   event: EventData,
-  locale: 'en' | 'ht' | 'fr' = 'en'
+  locale: 'en' | 'ht' | 'fr' | 'es' = 'en'
 ): string {
   const formatDate = (dateStr: string, timeStr: string): string => {
     const [year, month, day] = dateStr.split('-');
@@ -48,8 +51,15 @@ export function generateICS(
 
   const startDateTime = formatDate(event.date, event.time);
   // Assume 1 hour duration for events
-  const endDate = new Date(event.date + 'T' + event.time);
-  endDate.setHours(endDate.getHours() + 1);
+  const [year, month, day] = event.date.split('-');
+  const [hours, minutes] = event.time.split(':');
+  const endDate = new Date(
+    parseInt(year),
+    parseInt(month) - 1,
+    parseInt(day),
+    parseInt(hours) + 1, // Add 1 hour for duration
+    parseInt(minutes)
+  );
   const endDateTime =
     endDate.toISOString().replace(/[-:]/g, '').split('.')[0] + 'Z';
 
@@ -81,7 +91,7 @@ export function generateICS(
 
 export function downloadICS(
   event: EventData,
-  locale: 'en' | 'ht' | 'fr' = 'en'
+  locale: 'en' | 'ht' | 'fr' | 'es' = 'en'
 ): void {
   const icsContent = generateICS(event, locale);
   const blob = new Blob([icsContent], { type: 'text/calendar;charset=utf-8' });
