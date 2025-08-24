@@ -119,9 +119,15 @@ export default function AboutPage() {
               </p>
             </div>
 
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-8">
               <div className="text-center">
-                <div className="w-32 h-32 bg-muted rounded-full mx-auto mb-4"></div>
+                <div className="w-32 h-32 bg-muted rounded-full mx-auto mb-4">
+                  <img
+                    src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRDhgmbl08fopV11ZqUt6hCXo0HCPN-pPbMQQ&s"
+                    alt="Pastor Widmarc Pierre"
+                    className="w-full h-full object-cover rounded-full"
+                  />
+                </div>
                 <h3 className="text-lg font-semibold text-foreground mb-1">
                   {t('leadership.pastor.name')}
                 </h3>
@@ -134,7 +140,13 @@ export default function AboutPage() {
               </div>
 
               <div className="text-center">
-                <div className="w-32 h-32 bg-muted rounded-full mx-auto mb-4"></div>
+                <div className="w-32 h-32 bg-muted rounded-full mx-auto mb-4">
+                  <img
+                    src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT3tjopcRWN9Rh7XR0Ve6PNoECpVr-KLGCMOL2Yh0ghOUWIskhfz1k5iGf3CI4EQgf3z1A&usqp=CAU"
+                    alt="Pastor Widmarc Pierre"
+                    className="w-full h-full object-cover rounded-full"
+                  />
+                </div>
                 <h3 className="text-lg font-semibold text-foreground mb-1">
                   {t('leadership.associate.name')}
                 </h3>
@@ -143,19 +155,6 @@ export default function AboutPage() {
                 </p>
                 <p className="text-sm text-muted-foreground">
                   {t('leadership.associate.bio')}
-                </p>
-              </div>
-
-              <div className="text-center">
-                <div className="w-32 h-32 bg-muted rounded-full mx-auto mb-4"></div>
-                <h3 className="text-lg font-semibold text-foreground mb-1">
-                  {t('leadership.youth.name')}
-                </h3>
-                <p className="text-primary font-medium mb-2">
-                  {t('leadership.youth.title')}
-                </p>
-                <p className="text-sm text-muted-foreground">
-                  {t('leadership.youth.bio')}
                 </p>
               </div>
             </div>

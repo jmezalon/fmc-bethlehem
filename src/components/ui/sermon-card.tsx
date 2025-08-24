@@ -11,16 +11,19 @@ interface SermonCardProps {
       en: string;
       ht: string;
       fr: string;
+      es: string;
     };
     description: {
       en: string;
       ht: string;
       fr: string;
+      es: string;
     };
     speaker: {
       en: string;
       ht: string;
       fr: string;
+      es: string;
     };
     date: string;
     duration: string;
@@ -29,15 +32,16 @@ interface SermonCardProps {
       en: string;
       ht: string;
       fr: string;
+      es: string;
     };
-    topic: string;
     language: string;
   };
 }
 
 export function SermonCard({ sermon }: SermonCardProps) {
-  const t = useTranslations('watch.sermons');
-  const locale = useLocale() as 'en' | 'ht' | 'fr';
+  const t = useTranslations('watchPages.sermons');
+  const tFilters = useTranslations('watchPages.sermons.filters');
+  const locale = useLocale() as 'en' | 'ht' | 'fr' | 'es';
 
   const formatDate = (dateString: string) => {
     const date = new Date(dateString);
@@ -74,12 +78,12 @@ export function SermonCard({ sermon }: SermonCardProps) {
           )}
 
           {/* Title */}
-          <h3 className="text-xl font-semibold text-card-foreground line-clamp-2">
+          <h3 className="text-xl font-semibold text-card-foreground line-clamp-1">
             {sermon.title[locale]}
           </h3>
 
           {/* Description */}
-          <p className="text-muted-foreground text-sm line-clamp-3">
+          <p className="text-muted-foreground text-sm line-clamp-2">
             {sermon.description[locale]}
           </p>
 
@@ -91,7 +95,7 @@ export function SermonCard({ sermon }: SermonCardProps) {
             </div>
             <div className="flex items-center gap-2">
               <Calendar className="h-4 w-4" />
-              <span>{formatDate(sermon.date)}</span>
+              <span className="truncate">{formatDate(sermon.date)}</span>
             </div>
             <div className="flex items-center gap-2">
               <Clock className="h-4 w-4" />
@@ -103,12 +107,14 @@ export function SermonCard({ sermon }: SermonCardProps) {
             </div>
           </div>
 
-          {/* Topic */}
-          <div className="pt-2 border-t border-border">
-            <span className="text-xs text-muted-foreground">
-              {t('topic')}: {sermon.topic}
-            </span>
-          </div>
+          {/* Series */}
+          {sermon.series && (
+            <div className="pt-2 border-t border-border">
+              <span className="text-xs text-muted-foreground">
+                {tFilters('series')}: {sermon.series[locale]}
+              </span>
+            </div>
+          )}
         </div>
       </div>
     </div>

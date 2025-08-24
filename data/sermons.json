@@ -2,82 +2,94 @@
   {
     "id": "1",
     "title": {
-      "en": "Walking in Faith",
-      "fr": "Marcher dans la Foi",
-      "ht": "Mache nan Lafwa"
+      "en": "The Power of Confession",
+      "fr": "La Puissance de la Confession",
+      "ht": "Pouvwa Konfesyon an",
+      "es": "El Poder de la Confesión"
     },
     "speaker": {
-      "en": "Pastor Jean-Claude",
-      "fr": "Pasteur Jean-Claude", 
-      "ht": "Pastè Jean-Claude"
+      "en": "Pastor Maxon Saturne",
+      "fr": "Pasteur Maxon Saturne", 
+      "ht": "Pastè Maxon Saturne",
+      "es": "Pastor Maxon Saturne"
     },
-    "date": "2024-01-14",
-    "duration": "35:42",
+    "date": "2025-06-12",
+    "duration": "46:02",
     "description": {
-      "en": "Discover how to trust God's plan even when the path seems unclear.",
-      "fr": "Découvrez comment faire confiance au plan de Dieu même quand le chemin semble incertain.",
-      "ht": "Dekouvri kijan pou nou fè konfyans nan plan Bondye a menm lè chemen an sanble pa klè."
+      "en": "If you confess with your mouth the Lord Jesus and believe in your heart that God has raised Him from the dead, you will be saved.",
+      "fr": "Si tu confesses de ta bouche le Seigneur Jésus et que tu crois dans ton cœur que Dieu l’a ressuscité des morts, tu seras sauvé.",
+      "ht": "Si ou konfese ak bouch ou Senyè Jezi a epi ou kwè nan kè ou ke Bondye leve l nan lanmò, ou va sove.",
+      "es": "Si confiesas con tu boca al Señor Jesús y crees en tu corazón que Dios lo resucitó de los muertos, serás salvo."
     },
-    "videoUrl": "https://youtube.com/watch?v=example1",
-    "thumbnail": "/images/sermons/sermon-1.jpg",
+    "videoUrl": "https://www.youtube.com/watch?v=y7NmbuAXZa8",
+    "thumbnail": "https://i.ytimg.com/vi/y7NmbuAXZa8/hqdefault.jpg",
     "series": {
-      "en": "Faith Journey",
-      "fr": "Voyage de Foi",
-      "ht": "Vwayaj Lafwa"
+      "en": "Confession",
+      "fr": "Confession",
+      "ht": "Konfesyon",
+      "es": "Confesión"
     }
   },
   {
     "id": "2", 
     "title": {
-      "en": "Love in Action",
-      "fr": "L'Amour en Action",
-      "ht": "Renmen nan Aksyon"
+      "en": "God is a God of Restoration",
+      "fr": "Dieu est un Dieu de Restauration",
+      "ht": "Bondye se yon Bondye Restorasyon",
+      "es": "Dios es un Dios de Restauración"
     },
     "speaker": {
-      "en": "Pastor Marie",
-      "fr": "Pasteure Marie",
-      "ht": "Pastè Marie"
+      "en": "Pastor Widmarc Pierre",
+      "fr": "Pasteur Widmarc Pierre", 
+      "ht": "Pastè Widmarc Pierre",
+      "es": "Pastor Widmarc Pierre"
     },
-    "date": "2024-01-07",
-    "duration": "42:18",
+    "date": "2025-05-05",
+    "duration": "17:05",
     "description": {
-      "en": "Learn how to show Christ's love through practical service to others.",
-      "fr": "Apprenez comment montrer l'amour du Christ par le service pratique aux autres.",
-      "ht": "Aprann kijan pou nou montre renmen Kris la nan sèvis pratik pou lòt moun yo."
+      "en": "There is no one that God cannot restore. Let's dig deeper into this truth.",
+      "fr": "Il n’y a personne que Dieu ne puisse restaurer. Approfondissons cette vérité.",
+      "ht": "Pa gen pèsonn Bondye pa ka restore. Ann fouye pi fon nan verite sa a.",
+      "es": "No hay nadie que Dios no pueda restaurar. Vamos a profundizar en esta verdad."
     },
-    "videoUrl": "https://youtube.com/watch?v=example2",
-    "thumbnail": "/images/sermons/sermon-2.jpg",
+    "videoUrl": "https://www.youtube.com/watch?v=a9EUvKoTAEM",
+    "thumbnail": "https://i.ytimg.com/vi/a9EUvKoTAEM/hqdefault.jpg",
     "series": {
-      "en": "Living Like Jesus",
-      "fr": "Vivre Comme Jésus",
-      "ht": "Viv Tankou Jezi"
+      "en": "Restoration",
+      "fr": "Restauration",
+      "ht": "Restorasyon",
+      "es": "Restauración"
     }
   },
   {
     "id": "3",
     "title": {
-      "en": "Hope for Tomorrow",
-      "fr": "Espoir pour Demain", 
-      "ht": "Espwa pou Demen"
+      "en": "My Life Plan is Already Drawn",
+      "fr": "Le Plan de ma Vie est Déjà Tracé", 
+      "ht": "Plan Lavi Mwen Deja Trase",
+      "es": "El Plan de Mi Vida ya Está Trazado"
     },
     "speaker": {
-      "en": "Pastor David",
-      "fr": "Pasteur David",
-      "ht": "Pastè David"
+      "en": "Pastor Himel Pouponneau",
+      "fr": "Pasteur Himel Pouponneau", 
+      "ht": "Pastè Himel Pouponneau",
+      "es": "Pastor Himel Pouponneau"
     },
-    "date": "2023-12-31",
-    "duration": "38:55",
+    "date": "2025-02-22",
+    "duration": "37:28",
     "description": {
-      "en": "Find strength and hope in God's promises for the new year ahead.",
-      "fr": "Trouvez force et espoir dans les promesses de Dieu pour la nouvelle année.",
-      "ht": "Jwenn fòs ak espwa nan pwomès Bondye yo pou nouvo ane a."
+      "en": "Your life is planned by God and He is in control of your future.",
+      "fr": "Ta vie est planifiée par Dieu et Il est au contrôle de ton avenir.",
+      "ht": "Bondye deja planifye lavi ou e Li kontwole avni ou.",
+      "es": "Tu vida está planificada por Dios y Él tiene el control de tu futuro."
     },
-    "videoUrl": "https://youtube.com/watch?v=example3",
-    "thumbnail": "/images/sermons/sermon-3.jpg",
+    "videoUrl": "https://www.youtube.com/watch?v=E6q5q7eEJ-s",
+    "thumbnail": "https://i.ytimg.com/vi/E6q5q7eEJ-s/hqdefault.jpg",
     "series": {
-      "en": "New Beginnings",
-      "fr": "Nouveaux Commencements",
-      "ht": "Nouvo Kòmansman"
+      "en": "Life Plan",
+      "fr": "Plan de Vie",
+      "ht": "Plan Lavi",
+      "es": "Plan de Vida"
     }
   }
 ]

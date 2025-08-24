@@ -9,6 +9,7 @@ import { StructuredData } from '@/components/structured-data';
 import { generateEventJsonLd } from '@/lib/structured-data';
 import { Button } from '@/components/ui/button';
 import { EventDetailModal } from '@/components/ui/event-detail-modal';
+import { VideoPlayerModal } from '@/components/ui/video-player-modal';
 import { downloadICS } from '@/utils/ics-export';
 import {
   Calendar,
@@ -31,6 +32,8 @@ export default function HomePage() {
   const locale = useLocale() as 'en' | 'ht' | 'fr' | 'es';
   const [selectedEvent, setSelectedEvent] = useState<any>(null);
   const [isModalOpen, setIsModalOpen] = useState(false);
+  const [selectedSermon, setSelectedSermon] = useState<any>(null);
+  const [isVideoModalOpen, setIsVideoModalOpen] = useState(false);
 
   const handleExportICS = (event: any) => {
     downloadICS(event, locale);
@@ -204,7 +207,11 @@ export default function HomePage() {
                 className="bg-card rounded-lg border overflow-hidden hover:shadow-lg transition-shadow"
               >
                 <div className="aspect-video bg-muted flex items-center justify-center">
-                  <Play className="h-12 w-12 text-muted-foreground" />
+                <img 
+                  src={sermon.thumbnail} 
+                  alt={sermon.title[locale]}
+                  className="w-full h-full object-cover"
+                />
                 </div>
                 <div className="p-6">
                   <div className="flex items-center gap-2 text-sm text-muted-foreground mb-2">
@@ -214,25 +221,26 @@ export default function HomePage() {
                     <Clock className="h-4 w-4" />
                     {sermon.duration}
                   </div>
-                  <h3 className="text-lg font-semibold text-card-foreground mb-2">
+                  <h3 className="text-lg font-semibold text-card-foreground mb-2 line-clamp-1">
                     {sermon.title[locale] || sermon.title.en}
                   </h3>
-                  <p className="text-sm text-muted-foreground mb-2">
+                  <p className="text-sm text-muted-foreground mb-2 line-clamp-1">
                     {tHome('speaker')}:{' '}
                     {sermon.speaker[locale] || sermon.speaker.en}
                   </p>
-                  <p className="text-sm text-muted-foreground mb-4">
+                  <p className="text-sm text-muted-foreground mb-4 line-clamp-2">
                     {sermon.description[locale] || sermon.description.en}
                   </p>
-                  <Link
-                    href={sermon.videoUrl || '#'}
-                    target="_blank"
-                    rel="noopener noreferrer"
+                  <button
+                    onClick={() => {
+                      setSelectedSermon(sermon);
+                      setIsVideoModalOpen(true);
+                    }}
                     className="inline-flex items-center gap-2 text-primary hover:text-primary/80 font-medium transition-colors"
                   >
                     <Play className="h-4 w-4" />
                     {tHome('watchNow')}
-                  </Link>
+                  </button>
                 </div>
               </div>
             ))}
@@ -320,6 +328,16 @@ export default function HomePage() {
           setSelectedEvent(null);
         }}
         onExportICS={handleExportICS}
+      />
+
+      {/* Video Player Modal */}
+      <VideoPlayerModal
+        sermon={selectedSermon}
+        isOpen={isVideoModalOpen}
+        onClose={() => {
+          setIsVideoModalOpen(false);
+          setSelectedSermon(null);
+        }}
       />
     </main>
   );

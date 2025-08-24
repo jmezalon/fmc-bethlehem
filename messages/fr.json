@@ -706,19 +706,14 @@
       "title": "Notre Direction",
       "subtitle": "Rencontrez les dirigeants dévoués qui guident notre famille d'église",
       "pastor": {
-        "name": "Pasteur John Smith",
+        "name": "Pasteur Widmarc Pierre",
         "title": "Pasteur Principal",
-        "bio": "Le Pasteur John sert FMCB depuis 2010, apportant un cœur pour le discipulat et la sensibilisation communautaire."
+        "bio": "Le Pasteur Widmarc sert FMCB depuis 2020, suivant les traces de son père dans le leadership avec un cœur bienveillant envers ceux qui sont dans le besoin."
       },
       "associate": {
-        "name": "Pasteur Maria Rodriguez",
+        "name": "Pasteur Evans Pierre",
         "title": "Pasteur Associé",
-        "bio": "Le Pasteur Maria dirige notre ministère d'adoration et supervise notre congrégation hispanophone avec passion et dévouement."
-      },
-      "youth": {
-        "name": "Pasteur David Johnson",
-        "title": "Pasteur des Jeunes",
-        "bio": "Le Pasteur David fait du ministère auprès de nos jeunes et jeunes adultes depuis plus de 8 ans, les aidant à grandir dans leur foi."
+        "bio": "Le Pasteur Evans a soutenu son père depuis son jeune âge et a longtemps été musicien. Après le décès de son père, il a continué la mission avec son frère pour amener des âmes au royaume du Christ."
       }
     },
     "cta": {

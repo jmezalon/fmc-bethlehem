@@ -8,8 +8,6 @@ interface SermonFiltersProps {
   onFiltersChange: (filters: SermonFilters) => void;
   availableFilters: {
     series: string[];
-    topics: string[];
-    languages: string[];
     speakers: string[];
     years: number[];
   };
@@ -18,8 +16,6 @@ interface SermonFiltersProps {
 export interface SermonFilters {
   search: string;
   series: string;
-  topic: string;
-  language: string;
   speaker: string;
   year: string;
 }
@@ -33,8 +29,6 @@ export function SermonFilters({
   const [filters, setFilters] = useState<SermonFilters>({
     search: '',
     series: '',
-    topic: '',
-    language: '',
     speaker: '',
     year: '',
   });
@@ -53,8 +47,6 @@ export function SermonFilters({
     setFilters({
       search: '',
       series: '',
-      topic: '',
-      language: '',
       speaker: '',
       year: '',
     });
@@ -128,43 +120,6 @@ export function SermonFilters({
             </select>
           </div>
 
-          {/* Topic Filter */}
-          <div>
-            <label className="block text-sm font-medium text-foreground mb-2">
-              {t('topic')}
-            </label>
-            <select
-              value={filters.topic}
-              onChange={e => handleFilterChange('topic', e.target.value)}
-              className="w-full px-3 py-2 text-sm border border-input bg-background rounded-md focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent"
-            >
-              <option value="">{t('allTopics')}</option>
-              {availableFilters.topics.map(topic => (
-                <option key={topic} value={topic}>
-                  {topic}
-                </option>
-              ))}
-            </select>
-          </div>
-
-          {/* Language Filter */}
-          <div>
-            <label className="block text-sm font-medium text-foreground mb-2">
-              {t('language')}
-            </label>
-            <select
-              value={filters.language}
-              onChange={e => handleFilterChange('language', e.target.value)}
-              className="w-full px-3 py-2 text-sm border border-input bg-background rounded-md focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent"
-            >
-              <option value="">{t('allLanguages')}</option>
-              {availableFilters.languages.map(language => (
-                <option key={language} value={language}>
-                  {language}
-                </option>
-              ))}
-            </select>
-          </div>
 
           {/* Speaker Filter */}
           <div>

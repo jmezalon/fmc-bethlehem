@@ -856,19 +856,14 @@
         "title": "Nuestro Liderazgo",
         "subtitle": "Conoce a los líderes dedicados que guían a nuestra familia de iglesia",
         "pastor": {
-          "name": "Pastor John Smith",
+          "name": "Pastor Widmarc Pierre",
           "title": "Pastor Principal",
-          "bio": "El Pastor John ha servido a FMCB desde 2010, trayendo un corazón para el discipulado y el alcance comunitario."
+          "bio": "El Pastor Widmarc ha servido a FMCB desde 2020, siguiendo los pasos de su padre en el liderazgo con un corazón bondadoso hacia los necesitados."
         },
         "associate": {
-          "name": "Pastora Maria Rodriguez",
-          "title": "Pastora Asociada",
-          "bio": "La Pastora Maria lidera nuestro ministerio de adoración y supervisa nuestra congregación de habla hispana con pasión y dedicación."
-        },
-        "youth": {
-          "name": "Pastor David Johnson",
-          "title": "Pastor de Jóvenes",
-          "bio": "El Pastor David ha ministrado a nuestros jóvenes y adultos jóvenes durante más de 8 años, ayudándolos a crecer en su fe."
+          "name": "Pastor Evans Pierre",
+          "title": "Pastor Asociado",
+          "bio": "El Pastor Evans apoyó a su padre desde joven y ha sido músico por mucho tiempo. Después de que su padre falleció, ha continuado la misión con su hermano para traer almas al reino de Cristo."
         }
       },
       "cta": {

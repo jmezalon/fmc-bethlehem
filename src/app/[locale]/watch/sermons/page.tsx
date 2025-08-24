@@ -16,12 +16,10 @@ import sermonsData from '@/../../data/sermons.json';
 
 export default function SermonsPage() {
   const t = useTranslations('watchPages.sermons');
-  const locale = useLocale() as 'en' | 'ht' | 'fr';
+  const locale = useLocale() as 'en' | 'ht' | 'fr' | 'es';
   const [filters, setFilters] = useState<SermonFiltersType>({
     search: '',
     series: '',
-    topic: '',
-    language: '',
     speaker: '',
     year: '',
   });
@@ -30,12 +28,6 @@ export default function SermonsPage() {
   const availableFilters = useMemo(() => {
     const series = Array.from(
       new Set(sermonsData.map((s: any) => s.series?.[locale]).filter(Boolean))
-    );
-    const topics = Array.from(
-      new Set(sermonsData.map((s: any) => 'Faith & Spirituality'))
-    );
-    const languages = Array.from(
-      new Set(['English', 'Haitian Creole', 'French'])
     );
     const speakers = Array.from(
       new Set(sermonsData.map((s: any) => s.speaker?.[locale]))
@@ -46,8 +38,6 @@ export default function SermonsPage() {
 
     return {
       series: series.sort(),
-      topics: topics.sort(),
-      languages: languages.sort(),
       speakers: speakers.sort(),
       years,
     };
@@ -63,12 +53,15 @@ export default function SermonsPage() {
           sermon.title.en.toLowerCase().includes(searchTerm) ||
           sermon.title.ht.toLowerCase().includes(searchTerm) ||
           sermon.title.fr.toLowerCase().includes(searchTerm) ||
+          sermon.title.es.toLowerCase().includes(searchTerm) ||
           sermon.description.en.toLowerCase().includes(searchTerm) ||
           sermon.description.ht.toLowerCase().includes(searchTerm) ||
           sermon.description.fr.toLowerCase().includes(searchTerm) ||
+          sermon.description.es.toLowerCase().includes(searchTerm) ||
           sermon.speaker.en.toLowerCase().includes(searchTerm) ||
           sermon.speaker.ht.toLowerCase().includes(searchTerm) ||
-          sermon.speaker.fr.toLowerCase().includes(searchTerm);
+          sermon.speaker.fr.toLowerCase().includes(searchTerm) ||
+          sermon.speaker.es.toLowerCase().includes(searchTerm);
 
         if (!matchesSearch) return false;
       }
@@ -77,12 +70,6 @@ export default function SermonsPage() {
       if (filters.series && sermon.series?.[locale] !== filters.series)
         return false;
 
-      // Topic filter
-      if (filters.topic && sermon.topic !== filters.topic) return false;
-
-      // Language filter
-      if (filters.language && sermon.language !== filters.language)
-        return false;
 
       // Speaker filter
       if (filters.speaker && sermon.speaker[locale] !== filters.speaker)
@@ -155,7 +142,6 @@ export default function SermonsPage() {
                   sermon={{
                     ...sermon,
                     videoId: sermon.videoUrl?.split('v=')[1] || 'dQw4w9WgXcQ',
-                    topic: 'Faith & Spirituality',
                     language: 'Multilingual',
                   }}
                 />
@@ -178,8 +164,6 @@ export default function SermonsPage() {
                     setFilters({
                       search: '',
                       series: '',
-                      topic: '',
-                      language: '',
                       speaker: '',
                       year: '',
                     })
