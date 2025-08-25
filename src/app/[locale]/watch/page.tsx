@@ -46,7 +46,7 @@ export default function WatchPage() {
                 <div className="space-y-1 text-sm">
                   <div className="flex items-center justify-center gap-2">
                     <Clock className="h-3 w-3" />
-                    <span>{t('sundayService')}: 10:00 AM</span>
+                    <span>{t('sundayService')}: 9:00 AM</span>
                   </div>
                   <div className="flex items-center justify-center gap-2">
                     <Clock className="h-3 w-3" />

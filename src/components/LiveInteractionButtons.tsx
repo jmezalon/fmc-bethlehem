@@ -1,7 +1,8 @@
 'use client';
 
 import { Button } from '@/components/ui/button';
-import { MessageCircleIcon, ShareIcon } from 'lucide-react';
+import { MessageCircleIcon, ShareIcon, XIcon } from 'lucide-react';
+import { useState } from 'react';
 
 interface LiveInteractionButtonsProps {
   isLive: boolean;
@@ -9,12 +10,11 @@ interface LiveInteractionButtonsProps {
 }
 
 export default function LiveInteractionButtons({ isLive, videoId }: LiveInteractionButtonsProps) {
+  const [showChat, setShowChat] = useState(false);
+
   const handleJoinChat = () => {
     if (!isLive || !videoId) return;
-    
-    // Open YouTube live chat in new window
-    const chatUrl = `https://www.youtube.com/live_chat?v=${videoId}`;
-    window.open(chatUrl, '_blank', 'width=400,height=600,scrollbars=yes,resizable=yes');
+    setShowChat(!showChat);
   };
 
   const handleShareStream = () => {
@@ -82,8 +82,31 @@ export default function LiveInteractionButtons({ isLive, videoId }: LiveInteract
         onClick={handleJoinChat}
       >
         <MessageCircleIcon className="w-5 h-5" />
-        Join Live Chat
+        {showChat ? 'Hide Live Chat' : 'Join Live Chat'}
       </Button>
+      
+      {showChat && isLive && videoId && (
+        <div className="relative bg-white border border-slate-200 rounded-lg overflow-hidden">
+          <div className="flex items-center justify-between p-3 bg-slate-50 border-b border-slate-200">
+            <h3 className="text-sm font-medium text-slate-900">Live Chat</h3>
+            <Button
+              variant="ghost"
+              size="sm"
+              onClick={() => setShowChat(false)}
+              className="h-6 w-6 p-0"
+            >
+              <XIcon className="w-4 h-4" />
+            </Button>
+          </div>
+          <iframe
+            src={`https://www.youtube.com/live_chat?v=${videoId}&embed_domain=${window.location.hostname}`}
+            width="100%"
+            height="400"
+            className="w-full border-0"
+            title="YouTube Live Chat"
+          />
+        </div>
+      )}
       
       <Button 
         variant="outline" 

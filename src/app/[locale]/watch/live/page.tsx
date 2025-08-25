@@ -31,8 +31,10 @@ export default async function LivePage() {
     <div className="min-h-screen bg-background">
       {/* Status Badge */}
       <div className="flex justify-center pt-6 pb-2">
-        <div className="inline-flex items-center px-4 py-2 rounded-full text-sm font-medium bg-slate-100 text-slate-700">
-          {status === 'live' ? 'LIVE' : 'OFFLINE'}
+        <div className={`inline-flex items-center px-4 py-2 rounded-full text-sm font-medium ${
+          status === 'live' ? 'bg-red-500 text-white' : 'bg-slate-100 text-slate-700'
+        }`}>
+          {status == 'live' ? 'LIVE' : 'OFFLINE'}
         </div>
       </div>
 

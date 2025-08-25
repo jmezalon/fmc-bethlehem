@@ -21,7 +21,7 @@ export interface ServiceTime {
   id: string;
   name: string;
   dayOfWeek: number; // 0 = Sunday, 1 = Monday, etc.
-  startTime: string; // "10:00"
+  startTime: string; // "9:00"
   endTime: string; // "11:30"
   location?: string;
   description?: string;
@@ -235,7 +235,7 @@ export function convertEventToICS(
   event: any,
   locale: 'en' | 'fr' | 'ht' = 'en'
 ): ICSEvent {
-  const startDate = new Date(event.date + 'T' + (event.time || '10:00'));
+  const startDate = new Date(event.date + 'T' + (event.time || '9:00'));
   const endDate = new Date(startDate);
   endDate.setHours(endDate.getHours() + 2); // Default 2-hour duration
 
@@ -261,7 +261,7 @@ export const DEFAULT_SERVICE_TIMES: ServiceTime[] = [
     id: 'sunday-worship',
     name: 'Sunday Worship Service',
     dayOfWeek: 0, // Sunday
-    startTime: '10:00',
+    startTime: '9:00',
     endTime: '11:30',
     location: 'FMCB Sanctuary',
     description:
@@ -271,8 +271,8 @@ export const DEFAULT_SERVICE_TIMES: ServiceTime[] = [
     id: 'monday-bible-study',
     name: 'Monday Bible Study',
     dayOfWeek: 1, // Monday
-    startTime: '19:00',
-    endTime: '20:30',
+    startTime: '7:00',
+    endTime: '9:30',
     location: 'FMCB Fellowship Hall',
     description: 'Weekly Bible study and discussion group.',
   },
@@ -280,8 +280,8 @@ export const DEFAULT_SERVICE_TIMES: ServiceTime[] = [
     id: 'wednesday-prayer',
     name: 'Wednesday Prayer Meeting',
     dayOfWeek: 3, // Wednesday
-    startTime: '19:00',
-    endTime: '20:00',
+    startTime: '7:00',
+    endTime: '9:00',
     location: 'FMCB Prayer Room',
     description: 'Prayer, spiritual warfare, and intercession.',
   },

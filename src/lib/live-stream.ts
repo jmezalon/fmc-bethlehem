@@ -45,7 +45,7 @@ export const SERVICE_SCHEDULE: ServiceSchedule[] = [
     day: 0, // Sunday
     startHour: 12,
     startMinute: 30,
-    endHour: 14,
+    endHour: 2,
     endMinute: 30,
     description: "Continued worship and fellowship",
     language: "Haitian Creole"
@@ -63,9 +63,9 @@ export const SERVICE_SCHEDULE: ServiceSchedule[] = [
   {
     name: "Wednesday Prayer Service",
     day: 3, // Wednesday
-    startHour: 19,
+    startHour: 7,
     startMinute: 0,
-    endHour: 21,
+    endHour: 9,
     endMinute: 0,
     description: "Mid-week prayer and Bible study",
     language: "Multilingual"
@@ -80,8 +80,8 @@ export const SPECIAL_EVENTS: SpecialEvent[] = [
   //   description: "Nightly revival services",
   //   startDate: "2024-03-10", // Update with actual dates
   //   endDate: "2024-03-16",
-  //   startTime: "19:00",
-  //   endTime: "21:45",
+  //   startTime: "7:00",
+  //   endTime: "9:45",
   //   language: "Multilingual"
   // }
 ];
