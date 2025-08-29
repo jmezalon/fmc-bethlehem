@@ -20,7 +20,7 @@ export async function sendEmail(options: EmailOptions) {
     subject,
     html,
     text,
-    from = 'FMCB <noreply@fmcbethlehem.org>',
+    from = 'FMCB <onboarding@resend.dev>', // Use Resend's onboarding domain for testing
   } = options;
 
   try {
@@ -142,6 +142,41 @@ Thank you for subscribing to our newsletter. You'll now receive updates about:
 We're excited to keep you connected with our church family!
 
 You can unsubscribe at any time by replying to this email.
+    `,
+  }),
+
+  contactForm: (name: string, email: string, phone: string, subject: string, message: string) => ({
+    subject: `New Contact Message: ${subject}`,
+    html: `
+      <div style="font-family: Arial, sans-serif; max-width: 600px; margin: 0 auto;">
+        <h2 style="color: #8B1538;">New Contact Message</h2>
+        <div style="background-color: #f5f5f5; padding: 20px; border-radius: 5px; margin: 15px 0;">
+          <p><strong>From:</strong> ${name}</p>
+          <p><strong>Email:</strong> ${email}</p>
+          <p><strong>Phone:</strong> ${phone || 'Not provided'}</p>
+          <p><strong>Subject:</strong> ${subject}</p>
+        </div>
+        <div style="background-color: #fff; border: 1px solid #ddd; padding: 15px; border-radius: 5px; margin: 15px 0;">
+          <h3>Message:</h3>
+          <p style="white-space: pre-wrap;">${message}</p>
+        </div>
+        <p style="color: #666; font-size: 14px;">
+          This message was submitted through the FMCB website contact form.
+        </p>
+      </div>
+    `,
+    text: `
+New Contact Message
+
+From: ${name}
+Email: ${email}
+Phone: ${phone || 'Not provided'}
+Subject: ${subject}
+
+Message:
+${message}
+
+This message was submitted through the FMCB website contact form.
     `,
   }),
 };

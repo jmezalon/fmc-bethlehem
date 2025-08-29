@@ -7,11 +7,12 @@ export async function POST(request: NextRequest) {
   try {
     const data = await request.json();
 
-    // Add timestamp and ID
+    // Add timestamp, ID, and format name
     const submission = {
       id: Date.now().toString(),
       type: 'baptism',
       submittedAt: new Date().toISOString(),
+      name: `${data.firstName} ${data.lastName}`,
       ...data,
     };
 

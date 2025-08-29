@@ -37,6 +37,7 @@ export default function AdminPortalPage() {
   const submissionTypes = [
     { value: 'all', label: 'All Submissions' },
     { value: 'baptism', label: 'Baptism' },
+    { value: 'contact', label: 'Contact Messages' },
     { value: 'membership', label: 'Membership' },
     { value: 'ministries', label: 'Ministries' },
     { value: 'new-member-class', label: 'New Member Class' },
@@ -94,6 +95,7 @@ export default function AdminPortalPage() {
   const getTypeColor = (type: string) => {
     const colors = {
       baptism: 'bg-blue-100 text-blue-800',
+      contact: 'bg-yellow-100 text-yellow-800',
       membership: 'bg-green-100 text-green-800',
       ministries: 'bg-purple-100 text-purple-800',
       'new-member-class': 'bg-orange-100 text-orange-800',
