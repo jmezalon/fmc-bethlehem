@@ -50,13 +50,18 @@ export async function POST(request: NextRequest) {
       );
 
       const emailResult = await sendEmail({
-        to: process.env.CONTACT_EMAIL || 'jmezalon@gmail.com',
+        to: process.env.CONTACT_EMAIL || 'methodistchurch1993@gmail.com',
         subject: emailTemplate.subject,
         html: emailTemplate.html,
         text: emailTemplate.text,
       });
 
-      console.log('Email sent successfully:', emailResult);
+      console.log('Email sent successfully:', {
+        id: emailResult.data?.id,
+        to: process.env.CONTACT_EMAIL || 'jmezalon@gmail.com',
+        subject: emailTemplate.subject,
+        result: emailResult
+      });
       console.log('Contact form submitted and email sent:', submissionId);
     } catch (emailError) {
       console.error('Failed to send email notification:', emailError);

@@ -11,17 +11,35 @@ export function Footer() {
   const tService = useTranslations('serviceTimes');
   const [email, setEmail] = useState('');
   const [isSubmitting, setIsSubmitting] = useState(false);
+  const [message, setMessage] = useState('');
 
   const handleEmailSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     setIsSubmitting(true);
+    setMessage('');
 
-    // TODO: Implement email signup logic
-    setTimeout(() => {
+    try {
+      const response = await fetch('/api/newsletter', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({ email }),
+      });
+
+      const data = await response.json();
+
+      if (response.ok) {
+        setEmail('');
+        setMessage('Successfully subscribed! Check your email for confirmation.');
+      } else {
+        setMessage(data.message || 'Failed to subscribe. Please try again.');
+      }
+    } catch (error) {
+      setMessage('Failed to subscribe. Please try again.');
+    } finally {
       setIsSubmitting(false);
-      setEmail('');
-      // Show success message
-    }, 1000);
+    }
   };
 
   return (
@@ -188,6 +206,11 @@ export function Footer() {
                     >
                       {isSubmitting ? '...' : t('subscribe')}
                     </button>
+                    {message && (
+                      <p className={`text-xs mt-2 ${message.includes('Successfully') ? 'text-green-600' : 'text-red-600'}`}>
+                        {message}
+                      </p>
+                    )}
                   </form>
                 </div>
               </div>
