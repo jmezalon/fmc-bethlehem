@@ -277,6 +277,7 @@
       "title": "No Events Found",
       "description": "There are no upcoming events at this time. Check back soon!"
     },
+    "exportToCalendar": "Export to Calendar",
     "cta": {
       "title": "Stay Connected",
       "description": "Never miss an event! Subscribe to our newsletter or contact us for more information.",

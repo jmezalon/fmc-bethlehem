@@ -42,7 +42,13 @@ export default function EventsPage() {
   );
 
   const handleExportICS = (event: any) => {
-    downloadICS(event, locale);
+    console.log('Download button clicked for event:', event.title[locale]);
+    try {
+      downloadICS(event, locale);
+      console.log('ICS download initiated successfully');
+    } catch (error) {
+      console.error('Error downloading ICS:', error);
+    }
   };
 
   const handleEventClick = (event: any) => {

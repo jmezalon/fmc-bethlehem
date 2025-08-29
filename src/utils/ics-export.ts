@@ -40,8 +40,10 @@ export function generateICS(
     return date.toISOString().replace(/[-:]/g, '').split('.')[0] + 'Z';
   };
 
-  const escapeText = (text: string): string => {
-    return text
+  const escapeText = (text: string | any): string => {
+    // Convert to string if not already a string
+    const textStr = typeof text === 'string' ? text : String(text || '');
+    return textStr
       .replace(/\\/g, '\\\\')
       .replace(/;/g, '\\;')
       .replace(/,/g, '\\,')
@@ -79,7 +81,7 @@ export function generateICS(
     `SUMMARY:${escapeText(event.title[locale])}`,
     `DESCRIPTION:${escapeText(event.description[locale])}`,
     `LOCATION:${escapeText(event.location[locale])}`,
-    `CATEGORIES:${escapeText(event.category)}`,
+    `CATEGORIES:${escapeText(typeof event.category === 'object' ? event.category[locale] : event.category)}`,
     'STATUS:CONFIRMED',
     'TRANSP:OPAQUE',
     'END:VEVENT',
