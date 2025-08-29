@@ -1,35 +1,34 @@
 import { NextRequest, NextResponse } from 'next/server';
-import { writeFile, mkdir } from 'fs/promises';
-import { existsSync } from 'fs';
-import path from 'path';
+import { saveSubmission, initDatabase } from '@/lib/database';
 
 export async function POST(request: NextRequest) {
   try {
     const data = await request.json();
     
-    // Generate unique ID for the booking
-    const timestamp = new Date().toISOString().replace(/[:.]/g, '-');
-    const id = `venue-booking_${timestamp}_${Math.random().toString(36).substr(2, 9)}`;
+    // Prepare submission data
+    const submissionId = Date.now().toString();
+    const name = `${data.firstName} ${data.lastName}`;
     
-    // Prepare the booking data
-    const bookingData = {
-      id,
+    const submission = {
+      id: submissionId,
       type: 'venue-booking',
-      ...data,
-      submittedAt: new Date().toISOString(),
+      name,
+      email: data.email,
+      phone: data.phone,
+      data: {
+        ...data,
+        submittedAt: new Date().toISOString(),
+      }
     };
 
-    // Ensure submissions directory exists
-    const submissionsDir = path.join(process.cwd(), 'data', 'submissions');
-    if (!existsSync(submissionsDir)) {
-      await mkdir(submissionsDir, { recursive: true });
+    // Try to save to database, but don't fail if database is not available
+    try {
+      await initDatabase();
+      await saveSubmission(submission);
+      console.log('Venue booking submission saved to database:', submissionId);
+    } catch (dbError) {
+      console.error('Database save failed, continuing with email only:', dbError);
     }
-
-    // Save to JSON file
-    const filename = `${id}.json`;
-    const filepath = path.join(submissionsDir, filename);
-    
-    await writeFile(filepath, JSON.stringify(bookingData, null, 2));
 
     // Send email notification (optional - you can implement this later)
     // await sendBookingNotification(bookingData);
@@ -37,7 +36,7 @@ export async function POST(request: NextRequest) {
     return NextResponse.json({
       success: true,
       message: 'Venue booking request submitted successfully',
-      id: id,
+      id: submissionId,
     });
 
   } catch (error) {

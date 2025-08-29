@@ -1,40 +1,42 @@
 import { NextRequest, NextResponse } from 'next/server';
-import { writeFile, mkdir } from 'fs/promises';
-import { existsSync } from 'fs';
-import path from 'path';
+import { saveSubmission, initDatabase } from '@/lib/database';
 
 export async function POST(request: NextRequest) {
   try {
     const data = await request.json();
 
-    // Add timestamp, ID, and format name
+    // Prepare submission data
+    const submissionId = Date.now().toString();
+    const name = `${data.firstName} ${data.lastName}`;
+    
     const submission = {
-      id: Date.now().toString(),
+      id: submissionId,
       type: 'salvation',
-      submittedAt: new Date().toISOString(),
-      name: `${data.firstName} ${data.lastName}`,
-      ...data,
+      name,
+      email: data.email,
+      phone: data.phone,
+      data: {
+        ...data,
+        submittedAt: new Date().toISOString(),
+      }
     };
 
-    // Ensure submissions directory exists
-    const submissionsDir = path.join(process.cwd(), 'data', 'submissions');
-    if (!existsSync(submissionsDir)) {
-      await mkdir(submissionsDir, { recursive: true });
+    // Try to save to database, but don't fail if database is not available
+    try {
+      await initDatabase();
+      await saveSubmission(submission);
+      console.log('Salvation submission saved to database:', submissionId);
+    } catch (dbError) {
+      console.error('Database save failed, continuing with email only:', dbError);
     }
 
-    // Save to JSON file
-    const filename = `salvation_${submission.id}.json`;
-    const filepath = path.join(submissionsDir, filename);
-    await writeFile(filepath, JSON.stringify(submission, null, 2));
-
     // TODO: Send confirmation email using Resend
-    // This would require setting up Resend API key
-    console.log('Salvation form submitted:', submission.id);
+    console.log('Salvation form submitted:', submissionId);
 
     return NextResponse.json({
       success: true,
       message: 'Form submitted successfully',
-      id: submission.id,
+      id: submissionId,
     });
   } catch (error) {
     console.error('Error processing salvation form:', error);

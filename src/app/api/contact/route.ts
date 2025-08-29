@@ -6,9 +6,6 @@ export async function POST(request: NextRequest) {
   try {
     const data = await request.json();
 
-    // Initialize database tables if needed
-    await initDatabase();
-
     // Prepare submission data
     const submissionId = Date.now().toString();
     const name = `${data.firstName} ${data.lastName}`;
@@ -28,8 +25,15 @@ export async function POST(request: NextRequest) {
       }
     };
 
-    // Save to database
-    await saveSubmission(submission);
+    // Try to save to database, but don't fail if database is not available
+    try {
+      await initDatabase();
+      await saveSubmission(submission);
+      console.log('Submission saved to database:', submissionId);
+    } catch (dbError) {
+      console.error('Database save failed, continuing with email only:', dbError);
+      // Continue execution - email is more important than database storage
+    }
 
     // Send email notification using Resend
     try {

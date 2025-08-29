@@ -1,7 +1,5 @@
 import { NextRequest, NextResponse } from 'next/server';
-import { readdir, readFile } from 'fs/promises';
-import { existsSync } from 'fs';
-import path from 'path';
+import { getSubmissions, initDatabase } from '@/lib/database';
 
 export async function GET(request: NextRequest) {
   try {
@@ -17,9 +15,18 @@ export async function GET(request: NextRequest) {
       );
     }
 
-    const submissionsDir = path.join(process.cwd(), 'data', 'submissions');
-    
-    if (!existsSync(submissionsDir)) {
+    // Initialize database and get submissions
+    try {
+      await initDatabase();
+      const submissions = await getSubmissions(type || undefined);
+      
+      return NextResponse.json({
+        success: true,
+        submissions,
+        total: submissions.length,
+      });
+    } catch (dbError) {
+      console.error('Database error, falling back to empty results:', dbError);
       return NextResponse.json({
         success: true,
         submissions: [],
@@ -27,32 +34,6 @@ export async function GET(request: NextRequest) {
       });
     }
 
-    // Read all submission files
-    const files = await readdir(submissionsDir);
-    const jsonFiles = files.filter(file => file.endsWith('.json'));
-    
-    // Filter by type if specified
-    const filteredFiles = type 
-      ? jsonFiles.filter(file => file.startsWith(`${type}_`))
-      : jsonFiles;
-
-    // Read and parse all submissions
-    const submissions = await Promise.all(
-      filteredFiles.map(async (file) => {
-        const filepath = path.join(submissionsDir, file);
-        const content = await readFile(filepath, 'utf-8');
-        return JSON.parse(content);
-      })
-    );
-
-    // Sort by submission date (newest first)
-    submissions.sort((a, b) => new Date(b.submittedAt).getTime() - new Date(a.submittedAt).getTime());
-
-    return NextResponse.json({
-      success: true,
-      submissions,
-      total: submissions.length,
-    });
   } catch (error) {
     console.error('Error fetching submissions:', error);
     return NextResponse.json(
