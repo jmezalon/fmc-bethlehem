@@ -1,32 +1,35 @@
 import { NextRequest, NextResponse } from 'next/server';
-import { writeFile, mkdir } from 'fs/promises';
-import { existsSync } from 'fs';
-import path from 'path';
 import { sendEmail, emailTemplates } from '@/lib/email';
+import { saveSubmission, initDatabase } from '@/lib/database';
 
 export async function POST(request: NextRequest) {
   try {
     const data = await request.json();
 
-    // Add timestamp, ID, and format name
+    // Initialize database tables if needed
+    await initDatabase();
+
+    // Prepare submission data
+    const submissionId = Date.now().toString();
+    const name = `${data.firstName} ${data.lastName}`;
+    
     const submission = {
-      id: Date.now().toString(),
+      id: submissionId,
       type: 'contact',
-      submittedAt: new Date().toISOString(),
-      name: `${data.firstName} ${data.lastName}`,
-      ...data,
+      name,
+      email: data.email,
+      phone: data.phone,
+      data: {
+        firstName: data.firstName,
+        lastName: data.lastName,
+        subject: data.subject,
+        message: data.message,
+        submittedAt: new Date().toISOString(),
+      }
     };
 
-    // Ensure submissions directory exists
-    const submissionsDir = path.join(process.cwd(), 'data', 'submissions');
-    if (!existsSync(submissionsDir)) {
-      await mkdir(submissionsDir, { recursive: true });
-    }
-
-    // Save to JSON file
-    const filename = `contact_${submission.id}.json`;
-    const filepath = path.join(submissionsDir, filename);
-    await writeFile(filepath, JSON.stringify(submission, null, 2));
+    // Save to database
+    await saveSubmission(submission);
 
     // Send email notification using Resend
     try {
@@ -38,8 +41,8 @@ export async function POST(request: NextRequest) {
         submission.name,
         submission.email,
         submission.phone || '',
-        submission.subject,
-        submission.message
+        submission.data.subject,
+        submission.data.message
       );
 
       const emailResult = await sendEmail({
@@ -50,7 +53,7 @@ export async function POST(request: NextRequest) {
       });
 
       console.log('Email sent successfully:', emailResult);
-      console.log('Contact form submitted and email sent:', submission.id);
+      console.log('Contact form submitted and email sent:', submissionId);
     } catch (emailError) {
       console.error('Failed to send email notification:', emailError);
       console.error('Email error details:', JSON.stringify(emailError, null, 2));
@@ -60,7 +63,7 @@ export async function POST(request: NextRequest) {
     return NextResponse.json({
       success: true,
       message: 'Message sent successfully',
-      id: submission.id,
+      id: submissionId,
     });
   } catch (error) {
     console.error('Error processing contact form:', error);
