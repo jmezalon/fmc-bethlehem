@@ -11,6 +11,7 @@ import { Button } from '@/components/ui/button';
 import { EventDetailModal } from '@/components/ui/event-detail-modal';
 import { VideoPlayerModal } from '@/components/ui/video-player-modal';
 import { downloadICS } from '@/utils/ics-export';
+import { formatTime } from '@/utils/time-format';
 import {
   Calendar,
   Clock,
@@ -324,7 +325,7 @@ export default function HomePage() {
                     })()}
                     <span>•</span>
                     <Clock className="h-4 w-4" />
-                    {event.time}
+                    {formatTime(event.time, locale)}
                   </div>
                   <h3 className="text-lg font-semibold text-card-foreground mb-2 line-clamp-1">
                     {event.title[locale] || event.title.en}
