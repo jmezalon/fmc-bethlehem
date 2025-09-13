@@ -28,13 +28,13 @@ export default function AdminDashboard() {
                 Add, edit, and remove church events
               </p>
               <div className="flex gap-2 mt-4">
-                <Link href="/admin/content/events">
+                <Link href="/en/admin/content/events">
                   <Button variant="outline" size="sm">
                     <Settings className="h-4 w-4 mr-2" />
                     Manage
                   </Button>
                 </Link>
-                <Link href="/admin/content/events/new">
+                <Link href="/en/admin/content/events/new">
                   <Button size="sm">
                     <Plus className="h-4 w-4 mr-2" />
                     Add New
@@ -56,13 +56,13 @@ export default function AdminDashboard() {
                 Add, edit, and remove small groups
               </p>
               <div className="flex gap-2 mt-4">
-                <Link href="/admin/content/groups">
+                <Link href="/en/admin/content/groups">
                   <Button variant="outline" size="sm">
                     <Settings className="h-4 w-4 mr-2" />
                     Manage
                   </Button>
                 </Link>
-                <Link href="/admin/content/groups/new">
+                <Link href="/en/admin/content/groups/new">
                   <Button size="sm">
                     <Plus className="h-4 w-4 mr-2" />
                     Add New
@@ -84,13 +84,13 @@ export default function AdminDashboard() {
                 Add, edit, and remove sermon recordings
               </p>
               <div className="flex gap-2 mt-4">
-                <Link href="/admin/content/sermons">
+                <Link href="/en/admin/content/sermons">
                   <Button variant="outline" size="sm">
                     <Settings className="h-4 w-4 mr-2" />
                     Manage
                   </Button>
                 </Link>
-                <Link href="/admin/content/sermons/new">
+                <Link href="/en/admin/content/sermons/new">
                   <Button size="sm">
                     <Plus className="h-4 w-4 mr-2" />
                     Add New
@@ -111,19 +111,19 @@ export default function AdminDashboard() {
           </CardHeader>
           <CardContent>
             <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
-              <Link href="/admin/content/events/new">
+              <Link href="/en/admin/content/events/new">
                 <Button variant="outline" className="w-full justify-start">
                   <Calendar className="h-4 w-4 mr-2" />
                   Create New Event
                 </Button>
               </Link>
-              <Link href="/admin/content/groups/new">
+              <Link href="/en/admin/content/groups/new">
                 <Button variant="outline" className="w-full justify-start">
                   <Users className="h-4 w-4 mr-2" />
                   Create New Group
                 </Button>
               </Link>
-              <Link href="/admin/content/sermons/new">
+              <Link href="/en/admin/content/sermons/new">
                 <Button variant="outline" className="w-full justify-start">
                   <Play className="h-4 w-4 mr-2" />
                   Add New Sermon
