@@ -1,6 +1,6 @@
 'use client';
 
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import { useTranslations, useLocale } from 'next-intl';
 import Link from 'next/link';
 import { Container } from '@/components/ui/container';
@@ -11,8 +11,7 @@ import { CalendarSubscribe } from '@/components/ui/calendar-subscribe';
 import { downloadICS } from '@/utils/ics-export';
 import { Calendar, List, Filter, Mail, Phone } from 'lucide-react';
 
-// Import events data
-import eventsData from '@/../../data/events.json';
+// Events data will be fetched from API
 
 type ViewMode = 'list' | 'calendar';
 
@@ -23,14 +22,32 @@ export default function EventsPage() {
   const [selectedCategory, setSelectedCategory] = useState<string>('');
   const [selectedEvent, setSelectedEvent] = useState<any>(null);
   const [isModalOpen, setIsModalOpen] = useState(false);
+  const [events, setEvents] = useState<any[]>([]);
+  const [loading, setLoading] = useState(true);
+
+  useEffect(() => {
+    const fetchEvents = async () => {
+      try {
+        const response = await fetch('/api/events');
+        const eventsData = await response.json();
+        setEvents(eventsData);
+      } catch (error) {
+        console.error('Error fetching events:', error);
+      } finally {
+        setLoading(false);
+      }
+    };
+
+    fetchEvents();
+  }, []);
 
   // Get unique categories
   const categories = Array.from(
-    new Set(eventsData.map(event => event.category[locale]))
+    new Set(events.map(event => event.category[locale]))
   );
 
   // Filter events
-  const filteredEvents = eventsData.filter(event => {
+  const filteredEvents = events.filter(event => {
     if (selectedCategory && event.category[locale] !== selectedCategory)
       return false;
     return true;
@@ -55,6 +72,19 @@ export default function EventsPage() {
     // Could open a modal or navigate to event detail page
     console.log('Event clicked:', event);
   };
+
+  if (loading) {
+    return (
+      <main>
+        <div className="flex items-center justify-center min-h-screen">
+          <div className="text-center">
+            <div className="animate-spin rounded-full h-32 w-32 border-b-2 border-primary mx-auto mb-4"></div>
+            <p className="text-muted-foreground">Loading events...</p>
+          </div>
+        </div>
+      </main>
+    );
+  }
 
   return (
     <main>

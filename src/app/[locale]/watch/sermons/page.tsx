@@ -1,6 +1,6 @@
 'use client';
 
-import { useState, useMemo } from 'react';
+import { useState, useMemo, useEffect } from 'react';
 import { useTranslations, useLocale } from 'next-intl';
 import { Container } from '@/components/ui/container';
 import {
@@ -11,8 +11,7 @@ import { SermonCard } from '@/components/ui/sermon-card';
 import Link from 'next/link';
 import { Play, ArrowLeft } from 'lucide-react';
 
-// Import sermon data
-import sermonsData from '@/../../data/sermons.json';
+// Sermon data will be fetched from API
 
 export default function SermonsPage() {
   const t = useTranslations('watchPages.sermons');
@@ -23,17 +22,35 @@ export default function SermonsPage() {
     speaker: '',
     year: '',
   });
+  const [sermons, setSermons] = useState<any[]>([]);
+  const [loading, setLoading] = useState(true);
+
+  useEffect(() => {
+    const fetchSermons = async () => {
+      try {
+        const response = await fetch('/api/sermons');
+        const sermonsData = await response.json();
+        setSermons(sermonsData);
+      } catch (error) {
+        console.error('Error fetching sermons:', error);
+      } finally {
+        setLoading(false);
+      }
+    };
+
+    fetchSermons();
+  }, []);
 
   // Extract available filter options from data
   const availableFilters = useMemo(() => {
     const series = Array.from(
-      new Set(sermonsData.map((s: any) => s.series?.[locale]).filter(Boolean))
+      new Set(sermons.map((s: any) => s.series?.[locale]).filter(Boolean))
     );
     const speakers = Array.from(
-      new Set(sermonsData.map((s: any) => s.speaker?.[locale]))
+      new Set(sermons.map((s: any) => s.speaker?.[locale]))
     );
     const years = Array.from(
-      new Set(sermonsData.map((s: any) => new Date(s.date).getFullYear()))
+      new Set(sermons.map((s: any) => new Date(s.date).getFullYear()))
     ).sort((a: any, b: any) => b - a);
 
     return {
@@ -41,11 +58,11 @@ export default function SermonsPage() {
       speakers: speakers.sort(),
       years,
     };
-  }, [locale]);
+  }, [sermons, locale]);
 
   // Filter sermons based on current filters
   const filteredSermons = useMemo(() => {
-    return sermonsData.filter((sermon: any) => {
+    return sermons.filter((sermon: any) => {
       // Search filter
       if (filters.search) {
         const searchTerm = filters.search.toLowerCase();
@@ -83,7 +100,20 @@ export default function SermonsPage() {
 
       return true;
     });
-  }, [filters, locale]);
+  }, [sermons, filters, locale]);
+
+  if (loading) {
+    return (
+      <main>
+        <div className="flex items-center justify-center min-h-screen">
+          <div className="text-center">
+            <div className="animate-spin rounded-full h-32 w-32 border-b-2 border-primary mx-auto mb-4"></div>
+            <p className="text-muted-foreground">Loading sermons...</p>
+          </div>
+        </div>
+      </main>
+    );
+  }
 
   return (
     <main>

@@ -6,12 +6,15 @@ import {
   generateServiceTimesICS,
   ICSEvent,
 } from '@/lib/ics';
-import eventsData from '@/../../data/events.json';
+import { getAllEvents } from '@/lib/database';
 
 export async function GET(request: NextRequest) {
   try {
     const { searchParams } = new URL(request.url);
     const locale = (searchParams.get('locale') || 'en') as 'en' | 'fr' | 'ht';
+
+    // Get events from database
+    const eventsData = await getAllEvents();
 
     // Convert events to ICS format
     const icsEvents = eventsData.map(event => convertEventToICS(event, locale));

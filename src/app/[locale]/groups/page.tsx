@@ -1,6 +1,6 @@
 'use client';
 
-import { useState, useMemo } from 'react';
+import { useState, useMemo, useEffect } from 'react';
 import { useTranslations, useLocale } from 'next-intl';
 import { Container } from '@/components/ui/container';
 import { GroupCard } from '@/components/ui/group-card';
@@ -10,8 +10,7 @@ import {
 } from '@/components/ui/group-filters';
 import { Users, Search } from 'lucide-react';
 
-// Import groups data
-import groupsData from '@/../../data/groups.json';
+// Groups data will be fetched from API
 
 export default function GroupsPage() {
   const t = useTranslations('groups');
@@ -22,25 +21,43 @@ export default function GroupsPage() {
     language: '',
     lifeStage: '',
   });
+  const [groups, setGroups] = useState<any[]>([]);
+  const [loading, setLoading] = useState(true);
+
+  useEffect(() => {
+    const fetchGroups = async () => {
+      try {
+        const response = await fetch('/api/groups');
+        const groupsData = await response.json();
+        setGroups(groupsData);
+      } catch (error) {
+        console.error('Error fetching groups:', error);
+      } finally {
+        setLoading(false);
+      }
+    };
+
+    fetchGroups();
+  }, []);
 
   // Get available filter options
   const availableFilters = useMemo(() => {
     const daysOfWeek = Array.from(
-      new Set(groupsData.map(group => group.dayOfWeek))
+      new Set(groups.map(group => group.dayOfWeek))
     );
     const languages = Array.from(
-      new Set(groupsData.map(group => group.language))
+      new Set(groups.map(group => group.language))
     );
     const lifeStages = Array.from(
-      new Set(groupsData.map(group => group.lifeStage))
+      new Set(groups.map(group => group.lifeStage))
     );
 
     return { daysOfWeek, languages, lifeStages };
-  }, []);
+  }, [groups]);
 
   // Filter groups based on search and filters
   const filteredGroups = useMemo(() => {
-    return groupsData.filter(group => {
+    return groups.filter(group => {
       // Search filter
       if (searchTerm) {
         const searchLower = searchTerm.toLowerCase();
@@ -76,7 +93,7 @@ export default function GroupsPage() {
 
       return true;
     });
-  }, [searchTerm, filters, locale]);
+  }, [groups, searchTerm, filters, locale]);
 
   // Sort groups by day of week and time
   const sortedGroups = useMemo(() => {
@@ -102,6 +119,19 @@ export default function GroupsPage() {
       return a.time.localeCompare(b.time);
     });
   }, [filteredGroups]);
+
+  if (loading) {
+    return (
+      <main>
+        <div className="flex items-center justify-center min-h-screen">
+          <div className="text-center">
+            <div className="animate-spin rounded-full h-32 w-32 border-b-2 border-primary mx-auto mb-4"></div>
+            <p className="text-muted-foreground">Loading groups...</p>
+          </div>
+        </div>
+      </main>
+    );
+  }
 
   return (
     <main>

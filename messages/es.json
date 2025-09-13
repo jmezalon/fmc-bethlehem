@@ -664,7 +664,7 @@
     "pastors": {
       "title": "Nuestros Pastores",
       "senior": "Pastor Principal",
-      "associate": "Pastor Asociado"
+      "associate": "Pastor"
     },
     "contact": {
       "title": "¿Listo para Unirte a Nosotros?",
@@ -862,7 +862,7 @@
         },
         "associate": {
           "name": "Pastor Evans Pierre",
-          "title": "Pastor Asociado",
+          "title": "Pastor",
           "bio": "El Pastor Evans apoyó a su padre desde joven y ha sido músico por mucho tiempo. Después de que su padre falleció, ha continuado la misión con su hermano para traer almas al reino de Cristo."
         }
       },

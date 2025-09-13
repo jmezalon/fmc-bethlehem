@@ -1,6 +1,6 @@
 'use client';
 
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import { useTranslations, useLocale } from 'next-intl';
 import Link from 'next/link';
 import Image from 'next/image';
@@ -22,8 +22,7 @@ import {
   MessageSquare,
   ArrowRight,
 } from 'lucide-react';
-import eventsData from '../../../data/events.json';
-import sermonsData from '../../../data/sermons.json';
+// Data will be fetched from API
 
 export default function HomePage() {
   const t = useTranslations('hero');
@@ -34,16 +33,55 @@ export default function HomePage() {
   const [isModalOpen, setIsModalOpen] = useState(false);
   const [selectedSermon, setSelectedSermon] = useState<any>(null);
   const [isVideoModalOpen, setIsVideoModalOpen] = useState(false);
+  const [events, setEvents] = useState<any[]>([]);
+  const [sermons, setSermons] = useState<any[]>([]);
+  const [loading, setLoading] = useState(true);
 
   const handleExportICS = (event: any) => {
     downloadICS(event, locale);
   };
 
+  useEffect(() => {
+    const fetchData = async () => {
+      try {
+        const [eventsResponse, sermonsResponse] = await Promise.all([
+          fetch('/api/events'),
+          fetch('/api/sermons')
+        ]);
+        
+        const eventsData = await eventsResponse.json();
+        const sermonsData = await sermonsResponse.json();
+        
+        setEvents(eventsData);
+        setSermons(sermonsData);
+      } catch (error) {
+        console.error('Error fetching data:', error);
+      } finally {
+        setLoading(false);
+      }
+    };
+
+    fetchData();
+  }, []);
+
   // Generate structured data for upcoming events
-  const upcomingEvents = eventsData.slice(0, 3);
+  const upcomingEvents = events.slice(0, 3);
   const eventStructuredData = upcomingEvents.map((event: any) =>
     generateEventJsonLd(event, locale)
   );
+
+  if (loading) {
+    return (
+      <main>
+        <div className="flex items-center justify-center min-h-screen">
+          <div className="text-center">
+            <div className="animate-spin rounded-full h-32 w-32 border-b-2 border-primary mx-auto mb-4"></div>
+            <p className="text-muted-foreground">Loading...</p>
+          </div>
+        </div>
+      </main>
+    );
+  }
 
   return (
     <main>
@@ -201,7 +239,7 @@ export default function HomePage() {
             </Link>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-            {sermonsData.slice(0, 3).map((sermon: any) => (
+            {sermons.slice(0, 3).map((sermon: any) => (
               <div
                 key={sermon.id}
                 className="bg-card rounded-lg border overflow-hidden hover:shadow-lg transition-shadow"
@@ -264,7 +302,7 @@ export default function HomePage() {
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-            {eventsData.slice(0, 3).map((event: any) => (
+            {events.slice(0, 3).map((event: any) => (
               <div
                 key={event.id}
                 className="bg-card rounded-lg border overflow-hidden hover:shadow-lg transition-shadow"

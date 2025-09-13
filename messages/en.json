@@ -229,7 +229,7 @@
     "pastors": {
       "title": "Our Pastors",
       "senior": "Senior Pastor",
-      "associate": "Associate Pastor"
+      "associate": "Pastor"
     },
     "contact": {
       "title": "Ready to Join Us?",
@@ -886,7 +886,7 @@
       },
       "associate": {
         "name": "Pastor Evans Pierre",
-        "title": "Associate Pastor",
+        "title": "Pastor",
         "bio": "Pastor Evans stood by his dad side since a young age and has been a long time musician. After his dad passed away, he has continued the mission with his brother to bring soul to the kingdom of Christ."
       }
     }
