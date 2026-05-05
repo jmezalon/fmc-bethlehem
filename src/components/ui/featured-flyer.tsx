@@ -42,7 +42,7 @@ export function FeaturedFlyer() {
       setDismissed(true);
       return;
     }
-    fetch('/api/flyers/featured')
+    fetch('/api/flyers/featured', { cache: 'no-store' })
       .then(r => r.json())
       .then(data => {
         if (data.active) setFlyer(data);

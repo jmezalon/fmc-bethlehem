@@ -1,6 +1,9 @@
 import { NextRequest, NextResponse } from 'next/server';
 import { getFeaturedFlyer, setFeaturedFlyer, initDatabase } from '@/lib/database';
 
+export const dynamic = 'force-dynamic';
+export const revalidate = 0;
+
 function checkAuth(request: NextRequest) {
   const password = request.headers.get('x-admin-password');
   return password === process.env.PRAYER_ADMIN_SECRET;
