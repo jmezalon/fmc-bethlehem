@@ -200,13 +200,22 @@ export default function PlanVisitPage() {
                 <Clock className="h-5 w-5 text-primary" />
                 Monday
               </h3>
-              <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
+              <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
                 <div className="flex items-center gap-3">
                   <div className="w-2 h-2 bg-primary rounded-full"></div>
                   <div>
                     <p className="font-medium">Kase Chenn</p>
                     <p className="text-sm text-muted-foreground">Fasting & Prayer</p>
                     <p className="text-sm text-muted-foreground">8:00 AM - 12:00 PM</p>
+                  </div>
+                </div>
+                <div className="flex items-start gap-3">
+                  <div className="w-2 h-2 bg-amber-500 rounded-full mt-2 flex-shrink-0"></div>
+                  <div>
+                    <p className="font-medium">Food Pantry</p>
+                    <p className="text-sm text-muted-foreground">Elohim Foundation Inc.</p>
+                    <p className="text-sm text-muted-foreground">1:00 - 2:00 PM</p>
+                    <p className="text-xs text-amber-700 font-medium mt-0.5">ID required</p>
                   </div>
                 </div>
                 <div className="flex items-center gap-3">

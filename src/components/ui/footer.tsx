@@ -3,7 +3,7 @@
 import { useTranslations } from 'next-intl';
 import { Container } from '@/components/ui/container';
 import Link from 'next/link';
-import { MapPin, Mail, Youtube, Users, Camera } from 'lucide-react';
+import { MapPin, Mail, Youtube, Users, Camera, Utensils } from 'lucide-react';
 import { useState } from 'react';
 
 export function Footer() {
@@ -122,6 +122,20 @@ export function Footer() {
                   </h4>
                   <p className="text-muted-foreground">{t('wednesday')}</p>
                   <p className="text-primary font-medium">7:00 - 9:30 PM</p>
+                </div>
+              </div>
+
+              {/* Food Pantry — community outreach callout */}
+              <div className="mt-2 flex items-start gap-2 rounded-md border border-amber-200 bg-amber-50 p-3 text-sm">
+                <Utensils className="h-4 w-4 mt-0.5 flex-shrink-0 text-amber-700" />
+                <div>
+                  <p className="font-medium text-amber-900">{t('foodPantry')}</p>
+                  <p className="text-amber-800">
+                    {t('monday')} • 1:00 - 2:00 PM
+                  </p>
+                  <p className="text-xs text-amber-700">
+                    {t('foodPantryNote')}
+                  </p>
                 </div>
               </div>
             </div>
