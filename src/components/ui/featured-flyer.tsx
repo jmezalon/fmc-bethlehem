@@ -60,6 +60,7 @@ export function FeaturedFlyer() {
   const dateRange = formatDateRange(flyer.startDate, flyer.endDate);
 
   return (
+    <div className="flyer-enter">
     <section
       aria-label="Featured event"
       className="relative isolate overflow-hidden bg-[#3d0a23]"
@@ -94,9 +95,9 @@ export function FeaturedFlyer() {
         <div className="flex flex-col lg:flex-row items-center gap-10 lg:gap-14">
 
           {/* Flyer image — portrait on mobile (matches typical 4:5 portrait flyers) */}
-          <div className="lg:hidden relative mx-auto" style={{ width: '100%', maxWidth: 400 }}>
+          <div className="lg:hidden relative mx-auto flyer-image-in" style={{ width: '100%', maxWidth: 400 }}>
             {/* Warm halo behind image */}
-            <div className="absolute -inset-3 rounded-[28px] bg-gradient-to-br from-[#e4a166] via-[#f0c66d] to-[#e4a166] opacity-40 blur-2xl" />
+            <div className="absolute -inset-3 rounded-[28px] bg-gradient-to-br from-[#e4a166] via-[#f0c66d] to-[#e4a166] blur-2xl flyer-halo" />
             <div
               className="relative rounded-2xl overflow-hidden ring-1 ring-white/15 shadow-2xl shadow-black/40 bg-[#3d0a23]"
               style={{ aspectRatio: '4/5' }}
@@ -119,8 +120,8 @@ export function FeaturedFlyer() {
           </div>
 
           {/* Flyer image — landscape on desktop. 16:9 to match natural flyer aspect, nothing cropped. */}
-          <div className="hidden lg:block relative flex-shrink-0 w-[600px] xl:w-[720px] 2xl:w-[760px]">
-            <div className="absolute -inset-3 rounded-[28px] bg-gradient-to-br from-[#e4a166] via-[#f0c66d] to-[#e4a166] opacity-40 blur-2xl" />
+          <div className="hidden lg:block relative flex-shrink-0 w-[600px] xl:w-[720px] 2xl:w-[760px] flyer-image-in">
+            <div className="absolute -inset-3 rounded-[28px] bg-gradient-to-br from-[#e4a166] via-[#f0c66d] to-[#e4a166] blur-2xl flyer-halo" />
             <div
               className="relative rounded-2xl overflow-hidden ring-1 ring-white/15 shadow-2xl shadow-black/40 bg-[#3d0a23]"
               style={{ aspectRatio: '16/9' }}
@@ -143,7 +144,7 @@ export function FeaturedFlyer() {
           </div>
 
           {/* Event details */}
-          <div className="flex-1 text-center lg:text-left text-white">
+          <div className="flex-1 text-center lg:text-left text-white flyer-content-stagger">
             <span className="inline-flex items-center gap-2 mb-5 px-4 py-1.5 rounded-full bg-[#e4a166]/15 border border-[#e4a166]/40 text-[#f0c66d] text-[11px] font-semibold uppercase tracking-[0.22em]">
               <Sparkles className="h-3.5 w-3.5" />
               Featured Event
@@ -203,5 +204,6 @@ export function FeaturedFlyer() {
         <X className="h-4 w-4" />
       </button>
     </section>
+    </div>
   );
 }
