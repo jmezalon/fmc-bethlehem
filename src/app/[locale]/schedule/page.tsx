@@ -14,6 +14,7 @@ import {
   Moon,
   Droplets,
   Crown,
+  Utensils,
 } from 'lucide-react';
 
 export default function SchedulePage() {
@@ -57,6 +58,13 @@ export default function SchedulePage() {
           description: t('monday.kaseChennDesc'),
           icon: Heart,
           type: 'prayer',
+        },
+        {
+          time: '1:00 - 2:00 PM',
+          title: t('monday.foodPantry'),
+          description: t('monday.foodPantryDesc'),
+          icon: Utensils,
+          type: 'community',
         },
         {
           time: '5:30 - 7:00 PM',
@@ -183,6 +191,8 @@ export default function SchedulePage() {
         return 'bg-indigo-50 text-indigo-700 border-indigo-200';
       case 'marriage':
         return 'bg-pink-50 text-pink-700 border-pink-200';
+      case 'community':
+        return 'bg-amber-50 text-amber-800 border-amber-200';
       default:
         return 'bg-muted text-muted-foreground border-border';
     }
