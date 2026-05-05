@@ -1,4 +1,5 @@
 import { NextRequest, NextResponse } from 'next/server';
+import { sendEmail, emailTemplates } from '@/lib/email';
 import { saveSubmission, initDatabase } from '@/lib/database';
 
 export async function POST(request: NextRequest) {
@@ -8,7 +9,7 @@ export async function POST(request: NextRequest) {
     // Prepare submission data
     const submissionId = Date.now().toString();
     const name = `${data.firstName} ${data.lastName}`;
-    
+
     const submission = {
       id: submissionId,
       type: 'ministries',
@@ -30,8 +31,38 @@ export async function POST(request: NextRequest) {
       console.error('Database save failed, continuing with email only:', dbError);
     }
 
-    // TODO: Send confirmation email using Resend
-    console.log('Ministries form submitted:', submissionId);
+    // Send email notification to admin
+    try {
+      const emailTemplate = emailTemplates.formSubmission(
+        'Ministry Interest',
+        name,
+        data.email,
+        data.phone,
+        [
+          ['Age range', data.age],
+          ['Primary ministry', data.primaryMinistry],
+          ['Secondary ministries', data.secondaryMinistries],
+          ['Experience', data.experience],
+          ['Skills', data.skills],
+          ['Availability', data.availability],
+          ['Time commitment', data.timeCommitment],
+          ['Motivation', data.motivation],
+          ['Background check consent', data.backgroundCheck],
+          ['Additional info', data.additionalInfo],
+        ]
+      );
+
+      await sendEmail({
+        to: process.env.CONTACT_EMAIL || 'methodistchurch1993@gmail.com',
+        subject: emailTemplate.subject,
+        html: emailTemplate.html,
+        text: emailTemplate.text,
+      });
+
+      console.log('Ministries form submitted and email sent:', submissionId);
+    } catch (emailError) {
+      console.error('Failed to send email notification:', emailError);
+    }
 
     return NextResponse.json({
       success: true,

@@ -154,6 +154,78 @@ You can unsubscribe at any time by replying to this email.
     `,
   }),
 
+  formSubmission: (
+    formType: string,
+    name: string,
+    email: string,
+    phone: string | undefined,
+    fields: Array<[string, unknown]>
+  ) => {
+    const escapeHtml = (s: string) =>
+      s
+        .replace(/&/g, '&amp;')
+        .replace(/</g, '&lt;')
+        .replace(/>/g, '&gt;')
+        .replace(/"/g, '&quot;')
+        .replace(/'/g, '&#39;');
+
+    const formatValue = (v: unknown): string | null => {
+      if (v === undefined || v === null) return null;
+      if (Array.isArray(v)) return v.length ? v.join(', ') : null;
+      if (typeof v === 'boolean') return v ? 'Yes' : 'No';
+      const s = String(v).trim();
+      return s === '' ? null : s;
+    };
+
+    const visibleFields = fields
+      .map(([label, value]) => [label, formatValue(value)] as const)
+      .filter((entry): entry is readonly [string, string] => entry[1] !== null);
+
+    const fieldRowsHtml = visibleFields
+      .map(
+        ([label, value]) =>
+          `<p style="margin: 6px 0;"><strong>${escapeHtml(label)}:</strong> <span style="white-space: pre-wrap;">${escapeHtml(value)}</span></p>`
+      )
+      .join('');
+
+    const fieldRowsText = visibleFields
+      .map(([label, value]) => `${label}: ${value}`)
+      .join('\n');
+
+    return {
+      subject: `New ${formType} Submission${name ? ` from ${name}` : ''}`,
+      html: `
+      <div style="font-family: Arial, sans-serif; max-width: 600px; margin: 0 auto;">
+        <h2 style="color: #8B1538;">New ${escapeHtml(formType)} Submission</h2>
+        <div style="background-color: #f5f5f5; padding: 20px; border-radius: 5px; margin: 15px 0;">
+          <p style="margin: 6px 0;"><strong>Name:</strong> ${escapeHtml(name || 'Not provided')}</p>
+          <p style="margin: 6px 0;"><strong>Email:</strong> ${escapeHtml(email || 'Not provided')}</p>
+          <p style="margin: 6px 0;"><strong>Phone:</strong> ${escapeHtml(phone || 'Not provided')}</p>
+        </div>
+        <div style="background-color: #fff; border: 1px solid #ddd; padding: 15px; border-radius: 5px; margin: 15px 0;">
+          <h3 style="margin-top: 0;">Details</h3>
+          ${fieldRowsHtml || '<p style="color: #666;">No additional details provided.</p>'}
+        </div>
+        <p style="color: #666; font-size: 14px;">
+          This submission was made through the FMCB website.
+        </p>
+      </div>
+    `,
+      text: `
+New ${formType} Submission
+
+Name: ${name || 'Not provided'}
+Email: ${email || 'Not provided'}
+Phone: ${phone || 'Not provided'}
+
+Details:
+${fieldRowsText || 'No additional details provided.'}
+
+This submission was made through the FMCB website.
+      `,
+    };
+  },
+
   contactForm: (name: string, email: string, phone: string, subject: string, message: string) => ({
     subject: `New Contact Message: ${subject}`,
     html: `

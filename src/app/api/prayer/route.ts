@@ -2,6 +2,7 @@ import { NextRequest, NextResponse } from 'next/server';
 import { writeFile, readFile, mkdir } from 'fs/promises';
 import { existsSync } from 'fs';
 import path from 'path';
+import { sendEmail, emailTemplates } from '@/lib/email';
 
 export async function POST(request: NextRequest) {
   try {
@@ -54,8 +55,25 @@ export async function POST(request: NextRequest) {
     // Write updated prayers back to file
     await writeFile(prayersFile, JSON.stringify(prayers, null, 2));
 
-    // TODO: Send confirmation email using Resend
-    console.log('Prayer request submitted:', prayerRequest.id);
+    // Send email notification to admin
+    try {
+      const emailTemplate = emailTemplates.prayerRequest(
+        prayerRequest.name,
+        prayerRequest.request,
+        prayerRequest.isPublic
+      );
+
+      await sendEmail({
+        to: process.env.CONTACT_EMAIL || 'methodistchurch1993@gmail.com',
+        subject: emailTemplate.subject,
+        html: emailTemplate.html,
+        text: emailTemplate.text,
+      });
+
+      console.log('Prayer request submitted and email sent:', prayerRequest.id);
+    } catch (emailError) {
+      console.error('Failed to send email notification:', emailError);
+    }
 
     return NextResponse.json({
       success: true,

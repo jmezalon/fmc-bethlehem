@@ -1,4 +1,5 @@
 import { NextRequest, NextResponse } from 'next/server';
+import { sendEmail, emailTemplates } from '@/lib/email';
 import { saveSubmission, initDatabase } from '@/lib/database';
 
 export async function POST(request: NextRequest) {
@@ -8,7 +9,7 @@ export async function POST(request: NextRequest) {
     // Prepare submission data
     const submissionId = Date.now().toString();
     const name = `${data.firstName} ${data.lastName}`;
-    
+
     const submission = {
       id: submissionId,
       type: 'membership',
@@ -30,8 +31,42 @@ export async function POST(request: NextRequest) {
       console.error('Database save failed, continuing with email only:', dbError);
     }
 
-    // TODO: Send confirmation email using Resend
-    console.log('Membership form submitted:', submissionId);
+    // Send email notification to admin
+    try {
+      const addressParts = [data.address, data.city, data.state, data.zipCode]
+        .filter(Boolean)
+        .join(', ');
+
+      const emailTemplate = emailTemplates.formSubmission(
+        'Membership',
+        name,
+        data.email,
+        data.phone,
+        [
+          ['Address', addressParts],
+          ['Date of birth', data.dateOfBirth],
+          ['Marital status', data.maritalStatus],
+          ['Salvation date', data.salvationDate],
+          ['Baptism date', data.baptismDate],
+          ['Previous church', data.previousChurch],
+          ['Reason for membership', data.membershipReason],
+          ['Ministry interests', data.ministryInterests],
+          ['Skills', data.skills],
+          ['Availability', data.availability],
+        ]
+      );
+
+      await sendEmail({
+        to: process.env.CONTACT_EMAIL || 'methodistchurch1993@gmail.com',
+        subject: emailTemplate.subject,
+        html: emailTemplate.html,
+        text: emailTemplate.text,
+      });
+
+      console.log('Membership form submitted and email sent:', submissionId);
+    } catch (emailError) {
+      console.error('Failed to send email notification:', emailError);
+    }
 
     return NextResponse.json({
       success: true,
