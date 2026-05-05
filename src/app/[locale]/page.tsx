@@ -88,6 +88,10 @@ export default function HomePage() {
   return (
     <main>
       <StructuredData data={eventStructuredData} />
+
+      {/* Featured Flyer — first thing the visitor sees */}
+      <FeaturedFlyer />
+
       {/* Hero Section */}
       <section className="relative overflow-hidden">
         <div className="absolute inset-0">
@@ -166,9 +170,6 @@ export default function HomePage() {
           </div>
         </Container>
       </section>
-
-      {/* Featured Flyer */}
-      <FeaturedFlyer />
 
       {/* Feature Tiles */}
       <section className="py-16">
