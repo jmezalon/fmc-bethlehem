@@ -4,7 +4,7 @@ import { useState } from 'react';
 import Link from 'next/link';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
-import { Calendar, Users, Play, Plus, Settings } from 'lucide-react';
+import { Calendar, Users, Play, Plus, Settings, Image } from 'lucide-react';
 
 export default function AdminDashboard() {
   return (
@@ -94,6 +94,28 @@ export default function AdminDashboard() {
                   <Button size="sm">
                     <Plus className="h-4 w-4 mr-2" />
                     Add New
+                  </Button>
+                </Link>
+              </div>
+            </CardContent>
+          </Card>
+
+          {/* Featured Flyer */}
+          <Card className="hover:shadow-lg transition-shadow border-purple-200">
+            <CardHeader className="flex flex-row items-center justify-between space-y-0 pb-2">
+              <CardTitle className="text-sm font-medium">Featured Flyer</CardTitle>
+              <Image className="h-4 w-4 text-purple-500" />
+            </CardHeader>
+            <CardContent>
+              <div className="text-2xl font-bold">Home Page Flyer</div>
+              <p className="text-xs text-muted-foreground">
+                Set the featured event flyer shown on the home page
+              </p>
+              <div className="flex gap-2 mt-4">
+                <Link href="/en/admin/content/flyer">
+                  <Button variant="outline" size="sm" className="border-purple-300 text-purple-700 hover:bg-purple-50">
+                    <Settings className="h-4 w-4 mr-2" />
+                    Manage Flyer
                   </Button>
                 </Link>
               </div>

@@ -23,6 +23,7 @@ import {
   MessageSquare,
   ArrowRight,
 } from 'lucide-react';
+import { FeaturedFlyer } from '@/components/ui/featured-flyer';
 // Data will be fetched from API
 
 export default function HomePage() {
@@ -165,6 +166,9 @@ export default function HomePage() {
           </div>
         </Container>
       </section>
+
+      {/* Featured Flyer */}
+      <FeaturedFlyer />
 
       {/* Feature Tiles */}
       <section className="py-16">

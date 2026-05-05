@@ -20,7 +20,7 @@ const nextConfig = {
   reactStrictMode: false,
   
   images: {
-    domains: ['localhost'],
+    domains: ['localhost', 'res.cloudinary.com'],
   },
   trailingSlash: false,
   // Disable static optimization for dynamic rendering

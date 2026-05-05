@@ -61,6 +61,19 @@ export interface Sermon {
   updated_at?: Date;
 }
 
+export interface FeaturedFlyer {
+  active: boolean;
+  title: string;
+  subtitle: string;
+  portraitImage: string;
+  landscapeImage: string;
+  startDate: string;
+  endDate: string;
+  time: string;
+  location: string;
+  linkUrl: string;
+}
+
 // Initialize database tables
 export async function initDatabase() {
   try {
@@ -131,6 +144,15 @@ export async function initDatabase() {
       )
     `;
     
+    // Site config table (key-value store for settings like featured flyer)
+    await sql`
+      CREATE TABLE IF NOT EXISTS site_config (
+        key VARCHAR(255) PRIMARY KEY,
+        value JSONB NOT NULL,
+        updated_at TIMESTAMP WITH TIME ZONE DEFAULT NOW()
+      )
+    `;
+
     // Create indexes for better query performance
     await sql`CREATE INDEX IF NOT EXISTS idx_form_submissions_type ON form_submissions(type)`;
     await sql`CREATE INDEX IF NOT EXISTS idx_form_submissions_submitted_at ON form_submissions(submitted_at DESC)`;
@@ -416,6 +438,48 @@ export async function deleteSermon(id: string): Promise<void> {
     console.log('Sermon deleted successfully:', id);
   } catch (error) {
     console.error('Error deleting sermon:', error);
+    throw error;
+  }
+}
+
+// SITE CONFIG OPERATIONS
+const DEFAULT_FEATURED_FLYER: FeaturedFlyer = {
+  active: false,
+  title: '',
+  subtitle: '',
+  portraitImage: '',
+  landscapeImage: '',
+  startDate: '',
+  endDate: '',
+  time: '',
+  location: '',
+  linkUrl: '/events',
+};
+
+export async function getFeaturedFlyer(): Promise<FeaturedFlyer> {
+  try {
+    const result = await sql`
+      SELECT value FROM site_config WHERE key = 'featured_flyer'
+    `;
+    if (result.rows.length === 0) return DEFAULT_FEATURED_FLYER;
+    return result.rows[0].value as FeaturedFlyer;
+  } catch (error) {
+    console.error('Error fetching featured flyer:', error);
+    return DEFAULT_FEATURED_FLYER;
+  }
+}
+
+export async function setFeaturedFlyer(flyer: FeaturedFlyer): Promise<void> {
+  try {
+    await sql`
+      INSERT INTO site_config (key, value, updated_at)
+      VALUES ('featured_flyer', ${JSON.stringify(flyer)}, NOW())
+      ON CONFLICT (key) DO UPDATE
+        SET value = EXCLUDED.value,
+            updated_at = NOW()
+    `;
+  } catch (error) {
+    console.error('Error saving featured flyer:', error);
     throw error;
   }
 }
