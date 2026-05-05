@@ -93,21 +93,21 @@ export function FeaturedFlyer() {
       <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-14 sm:py-16 lg:py-20">
         <div className="flex flex-col lg:flex-row items-center gap-10 lg:gap-14">
 
-          {/* Flyer image — portrait on mobile */}
-          <div className="lg:hidden relative mx-auto" style={{ width: '100%', maxWidth: 360 }}>
+          {/* Flyer image — portrait on mobile (matches typical 4:5 portrait flyers) */}
+          <div className="lg:hidden relative mx-auto" style={{ width: '100%', maxWidth: 400 }}>
             {/* Warm halo behind image */}
             <div className="absolute -inset-3 rounded-[28px] bg-gradient-to-br from-[#e4a166] via-[#f0c66d] to-[#e4a166] opacity-40 blur-2xl" />
             <div
-              className="relative rounded-2xl overflow-hidden ring-1 ring-white/15 shadow-2xl shadow-black/40"
-              style={{ aspectRatio: '9/11' }}
+              className="relative rounded-2xl overflow-hidden ring-1 ring-white/15 shadow-2xl shadow-black/40 bg-[#3d0a23]"
+              style={{ aspectRatio: '4/5' }}
             >
               {flyer.portraitImage ? (
                 <Image
                   src={flyer.portraitImage}
                   alt={flyer.title}
                   fill
-                  className="object-cover"
-                  sizes="(max-width: 1024px) 360px"
+                  className="object-contain"
+                  sizes="(max-width: 1024px) 400px"
                   priority
                 />
               ) : (
@@ -118,20 +118,20 @@ export function FeaturedFlyer() {
             </div>
           </div>
 
-          {/* Flyer image — landscape on desktop */}
-          <div className="hidden lg:block relative flex-shrink-0" style={{ width: 580 }}>
+          {/* Flyer image — landscape on desktop. 16:9 to match natural flyer aspect, nothing cropped. */}
+          <div className="hidden lg:block relative flex-shrink-0 w-[600px] xl:w-[720px] 2xl:w-[760px]">
             <div className="absolute -inset-3 rounded-[28px] bg-gradient-to-br from-[#e4a166] via-[#f0c66d] to-[#e4a166] opacity-40 blur-2xl" />
             <div
-              className="relative rounded-2xl overflow-hidden ring-1 ring-white/15 shadow-2xl shadow-black/40"
-              style={{ aspectRatio: '16/7' }}
+              className="relative rounded-2xl overflow-hidden ring-1 ring-white/15 shadow-2xl shadow-black/40 bg-[#3d0a23]"
+              style={{ aspectRatio: '16/9' }}
             >
               {flyer.landscapeImage ? (
                 <Image
                   src={flyer.landscapeImage}
                   alt={flyer.title}
                   fill
-                  className="object-cover"
-                  sizes="580px"
+                  className="object-contain"
+                  sizes="(min-width: 1536px) 760px, (min-width: 1280px) 720px, 600px"
                   priority
                 />
               ) : (
